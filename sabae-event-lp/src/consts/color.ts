@@ -1,6 +1,6 @@
 export const COLORS = {
-	HEADER: "#000",
-	HEADER_TEXT: "#FFF",
+	HEADER: "#FFF",
+	HEADER_TEXT: "#4B5563",
 	PRIMARY: "#0cf",
 	MASK: "#000",
 };

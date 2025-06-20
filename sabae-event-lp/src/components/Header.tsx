@@ -4,28 +4,29 @@ import { COLORS } from "../consts/color.ts";
 
 export const Header = () => {
 	return (
-		<>
-			<DIV_HeaderWrapper>
-				<DIV_HeaderContainer>
-					{/* TODO: 下記削除する予定 */}
-					<div>ヘッダーエリア</div>
-					{/* ロゴエリア */}
+		<DIV_HeaderWrapper>
+			<DIV_HeaderContainer>
+				<div>ヘッダーエリア</div>
+				{/* ロゴエリア */}
 
-					{/* ナビゲーション */}
+				{/* ナビゲーション */}
 
-					{/* ハンバーガーアイコン */}
-				</DIV_HeaderContainer>
-			</DIV_HeaderWrapper>
-		</>
+				{/* ハンバーガーアイコン */}
+			</DIV_HeaderContainer>
+		</DIV_HeaderWrapper>
 	);
 };
+
 const DIV_HeaderWrapper = styled.div`
-	background-color: ${COLORS.HEADER};
+	position: fixed;
 	color: ${COLORS.HEADER_TEXT};
+	width: 100%;
 `;
 
-const DIV_HeaderContainer = styled(DIV_container)`
+const DIV_HeaderContainer = styled.div`
+	background-color: ${COLORS.HEADER};
 	display: flex;
 	align-items: center;
-	height: 60px;
+	margin: 20px;
+	padding: 25px;
 `;
