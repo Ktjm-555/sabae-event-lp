@@ -1,7 +1,11 @@
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+
 function App() {
 	return (
 		<>
-			<div>テスト</div>
+			<Header />
+			<Hero />
 		</>
 	);
 }
