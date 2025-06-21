@@ -19,13 +19,13 @@ export const EventContents = () => {
 						title="パーク探検！クイズラリー"
 						caption="SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい！！"
 						imgSrc="images/contents_image.png"
-						hasBalloon={true}
+						balloonList={["9/20", "土", "9/21", "日"]}
 					/>
 					<Contents
 						title="わくわくサステナブース"
 						caption="ブースを巡ってクイズにチャレンジ！スタンプを集めて豪華賞品をゲットしよう！"
 						imgSrc="images/contents_image2.png"
-						hasBalloon={false}
+						balloonList={[]}
 					/>
 				</DIV_ContentsContainer>
 				<P_Subtitle>めがねのまちさばえ応援プロジェクト</P_Subtitle>
@@ -33,7 +33,7 @@ export const EventContents = () => {
 					title="スペシャルステージ"
 					caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
 					annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
-					hasBalloon={false}
+					balloonList={["9/20", "土"]}
 				/>
 			</SECTION_EventContainer>
 		</DIV_EventWrapper>

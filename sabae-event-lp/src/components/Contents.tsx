@@ -4,14 +4,18 @@ import { ContentsTitle } from "./CotentsTitle";
 type Props = {
 	title: string;
 	caption: string;
-	hasBalloon: boolean;
+	balloonList: Array<string>;
 	imgSrc: string;
 };
 
-export const Contents = ({ title, caption, imgSrc, hasBalloon }: Props) => {
+export const Contents = ({ title, caption, imgSrc, balloonList }: Props) => {
 	return (
 		<div>
-			<ContentsTitle title={title} caption={caption} hasBalloon={hasBalloon} />
+			<ContentsTitle
+				title={title}
+				caption={caption}
+				balloonList={balloonList}
+			/>
 			<IMG_Image src={imgSrc} />
 		</div>
 	);

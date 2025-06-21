@@ -5,21 +5,21 @@ import { COLORS } from "../consts/color";
 type Props = {
 	title: string;
 	caption: string;
-	hasBalloon: boolean;
+	balloonList: Array<string>;
 	annotation?: string;
 };
 
 export const ContentsTitle = ({
 	title,
 	caption,
-	hasBalloon,
+	balloonList,
 	annotation,
 }: Props) => {
 	return (
 		<div>
 			<DIV_TitleContainer>
 				<H1_Title>{title}</H1_Title>
-				{hasBalloon && <Balloon />}
+				{balloonList.length > 0 && <Balloon balloonList={balloonList} />}
 			</DIV_TitleContainer>
 			<P_Caption>
 				{caption} <SPAN_Annotation>{annotation}</SPAN_Annotation>

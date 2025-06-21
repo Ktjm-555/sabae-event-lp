@@ -1,21 +1,31 @@
 import styled from "@emotion/styled";
+type Props = {
+	balloonList: Array<string>;
+};
 
-export const Balloon = () => (
+export const Balloon = ({ balloonList }: Props) => (
 	<DIV_Balloon>
 		<P_Date>
 			<SPAN_Blue>
-				9/20<SPAN_CircleBlue>土</SPAN_CircleBlue>
+				{balloonList[0]}
+				<SPAN_CircleBlue>{balloonList[1]}</SPAN_CircleBlue>
 			</SPAN_Blue>
-			<SPAN_Red>
-				21<SPAN_CircleRed>日</SPAN_CircleRed>
-			</SPAN_Red>
+			{balloonList[2] && (
+				<SPAN_Red>
+					{balloonList[2]}
+					<SPAN_CircleRed>{balloonList[3]}</SPAN_CircleRed>
+				</SPAN_Red>
+			)}
 		</P_Date>
 	</DIV_Balloon>
 );
 
 const DIV_Balloon = styled.div`
 	position: relative;
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	padding: 10px 5px;
 	color: #ccc;
 	font-size: 16px;

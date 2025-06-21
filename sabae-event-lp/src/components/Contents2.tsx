@@ -6,14 +6,14 @@ import { CardTitle } from "./CardTitle";
 type Props = {
 	title: string;
 	caption: string;
-	hasBalloon: boolean;
+	balloonList: Array<string>;
 	annotation?: string;
 };
 
 export const Contents2 = ({
 	title,
 	caption,
-	hasBalloon,
+	balloonList,
 	annotation,
 }: Props) => {
 	return (
@@ -21,7 +21,7 @@ export const Contents2 = ({
 			<ContentsTitle
 				title={title}
 				caption={caption}
-				hasBalloon={hasBalloon}
+				balloonList={balloonList}
 				annotation={annotation}
 			/>
 			<DIV_CardsWrapper>
