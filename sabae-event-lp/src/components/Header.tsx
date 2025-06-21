@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { DIV_container } from "../Style.ts";
 import { COLORS } from "../consts/color.ts";
 
 export const Header = () => {
@@ -19,8 +18,9 @@ export const Header = () => {
 
 const DIV_HeaderWrapper = styled.div`
 	position: fixed;
-	color: ${COLORS.HEADER_TEXT};
+	color: ${COLORS.TEXT};
 	width: 100%;
+	z-index: 1000;
 `;
 
 const DIV_HeaderContainer = styled.div`

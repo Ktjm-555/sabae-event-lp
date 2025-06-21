@@ -13,13 +13,13 @@ export const Hero = () => {
 const SECTION_HeroContainer = styled.section`
 	width: 100%;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1000px) {
 	}
 `;
 
 const IMG_Image = styled.img`
 	width: 100%;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1000px) {
 	}
 `;

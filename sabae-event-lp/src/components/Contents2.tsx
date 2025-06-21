@@ -1,0 +1,182 @@
+import styled from "@emotion/styled";
+import { ContentsTitle } from "./CotentsTitle";
+import { COLORS } from "../consts/color";
+import { CardTitle } from "./CardTitle";
+
+type Props = {
+	title: string;
+	caption: string;
+	hasBalloon: boolean;
+	annotation?: string;
+};
+
+export const Contents2 = ({
+	title,
+	caption,
+	hasBalloon,
+	annotation,
+}: Props) => {
+	return (
+		<div>
+			<ContentsTitle
+				title={title}
+				caption={caption}
+				hasBalloon={hasBalloon}
+				annotation={annotation}
+			/>
+			<DIV_CardsWrapper>
+				<SECTION_CardContainer>
+					<CardTitle
+						title="LDHダンスワークショップショー"
+						label="出演ゲスト"
+						labelNum={1}
+					/>
+					<DIV_GuestContainer>
+						<div>
+							<DIV_Image>
+								<IMG_Image src="images/contents2_image.png" />
+							</DIV_Image>
+							<p>EXILE TETSUYA</p>
+						</div>
+						<div>
+							<DIV_Image>
+								<IMG_Image src="images/contents2_image2.png" />
+							</DIV_Image>
+							<p>岩谷翔吾（THE RAMPAGE）</p>
+						</div>
+					</DIV_GuestContainer>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer>
+					<CardTitle
+						title="“さばえアクション∞（エイト）“"
+						label="出演ゲスト"
+						labelNum={2}
+						annotation="コレクション produced by TGC"
+					/>
+					<DIV_Guest>
+						<div>
+							<DIV_Image>
+								<IMG_Image src="images/contents2_image3.png" />
+							</DIV_Image>
+							<p>くれいじーまぐねっと</p>
+						</div>
+					</DIV_Guest>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer>
+					<CardTitle
+						title="繊維産業×福井文化服装学院コラボ"
+						label="ステージ企画"
+						labelNum={1}
+					/>
+					<P_Description>
+						鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
+						produced by TGC」でモデルが着用します。
+					</P_Description>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer>
+					<CardTitle
+						title="キッズモデルコラボ"
+						label="ステージ企画"
+						labelNum={2}
+					/>
+					<P_Description>
+						子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
+					</P_Description>
+					<DIV_NoticeSection>
+						<h4>キッズモデル募集</h4>
+						<UL_Notice>
+							<li>・募集開始：2025年6月26日(木)～</li>
+							<li>・対象年齢：年長児～小学３年生</li>
+							<li>・募集要件：SDGsを表現したファッションを着用すること 他</li>
+						</UL_Notice>
+						<SPAN_Notice>
+							※詳細・ご応募は、さばえSDGs推進センターHPまで
+						</SPAN_Notice>
+					</DIV_NoticeSection>
+				</SECTION_CardContainer>
+			</DIV_CardsWrapper>
+		</div>
+	);
+};
+
+const SECTION_CardContainer = styled.section`
+	background-color: #fff;
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	padding: 25px;
+	color: ${COLORS.TEXT};
+`;
+
+const DIV_CardsWrapper = styled.div`
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+	grid-auto-rows: 1fr;
+
+	@media (max-width: 800px) {
+		grid-template-columns: none;
+		grid-auto-rows: auto;
+	}
+`;
+
+const DIV_GuestContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+
+	@media (max-width: 500px) {
+		display: block;
+	}
+`;
+
+const DIV_Image = styled.div`
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+`;
+
+const IMG_Image = styled.img`
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+`;
+
+const DIV_Guest = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (max-width: 500px) {
+		div {
+			width: 100%;
+		}
+	}
+`;
+
+const P_Description = styled.p`
+	margin-bottom: 20px;
+
+	@media (max-width: 500px) {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+`;
+
+const DIV_NoticeSection = styled.div`
+	background-color: #fdede2;
+	padding: 15px;
+`;
+
+const UL_Notice = styled.ul`
+	@media (max-width: 500px) {
+		font-size: 14px;
+	}
+`;
+
+const SPAN_Notice = styled.span`
+	font-size: 14px;
+
+	@media (max-width: 500px) {
+		font-size: 10px;
+	}
+`;
