@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { COLORS } from "../consts/color.ts";
-import { DIV_container } from "../Style.ts";
+import { DIV_container, DIV_SectionWrapper } from "../Style.ts";
 import { Contents } from "./Contents.tsx";
 import { Contents2 } from "./Contents2.tsx";
 
@@ -40,10 +40,7 @@ export const EventContents = () => {
 	);
 };
 
-const DIV_EventWrapper = styled.div`
-	background-color: ${COLORS.EVENT};
-	width: 100%;
-	padding-bottom: 60px;
+const DIV_EventWrapper = styled(DIV_SectionWrapper)`
 	padding-top: 150px;
 	margin-top: -80px;
 `;

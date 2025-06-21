@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { COLORS } from "../consts/color";
 import { CardTitle } from "./CardTitle";
+import { DIV_CardContainer } from "../Style";
 
 type Props = {
 	title: string;
@@ -99,13 +99,9 @@ export const Contents2 = ({
 	);
 };
 
-const SECTION_CardContainer = styled.section`
-	background-color: #fff;
-	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
-	border-radius: 4px;
-	padding: 25px;
-	color: ${COLORS.TEXT};
-`;
+export const SECTION_CardContainer = styled(
+	DIV_CardContainer.withComponent("section")
+)``;
 
 const DIV_CardsWrapper = styled.div`
 	display: grid;
