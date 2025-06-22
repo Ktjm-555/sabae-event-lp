@@ -7,7 +7,6 @@ export const DIV_container = styled.div`
 
 	padding: 0 70px;
 	margin: 0 auto;
-	font-family: "M PLUS 1", sans-serif;
 
 	@media (max-width: 1000px) {
 		padding: 0 30px;
@@ -33,6 +32,8 @@ export const DIV_CardContainer = styled.div`
 `;
 
 export const P_Subtitle = styled.p`
+	font-family: "M PLUS 1", sans-serif;
+
 	font-size: 24px;
 	font-weight: 500;
 

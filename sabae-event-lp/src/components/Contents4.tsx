@@ -156,6 +156,7 @@ const P_SubTitle = styled.div`
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 5px;
+	font-family: "M PLUS 1", sans-serif;
 `;
 
 const DIV_Image = styled.div`

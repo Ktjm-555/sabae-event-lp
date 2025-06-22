@@ -51,6 +51,7 @@ const P_DescText = styled.p`
 	font-weight: 500;
 	font-size: 24px;
 	margin-bottom: 70px;
+	font-family: "M PLUS 1", sans-serif;
 
 	@media (max-width: 900px) {
 		font-size: 20px;

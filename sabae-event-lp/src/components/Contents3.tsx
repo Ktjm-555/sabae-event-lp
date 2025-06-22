@@ -189,6 +189,10 @@ const DIV_SwipeImage = styled.div`
 	flex-direction: column;
 	align-items: center;
 	color: #4b5563;
+
+	p {
+		font-family: "M PLUS 1", sans-serif;
+	}
 `;
 
 const IMG_Logo = styled.img`
