@@ -414,7 +414,7 @@ Error generating stack: `+l.message+`
 	@media (max-width: 500px) {
 		font-size: 11px;
 	}
-`,cy=()=>T.jsx(T.Fragment,{children:T.jsx(oy,{href:"/",children:T.jsx("img",{src:"logo/sabae_logo.svg",alt:"logo"})})}),oy=X.a`
+`,cy=()=>T.jsx(T.Fragment,{children:T.jsx(oy,{href:"#1",children:T.jsx("img",{src:"logo/sabae_logo.svg",alt:"logo"})})}),oy=X.a`
 	display: block;
 	@media (max-width: 410px) {
 		img {
