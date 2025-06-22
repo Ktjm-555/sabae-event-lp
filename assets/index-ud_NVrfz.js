@@ -151,6 +151,7 @@ Error generating stack: `+l.message+`
 	background: #e60012;
 `,Fa=({title:a,caption:i,balloonList:u,annotation:r})=>T.jsxs("div",{children:[T.jsxs(D0,{children:[T.jsx(R0,{children:a}),u.length>0&&T.jsx(_0,{balloonList:u})]}),i&&T.jsxs(N0,{children:[i," ",T.jsx(j0,{children:r})]})]}),D0=X.div`
 	display: flex;
+	align-items: center;
 	position: relative;
 	border-bottom: 3px solid #e6e6e6;
 	padding-bottom: 0.4em;
@@ -208,7 +209,7 @@ Error generating stack: `+l.message+`
 	text-align: center;
 	line-height: 1.4;
 	display: inline-block;
-	margin-right: 25px;
+	margin-right: 10px;
 	min-width: 70px;
 
 	@media (max-width: 900px) {
