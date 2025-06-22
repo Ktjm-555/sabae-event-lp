@@ -200,6 +200,14 @@ Error generating stack: `+l.message+`
 		height: auto;
 		margin-bottom: 10px;
 	}
+
+	/* ここだけレスポンシブ例外対応 */
+	/*TODO:上と統合する */
+	@media (max-width: 410px) {
+		display: block;
+		height: auto;
+		margin-bottom: 10px;
+	}
 `,G0=X.p`
 	background-color: red;
 	color: #fff;
@@ -240,6 +248,10 @@ Error generating stack: `+l.message+`
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 800px) {
 		margin-top: 0;
+	}
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 410px) {
+		margin-top: 10px;
 	}
 `,B0=X.span`
 	display: block;
