@@ -71,7 +71,7 @@ export const Contents3 = ({
 					annotation={annotation}
 				/>
 				<DIV_Content>
-					<img
+					<IMG_Logo
 						src="logo/sabae_eight.svg"
 						alt="さばえアクション∞(エイト)_ロゴ"
 					/>
@@ -189,4 +189,10 @@ const DIV_SwipeImage = styled.div`
 	flex-direction: column;
 	align-items: center;
 	color: #4b5563;
+`;
+
+const IMG_Logo = styled.img`
+	@media (max-width: 385px) {
+		width: 340px;
+	}
 `;

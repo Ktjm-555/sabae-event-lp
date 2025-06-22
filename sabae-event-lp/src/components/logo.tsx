@@ -12,4 +12,15 @@ export const Logo = () => {
 
 const A_Logo = styled.a`
 	display: block;
+	@media (max-width: 410px) {
+		img {
+			width: 190px;
+		}
+	}
+
+	@media (max-width: 360px) {
+		img {
+			width: 170px;
+		}
+	}
 `;
