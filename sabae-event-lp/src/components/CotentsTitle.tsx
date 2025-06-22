@@ -32,6 +32,7 @@ export const ContentsTitle = ({
 
 const DIV_TitleContainer = styled.div`
 	display: flex;
+	align-items: center;
 	position: relative;
 	border-bottom: 3px solid #e6e6e6;
 	padding-bottom: 0.4em;

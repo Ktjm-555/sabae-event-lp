@@ -57,7 +57,7 @@ const P_TitleLabel = styled.p`
 	text-align: center;
 	line-height: 1.4;
 	display: inline-block;
-	margin-right: 25px;
+	margin-right: 10px;
 	min-width: 70px;
 
 	@media (max-width: 900px) {
