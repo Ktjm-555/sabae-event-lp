@@ -8,7 +8,10 @@ export const Header = () => {
 	const [isShowMask, setIsShowMask] = useState(false);
 
 	const toggleShowMask = () => {
-		setIsShowMask(!isShowMask);
+		// 画面幅が小さい時だけ発動
+		if (window.innerWidth <= 1030) {
+			setIsShowMask(!isShowMask);
+		}
 	};
 
 	const goToSabaeInstaPage = () => {
@@ -171,6 +174,8 @@ const DIV_HeaderContainer = styled.div`
 	align-items: center;
 	margin: 20px;
 	padding: 25px;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 	@media (max-width: 1030px) {
 		position: relative;
@@ -186,7 +191,7 @@ const NAV_HeaderNavContainer = styled.nav`
 	@media (max-width: 1030px) {
 		width: 220px;
 		position: fixed;
-		background-color: ${COLORS.HEADER};
+		background-color: #fff;
 		top: 0;
 		right: -300px;
 		bottom: 0;
