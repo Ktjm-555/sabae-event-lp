@@ -272,6 +272,10 @@ const DIV_HeaderToggleArea = styled.div`
 `;
 
 const DIV_HeaderSns = styled.div`
+	display: none;
+	@media (max-width: 1030px) {
+		display: block;
+	}
 	&.open {
 		display: none;
 	}
