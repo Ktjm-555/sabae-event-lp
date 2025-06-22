@@ -58,11 +58,15 @@ const P_TitleLabel = styled.p`
 	line-height: 1.4;
 	display: inline-block;
 	margin-right: 10px;
-	min-width: 70px;
+	min-width: 80px;
 
 	@media (max-width: 900px) {
 		padding: 3px 6px;
 		font-size: 14px;
+	}
+
+	@media (max-width: 500px) {
+		font-size: 12px;
 	}
 `;
 
