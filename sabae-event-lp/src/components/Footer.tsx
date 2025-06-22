@@ -25,7 +25,7 @@ export const Footer = () => {
 						</DL_ContactContainer>
 					</div>
 					<DIV_Contens>
-						<P_Event>過去のイベント</P_Event>
+						<P_Event>過去のフェス</P_Event>
 						<DIV_LinkList>
 							<A_EventUrl
 								href="https://fes.sabae-sdgs.jp/"

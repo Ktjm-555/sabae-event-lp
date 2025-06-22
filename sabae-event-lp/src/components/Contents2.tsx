@@ -28,9 +28,27 @@ export const Contents2 = ({
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
 					<CardTitle
-						title="LDHダンスワークショップショー"
+						title={`“さばえアクション∞（エイト）”\nコレクション produced by TGC`}
 						label="出演ゲスト"
 						labelNum={1}
+					/>
+					<DIV_Guest>
+						<div>
+							<DIV_Image>
+								<IMG_Image
+									src="images/contents2_image3.png"
+									alt="くれいじーまぐねっとの画像"
+								/>
+							</DIV_Image>
+							<p>くれいじーまぐねっと</p>
+						</div>
+					</DIV_Guest>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer>
+					<CardTitle
+						title="LDHダンスワークショップショー"
+						label="出演ゲスト"
+						labelNum={2}
 					/>
 					<DIV_GuestContainer>
 						<div>
@@ -52,24 +70,6 @@ export const Contents2 = ({
 							<p>岩谷翔吾（THE RAMPAGE）</p>
 						</div>
 					</DIV_GuestContainer>
-				</SECTION_CardContainer>
-				<SECTION_CardContainer>
-					<CardTitle
-						title={`“さばえアクション∞（エイト）”\nコレクション produced by TGC`}
-						label="出演ゲスト"
-						labelNum={2}
-					/>
-					<DIV_Guest>
-						<div>
-							<DIV_Image>
-								<IMG_Image
-									src="images/contents2_image3.png"
-									alt="くれいじーまぐねっとの画像"
-								/>
-							</DIV_Image>
-							<p>くれいじーまぐねっと</p>
-						</div>
-					</DIV_Guest>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle

@@ -80,6 +80,11 @@ export const Contents3 = ({
 			<div>
 				<Swiper
 					spaceBetween={25}
+					// navigation={{
+					// 	prevEl: ".swiper-button-prev",
+					// 	nextEl: ".swiper-button-next",
+					// }}
+					navigation={true}
 					slidesPerView="auto"
 					loop={true}
 					breakpoints={{
@@ -87,6 +92,8 @@ export const Contents3 = ({
 						901: { centeredSlides: false },
 					}}
 				>
+					{/* <div className="swiper-button-prev">Prev</div> */}
+
 					{swiperItems.map((item, index) => (
 						<SwiperSlide key={index} style={{ width: "280px" }}>
 							<DIV_SwiperCardContainer>
@@ -98,6 +105,8 @@ export const Contents3 = ({
 							</DIV_SwiperCardContainer>
 						</SwiperSlide>
 					))}
+
+					{/* <div className="swiper-button-next">Next</div> */}
 				</Swiper>
 			</div>
 		</div>
