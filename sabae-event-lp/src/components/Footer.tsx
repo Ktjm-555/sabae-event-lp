@@ -103,6 +103,14 @@ const DL_ContactContainer = styled.dl`
 	dd {
 		margin: 0;
 	}
+
+	/* 450px以下のとき、最初のdivだけ縦並び */
+	@media (max-width: 450px) {
+		div:first-of-type {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
 `;
 
 const DIV_Contens = styled.div`
