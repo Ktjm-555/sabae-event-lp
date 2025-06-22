@@ -27,6 +27,6 @@ export const DIV_CardContainer = styled.div`
 	background-color: #fff;
 	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
-	padding: 25px;
+	padding: 20px;
 	color: ${COLORS.TEXT};
 `;

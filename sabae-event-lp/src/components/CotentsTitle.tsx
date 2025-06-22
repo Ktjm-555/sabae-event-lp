@@ -4,7 +4,7 @@ import { COLORS } from "../consts/color";
 
 type Props = {
 	title: string;
-	caption: string;
+	caption?: string;
 	balloonList: Array<string>;
 	annotation?: string;
 };
@@ -21,9 +21,11 @@ export const ContentsTitle = ({
 				<H1_Title>{title}</H1_Title>
 				{balloonList.length > 0 && <Balloon balloonList={balloonList} />}
 			</DIV_TitleContainer>
-			<P_Caption>
-				{caption} <SPAN_Annotation>{annotation}</SPAN_Annotation>
-			</P_Caption>
+			{caption && (
+				<P_Caption>
+					{caption} <SPAN_Annotation>{annotation}</SPAN_Annotation>
+				</P_Caption>
+			)}
 		</div>
 	);
 };

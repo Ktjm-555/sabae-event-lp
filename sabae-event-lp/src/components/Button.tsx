@@ -28,7 +28,10 @@ const BUTTON_Button = styled.button`
 	font-size: 16px;
 	cursor: pointer;
 	transition: background-color 0.2s;
-	margin-top: 25px;
+
+	@media (max-width: 500px) {
+		padding: 6px 18px;
+	}
 
 	&:hover:not(:disabled) {
 		opacity: 0.8;

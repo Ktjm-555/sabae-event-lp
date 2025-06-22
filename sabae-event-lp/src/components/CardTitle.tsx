@@ -1,44 +1,50 @@
 import styled from "@emotion/styled";
+import React from "react";
 
 type Props = {
 	title: string;
-	label: string;
-	labelNum: number;
+	label?: string;
+	labelNum?: number;
 	annotation?: string;
 };
 
 export const CardTitle = ({ title, label, labelNum, annotation }: Props) => {
 	return (
-		<DIV_CardTitleContainer>
-			<P_TitleLabel>
-				{label}
-				<br />第{labelNum}弾
-			</P_TitleLabel>
+		<DIV_CardTitleContainer label={label}>
+			{label && (
+				<P_TitleLabel>
+					{label}
+					<br />第{labelNum}弾
+				</P_TitleLabel>
+			)}
+
 			<div>
-				<H2_Title>{title}</H2_Title>
-				<SPAN_Annotation>{annotation}</SPAN_Annotation>
+				<H2_Title>
+					{title.split("\n").map((line, i) => (
+						<React.Fragment key={i}>
+							{line}
+							<br />
+						</React.Fragment>
+					))}
+				</H2_Title>
+				{annotation && <SPAN_Annotation>{annotation}</SPAN_Annotation>}
 			</div>
 		</DIV_CardTitleContainer>
 	);
 };
 
-const DIV_CardTitleContainer = styled.div`
+const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 	display: flex;
 	align-items: center;
-	height: 50px;
-	margin-bottom: 20px;
+	${({ label }) => label && `height: 50px;`}
+	${({ label }) => `margin-bottom: ${label ? "20px" : "10px"};`}
+	line-height: 1;
 
-	@media (max-width: 900px) {
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 900px) and (min-width: 801px) {
 		display: block;
 		height: auto;
 		margin-bottom: 10px;
-	}
-
-	@media (max-width: 800px) {
-		display: flex;
-		align-items: center;
-		height: 50px;
-		margin-bottom: 20px;
 	}
 `;
 
@@ -54,7 +60,8 @@ const P_TitleLabel = styled.p`
 	margin-right: 25px;
 	min-width: 70px;
 
-	@media (max-width: 500px) {
+	@media (max-width: 900px) {
+		padding: 3px 6px;
 		font-size: 14px;
 	}
 `;

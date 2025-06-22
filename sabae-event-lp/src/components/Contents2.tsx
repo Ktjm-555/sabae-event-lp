@@ -5,7 +5,7 @@ import { DIV_CardContainer } from "../Style";
 
 type Props = {
 	title: string;
-	caption: string;
+	caption?: string;
 	balloonList: Array<string>;
 	annotation?: string;
 };
@@ -99,7 +99,7 @@ export const Contents2 = ({
 	);
 };
 
-export const SECTION_CardContainer = styled(
+const SECTION_CardContainer = styled(
 	DIV_CardContainer.withComponent("section")
 )``;
 

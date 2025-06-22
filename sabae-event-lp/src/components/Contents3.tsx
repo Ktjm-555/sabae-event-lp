@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { COLORS } from "../consts/color";
 import { Button } from "./Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,7 +7,7 @@ import { DIV_CardContainer } from "../Style";
 
 type Props = {
 	title: string;
-	caption: string;
+	caption?: string;
 	balloonList: Array<string>;
 	annotation?: string;
 };
@@ -59,7 +58,7 @@ export const Contents3 = ({
 						src="logo/sabae_eight.svg"
 						alt="さばえアクション∞(エイト)_ロゴ"
 					/>
-					<P_LogoSup>「笑顔があふれるまち」を目指す8つのアクション</P_LogoSup>
+					<p>「笑顔があふれるまち」を目指す8つのアクション</p>
 				</DIV_Content>
 			</DIV_OverviewContainer>
 			<DIV_OverviewContainer_SP>
@@ -78,7 +77,7 @@ export const Contents3 = ({
 					<Button onClick={goToSabaeEightPage}>詳しくはこちら</Button>
 				</DIV_Content>
 			</DIV_OverviewContainer_SP>
-			<DIV_SwiperContainer>
+			<div>
 				<Swiper
 					spaceBetween={25}
 					slidesPerView="auto"
@@ -100,7 +99,7 @@ export const Contents3 = ({
 						</SwiperSlide>
 					))}
 				</Swiper>
-			</DIV_SwiperContainer>
+			</div>
 		</div>
 	);
 };
@@ -128,23 +127,19 @@ const DIV_OverviewContainer_SP = styled.div`
 	}
 `;
 
-const DIV_Content = styled.p`
+const DIV_Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* ボタン上部のmarginと合わせる */
-	margin-bottom: 25px;
+	color: #4b5563;
+
+	@media (max-width: 900px) {
+		margin-bottom: 25px;
+	}
 `;
 
 const P_LogoSup = styled.p`
-	color: #4b5563;
-`;
-
-const DIV_SwiperContainer = styled.div`
-	/* padding分ひく */
-	/* width: 100%; */
-	/* width: calc(100vw - 140px);
-	max-width: calc(1400px - 140px); */
+	margin-bottom: 25px;
 `;
 
 const DIV_SwiperCardContainer = styled(DIV_CardContainer)`
@@ -171,85 +166,4 @@ const DIV_SwipeImage = styled.div`
 	flex-direction: column;
 	align-items: center;
 	color: #4b5563;
-`;
-const SECTION_CgardContainer = styled.section`
-	background-color: #fff;
-	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
-	border-radius: 4px;
-	padding: 25px;
-	color: ${COLORS.TEXT};
-`;
-
-const DIV_CardsWrapper = styled.div`
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
-	grid-auto-rows: 1fr;
-
-	@media (max-width: 800px) {
-		grid-template-columns: none;
-		grid-auto-rows: auto;
-	}
-`;
-
-const DIV_GuestContainer = styled.div`
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-
-	@media (max-width: 500px) {
-		display: block;
-	}
-`;
-
-const DIV_Image = styled.div`
-	width: 100%;
-	aspect-ratio: 1 / 1;
-	overflow: hidden;
-`;
-
-const IMG_Image = styled.img`
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-`;
-
-const DIV_Guest = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	@media (max-width: 500px) {
-		div {
-			width: 100%;
-		}
-	}
-`;
-
-const P_Description = styled.p`
-	margin-bottom: 20px;
-
-	@media (max-width: 500px) {
-		font-size: 14px;
-		margin-bottom: 20px;
-	}
-`;
-
-const DIV_NoticeSection = styled.div`
-	background-color: #fdede2;
-	padding: 15px;
-`;
-
-const UL_Notice = styled.ul`
-	@media (max-width: 500px) {
-		font-size: 14px;
-	}
-`;
-
-const SPAN_Notice = styled.span`
-	font-size: 14px;
-
-	@media (max-width: 500px) {
-		font-size: 10px;
-	}
 `;

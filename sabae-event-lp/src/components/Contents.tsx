@@ -3,7 +3,7 @@ import { ContentsTitle } from "./CotentsTitle";
 
 type Props = {
 	title: string;
-	caption: string;
+	caption?: string;
 	balloonList: Array<string>;
 	imgSrc: string;
 };
