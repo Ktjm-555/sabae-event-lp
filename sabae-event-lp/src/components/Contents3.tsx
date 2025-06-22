@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
+import { DIV_CardContainer } from "../Style";
 import { Button } from "./Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { DIV_CardContainer } from "../Style";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 type Props = {
 	title: string;
@@ -77,13 +79,10 @@ export const Contents3 = ({
 					<Button onClick={goToSabaeEightPage}>詳しくはこちら</Button>
 				</DIV_Content>
 			</DIV_OverviewContainer_SP>
-			<div>
+			<DIV_SwiperContainer>
 				<Swiper
 					spaceBetween={25}
-					// navigation={{
-					// 	prevEl: ".swiper-button-prev",
-					// 	nextEl: ".swiper-button-next",
-					// }}
+					modules={[Navigation]}
 					navigation={true}
 					slidesPerView="auto"
 					loop={true}
@@ -92,8 +91,6 @@ export const Contents3 = ({
 						901: { centeredSlides: false },
 					}}
 				>
-					{/* <div className="swiper-button-prev">Prev</div> */}
-
 					{swiperItems.map((item, index) => (
 						<SwiperSlide key={index} style={{ width: "280px" }}>
 							<DIV_SwiperCardContainer>
@@ -108,7 +105,7 @@ export const Contents3 = ({
 
 					{/* <div className="swiper-button-next">Next</div> */}
 				</Swiper>
-			</div>
+			</DIV_SwiperContainer>
 		</div>
 	);
 };
@@ -149,6 +146,23 @@ const DIV_Content = styled.div`
 
 const P_LogoSup = styled.p`
 	margin-bottom: 25px;
+`;
+
+const DIV_SwiperContainer = styled.div`
+	.swiper-button-prev,
+	.swiper-button-next {
+		background-color: rgba(230, 0, 18, 0.8);
+		color: #fff;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&::after {
+			font-size: 12px;
+		}
+	}
 `;
 
 const DIV_SwiperCardContainer = styled(DIV_CardContainer)`
