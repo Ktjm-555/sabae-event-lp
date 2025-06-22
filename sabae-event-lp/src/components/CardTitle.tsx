@@ -46,6 +46,14 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 		height: auto;
 		margin-bottom: 10px;
 	}
+
+	/* ここだけレスポンシブ例外対応 */
+	/*TODO:上と統合する */
+	@media (max-width: 410px) {
+		display: block;
+		height: auto;
+		margin-bottom: 10px;
+	}
 `;
 
 const P_TitleLabel = styled.p`
@@ -90,6 +98,10 @@ const H2_Title = styled.h2`
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 800px) {
 		margin-top: 0;
+	}
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 410px) {
+		margin-top: 10px;
 	}
 `;
 
