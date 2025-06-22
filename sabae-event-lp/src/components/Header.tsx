@@ -45,7 +45,7 @@ export const Header = () => {
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 						</UL_HeaderNavList>
-						<DIV_ButtonContainer>
+						<div>
 							<Button
 								onClick={goToSabaeInstaPage}
 								isShort={true}
@@ -54,7 +54,7 @@ export const Header = () => {
 								公式SNS
 								<IMG_Icon src="icons/instagram_white.svg" />
 							</Button>
-						</DIV_ButtonContainer>
+						</div>
 					</DIV_AAA>
 
 					{/* 主催情報 */}
@@ -156,17 +156,6 @@ const DL_ContactContainer = styled.dl`
 	dd {
 		margin: 0;
 	}
-`;
-
-const DIV_ButtonContainer = styled.div`
-	@media (max-width: 1030px) {
-		/* display: none; */
-	}
-`;
-
-const DIV_ButtonContainer2 = styled.div`
-	display: flex;
-	justify-content: center;
 `;
 
 const DIV_HeaderWrapper = styled.div`
@@ -276,7 +265,7 @@ const DIV_HeaderToggleArea = styled.div`
 		align-items: center;
 		gap: 15px;
 		position: absolute;
-		top: 25px;
+		top: 18px;
 		right: 25px;
 		z-index: 3;
 	}
