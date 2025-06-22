@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const Logo = () => {
 	return (
 		<>
-			<A_Logo href="/">
+			<A_Logo href="#1">
 				<img src="logo/sabae_logo.svg" alt="logo" />
 			</A_Logo>
 		</>
