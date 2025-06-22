@@ -589,6 +589,10 @@ Error generating stack: `+l.message+`
 		z-index: 3;
 	}
 `,_y=X.div`
+	display: none;
+	@media (max-width: 1030px) {
+		display: block;
+	}
 	&.open {
 		display: none;
 	}
