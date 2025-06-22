@@ -210,11 +210,15 @@ Error generating stack: `+l.message+`
 	line-height: 1.4;
 	display: inline-block;
 	margin-right: 10px;
-	min-width: 70px;
+	min-width: 80px;
 
 	@media (max-width: 900px) {
 		padding: 3px 6px;
 		font-size: 14px;
+	}
+
+	@media (max-width: 500px) {
+		font-size: 12px;
 	}
 `,L0=X.h2`
 	font-size: 22px;
