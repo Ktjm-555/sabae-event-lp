@@ -8,7 +8,7 @@ export const IntroduceContents = () => {
 			<SECTION_IntroduceContainer>
 				<Contents3
 					title="さばえアクション∞とは"
-					caption="SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。<br>
+					caption="SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
 一人一人の小さな行動で広がり、つながり、まちの未来を大きく変えていく。そんな”∞(無限)”の願いを込めた未来へのアクションです。"
 					balloonList={[]}
 				/>

@@ -57,7 +57,8 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 `;
 
 const P_TitleLabel = styled.p`
-	background-color: red;
+	/* TODO：赤色定義する */
+	background-color: #e60012;
 	color: #fff;
 	padding: 6px;
 	font-size: 15px;

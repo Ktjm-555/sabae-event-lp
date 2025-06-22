@@ -147,7 +147,8 @@ const A_EventUrl = styled.a`
 const DIV_Copyright = styled.div`
 	text-align: right;
 	border-top: 1px solid #fff;
-	margin-top: 30px;
+	margin-top: 20px;
+	padding-top: 10px;
 
 	@media (max-width: 900px) {
 		font-size: 14px;
