@@ -6,7 +6,6 @@ export const IntroduceContentsWide = () => {
 	return (
 		<SECTION_IntroduceContainer>
 			<DIV_ContentsContainer>
-				<P_Subtitle>同時開催</P_Subtitle>
 				<Contents4 title="さばえ３大フェス" balloonList={[]} />
 			</DIV_ContentsContainer>
 		</SECTION_IntroduceContainer>
@@ -23,29 +22,3 @@ const SECTION_IntroduceContainer = styled.div`
 `;
 
 const DIV_ContentsContainer = styled(DIV_container)``;
-
-const P_Subtitle = styled.p`
-	font-weight: 500;
-	font-size: 24px;
-`;
-
-// const DIV_ContentsContainer = styled.div`
-// 	display: grid;
-// 	grid-template-columns: repeat(2, 1fr);
-// 	gap: 50px;
-// 	grid-auto-rows: 1fr;
-// 	margin-bottom: 70px;
-
-// 	@media (max-width: 900px) {
-// 		margin-bottom: 40px;
-// 	}
-
-// 	@media (max-width: 800px) {
-// 		grid-template-columns: none;
-// 		grid-auto-rows: auto;
-// 	}
-
-// 	@media (max-width: 500px) {
-// 		margin-bottom: 20px;
-// 	}
-// `;

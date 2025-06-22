@@ -18,6 +18,7 @@ const goToSabaeEightPage = () => {
 export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 	return (
 		<div>
+			<P_Subtitle id="4">同時開催</P_Subtitle>
 			<ContentsTitle
 				title={title}
 				balloonList={balloonList}
@@ -102,6 +103,11 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 		</div>
 	);
 };
+
+const P_Subtitle = styled.p`
+	font-weight: 500;
+	font-size: 24px;
+`;
 
 const SECTION_CardContainer = styled(
 	DIV_CardContainer.withComponent("section")

@@ -25,10 +25,6 @@ export const Footer = () => {
 						</DL_ContactContainer>
 					</div>
 					<DIV_Contens>
-						<DIV_Sns>
-							<p>公式SNS</p>
-							<IMG_Icon src="icons/instagram_white.svg" />
-						</DIV_Sns>
 						<P_Event>過去のイベント</P_Event>
 						<DIV_LinkList>
 							<A_EventUrl
@@ -119,7 +115,7 @@ const DIV_Contens = styled.div`
 	}
 `;
 
-const DIV_Sns = styled.div`
+const A_Sns = styled.a`
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;

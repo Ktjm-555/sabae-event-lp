@@ -4,7 +4,7 @@ import { Contents3 } from "./Contents3.tsx";
 
 export const IntroduceContents = () => {
 	return (
-		<DIV_IntroduceWrapper>
+		<DIV_IntroduceWrapper id="3">
 			<SECTION_IntroduceContainer>
 				<Contents3
 					title="さばえアクション∞とは"

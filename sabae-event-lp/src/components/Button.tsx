@@ -5,11 +5,21 @@ type Props = {
 	children: ReactNode;
 	onClick: MouseEventHandler<HTMLButtonElement>;
 	disabled?: boolean;
+	isShort?: boolean;
 };
 
-export const Button = ({ children, onClick, disabled = false }: Props) => {
+export const Button = ({
+	children,
+	onClick,
+	disabled = false,
+	isShort,
+}: Props) => {
 	return (
-		<BUTTON_Button onClick={onClick} disabled={disabled}>
+		<BUTTON_Button
+			onClick={onClick}
+			disabled={disabled}
+			className={isShort ? "short" : ""}
+		>
 			<span>{children}</span>
 			<SPAN_Arrow />
 		</BUTTON_Button>
@@ -28,6 +38,10 @@ const BUTTON_Button = styled.button`
 	font-size: 16px;
 	cursor: pointer;
 	transition: background-color 0.2s;
+
+	&.short {
+		padding: 6px 18px;
+	}
 
 	@media (max-width: 500px) {
 		padding: 6px 18px;

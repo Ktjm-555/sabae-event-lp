@@ -44,6 +44,7 @@ const H1_Title = styled.h1`
 	&::before {
 		position: absolute;
 		bottom: -3px;
+		left: 0;
 		width: 60px;
 		height: 3px;
 		display: block;

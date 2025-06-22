@@ -28,7 +28,6 @@ export const EventContents = () => {
 						balloonList={[]}
 					/>
 				</DIV_ContentsContainer>
-				<P_Subtitle>めがねのまちさばえ応援プロジェクト</P_Subtitle>
 				<Contents2
 					title="スペシャルステージ"
 					caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
@@ -45,10 +44,7 @@ const DIV_EventWrapper = styled(DIV_SectionWrapper)`
 	margin-top: -80px;
 `;
 
-const SECTION_EventContainer = styled(DIV_container.withComponent("section"))`
-	/* display: flex;
-	align-items: center; */
-`;
+const SECTION_EventContainer = styled(DIV_container.withComponent("section"))``;
 
 const P_DescText = styled.p`
 	color: ${COLORS.TEXT};

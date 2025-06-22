@@ -18,6 +18,7 @@ export const Contents2 = ({
 }: Props) => {
 	return (
 		<div>
+			<P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</P_Subtitle>
 			<ContentsTitle
 				title={title}
 				caption={caption}
@@ -113,6 +114,11 @@ const DIV_CardsWrapper = styled.div`
 		grid-template-columns: none;
 		grid-auto-rows: auto;
 	}
+`;
+
+const P_Subtitle = styled.p`
+	font-weight: 500;
+	font-size: 24px;
 `;
 
 const DIV_GuestContainer = styled.div`

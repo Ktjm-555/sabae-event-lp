@@ -1,4 +1,8 @@
 /* 初期設定 */
+html {
+	/* ページ内遷移のスクロール位置調整 */
+	scroll-padding-top: 100px;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -25,7 +29,8 @@ a:focus {
 }
 
 ul,
-ol {
+ol,
+dl {
 	margin: 0;
 	padding: 0;
 	list-style: none;
