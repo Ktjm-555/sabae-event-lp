@@ -51,8 +51,8 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 const P_TitleLabel = styled.p`
 	background-color: red;
 	color: #fff;
-	padding: 6px 12px;
-	font-size: 16px;
+	padding: 6px;
+	font-size: 15px;
 	font-weight: bold;
 	text-align: center;
 	line-height: 1.4;

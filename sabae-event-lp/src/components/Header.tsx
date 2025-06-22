@@ -11,8 +11,8 @@ export const Header = () => {
 		setIsShowMask(!isShowMask);
 	};
 
-	const goToSabaeEightPage = () => {
-		window.open("https://meganefes.com/", "_blank");
+	const goToSabaeInstaPage = () => {
+		window.open("https://www.instagram.com/sabae_sdgsfes/", "_blank");
 	};
 
 	return (
@@ -20,31 +20,42 @@ export const Header = () => {
 			<DIV_HeaderContainer>
 				{/* ロゴエリア */}
 				<Logo />
-
-				{/* ナビゲーション */}
 				<NAV_HeaderNavContainer className={isShowMask ? "open" : ""}>
-					<UL_HeaderNavList>
-						<LI_HeaderNavItem>
-							<A_HeaderNavLink href="#1" onClick={toggleShowMask}>
-								トップ
-							</A_HeaderNavLink>
-						</LI_HeaderNavItem>
-						<LI_HeaderNavItem>
-							<A_HeaderNavLink href="#2" onClick={toggleShowMask}>
-								スペシャルステージ
-							</A_HeaderNavLink>
-						</LI_HeaderNavItem>
-						<LI_HeaderNavItem>
-							<A_HeaderNavLink href="#3" onClick={toggleShowMask}>
-								さばえアクション∞とは
-							</A_HeaderNavLink>
-						</LI_HeaderNavItem>
-						<LI_HeaderNavItem>
-							<A_HeaderNavLink href="#4" onClick={toggleShowMask}>
-								さばえ３大フェス
-							</A_HeaderNavLink>
-						</LI_HeaderNavItem>
-					</UL_HeaderNavList>
+					<DIV_AAA>
+						{/* ナビゲーション */}
+						<UL_HeaderNavList>
+							<LI_HeaderNavItem>
+								<A_HeaderNavLink href="#1" onClick={toggleShowMask}>
+									トップ
+								</A_HeaderNavLink>
+							</LI_HeaderNavItem>
+							<LI_HeaderNavItem>
+								<A_HeaderNavLink href="#2" onClick={toggleShowMask}>
+									スペシャルステージ
+								</A_HeaderNavLink>
+							</LI_HeaderNavItem>
+							<LI_HeaderNavItem>
+								<A_HeaderNavLink href="#3" onClick={toggleShowMask}>
+									さばえアクション∞とは
+								</A_HeaderNavLink>
+							</LI_HeaderNavItem>
+							<LI_HeaderNavItem>
+								<A_HeaderNavLink href="#4" onClick={toggleShowMask}>
+									さばえ３大フェス
+								</A_HeaderNavLink>
+							</LI_HeaderNavItem>
+						</UL_HeaderNavList>
+						<DIV_ButtonContainer>
+							<Button
+								onClick={goToSabaeInstaPage}
+								isShort={true}
+								isArrow={false}
+							>
+								公式SNS
+								<IMG_Icon src="icons/instagram_white.svg" />
+							</Button>
+						</DIV_ButtonContainer>
+					</DIV_AAA>
 
 					{/* 主催情報 */}
 					<DIV_OrganizedInfo className={isShowMask ? "open" : ""}>
@@ -64,11 +75,16 @@ export const Header = () => {
 								<dd>contact@sabae-sdgs.jp</dd>
 							</div>
 						</DL_ContactContainer>
-						<DIV_ButtonContainer>
-							<Button onClick={goToSabaeEightPage} isShort={true}>
-								公式サイト
+						<DIV_ButtonContainer2>
+							<Button
+								onClick={goToSabaeInstaPage}
+								isShort={true}
+								isArrow={false}
+							>
+								公式SNS
+								<IMG_Icon src="icons/instagram_white.svg" />
 							</Button>
-						</DIV_ButtonContainer>
+						</DIV_ButtonContainer2>
 					</DIV_OrganizedInfo>
 				</NAV_HeaderNavContainer>
 
@@ -89,6 +105,10 @@ export const Header = () => {
 	);
 };
 
+const DIV_AAA = styled.div`
+	display: flex;
+`;
+
 const DIV_OrganizedInfo = styled.div`
 	display: none;
 	&.open {
@@ -105,6 +125,12 @@ const P_ContactTitle = styled.p`
 	font-size: 14px;
 `;
 
+const IMG_Icon = styled.img`
+	margin-left: 8px;
+	width: 25px;
+	height: 25px;
+`;
+
 const DL_ContactContainer = styled.dl`
 	font-size: 14px;
 	margin-bottom: 10px;
@@ -119,6 +145,12 @@ const DL_ContactContainer = styled.dl`
 `;
 
 const DIV_ButtonContainer = styled.div`
+	@media (max-width: 1030px) {
+		display: none;
+	}
+`;
+
+const DIV_ButtonContainer2 = styled.div`
 	display: flex;
 	justify-content: center;
 `;
@@ -137,7 +169,7 @@ const DIV_HeaderContainer = styled.div`
 	margin: 20px;
 	padding: 25px;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1030px) {
 		position: relative;
 	}
 `;
@@ -148,7 +180,7 @@ const NAV_HeaderNavContainer = styled.nav`
 	flex-direction: column;
 	justify-content: space-between;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1030px) {
 		width: 220px;
 		position: fixed;
 		background-color: ${COLORS.HEADER};
@@ -171,8 +203,9 @@ const NAV_HeaderNavContainer = styled.nav`
 const UL_HeaderNavList = styled.ul`
 	display: flex;
 	align-items: center;
+	margin-right: 20px;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1030px) {
 		flex-direction: column;
 	}
 `;
@@ -180,7 +213,7 @@ const UL_HeaderNavList = styled.ul`
 const LI_HeaderNavItem = styled.li`
 	margin-left: 15px;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1030px) {
 		margin-left: 0;
 
 		&:nth-child(1) {
@@ -199,7 +232,7 @@ const A_HeaderNavLink = styled.a`
 		color: #e60012;
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1030px) {
 		position: relative;
 		display: block;
 		border-bottom: 2px solid #e6e6e6;
@@ -223,7 +256,7 @@ const A_HeaderNavLink = styled.a`
 const DIV_HeaderToggleBtn = styled.div`
 	display: none;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1030px) {
 		display: block;
 		position: absolute;
 		top: 25px;

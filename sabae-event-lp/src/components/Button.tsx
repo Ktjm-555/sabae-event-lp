@@ -6,6 +6,7 @@ type Props = {
 	onClick: MouseEventHandler<HTMLButtonElement>;
 	disabled?: boolean;
 	isShort?: boolean;
+	isArrow?: boolean;
 };
 
 export const Button = ({
@@ -13,6 +14,7 @@ export const Button = ({
 	onClick,
 	disabled = false,
 	isShort,
+	isArrow = true,
 }: Props) => {
 	return (
 		<BUTTON_Button
@@ -21,7 +23,7 @@ export const Button = ({
 			className={isShort ? "short" : ""}
 		>
 			<span>{children}</span>
-			<SPAN_Arrow />
+			{isArrow && <SPAN_Arrow />}
 		</BUTTON_Button>
 	);
 };
@@ -40,7 +42,7 @@ const BUTTON_Button = styled.button`
 	transition: background-color 0.2s;
 
 	&.short {
-		padding: 6px 18px;
+		padding: 10px 15px;
 	}
 
 	@media (max-width: 500px) {
