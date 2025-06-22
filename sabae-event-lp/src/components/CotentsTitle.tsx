@@ -77,4 +77,5 @@ const SPAN_Annotation = styled.span`
 const P_Caption = styled.p`
 	color: ${COLORS.TEXT};
 	min-height: 70px;
+	margin-bottom: 20px;
 `;

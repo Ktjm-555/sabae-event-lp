@@ -36,14 +36,14 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IMG_Icon src="icons/instagram.svg" />
+							<IMG_Icon src="icons/instagram.svg" alt="instagramのアイコン" />
 						</A_Icon>
 						<A_Icon
 							href="https://www.facebook.com/profile.php?id=61560310619817"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IMG_Icon src="icons/facebook.svg" />
+							<IMG_Icon src="icons/facebook.svg" alt="facebookのアイコン" />
 						</A_Icon>
 					</DIV_IconContainer>
 				</SECTION_CardContainer>
@@ -60,21 +60,21 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icons/twitter-x.svg" />
+								<IMG_Icon src="icons/twitter-x.svg" alt="twitter-xのアイコン" />
 							</A_Icon>
 							<A_Icon
 								href="https://www.instagram.com/meganefes/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icons/instagram.svg" />
+								<IMG_Icon src="icons/instagram.svg" alt="instagramのアイコン" />
 							</A_Icon>
 							<A_Icon
 								href="https://www.facebook.com/meganefes"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icons/facebook.svg" />
+								<IMG_Icon src="icons/facebook.svg" alt="facebookのアイコン" />
 							</A_Icon>
 							<A_Icon
 								href="https://m.youtube.com/channel/UCDwHawMHi7yeLzSSof8bvDQ"
@@ -96,7 +96,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 						スタンプを集めると、豪華景品が当たるカプセルマシンを回せるチャンス！
 					</P_Description_gapNone>
 					<DIV_Image>
-						<img src="logo/comic_logo.svg" />
+						<img src="logo/comic_logo.svg" alt="コロコロコミックのロゴ" />
 					</DIV_Image>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>

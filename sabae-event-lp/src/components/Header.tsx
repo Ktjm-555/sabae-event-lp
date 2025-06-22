@@ -141,6 +141,7 @@ const DIV_HeaderContainer = styled.div`
 		position: relative;
 	}
 `;
+
 const NAV_HeaderNavContainer = styled.nav`
 	margin-left: auto;
 	display: flex;
@@ -166,6 +167,7 @@ const NAV_HeaderNavContainer = styled.nav`
 		}
 	}
 `;
+
 const UL_HeaderNavList = styled.ul`
 	display: flex;
 	align-items: center;
@@ -176,7 +178,7 @@ const UL_HeaderNavList = styled.ul`
 `;
 
 const LI_HeaderNavItem = styled.li`
-	margin-left: 20px;
+	margin-left: 15px;
 
 	@media (max-width: 900px) {
 		margin-left: 0;
@@ -190,6 +192,13 @@ const LI_HeaderNavItem = styled.li`
 const A_HeaderNavLink = styled.a`
 	color: ${COLORS.TEXT};
 	font-weight: 500;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: #e60012;
+	}
+
 	@media (max-width: 900px) {
 		position: relative;
 		display: block;

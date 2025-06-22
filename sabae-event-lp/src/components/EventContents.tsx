@@ -79,6 +79,7 @@ const DIV_ContentsContainer = styled.div`
 		margin-bottom: 40px;
 	}
 
+	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 800px) {
 		grid-template-columns: none;
 		grid-auto-rows: auto;

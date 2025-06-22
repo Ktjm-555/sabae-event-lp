@@ -16,7 +16,7 @@ export const Contents = ({ title, caption, imgSrc, balloonList }: Props) => {
 				caption={caption}
 				balloonList={balloonList}
 			/>
-			<IMG_Image src={imgSrc} />
+			<IMG_Image src={imgSrc} alt="ブースの画像" />
 		</div>
 	);
 };

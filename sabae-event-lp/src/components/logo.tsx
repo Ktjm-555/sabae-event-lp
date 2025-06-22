@@ -13,7 +13,3 @@ export const Logo = () => {
 const A_Logo = styled.a`
 	display: block;
 `;
-
-// const IMG_LogoImg = styled.img`
-// 	height: 25px;
-// `;

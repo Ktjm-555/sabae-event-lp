@@ -115,29 +115,6 @@ const DIV_Contens = styled.div`
 	}
 `;
 
-const A_Sns = styled.a`
-	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
-	font-size: 18px;
-	font-weight: bold;
-
-	@media (max-width: 500px) {
-		font-size: 16px;
-	}
-`;
-
-const IMG_Icon = styled.img`
-	margin-left: 8px;
-	width: 32px;
-	height: 32px;
-
-	@media (max-width: 500px) {
-		width: 28px;
-		height: 28px;
-	}
-`;
-
 const P_Event = styled.p`
 	font-weight: bold;
 	@media (max-width: 500px) {

@@ -35,13 +35,19 @@ export const Contents2 = ({
 					<DIV_GuestContainer>
 						<div>
 							<DIV_Image>
-								<IMG_Image src="images/contents2_image.png" />
+								<IMG_Image
+									src="images/contents2_image.png"
+									alt="EXILE TETSUYAの画像"
+								/>
 							</DIV_Image>
 							<p>EXILE TETSUYA</p>
 						</div>
 						<div>
 							<DIV_Image>
-								<IMG_Image src="images/contents2_image2.png" />
+								<IMG_Image
+									src="images/contents2_image2.png"
+									alt="岩谷翔吾（THE RAMPAGE）の画像"
+								/>
 							</DIV_Image>
 							<p>岩谷翔吾（THE RAMPAGE）</p>
 						</div>
@@ -49,15 +55,17 @@ export const Contents2 = ({
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle
-						title="“さばえアクション∞（エイト）“"
+						title={`“さばえアクション∞（エイト）”\nコレクション produced by TGC`}
 						label="出演ゲスト"
 						labelNum={2}
-						annotation="コレクション produced by TGC"
 					/>
 					<DIV_Guest>
 						<div>
 							<DIV_Image>
-								<IMG_Image src="images/contents2_image3.png" />
+								<IMG_Image
+									src="images/contents2_image3.png"
+									alt="くれいじーまぐねっとの画像"
+								/>
 							</DIV_Image>
 							<p>くれいじーまぐねっと</p>
 						</div>
@@ -110,6 +118,7 @@ const DIV_CardsWrapper = styled.div`
 	gap: 30px;
 	grid-auto-rows: 1fr;
 
+	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 800px) {
 		grid-template-columns: none;
 		grid-auto-rows: auto;
@@ -156,7 +165,7 @@ const DIV_Guest = styled.div`
 `;
 
 const P_Description = styled.p`
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 
 	@media (max-width: 500px) {
 		font-size: 14px;

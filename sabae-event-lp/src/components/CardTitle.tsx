@@ -70,18 +70,20 @@ const H2_Title = styled.h2`
 	font-size: 22px;
 	font-weight: bold;
 
-	@media (max-width: 1150px) {
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 1160px) {
 		font-size: 18px;
 	}
 
-	@media (max-width: 960px) {
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 1040px) {
 		font-size: 16px;
 	}
 
 	@media (max-width: 900px) {
 		margin-top: 10px;
 	}
-
+	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 800px) {
 		margin-top: 0;
 	}
