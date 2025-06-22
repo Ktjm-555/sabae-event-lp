@@ -132,6 +132,16 @@ const DIV_GuestContainer = styled.div`
 
 	@media (max-width: 500px) {
 		display: block;
+
+		/* 子要素の下に余白をつける（最後の要素は除く） */
+		> div {
+			margin-bottom: 20px;
+		}
+
+		/* 最後の要素は余白なしにする場合 */
+		> div:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 `;
 

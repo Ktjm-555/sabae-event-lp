@@ -89,7 +89,10 @@ export const Header = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IMG_Icon src="icons/instagram.svg" alt="instagramのアイコン" />
+							<IMG_Icon
+								src="icons/instagram_gray.svg"
+								alt="instagramのアイコン"
+							/>
 							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>
 						</a>
 					</DIV_HeaderSns>
