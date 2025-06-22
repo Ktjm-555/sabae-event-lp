@@ -19,7 +19,7 @@ const SECTION_HeroContainer = styled.section`
 const IMG_Image = styled.img`
 	width: 100%;
 
-	@media (max-width: 900px) {
+	@media (max-width: 800px) {
 		display: none;
 	}
 `;
@@ -27,7 +27,7 @@ const IMG_Image = styled.img`
 const IMG_Image_SP = styled.img`
 	display: none;
 
-	@media (max-width: 900px) {
+	@media (max-width: 800px) {
 		display: block;
 		width: 100%;
 		height: auto;
@@ -40,7 +40,7 @@ const IMG_Image_SP = styled.img`
 		object-position: center;
 	}
 
-	@media (max-width: 451px) {
+	@media (max-width: 450px) {
 		display: none;
 	}
 `;
