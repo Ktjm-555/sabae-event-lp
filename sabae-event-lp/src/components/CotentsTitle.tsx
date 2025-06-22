@@ -39,8 +39,6 @@ const DIV_TitleContainer = styled.div`
 `;
 
 const H1_Title = styled.h1`
-	font-size: 44px;
-
 	&::before {
 		position: absolute;
 		bottom: -3px;
@@ -50,14 +48,6 @@ const H1_Title = styled.h1`
 		display: block;
 		content: "";
 		background: #e60012;
-	}
-
-	@media (max-width: 900px) {
-		font-size: 35px;
-	}
-
-	@media (max-width: 500px) {
-		font-size: 26px;
 	}
 `;
 

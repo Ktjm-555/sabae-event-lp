@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { COLORS } from "./consts/color";
+import { css } from "@emotion/react";
 
 export const DIV_container = styled.div`
 	max-width: 1400px;
@@ -29,4 +30,22 @@ export const DIV_CardContainer = styled.div`
 	border-radius: 4px;
 	padding: 20px;
 	color: ${COLORS.TEXT};
+`;
+
+export const P_Subtitle = styled.p`
+	font-size: 24px;
+	font-weight: 500;
+
+	@media (max-width: 900px) {
+		font-size: 20px;
+	}
+
+	@media (max-width: 800px) {
+		font-size: 16px;
+	}
+`;
+
+export const Styled_P_LargeBold = css`
+	font-size: 24px;
+	font-weight: bold;
 `;

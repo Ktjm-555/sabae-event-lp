@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { DIV_container } from "../Style.ts";
+import { DIV_container, Styled_P_LargeBold } from "../Style.ts";
 
 export const Footer = () => {
 	return (
@@ -74,12 +74,11 @@ const DIV_DetailContainer = styled.div`
 `;
 
 const P_Organized = styled.p`
-	font-size: 24px;
-	font-weight: bold;
+	${Styled_P_LargeBold};
 	margin-bottom: 20px;
 
 	@media (max-width: 500px) {
-		font-size: 22px;
+		font-size: 20px;
 	}
 `;
 
@@ -117,9 +116,6 @@ const DIV_Contens = styled.div`
 
 const P_Event = styled.p`
 	font-weight: bold;
-	@media (max-width: 500px) {
-		font-size: 16px;
-	}
 `;
 
 const DIV_LinkList = styled.div`

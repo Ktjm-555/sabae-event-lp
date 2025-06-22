@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "./CardTitle";
-import { DIV_CardContainer } from "../Style";
+import { DIV_CardContainer, P_Subtitle } from "../Style";
 import { Button } from "./Button";
 
 type Props = {
@@ -103,11 +103,6 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 		</div>
 	);
 };
-
-const P_Subtitle = styled.p`
-	font-weight: 500;
-	font-size: 24px;
-`;
 
 const SECTION_CardContainer = styled(
 	DIV_CardContainer.withComponent("section")

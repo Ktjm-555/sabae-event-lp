@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { COLORS } from "../consts/color.ts";
-import { DIV_container, DIV_SectionWrapper } from "../Style.ts";
+import { DIV_container, DIV_SectionWrapper, P_Subtitle } from "../Style.ts";
 import { Contents } from "./Contents.tsx";
 import { Contents2 } from "./Contents2.tsx";
 
@@ -61,11 +61,6 @@ const P_DescText = styled.p`
 		font-size: 16px;
 		margin-bottom: 20px;
 	}
-`;
-
-const P_Subtitle = styled.p`
-	font-weight: 500;
-	font-size: 24px;
 `;
 
 const DIV_ContentsContainer = styled.div`

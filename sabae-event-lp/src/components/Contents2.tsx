@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "./CardTitle";
-import { DIV_CardContainer } from "../Style";
+import { DIV_CardContainer, P_Subtitle } from "../Style";
 
 type Props = {
 	title: string;
@@ -123,11 +123,6 @@ const DIV_CardsWrapper = styled.div`
 		grid-template-columns: none;
 		grid-auto-rows: auto;
 	}
-`;
-
-const P_Subtitle = styled.p`
-	font-weight: 500;
-	font-size: 24px;
 `;
 
 const DIV_GuestContainer = styled.div`
