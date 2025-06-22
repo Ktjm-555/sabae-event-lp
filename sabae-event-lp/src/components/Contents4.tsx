@@ -175,7 +175,6 @@ const IMG_Icon = styled.img`
 
 const A_Icon = styled.a`
 	display: inline-block;
-
 	margin-left: 8px;
 `;
 

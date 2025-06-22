@@ -75,28 +75,31 @@ export const Header = () => {
 								<dd>contact@sabae-sdgs.jp</dd>
 							</div>
 						</DL_ContactContainer>
-						<DIV_ButtonContainer2>
-							<Button
-								onClick={goToSabaeInstaPage}
-								isShort={true}
-								isArrow={false}
-							>
-								公式SNS
-								<IMG_Icon src="icons/instagram_white.svg" />
-							</Button>
-						</DIV_ButtonContainer2>
 					</DIV_OrganizedInfo>
 				</NAV_HeaderNavContainer>
 
 				{/* ハンバーガーアイコン */}
-				<DIV_HeaderToggleBtn
-					className={isShowMask ? "open" : ""}
-					onClick={toggleShowMask}
-				>
-					<span></span>
-					<span></span>
-					<span></span>
-				</DIV_HeaderToggleBtn>
+				<DIV_HeaderToggleArea>
+					<DIV_HeaderSns className={isShowMask ? "open" : ""}>
+						<a
+							href="https://www.instagram.com/sabae_sdgsfes/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IMG_Icon src="icons/instagram.svg" alt="instagramのアイコン" />
+							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>
+						</a>
+					</DIV_HeaderSns>
+
+					<DIV_HeaderToggleBtn
+						className={isShowMask ? "open" : ""}
+						onClick={toggleShowMask}
+					>
+						<span></span>
+						<span></span>
+						<span></span>
+					</DIV_HeaderToggleBtn>
+				</DIV_HeaderToggleArea>
 			</DIV_HeaderContainer>
 
 			{/* ナビゲーション下のマスク */}
@@ -107,6 +110,12 @@ export const Header = () => {
 
 const DIV_AAA = styled.div`
 	display: flex;
+
+	@media (max-width: 1030px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+	}
 `;
 
 const DIV_OrganizedInfo = styled.div`
@@ -131,6 +140,11 @@ const IMG_Icon = styled.img`
 	height: 25px;
 `;
 
+const SPAN_UnderIcon = styled.span`
+	font-size: 10px;
+	display: block;
+`;
+
 const DL_ContactContainer = styled.dl`
 	font-size: 14px;
 	margin-bottom: 10px;
@@ -146,7 +160,7 @@ const DL_ContactContainer = styled.dl`
 
 const DIV_ButtonContainer = styled.div`
 	@media (max-width: 1030px) {
-		display: none;
+		/* display: none; */
 	}
 `;
 
@@ -253,18 +267,37 @@ const A_HeaderNavLink = styled.a`
 	}
 `;
 
+const DIV_HeaderToggleArea = styled.div`
+	display: none;
+
+	@media (max-width: 1031px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		z-index: 3;
+	}
+`;
+
+const DIV_HeaderSns = styled.div`
+	&.open {
+		display: none;
+	}
+`;
+
 const DIV_HeaderToggleBtn = styled.div`
 	display: none;
 
 	@media (max-width: 1030px) {
 		display: block;
-		position: absolute;
-		top: 25px;
-		right: 25px; /* コンテナーのpaddingに合わせると良い*/
 		width: 30px;
 		height: 30px;
 		z-index: 3;
 		cursor: pointer;
+		position: relative; /* 子spanのabsolute位置基準用 */
 
 		span {
 			display: block;
