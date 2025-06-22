@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 export const Logo = () => {
 	return (
 		<>
-			<A_Logo href="/">
-				<IMG_LogoImg src="icon/logo.svg" alt="logo" />
+			<A_Logo href="#1">
+				<img src="logo/sabae_logo.svg" alt="logo" />
 			</A_Logo>
 		</>
 	);
@@ -12,8 +12,15 @@ export const Logo = () => {
 
 const A_Logo = styled.a`
 	display: block;
-`;
+	@media (max-width: 410px) {
+		img {
+			width: 190px;
+		}
+	}
 
-const IMG_LogoImg = styled.img`
-	height: 25px;
+	@media (max-width: 360px) {
+		img {
+			width: 170px;
+		}
+	}
 `;

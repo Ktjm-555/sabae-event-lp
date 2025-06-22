@@ -1,6 +1,11 @@
 /* 初期設定 */
+html {
+	/* ページ内遷移のスクロール位置調整 */
+	scroll-padding-top: 130px;
+}
 body {
 	margin: 0;
+	padding: 0;
 }
 
 img {
@@ -23,8 +28,49 @@ a:focus {
 }
 
 ul,
-ol {
+ol,
+dl {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "M PLUS 1", sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	padding: 0;
+}
+p,
+div {
+	font-family: "Noto Sans", sans-serif;
+	line-height: 1.75;
+}
+
+h1 {
+	font-size: 44px;
+}
+
+@media (max-width: 900px) {
+	h1 {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 400px) {
+	h1 {
+		font-size: 26px;
+	}
+	p {
+		font-size: 14px;
+	}
 }

@@ -1,6 +1,7 @@
 export const COLORS = {
-	HEADER: "#FFF",
-	HEADER_TEXT: "#4B5563",
+	HEADER: "rgba(255, 255, 255, 0.15)",
+	TEXT: "#4B5563",
 	PRIMARY: "#0cf",
+	EVENT: "#FFFDE2",
 	MASK: "#000",
 };
