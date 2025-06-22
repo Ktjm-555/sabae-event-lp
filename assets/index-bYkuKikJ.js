@@ -661,7 +661,8 @@ Error generating stack: `+l.message+`
 		height: 30px;
 		z-index: 3;
 		cursor: pointer;
-		position: relative; /* 子spanのabsolute位置基準用 */
+		position: relative;
+		margin-bottom: 2px;
 
 		span {
 			display: block;
