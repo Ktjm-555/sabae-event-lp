@@ -41,7 +41,11 @@ export const EventContents = () => {
 
 const DIV_EventWrapper = styled(DIV_SectionWrapper)`
 	padding-top: 150px;
-	margin-top: -80px;
+	margin-top: -100px;
+
+	@media (max-width: 900px) {
+		margin-top: -130px;
+	}
 `;
 
 const SECTION_EventContainer = styled(DIV_container.withComponent("section"))``;
