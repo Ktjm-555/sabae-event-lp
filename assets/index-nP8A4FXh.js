@@ -181,7 +181,7 @@ Error generating stack: `+l.message+`
 		top: -10px;
 		left: 50%;
 		transform: translateX(-50%);
-		font-size: 16px;
+		font-size: 15px;
 		white-space: nowrap;
 		font-weight: 400;
 
@@ -192,7 +192,7 @@ Error generating stack: `+l.message+`
 
 		@media (max-width: 500px) {
 			font-size: 9px;
-			top: -5px;
+			top: -6px;
 		}
 	}
 
