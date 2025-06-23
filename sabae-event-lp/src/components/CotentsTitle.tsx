@@ -65,7 +65,7 @@ const H1_Title = styled.h1`
 		top: -10px;
 		left: 50%;
 		transform: translateX(-50%);
-		font-size: 16px;
+		font-size: 15px;
 		white-space: nowrap;
 		font-weight: 400;
 
@@ -75,14 +75,14 @@ const H1_Title = styled.h1`
 		}
 
 		@media (max-width: 500px) {
-			font-size: 10px;
-			top: -10px;
+			font-size: 9px;
+			top: -6px;
 		}
 	}
 
 	span > span:nth-child(2) {
 		display: inline-block;
-		vertical-align: -0.1em;
+		vertical-align: -7px;
 		font-size: 85px;
 		font-weight: 400;
 		line-height: 0;
