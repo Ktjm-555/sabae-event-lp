@@ -56,11 +56,11 @@ const H1_Title = styled.h1`
 
 	/* spanタグでルビ振っている */
 	/* TODO(再考する？)：∞が他の文字よりも小さいため、それを大きくするとrubyではうまく実装できず。*/
-	span {
+	/* span {
 		position: relative;
-	}
+	} */
 
-	span > span:nth-child(1) {
+	/* span > span:nth-child(1) {
 		position: absolute;
 		top: -10px;
 		left: 50%;
@@ -96,7 +96,7 @@ const H1_Title = styled.h1`
 			vertical-align: -10px;
 			font-size: 47px;
 		}
-	}
+	} */
 	/* ここまでルビ */
 
 	// TODO:使うかもなので一旦取っておく改行調整
