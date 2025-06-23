@@ -172,11 +172,11 @@ Error generating stack: `+l.message+`
 
 	/* spanタグでルビ振っている */
 	/* TODO(再考する？)：∞が他の文字よりも小さいため、それを大きくするとrubyではうまく実装できず。*/
-	span {
+	/* span {
 		position: relative;
-	}
+	} */
 
-	span > span:nth-child(1) {
+	/* span > span:nth-child(1) {
 		position: absolute;
 		top: -10px;
 		left: 50%;
@@ -204,14 +204,15 @@ Error generating stack: `+l.message+`
 		line-height: 0;
 
 		@media (max-width: 900px) {
-			vertical-align: -13px;
+			vertical-align: -12px;
 			font-size: 60px;
 		}
 
 		@media (max-width: 500px) {
+			vertical-align: -10px;
 			font-size: 47px;
 		}
-	}
+	} */
 	/* ここまでルビ */
 
 	// TODO:使うかもなので一旦取っておく改行調整
@@ -906,7 +907,7 @@ Error generating stack: `+l.message+`
 	@media (max-width: 500px) {
 		width: 325px;
 	}
-`,ES=()=>T.jsx(wS,{id:"3",children:T.jsx(_S,{children:T.jsx(hS,{title:"さばえアクション<span><span>エイト</span><span>∞</span></span>とは",caption:`SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
+`,ES=()=>T.jsx(wS,{id:"3",children:T.jsx(_S,{children:T.jsx(hS,{title:"さばえアクション<span>∞</span>(エイト)とは",caption:`SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
 一人一人の小さな行動で広がり、つながり、まちの未来を大きく変えていく。そんな”∞(無限)”の願いを込めた未来へのアクションです。`,balloonList:[]})})}),wS=X(Mh)`
 	background-color: #fff;
 	/* セクションまたぎのpadding-top */
