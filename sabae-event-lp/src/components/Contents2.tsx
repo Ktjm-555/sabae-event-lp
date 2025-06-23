@@ -40,7 +40,7 @@ export const Contents2 = ({
 									alt="くれいじーまぐねっとの画像"
 								/>
 							</DIV_Image>
-							<p>くれいじーまぐねっと</p>
+							<p>くれいじーまぐねっと[メインMC]</p>
 						</div>
 					</DIV_Guest>
 				</SECTION_CardContainer>
@@ -81,6 +81,10 @@ export const Contents2 = ({
 						鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
 						produced by TGC」でモデルが着用します。
 					</P_Description>
+					<DIV_ImageContainer>
+						<img src="images/senni_hukui.png" />
+						<img src="images/senni_hukui2.png" />
+					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle
@@ -138,7 +142,7 @@ const DIV_GuestContainer = styled.div`
 			margin-bottom: 20px;
 		}
 
-		/* 最後の要素は余白なしにする場合 */
+		/* 最後の要素は余白なしにする */
 		> div:last-of-type {
 			margin-bottom: 0;
 		}
@@ -194,5 +198,30 @@ const SPAN_Notice = styled.span`
 
 	@media (max-width: 500px) {
 		font-size: 10px;
+	}
+`;
+
+const DIV_ImageContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+
+	img {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	@media (max-width: 500px) {
+		display: block;
+
+		/* 縦並び時に余白をつける */
+		img {
+			margin-bottom: 20px;
+		}
+
+		/* 最後の要素は余白なしにする */
+		img:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 `;
