@@ -59,7 +59,7 @@ Error generating stack: `+l.message+`
 	padding: 0 70px;
 	margin: 0 auto;
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1020px) {
 		padding: 0 30px;
 	}
 
@@ -170,7 +170,51 @@ Error generating stack: `+l.message+`
 		background: #e60012;
 	}
 
-	.br-sp {
+	/* spanタグでルビ振っている */
+	/* TODO(再考する？)：∞が他の文字よりも小さいため、それを大きくするとrubyではうまく実装できず。*/
+	span {
+		position: relative;
+	}
+
+	span > span:nth-child(1) {
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 16px;
+		white-space: nowrap;
+		font-weight: 400;
+
+		@media (max-width: 900px) {
+			font-size: 11px;
+			top: -8px;
+		}
+
+		@media (max-width: 500px) {
+			font-size: 10px;
+			top: -10px;
+		}
+	}
+
+	span > span:nth-child(2) {
+		display: inline-block;
+		vertical-align: -0.1em;
+		font-size: 85px;
+		font-weight: 400;
+		line-height: 0;
+
+		@media (max-width: 900px) {
+			font-size: 60px;
+		}
+
+		@media (max-width: 500px) {
+			font-size: 47px;
+		}
+	}
+	/* ここまでルビ */
+
+	// TODO:使うかもなので一旦取っておく改行調整
+	/* .br-sp {
 		display: none;
 	}
 
@@ -178,7 +222,7 @@ Error generating stack: `+l.message+`
 		.br-sp {
 			display: inline;
 		}
-	}
+	} */
 `,R0=X.span`
 	font-size: 12px;
 
@@ -861,7 +905,7 @@ Error generating stack: `+l.message+`
 	@media (max-width: 500px) {
 		width: 325px;
 	}
-`,ES=()=>T.jsx(wS,{id:"3",children:T.jsx(_S,{children:T.jsx(hS,{title:"さばえアクション∞とは",caption:`SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
+`,ES=()=>T.jsx(wS,{id:"3",children:T.jsx(_S,{children:T.jsx(hS,{title:"さばえアクション<span><span>エイト</span><span>∞</span></span>とは",caption:`SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
 一人一人の小さな行動で広がり、つながり、まちの未来を大きく変えていく。そんな”∞(無限)”の願いを込めた未来へのアクションです。`,balloonList:[]})})}),wS=X(Mh)`
 	background-color: #fff;
 	/* セクションまたぎのpadding-top */
