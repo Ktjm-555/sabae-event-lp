@@ -198,7 +198,7 @@ Error generating stack: `+l.message+`
 
 	span > span:nth-child(2) {
 		display: inline-block;
-		vertical-align: -13px;
+		vertical-align: -10px;
 		font-size: 85px;
 		font-weight: 400;
 		line-height: 0;
