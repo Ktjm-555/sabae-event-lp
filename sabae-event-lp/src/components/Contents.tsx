@@ -23,6 +23,4 @@ export const Contents = ({ title, caption, imgSrc, balloonList }: Props) => {
 
 const IMG_Image = styled.img`
 	width: 100%;
-	height: 330px;
-	object-fit: cover;
 `;
