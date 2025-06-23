@@ -93,6 +93,7 @@ const H1_Title = styled.h1`
 		}
 
 		@media (max-width: 500px) {
+			vertical-align: -20px;
 			font-size: 47px;
 		}
 	}
