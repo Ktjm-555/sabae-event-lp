@@ -88,12 +88,12 @@ const H1_Title = styled.h1`
 		line-height: 0;
 
 		@media (max-width: 900px) {
-			vertical-align: -13px;
+			vertical-align: -12px;
 			font-size: 60px;
 		}
 
 		@media (max-width: 500px) {
-			vertical-align: -20px;
+			vertical-align: -10px;
 			font-size: 47px;
 		}
 	}
