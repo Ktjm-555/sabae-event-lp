@@ -174,11 +174,11 @@ Error generating stack: `+l.message+`
 		display: none;
 	}
 
-	@media (max-width: 500px) {
+	/* @media (max-width: 415px) {
 		.br-sp {
 			display: inline;
 		}
-	}
+	} */
 `,j0=Q.span`
 	font-size: 12px;
 
@@ -364,7 +364,7 @@ Error generating stack: `+l.message+`
 			margin-bottom: 0;
 		}
 	}
-`,J0=()=>T.jsx($0,{children:T.jsxs(P0,{children:[T.jsxs(I0,{children:["SDGsの目標達成に向け、市民一人一人が自分ごととして行動するきっかけづくりのためのイベントです。",T.jsx("br",{}),"今回は、若者視点で考案した行動目標「さばえアクション∞(エイト)」をとおし、知って、遊んで、楽しめるフェスを目指します。"]}),T.jsx(jo,{children:"体験&販売"}),T.jsxs(W0,{children:[T.jsx(Wp,{title:"わくわくサステナブース",caption:"SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい！！",imgSrc:"images/contents_image.png",balloonList:["9/20","土","9/21","日"]}),T.jsx(Wp,{title:"パーク探検！クイズラリー",caption:"ブースを巡ってクイズにチャレンジ！スタンプを集めて豪華賞品をゲットしよう！",imgSrc:"images/contents_image2.png",balloonList:[]})]}),T.jsx(q0,{title:"スペシャルステージ",caption:"トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！",annotation:"※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。",balloonList:["9/20","土"]})]})}),$0=Q(Oh)`
+`,J0=()=>T.jsx($0,{children:T.jsxs(P0,{children:[T.jsxs(I0,{children:["SDGsの目標達成に向け、市民一人一人が自分ごととして行動するきっかけづくりのためのイベントです。",T.jsx("br",{}),"今回は、若者視点で考案した行動目標「さばえアクション∞(エイト)」をとおし、知って、遊んで、楽しめるフェスを目指します。"]}),T.jsx(jo,{children:"体験&販売"}),T.jsxs(W0,{children:[T.jsx(Wp,{title:"わくわく<br class='br-sp'>サステナブース",caption:"SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい！！",imgSrc:"images/contents_image.png",balloonList:["9/20","土","9/21","日"]}),T.jsx(Wp,{title:"パーク探検！クイズラリー",caption:"ブースを巡ってクイズにチャレンジ！スタンプを集めて豪華賞品をゲットしよう！",imgSrc:"images/contents_image2.png",balloonList:[]})]}),T.jsx(q0,{title:"スペシャルステージ",caption:"トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！",annotation:"※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。",balloonList:["9/20","土"]})]})}),$0=Q(Oh)`
 	padding-top: 150px;
 	margin-top: -100px;
 
