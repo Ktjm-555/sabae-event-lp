@@ -191,8 +191,8 @@ Error generating stack: `+l.message+`
 		}
 
 		@media (max-width: 500px) {
-			font-size: 10px;
-			top: -10px;
+			font-size: 9px;
+			top: -5px;
 		}
 	}
 
