@@ -85,7 +85,7 @@ export const Contents3 = ({
 					modules={[Navigation, Autoplay]}
 					navigation={true}
 					autoplay={{
-						delay: 2500,
+						delay: 2000,
 						disableOnInteraction: false,
 					}}
 					slidesPerView="auto"
@@ -200,7 +200,10 @@ const DIV_SwipeImage = styled.div`
 `;
 
 const IMG_Logo = styled.img`
-	@media (max-width: 385px) {
-		width: 340px;
+	@media (max-width: 900px) {
+		width: 360px;
+	}
+	@media (max-width: 500px) {
+		width: 325px;
 	}
 `;
