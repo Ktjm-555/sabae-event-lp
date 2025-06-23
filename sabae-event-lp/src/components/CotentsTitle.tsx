@@ -57,7 +57,7 @@ const H1_Title = styled.h1`
 		display: none;
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 415px) {
 		.br-sp {
 			display: inline;
 		}
