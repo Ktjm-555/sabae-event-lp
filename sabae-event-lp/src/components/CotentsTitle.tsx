@@ -82,12 +82,13 @@ const H1_Title = styled.h1`
 
 	span > span:nth-child(2) {
 		display: inline-block;
-		vertical-align: -7px;
+		vertical-align: -13px;
 		font-size: 85px;
 		font-weight: 400;
 		line-height: 0;
 
 		@media (max-width: 900px) {
+			vertical-align: -15px;
 			font-size: 60px;
 		}
 
