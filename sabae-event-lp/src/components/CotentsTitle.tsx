@@ -18,7 +18,7 @@ export const ContentsTitle = ({
 	return (
 		<div>
 			<DIV_TitleContainer>
-				{/* 静的なテキストなため問題なし brを入れたいため、下記をdanger...を使用 */}
+				{/* 静的なテキストなため問題なし brを考慮し、下記をdanger...を使用 */}
 				<H1_Title dangerouslySetInnerHTML={{ __html: title }} />
 				{balloonList.length > 0 && <Balloon balloonList={balloonList} />}
 			</DIV_TitleContainer>
