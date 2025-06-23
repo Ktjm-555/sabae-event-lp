@@ -332,13 +332,13 @@ const DIV_HeaderToggleBtn = styled.div`
 		}
 
 		&.open span:nth-of-type(1) {
-			transform: translateY(10px) rotate(-315deg);
+			transform: translateY(6px) rotate(-315deg);
 		}
 		&.open span:nth-of-type(2) {
 			opacity: 0;
 		}
 		&.open span:nth-of-type(3) {
-			transform: translateY(-10px) rotate(315deg);
+			transform: translateY(-6px) rotate(315deg);
 		}
 
 		&.open {
