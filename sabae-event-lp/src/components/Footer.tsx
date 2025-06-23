@@ -100,11 +100,8 @@ const DL_ContactContainer = styled.dl`
 		display: flex;
 	}
 
-	dd {
-		margin: 0;
-	}
-
 	/* 450px以下のとき、最初のdivだけ縦並び */
+	/* さばえSDGs推進センター だけ */
 	@media (max-width: 450px) {
 		div:first-of-type {
 			flex-direction: column;

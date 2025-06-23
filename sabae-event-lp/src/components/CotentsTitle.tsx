@@ -18,7 +18,8 @@ export const ContentsTitle = ({
 	return (
 		<div>
 			<DIV_TitleContainer>
-				<H1_Title>{title}</H1_Title>
+				{/* 静的なテキストなため問題なし brを入れたいため、下記をdanger...を使用 */}
+				<H1_Title dangerouslySetInnerHTML={{ __html: title }} />
 				{balloonList.length > 0 && <Balloon balloonList={balloonList} />}
 			</DIV_TitleContainer>
 			{caption && (
@@ -40,6 +41,7 @@ const DIV_TitleContainer = styled.div`
 `;
 
 const H1_Title = styled.h1`
+	/* 見出ししたのボーダのマーク */
 	&::before {
 		position: absolute;
 		bottom: -3px;
@@ -49,6 +51,16 @@ const H1_Title = styled.h1`
 		display: block;
 		content: "";
 		background: #e60012;
+	}
+
+	.br-sp {
+		display: none;
+	}
+
+	@media (max-width: 500px) {
+		.br-sp {
+			display: inline;
+		}
 	}
 `;
 

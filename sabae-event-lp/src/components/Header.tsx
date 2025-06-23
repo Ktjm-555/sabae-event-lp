@@ -148,6 +148,7 @@ const IMG_Icon = styled.img`
 
 const SPAN_UnderIcon = styled.span`
 	font-size: 10px;
+	font-weight: bold;
 	display: block;
 `;
 
@@ -159,8 +160,14 @@ const DL_ContactContainer = styled.dl`
 		display: flex;
 	}
 
-	dd {
-		margin: 0;
+	/* さばえSDGs推進センター だけ */
+	div:first-of-type {
+		flex-direction: column;
+		align-items: flex-start;
+
+		dd {
+			font-size: 13px;
+		}
 	}
 `;
 
@@ -313,7 +320,7 @@ const DIV_HeaderToggleBtn = styled.div`
 		}
 
 		span:nth-child(1) {
-			top: 4px;
+			top: 8px;
 		}
 
 		span:nth-child(2) {
@@ -321,7 +328,7 @@ const DIV_HeaderToggleBtn = styled.div`
 		}
 
 		span:nth-child(3) {
-			bottom: 4px;
+			top: 20px;
 		}
 
 		&.open span:nth-of-type(1) {

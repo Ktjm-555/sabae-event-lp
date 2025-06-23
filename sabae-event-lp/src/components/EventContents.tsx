@@ -16,7 +16,7 @@ export const EventContents = () => {
 				<P_Subtitle>体験&販売</P_Subtitle>
 				<DIV_ContentsContainer>
 					<Contents
-						title="パーク探検！クイズラリー"
+						title="パーク探検！<br class='br-sp'>クイズラリー"
 						caption="SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい！！"
 						imgSrc="images/contents_image.png"
 						balloonList={["9/20", "土", "9/21", "日"]}
