@@ -6,7 +6,7 @@ export const Hero = () => {
 			<SECTION_HeroContainer id="1">
 				<IMG_Image src="images/MV.png" alt="フェスのメイン画像" />
 				<IMG_Image_SP src="images/MV_SP.png" alt="フェスのメイン画像" />
-				<IMG_Image_SP2 src="images/MV_SP2.png" alt="フェスのメイン画像" />
+				<IMG_Image_SP2 src="images/MV_SP2.png.png" alt="フェスのメイン画像" />
 			</SECTION_HeroContainer>
 		</>
 	);

@@ -5,7 +5,7 @@ import { Button } from "./Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 type Props = {
 	title: string;
@@ -82,8 +82,12 @@ export const Contents3 = ({
 			<DIV_SwiperContainer>
 				<Swiper
 					spaceBetween={25}
-					modules={[Navigation]}
+					modules={[Navigation, Autoplay]}
 					navigation={true}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false,
+					}}
 					slidesPerView="auto"
 					loop={true}
 					breakpoints={{
