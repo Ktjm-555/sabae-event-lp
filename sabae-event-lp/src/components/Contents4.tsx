@@ -157,6 +157,16 @@ const P_SubTitle = styled.div`
 	font-weight: bold;
 	margin-bottom: 5px;
 	font-family: "M PLUS 1", sans-serif;
+
+	/* 下のカードコンポのH2_Titleに大きさと連動して変更する */
+	@media (max-width: 1160px) {
+		font-size: 14px;
+	}
+
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 1040px) {
+		font-size: 12px;
+	}
 `;
 
 const DIV_Image = styled.div`
