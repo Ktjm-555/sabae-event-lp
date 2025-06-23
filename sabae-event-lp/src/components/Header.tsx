@@ -53,9 +53,9 @@ export const Header = () => {
 								onClick={goToSabaeInstaPage}
 								isShort={true}
 								isArrow={false}
+								icon="icons/instagram_white.svg"
 							>
 								公式SNS
-								<IMG_Icon src="icons/instagram_white.svg" />
 							</Button>
 						</div>
 					</DIV_AAA>
@@ -140,6 +140,7 @@ const P_ContactTitle = styled.p`
 	font-size: 14px;
 `;
 
+// TODO：汎用化する？
 const IMG_Icon = styled.img`
 	margin-left: 8px;
 	width: 25px;
