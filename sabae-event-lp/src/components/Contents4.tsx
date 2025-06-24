@@ -48,7 +48,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					</DIV_IconContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
-					<CardTitle title="メガネフェス" />
+					<CardTitle title="めがねフェス" />
 					<P_Description>
 						「めがねよ、ありがとう」を合言葉に、全国からめがね好きが集まるめがねの感謝祭。めがね供養をはじめ、めがねの製造工程をユニークに展示・体験する「メガ展」、産地の最新めがねなどの販売、ステージ、グルメまで、めがねづくしのイベントです。
 					</P_Description>
