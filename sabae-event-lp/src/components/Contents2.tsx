@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "./CardTitle";
 import { DIV_CardContainer, P_Subtitle } from "../Style";
+import { Button } from "./Button";
 
 type Props = {
 	title: string;
@@ -16,6 +17,10 @@ export const Contents2 = ({
 	balloonList,
 	annotation,
 }: Props) => {
+	const goToSabaeEightPage = () => {
+		window.open("https://www.sabae-sdgs.jp/", "_blank");
+	};
+
 	return (
 		<div>
 			<P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</P_Subtitle>
@@ -105,6 +110,7 @@ export const Contents2 = ({
 						<SPAN_Notice>
 							※詳細・ご応募は、さばえSDGs推進センターHPまで
 						</SPAN_Notice>
+						<Button onClick={goToSabaeEightPage}>ご応募はこちら</Button>
 					</DIV_NoticeSection>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
@@ -193,7 +199,10 @@ const UL_Notice = styled.ul`
 `;
 
 const SPAN_Notice = styled.span`
+	display: block;
 	font-size: 14px;
+	/* 要素外側のpaddingに合わせている */
+	margin-bottom: 15px;
 
 	@media (max-width: 500px) {
 		font-size: 10px;

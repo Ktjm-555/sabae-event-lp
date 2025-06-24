@@ -33,16 +33,16 @@ const swiperItems = [
 	},
 ];
 
-const goToSabaeEightPage = () => {
-	window.open("https://www.sabae-sdgs.jp/news/2080/", "_blank");
-};
-
 export const Contents3 = ({
 	title,
 	caption,
 	balloonList,
 	annotation,
 }: Props) => {
+	const goToSabaeEightPage = () => {
+		window.open("https://www.sabae-sdgs.jp/news/2080/", "_blank");
+	};
+
 	return (
 		<div>
 			<DIV_OverviewContainer>
