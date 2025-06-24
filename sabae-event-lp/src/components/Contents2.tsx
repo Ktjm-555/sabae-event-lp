@@ -46,7 +46,7 @@ export const Contents2 = ({
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle
-						title="LDHダンスワークショップショー"
+						title="LDH ダンスワークショップショー"
 						label="出演ゲスト"
 						labelNum={2}
 					/>
