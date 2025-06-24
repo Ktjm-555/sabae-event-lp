@@ -54,7 +54,7 @@ export const Contents2 = ({
 						<div>
 							<DIV_Image>
 								<IMG_Image
-									src="images/contents2_image.png"
+									src="images/tetsuyasan.png"
 									alt="EXILE TETSUYAの画像"
 								/>
 							</DIV_Image>
@@ -63,7 +63,7 @@ export const Contents2 = ({
 						<div>
 							<DIV_Image>
 								<IMG_Image
-									src="images/contents2_image2.png"
+									src="images/iwatanisan.png"
 									alt="岩谷翔吾（THE RAMPAGE）の画像"
 								/>
 							</DIV_Image>
