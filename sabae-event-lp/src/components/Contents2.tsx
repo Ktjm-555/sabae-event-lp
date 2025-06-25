@@ -17,8 +17,8 @@ export const Contents2 = ({
 	balloonList,
 	annotation,
 }: Props) => {
-	const goToSabaeEightPage = () => {
-		window.open("https://www.sabae-sdgs.jp/", "_blank");
+	const goToSabaeModelPage = () => {
+		window.open("https://www.sabae-sdgs.jp/news/2120/", "_blank");
 	};
 
 	return (
@@ -110,7 +110,7 @@ export const Contents2 = ({
 						<SPAN_Notice>
 							※詳細・ご応募は、さばえSDGs推進センターHPまで
 						</SPAN_Notice>
-						<Button onClick={goToSabaeEightPage}>ご応募はこちら</Button>
+						<Button onClick={goToSabaeModelPage}>ご応募はこちら</Button>
 					</DIV_NoticeSection>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
