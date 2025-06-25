@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "./CardTitle";
 import { DIV_CardContainer, P_Subtitle } from "../Style";
+import { Button } from "./Button";
 
 type Props = {
 	title: string;
@@ -16,6 +17,10 @@ export const Contents2 = ({
 	balloonList,
 	annotation,
 }: Props) => {
+	const goToSabaeEightPage = () => {
+		window.open("https://www.sabae-sdgs.jp/", "_blank");
+	};
+
 	return (
 		<div>
 			<P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</P_Subtitle>
@@ -40,13 +45,13 @@ export const Contents2 = ({
 									alt="くれいじーまぐねっとの画像"
 								/>
 							</DIV_Image>
-							<p>くれいじーまぐねっと</p>
+							<p>くれいじーまぐねっと[メインMC]</p>
 						</div>
 					</DIV_Guest>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle
-						title="LDHダンスワークショップショー"
+						title="LDH ダンスワークショップショー"
 						label="出演ゲスト"
 						labelNum={2}
 					/>
@@ -54,7 +59,7 @@ export const Contents2 = ({
 						<div>
 							<DIV_Image>
 								<IMG_Image
-									src="images/contents2_image.png"
+									src="images/tetsuyasan.png"
 									alt="EXILE TETSUYAの画像"
 								/>
 							</DIV_Image>
@@ -63,7 +68,7 @@ export const Contents2 = ({
 						<div>
 							<DIV_Image>
 								<IMG_Image
-									src="images/contents2_image2.png"
+									src="images/iwatanisan.png"
 									alt="岩谷翔吾（THE RAMPAGE）の画像"
 								/>
 							</DIV_Image>
@@ -81,6 +86,10 @@ export const Contents2 = ({
 						鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
 						produced by TGC」でモデルが着用します。
 					</P_Description>
+					<DIV_ImageContainer>
+						<img src="images/senni_hukui.png" />
+						<img src="images/senni_hukui2.png" />
+					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle
@@ -101,6 +110,7 @@ export const Contents2 = ({
 						<SPAN_Notice>
 							※詳細・ご応募は、さばえSDGs推進センターHPまで
 						</SPAN_Notice>
+						<Button onClick={goToSabaeEightPage}>ご応募はこちら</Button>
 					</DIV_NoticeSection>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
@@ -138,7 +148,7 @@ const DIV_GuestContainer = styled.div`
 			margin-bottom: 20px;
 		}
 
-		/* 最後の要素は余白なしにする場合 */
+		/* 最後の要素は余白なしにする */
 		> div:last-of-type {
 			margin-bottom: 0;
 		}
@@ -147,7 +157,6 @@ const DIV_GuestContainer = styled.div`
 
 const DIV_Image = styled.div`
 	width: 100%;
-	aspect-ratio: 1 / 1;
 	overflow: hidden;
 `;
 
@@ -190,9 +199,37 @@ const UL_Notice = styled.ul`
 `;
 
 const SPAN_Notice = styled.span`
+	display: block;
 	font-size: 14px;
+	/* 要素外側のpaddingに合わせている */
+	margin-bottom: 15px;
 
 	@media (max-width: 500px) {
 		font-size: 10px;
+	}
+`;
+
+const DIV_ImageContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+
+	img {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	@media (max-width: 500px) {
+		display: block;
+
+		/* 縦並び時に余白をつける */
+		img {
+			margin-bottom: 20px;
+		}
+
+		/* 最後の要素は余白なしにする */
+		img:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 `;

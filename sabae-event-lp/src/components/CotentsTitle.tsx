@@ -18,7 +18,9 @@ export const ContentsTitle = ({
 	return (
 		<div>
 			<DIV_TitleContainer>
-				<H1_Title>{title}</H1_Title>
+				{/* 静的なテキストなため問題なし brを考慮し、下記をdanger...を使用 */}
+				{/* ルビ使用のためspanタグを使用する際は、下のCSS確認 */}
+				<H1_Title dangerouslySetInnerHTML={{ __html: title }} />
 				{balloonList.length > 0 && <Balloon balloonList={balloonList} />}
 			</DIV_TitleContainer>
 			{caption && (
@@ -40,6 +42,7 @@ const DIV_TitleContainer = styled.div`
 `;
 
 const H1_Title = styled.h1`
+	/* 見出ししたのボーダのマーク */
 	&::before {
 		position: absolute;
 		bottom: -3px;
@@ -50,6 +53,62 @@ const H1_Title = styled.h1`
 		content: "";
 		background: #e60012;
 	}
+
+	/* spanタグでルビ振っている */
+	/* TODO(再考する？)：∞が他の文字よりも小さいため、それを大きくするとrubyではうまく実装できず。*/
+	/* span {
+		position: relative;
+	} */
+
+	/* span > span:nth-child(1) {
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 15px;
+		white-space: nowrap;
+		font-weight: 400;
+
+		@media (max-width: 900px) {
+			font-size: 11px;
+			top: -8px;
+		}
+
+		@media (max-width: 500px) {
+			font-size: 9px;
+			top: -6px;
+		}
+	}
+
+	span > span:nth-child(2) {
+		display: inline-block;
+		vertical-align: -7px;
+		font-size: 85px;
+		font-weight: 400;
+		line-height: 0;
+
+		@media (max-width: 900px) {
+			vertical-align: -12px;
+			font-size: 60px;
+		}
+
+		@media (max-width: 500px) {
+			vertical-align: -10px;
+			font-size: 47px;
+		}
+	} */
+	/* ここまでルビ */
+
+	// TODO:使うかもなので一旦取っておく改行調整
+	/* .br-sp {
+		display: none;
+	}
+
+	@media (max-width: 415px) {
+		.br-sp {
+			display: inline;
+		}
+	} */
 `;
 
 const SPAN_Annotation = styled.span`

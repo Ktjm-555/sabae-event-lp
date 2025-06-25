@@ -48,7 +48,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					</DIV_IconContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
-					<CardTitle title="メガネフェス" />
+					<CardTitle title="めがねフェス" />
 					<P_Description>
 						「めがねよ、ありがとう」を合言葉に、全国からめがね好きが集まるめがねの感謝祭。めがね供養をはじめ、めがねの製造工程をユニークに展示・体験する「メガ展」、産地の最新めがねなどの販売、ステージ、グルメまで、めがねづくしのイベントです。
 					</P_Description>
@@ -157,6 +157,16 @@ const P_SubTitle = styled.div`
 	font-weight: bold;
 	margin-bottom: 5px;
 	font-family: "M PLUS 1", sans-serif;
+
+	/* 下のカードコンポのH2_Titleに大きさと連動して変更する */
+	@media (max-width: 1160px) {
+		font-size: 14px;
+	}
+
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 1040px) {
+		font-size: 12px;
+	}
 `;
 
 const DIV_Image = styled.div`

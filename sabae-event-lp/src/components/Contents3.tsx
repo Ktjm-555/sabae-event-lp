@@ -5,7 +5,7 @@ import { Button } from "./Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 type Props = {
 	title: string;
@@ -33,16 +33,16 @@ const swiperItems = [
 	},
 ];
 
-const goToSabaeEightPage = () => {
-	window.open("https://www.sabae-sdgs.jp/news/2080/", "_blank");
-};
-
 export const Contents3 = ({
 	title,
 	caption,
 	balloonList,
 	annotation,
 }: Props) => {
+	const goToSabaeEightPage = () => {
+		window.open("https://www.sabae-sdgs.jp/news/2080/", "_blank");
+	};
+
 	return (
 		<div>
 			<DIV_OverviewContainer>
@@ -82,8 +82,12 @@ export const Contents3 = ({
 			<DIV_SwiperContainer>
 				<Swiper
 					spaceBetween={25}
-					modules={[Navigation]}
+					modules={[Navigation, Autoplay]}
 					navigation={true}
+					autoplay={{
+						delay: 2000,
+						disableOnInteraction: false,
+					}}
 					slidesPerView="auto"
 					loop={true}
 					breakpoints={{
@@ -196,7 +200,10 @@ const DIV_SwipeImage = styled.div`
 `;
 
 const IMG_Logo = styled.img`
-	@media (max-width: 385px) {
-		width: 340px;
+	@media (max-width: 900px) {
+		width: 360px;
+	}
+	@media (max-width: 500px) {
+		width: 325px;
 	}
 `;

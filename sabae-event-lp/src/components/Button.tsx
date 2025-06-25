@@ -7,6 +7,7 @@ type Props = {
 	disabled?: boolean;
 	isShort?: boolean;
 	isArrow?: boolean;
+	icon?: string;
 };
 
 export const Button = ({
@@ -15,6 +16,7 @@ export const Button = ({
 	disabled = false,
 	isShort,
 	isArrow = true,
+	icon = "",
 }: Props) => {
 	return (
 		<BUTTON_Button
@@ -24,6 +26,7 @@ export const Button = ({
 		>
 			<span>{children}</span>
 			{isArrow && <SPAN_Arrow />}
+			{icon && <IMG_Icon src={icon} />}
 		</BUTTON_Button>
 	);
 };
@@ -67,4 +70,10 @@ const SPAN_Arrow = styled.span`
 	border-right: 2px solid white;
 	transform: rotate(45deg);
 	vertical-align: middle;
+`;
+
+const IMG_Icon = styled.img`
+	margin-left: 6px;
+	width: 25px;
+	height: 25px;
 `;

@@ -53,9 +53,9 @@ export const Header = () => {
 								onClick={goToSabaeInstaPage}
 								isShort={true}
 								isArrow={false}
+								icon="icons/instagram_white.svg"
 							>
 								公式SNS
-								<IMG_Icon src="icons/instagram_white.svg" />
 							</Button>
 						</div>
 					</DIV_AAA>
@@ -140,6 +140,7 @@ const P_ContactTitle = styled.p`
 	font-size: 14px;
 `;
 
+// TODO：汎用化する？
 const IMG_Icon = styled.img`
 	margin-left: 8px;
 	width: 25px;
@@ -148,6 +149,7 @@ const IMG_Icon = styled.img`
 
 const SPAN_UnderIcon = styled.span`
 	font-size: 10px;
+	font-weight: bold;
 	display: block;
 `;
 
@@ -159,8 +161,14 @@ const DL_ContactContainer = styled.dl`
 		display: flex;
 	}
 
-	dd {
-		margin: 0;
+	/* さばえSDGs推進センター だけ */
+	div:first-of-type {
+		flex-direction: column;
+		align-items: flex-start;
+
+		dd {
+			font-size: 13px;
+		}
 	}
 `;
 
@@ -313,7 +321,7 @@ const DIV_HeaderToggleBtn = styled.div`
 		}
 
 		span:nth-child(1) {
-			top: 4px;
+			top: 8px;
 		}
 
 		span:nth-child(2) {
@@ -321,17 +329,17 @@ const DIV_HeaderToggleBtn = styled.div`
 		}
 
 		span:nth-child(3) {
-			bottom: 4px;
+			top: 20px;
 		}
 
 		&.open span:nth-of-type(1) {
-			transform: translateY(10px) rotate(-315deg);
+			transform: translateY(6px) rotate(-315deg);
 		}
 		&.open span:nth-of-type(2) {
 			opacity: 0;
 		}
 		&.open span:nth-of-type(3) {
-			transform: translateY(-10px) rotate(315deg);
+			transform: translateY(-6px) rotate(315deg);
 		}
 
 		&.open {

@@ -16,13 +16,13 @@ export const EventContents = () => {
 				<P_Subtitle>体験&販売</P_Subtitle>
 				<DIV_ContentsContainer>
 					<Contents
-						title="パーク探検！クイズラリー"
+						title="わくわくサステナブース"
 						caption="SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい！！"
 						imgSrc="images/contents_image.png"
 						balloonList={["9/20", "土", "9/21", "日"]}
 					/>
 					<Contents
-						title="わくわくサステナブース"
+						title="パーク探検！クイズラリー"
 						caption="ブースを巡ってクイズにチャレンジ！スタンプを集めて豪華賞品をゲットしよう！"
 						imgSrc="images/contents_image2.png"
 						balloonList={[]}
