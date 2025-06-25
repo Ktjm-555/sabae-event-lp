@@ -41,7 +41,7 @@ export const Contents2 = ({
 						<div>
 							<DIV_Image>
 								<IMG_Image
-									src="images/contents2_image3.png"
+									src="images/photo_spstage_guest_01.png"
 									alt="くれいじーまぐねっとの画像"
 								/>
 							</DIV_Image>
@@ -59,7 +59,7 @@ export const Contents2 = ({
 						<div>
 							<DIV_Image>
 								<IMG_Image
-									src="images/tetsuyasan.png"
+									src="images/photo_spstage_guest_02.png"
 									alt="EXILE TETSUYAの画像"
 								/>
 							</DIV_Image>
@@ -68,7 +68,7 @@ export const Contents2 = ({
 						<div>
 							<DIV_Image>
 								<IMG_Image
-									src="images/iwatanisan.png"
+									src="images/photo_spstage_guest_03.png"
 									alt="岩谷翔吾（THE RAMPAGE）の画像"
 								/>
 							</DIV_Image>
@@ -87,8 +87,11 @@ export const Contents2 = ({
 						produced by TGC」でモデルが着用します。
 					</P_Description>
 					<DIV_ImageContainer>
-						<img src="images/senni_hukui.png" />
-						<img src="images/senni_hukui2.png" />
+						<img
+							src="images/photo_spstage_collab_01.png"
+							alt="福井文化服装学院の画像"
+						/>
+						<img src="images/photo_spstage_collab_02.png" alt="学生の画像" />
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>

@@ -53,7 +53,7 @@ export const Header = () => {
 								onClick={goToSabaeInstaPage}
 								isShort={true}
 								isArrow={false}
-								icon="icons/instagram_white.svg"
+								icon="icon/instagram_white.svg"
 							>
 								公式SNS
 							</Button>
@@ -90,7 +90,7 @@ export const Header = () => {
 							rel="noopener noreferrer"
 						>
 							<IMG_Icon
-								src="icons/instagram_gray.svg"
+								src="icon/instagram_gray.svg"
 								alt="instagramのアイコン"
 							/>
 							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>

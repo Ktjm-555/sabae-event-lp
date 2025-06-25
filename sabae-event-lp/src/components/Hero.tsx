@@ -4,9 +4,18 @@ export const Hero = () => {
 	return (
 		<>
 			<SECTION_HeroContainer id="1">
-				<IMG_Image src="images/MV.png" alt="フェスのメイン画像" />
-				<IMG_Image_SP src="images/MV_SP.png" alt="フェスのメイン画像" />
-				<IMG_Image_SP2 src="images/MV_SP2.png" alt="フェスのメイン画像" />
+				<IMG_Image
+					src="images/image_mainvisual_01.png"
+					alt="フェスのメイン画像"
+				/>
+				<IMG_Image_SP
+					src="images/image_mainvisual_01_tablet.png"
+					alt="フェスのメイン画像"
+				/>
+				<IMG_Image_SP2
+					src="images/image_mainvisual_01_sp.png"
+					alt="フェスのメイン画像"
+				/>
 			</SECTION_HeroContainer>
 		</>
 	);
