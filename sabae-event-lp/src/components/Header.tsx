@@ -191,6 +191,10 @@ const DIV_HeaderContainer = styled.div`
 	@media (max-width: 1030px) {
 		position: relative;
 	}
+
+	@media (max-width: 450px) {
+		padding: 20px;
+	}
 `;
 
 const NAV_HeaderNavContainer = styled.nav`
@@ -272,6 +276,7 @@ const A_HeaderNavLink = styled.a`
 	}
 `;
 
+/* TODO: とぐるだけではないので変数名変更 */
 const DIV_HeaderToggleArea = styled.div`
 	display: none;
 
@@ -284,6 +289,10 @@ const DIV_HeaderToggleArea = styled.div`
 		top: 18px;
 		right: 25px;
 		z-index: 3;
+	}
+
+	@media (max-width: 450px) {
+		top: 13px;
 	}
 `;
 
