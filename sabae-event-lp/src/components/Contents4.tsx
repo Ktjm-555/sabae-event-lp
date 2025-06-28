@@ -36,14 +36,14 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IMG_Icon src="icons/instagram.svg" alt="instagramのアイコン" />
+							<IMG_Icon src="icon/instagram.svg" alt="instagramのアイコン" />
 						</A_Icon>
 						<A_Icon
 							href="https://www.facebook.com/profile.php?id=61560310619817"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IMG_Icon src="icons/facebook.svg" alt="facebookのアイコン" />
+							<IMG_Icon src="icon/facebook.svg" alt="facebookのアイコン" />
 						</A_Icon>
 					</DIV_IconContainer>
 				</SECTION_CardContainer>
@@ -60,28 +60,28 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icons/twitter-x.svg" alt="twitter-xのアイコン" />
+								<IMG_Icon src="icon/twitter-x.svg" alt="twitter-xのアイコン" />
 							</A_Icon>
 							<A_Icon
 								href="https://www.instagram.com/meganefes/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icons/instagram.svg" alt="instagramのアイコン" />
+								<IMG_Icon src="icon/instagram.svg" alt="instagramのアイコン" />
 							</A_Icon>
 							<A_Icon
 								href="https://www.facebook.com/meganefes"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icons/facebook.svg" alt="facebookのアイコン" />
+								<IMG_Icon src="icon/facebook.svg" alt="facebookのアイコン" />
 							</A_Icon>
 							<A_Icon
 								href="https://m.youtube.com/channel/UCDwHawMHi7yeLzSSof8bvDQ"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icons/youtube.svg" />
+								<IMG_Icon src="icon/youtube.svg" />
 							</A_Icon>
 						</DIV_IconContainer_underButton>
 					</DIV_CardFooter>

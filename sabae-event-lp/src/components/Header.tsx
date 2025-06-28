@@ -53,7 +53,7 @@ export const Header = () => {
 								onClick={goToSabaeInstaPage}
 								isShort={true}
 								isArrow={false}
-								icon="icons/instagram_white.svg"
+								icon="icon/instagram_white.svg"
 							>
 								公式SNS
 							</Button>
@@ -90,7 +90,7 @@ export const Header = () => {
 							rel="noopener noreferrer"
 						>
 							<IMG_Icon
-								src="icons/instagram_gray.svg"
+								src="icon/instagram_gray.svg"
 								alt="instagramのアイコン"
 							/>
 							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>
@@ -191,6 +191,10 @@ const DIV_HeaderContainer = styled.div`
 	@media (max-width: 1030px) {
 		position: relative;
 	}
+
+	@media (max-width: 450px) {
+		padding: 20px;
+	}
 `;
 
 const NAV_HeaderNavContainer = styled.nav`
@@ -272,6 +276,7 @@ const A_HeaderNavLink = styled.a`
 	}
 `;
 
+/* TODO: とぐるだけではないので変数名変更 */
 const DIV_HeaderToggleArea = styled.div`
 	display: none;
 
@@ -284,6 +289,10 @@ const DIV_HeaderToggleArea = styled.div`
 		top: 18px;
 		right: 25px;
 		z-index: 3;
+	}
+
+	@media (max-width: 450px) {
+		top: 13px;
 	}
 `;
 

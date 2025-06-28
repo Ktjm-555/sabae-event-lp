@@ -17,18 +17,42 @@ type Props = {
 const swiperItems = [
 	{
 		num: "01",
-		src: "images/sabae_action1.png",
+		src: "images/figure_sabae_action_01.png",
 		text: "いいと思ったらほめよう",
 	},
-	{ num: "02", src: "images/sabae_action2.png", text: "自分を大切にしよう" },
-	{ num: "03", src: "images/sabae_action3.png", text: "視野を広げよう" },
-	{ num: "04", src: "images/sabae_action4.png", text: "フードロスを減らそう" },
-	{ num: "05", src: "images/sabae_action5.png", text: "地産地消しよう" },
-	{ num: "06", src: "images/sabae_action6.png", text: "イベントに参加しよう" },
-	{ num: "07", src: "images/sabae_action7.png", text: "リサイクルしよう" },
+	{
+		num: "02",
+		src: "images/figure_sabae_action_02.png",
+		text: "自分を大切にしよう",
+	},
+	{
+		num: "03",
+		src: "images/figure_sabae_action_03.png",
+		text: "視野を広げよう",
+	},
+	{
+		num: "04",
+		src: "images/figure_sabae_action_04.png",
+		text: "フードロスを減らそう",
+	},
+	{
+		num: "05",
+		src: "images/figure_sabae_action_05.png",
+		text: "地産地消しよう",
+	},
+	{
+		num: "06",
+		src: "images/figure_sabae_action_06.png",
+		text: "イベントに参加しよう",
+	},
+	{
+		num: "07",
+		src: "images/figure_sabae_action_07.png",
+		text: "リサイクルしよう",
+	},
 	{
 		num: "08",
-		src: "images/sabae_action8.png",
+		src: "images/figure_sabae_action_08.png",
 		text: "さばえらしさを伝えよう",
 	},
 ];
