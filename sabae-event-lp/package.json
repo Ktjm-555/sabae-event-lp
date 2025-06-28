@@ -1,7 +1,7 @@
 {
 	"name": "sabae-event-lp",
 	"private": true,
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -15,6 +15,7 @@
 		"@emotion/styled": "^11.14.0",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
+		"react-ga4": "^2.1.0",
 		"swiper": "^11.2.8"
 	},
 	"devDependencies": {
