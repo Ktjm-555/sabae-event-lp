@@ -57,7 +57,7 @@ export const Footer = () => {
 /* TODO:Wrapperじゃない？ */
 const SECTION_FooterContainer = styled.div`
 	background-color: ${COLORS.PRIMARY};
-	color: #fff;
+	color: ${COLORS.TEXT_ON_ACCENT};
 	/* TODO：コンテナの上下のpadding合わせる */
 	padding-top: 35px;
 	padding-bottom: 35px;
@@ -144,7 +144,7 @@ const A_EventUrl = styled.a`
 
 const DIV_Copyright = styled.div`
 	text-align: right;
-	border-top: 1px solid #fff;
+	border-top: 1px solid ${COLORS.TEXT_ON_ACCENT};
 	margin-top: 20px;
 	padding-top: 10px;
 

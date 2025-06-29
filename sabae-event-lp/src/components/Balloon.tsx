@@ -28,10 +28,9 @@ const DIV_Balloon = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 10px 5px;
-	color: #ccc;
 	font-size: 16px;
-	background: #fff;
-	border: 1px solid #ccc;
+	background: ${COLORS.CARD_BG};
+	border: 1px solid ${COLORS.BORDER};
 	border-radius: 10px;
 	margin-left: 15px;
 	height: 40px;
@@ -44,8 +43,8 @@ const DIV_Balloon = styled.div`
 		transform: translateY(-50%);
 		border-top: 5px solid transparent;
 		border-bottom: 5px solid transparent;
-		border-right: 8px solid #fff; /* 吹き出しのしっぽを白に */
-		filter: drop-shadow(-1px 0 0 #ccc); /* 擬似的な枠線をしっぽに */
+		border-right: 8px solid ${COLORS.CARD_BG}; /* 吹き出しのしっぽを白に */
+		filter: drop-shadow(-1px 0 0 ${COLORS.BORDER}); /* 擬似的な枠線をしっぽに */
 	}
 `;
 

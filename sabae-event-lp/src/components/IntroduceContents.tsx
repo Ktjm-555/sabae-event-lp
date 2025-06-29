@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { DIV_container, DIV_SectionWrapper } from "../Style.ts";
 import { Contents3 } from "./Contents3.tsx";
+import { COLORS } from "../consts/color.ts";
 
 export const IntroduceContents = () => {
 	return (
@@ -20,7 +21,7 @@ export const IntroduceContents = () => {
 };
 
 const DIV_IntroduceWrapper = styled(DIV_SectionWrapper)`
-	background-color: #fff;
+	background-color: ${COLORS.SEC_NORMAL_BG};
 	/* セクションまたぎのpadding-top */
 	padding-top: 35px;
 `;

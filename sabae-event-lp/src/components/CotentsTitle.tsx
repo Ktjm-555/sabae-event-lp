@@ -36,7 +36,7 @@ const DIV_TitleContainer = styled.div`
 	display: flex;
 	align-items: center;
 	position: relative;
-	border-bottom: 3px solid #e6e6e6;
+	border-bottom: 3px solid ${COLORS.BORDER_ON_ACCENT};
 	padding-bottom: 0.4em;
 	margin-bottom: 14px;
 `;

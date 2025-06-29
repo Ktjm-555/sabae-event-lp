@@ -18,13 +18,13 @@ export const DIV_container = styled.div`
 `;
 
 export const DIV_SectionWrapper = styled.div`
-	background-color: ${COLORS.EVENT};
+	background-color: ${COLORS.SEC_YELLOW_BG};
 	width: 100%;
 	padding-bottom: 60px;
 `;
 
 export const DIV_CardContainer = styled.div`
-	background-color: #fff;
+	background-color: ${COLORS.CARD_BG};
 	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
 	padding: 20px;

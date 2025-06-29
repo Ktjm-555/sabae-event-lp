@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Contents4 } from "./Contents4.tsx";
 import { DIV_container } from "../Style.ts";
+import { COLORS } from "../consts/color.ts";
 
 export const IntroduceContentsWide = () => {
 	return (
@@ -14,7 +15,7 @@ export const IntroduceContentsWide = () => {
 
 /* 背景が画面幅のため、sectionを継承しない */
 const SECTION_IntroduceContainer = styled.div`
-	background-color: #f4f4f4;
+	background-color: ${COLORS.SEC_GRAY_BG};
 	/* 上の要素に少し重ねるようなデザイン */
 	padding-top: 220px;
 	margin-top: -240px;

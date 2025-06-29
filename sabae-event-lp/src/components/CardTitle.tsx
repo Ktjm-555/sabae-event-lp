@@ -50,7 +50,7 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 
 const P_TitleLabel = styled.p`
 	background-color: ${COLORS.PRIMARY};
-	color: #fff;
+	color: ${COLORS.TEXT_ON_ACCENT};
 	padding: 6px;
 	font-size: 15px;
 	font-weight: bold;

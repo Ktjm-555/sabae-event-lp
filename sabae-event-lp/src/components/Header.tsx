@@ -205,7 +205,7 @@ const NAV_HeaderNavContainer = styled.nav`
 	@media (max-width: 1030px) {
 		width: 220px;
 		position: fixed;
-		background-color: #fff;
+		background-color: ${COLORS.CARD_BG};
 		top: 0;
 		right: -300px;
 		bottom: 0;
@@ -256,7 +256,7 @@ const A_HeaderNavLink = styled.a`
 	@media (max-width: 1030px) {
 		position: relative;
 		display: block;
-		border-bottom: 2px solid #e6e6e6;
+		border-bottom: 2px solid ${COLORS.BORDER_ON_ACCENT};
 		padding: 20px;
 		/* 下記、表示ナビ幅 - 文字要素のpaddingを引く */
 		width: calc(220px - 40px);

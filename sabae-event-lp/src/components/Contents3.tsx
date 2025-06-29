@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
+import { COLORS } from "../consts/color";
 
 type Props = {
 	title: string;
@@ -179,7 +180,7 @@ const DIV_SwiperContainer = styled.div`
 	.swiper-button-prev,
 	.swiper-button-next {
 		background-color: rgba(230, 0, 18, 0.8);
-		color: #fff;
+		color: ${COLORS.TEXT_ON_ACCENT};
 		border-radius: 50%;
 		width: 40px;
 		height: 40px;

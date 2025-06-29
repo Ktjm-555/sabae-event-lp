@@ -3,6 +3,7 @@ import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "./CardTitle";
 import { DIV_CardContainer, P_Subtitle } from "../Style";
 import { Button } from "./Button";
+import { COLORS } from "../consts/color";
 
 type Props = {
 	title: string;
@@ -191,7 +192,7 @@ const P_Description = styled.p`
 `;
 
 const DIV_NoticeSection = styled.div`
-	background-color: #fdede2;
+	background-color: ${COLORS.NOTICE_BG};
 	padding: 15px;
 `;
 
