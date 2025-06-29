@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { DIV_CardContainer } from "../Style";
+import { S_DIV_CardContainer } from "../Style";
 import { Button } from "./Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -193,7 +193,7 @@ const DIV_SwiperContainer = styled.div`
 	}
 `;
 
-const DIV_SwiperCardContainer = styled(DIV_CardContainer)`
+const DIV_SwiperCardContainer = styled(S_DIV_CardContainer)`
 	padding: 15px;
 	/* スワイパーの枠に重なるため */
 	margin-top: 10px;

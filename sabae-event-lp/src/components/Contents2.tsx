@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "./CardTitle";
-import { DIV_CardContainer, P_Subtitle } from "../Style";
+import { S_P_Description, S_DIV_CardContainer, S_P_Subtitle } from "../Style";
 import { Button } from "./Button";
 import { COLORS } from "../consts/color";
 
@@ -24,7 +24,7 @@ export const Contents2 = ({
 
 	return (
 		<div>
-			<P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</P_Subtitle>
+			<S_P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
 			<ContentsTitle
 				title={title}
 				caption={caption}
@@ -83,10 +83,10 @@ export const Contents2 = ({
 						label="ステージ企画"
 						labelNum={1}
 					/>
-					<P_Description>
+					<S_P_Description>
 						鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
 						produced by TGC」でモデルが着用します。
-					</P_Description>
+					</S_P_Description>
 					<DIV_ImageContainer>
 						<img
 							src="images/photo_spstage_collab_01.png"
@@ -101,9 +101,9 @@ export const Contents2 = ({
 						label="ステージ企画"
 						labelNum={2}
 					/>
-					<P_Description>
+					<S_P_Description>
 						子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
-					</P_Description>
+					</S_P_Description>
 					<DIV_NoticeSection>
 						<h4>キッズモデル募集</h4>
 						<UL_Notice>
@@ -123,7 +123,7 @@ export const Contents2 = ({
 };
 
 const SECTION_CardContainer = styled(
-	DIV_CardContainer.withComponent("section")
+	S_DIV_CardContainer.withComponent("section")
 )``;
 
 const DIV_CardsWrapper = styled.div`
@@ -179,15 +179,6 @@ const DIV_Guest = styled.div`
 		div {
 			width: 100%;
 		}
-	}
-`;
-
-const P_Description = styled.p`
-	margin-bottom: 40px;
-
-	@media (max-width: 500px) {
-		font-size: 14px;
-		margin-bottom: 20px;
 	}
 `;
 

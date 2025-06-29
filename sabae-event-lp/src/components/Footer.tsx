@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
-import { DIV_container, Styled_P_LargeBold } from "../Style.ts";
+import { S_SECTION_container } from "../Style.ts";
 import { COLORS } from "../consts/color.ts";
+import { TEXT_L } from "../consts/typography.ts";
 
 export const Footer = () => {
 	return (
 		<SECTION_FooterContainer>
-			<DIV_ContentsContainer>
+			<S_SECTION_container>
 				<DIV_DetailContainer>
 					<div>
 						<P_Organized>主催：鯖江市</P_Organized>
@@ -48,7 +49,7 @@ export const Footer = () => {
 				<DIV_Copyright>
 					© 2025 Resources Center for Implementation of the SDGs in SABAE
 				</DIV_Copyright>
-			</DIV_ContentsContainer>
+			</S_SECTION_container>
 		</SECTION_FooterContainer>
 	);
 };
@@ -63,8 +64,6 @@ const SECTION_FooterContainer = styled.div`
 	padding-bottom: 35px;
 `;
 
-const DIV_ContentsContainer = styled(DIV_container)``;
-
 const DIV_DetailContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -75,7 +74,7 @@ const DIV_DetailContainer = styled.div`
 `;
 
 const P_Organized = styled.p`
-	${Styled_P_LargeBold};
+	${TEXT_L};
 	margin-bottom: 20px;
 
 	@media (max-width: 500px) {

@@ -74,7 +74,7 @@ const H2_Title = styled.h2`
 	font-size: 22px;
 	font-weight: bold;
 
-	/* ここ修正時：P_SubTitleがある場合はそれも直す必要あり！ */
+	/* ここ修正時：S_P_Subtitleがある場合はそれも直す必要あり！ */
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 1160px) {
 		font-size: 18px;
