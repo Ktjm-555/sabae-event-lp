@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { COLORS } from "../consts/color";
 type Props = {
 	balloonList: Array<string>;
 };
@@ -66,7 +67,7 @@ const SPAN_Blue = styled.span`
 `;
 
 const SPAN_Red = styled.span`
-	color: #e60012;
+	color: ${COLORS.PRIMARY};
 	display: flex;
 	align-items: center;
 	gap: 2px;
@@ -87,5 +88,5 @@ const SPAN_CircleBlue = styled.span`
 `;
 
 const SPAN_CircleRed = styled(SPAN_CircleBlue)`
-	background: #e60012;
+	background: ${COLORS.PRIMARY};
 `;

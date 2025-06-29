@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { DIV_container, Styled_P_LargeBold } from "../Style.ts";
+import { COLORS } from "../consts/color.ts";
 
 export const Footer = () => {
 	return (
@@ -55,7 +56,7 @@ export const Footer = () => {
 /* 背景は画面幅のため、sectionを継承しない */
 /* TODO:Wrapperじゃない？ */
 const SECTION_FooterContainer = styled.div`
-	background-color: #e60012;
+	background-color: ${COLORS.PRIMARY};
 	color: #fff;
 	/* TODO：コンテナの上下のpadding合わせる */
 	padding-top: 35px;

@@ -51,7 +51,7 @@ const H1_Title = styled.h1`
 		height: 3px;
 		display: block;
 		content: "";
-		background: #e60012;
+		background: ${COLORS.PRIMARY};
 	}
 
 	/* spanタグでルビ振っている */

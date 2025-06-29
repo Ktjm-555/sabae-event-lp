@@ -252,7 +252,7 @@ const A_HeaderNavLink = styled.a`
 	&:hover,
 	&:active,
 	&:focus {
-		color: #e60012;
+		color: ${COLORS.PRIMARY};
 	}
 
 	@media (max-width: 1030px) {
@@ -271,7 +271,7 @@ const A_HeaderNavLink = styled.a`
 			height: 2px;
 			display: block;
 			content: "";
-			background: #e60012;
+			background: ${COLORS.PRIMARY};
 		}
 	}
 `;

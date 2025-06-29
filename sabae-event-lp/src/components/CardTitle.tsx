@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { COLORS } from "../consts/color";
 
 type Props = {
 	title: string;
@@ -40,16 +41,7 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 	${({ label }) => `margin-bottom: ${label ? "20px" : "10px"};`}
 	line-height: 1;
 
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 900px) and (min-width: 801px) {
-		display: block;
-		height: auto;
-		margin-bottom: 10px;
-	}
-
-	/* ここだけレスポンシブ例外対応 */
-	/*TODO:上と統合する */
-	@media (max-width: 410px) {
+	@media (max-width: 900px) and (min-width: 801px), (max-width: 410px) {
 		display: block;
 		height: auto;
 		margin-bottom: 10px;
@@ -57,8 +49,7 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 `;
 
 const P_TitleLabel = styled.p`
-	/* TODO：赤色定義する */
-	background-color: #e60012;
+	background-color: ${COLORS.PRIMARY};
 	color: #fff;
 	padding: 6px;
 	font-size: 15px;
