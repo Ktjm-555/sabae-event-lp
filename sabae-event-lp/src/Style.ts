@@ -33,7 +33,7 @@ export const DIV_CardContainer = styled.div`
 
 export const P_Subtitle = styled.p`
 	font-family: "M PLUS 1", sans-serif;
-
+	color: ${COLORS.TITLE};
 	font-size: 24px;
 	font-weight: 500;
 

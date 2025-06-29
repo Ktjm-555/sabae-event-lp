@@ -174,7 +174,6 @@ const DL_ContactContainer = styled.dl`
 
 const DIV_HeaderWrapper = styled.div`
 	position: fixed;
-	color: ${COLORS.TEXT};
 	width: 100%;
 	z-index: 1000;
 `;
@@ -246,7 +245,6 @@ const LI_HeaderNavItem = styled.li`
 `;
 
 const A_HeaderNavLink = styled.a`
-	color: ${COLORS.TEXT};
 	font-weight: 500;
 
 	&:hover,
@@ -324,7 +322,7 @@ const DIV_HeaderToggleBtn = styled.div`
 			left: 0;
 			width: 30px;
 			height: 2px;
-			background-color: #4b5563;
+			background-color: ${COLORS.TEXT};
 			transition: all 0.5s;
 			border-radius: 4px;
 		}

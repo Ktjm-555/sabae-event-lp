@@ -165,7 +165,6 @@ const DIV_Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: #4b5563;
 
 	@media (max-width: 900px) {
 		margin-bottom: 25px;
@@ -216,7 +215,6 @@ const DIV_SwipeImage = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: #4b5563;
 
 	p {
 		font-family: "M PLUS 1", sans-serif;

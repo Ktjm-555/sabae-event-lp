@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { COLORS } from "../consts/color.ts";
 import { DIV_container, DIV_SectionWrapper, P_Subtitle } from "../Style.ts";
 import { Contents } from "./Contents.tsx";
 import { Contents2 } from "./Contents2.tsx";
@@ -51,7 +50,6 @@ const DIV_EventWrapper = styled(DIV_SectionWrapper)`
 const SECTION_EventContainer = styled(DIV_container.withComponent("section"))``;
 
 const P_DescText = styled.p`
-	color: ${COLORS.TEXT};
 	font-weight: 500;
 	font-size: 24px;
 	margin-bottom: 70px;
