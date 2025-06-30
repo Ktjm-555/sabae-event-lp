@@ -1,7 +1,15 @@
 export const COLORS = {
 	HEADER: "rgba(255, 255, 255, 0.85)",
+	TITLE: "#000000",
 	TEXT: "#4B5563",
-	PRIMARY: "#0cf",
-	EVENT: "#FFFDE2",
+	TEXT_ON_ACCENT: "#fff",
+	PRIMARY: "#e60012",
+	NOTICE_BG: "#fdede2",
+	SEC_NORMAL_BG: "#fff",
+	SEC_YELLOW_BG: "#fffde2",
+	SEC_GRAY_BG: "#f4f4f4",
+	CARD_BG: "#fff",
 	MASK: "#000",
+	BORDER: "#ccc",
+	BORDER_ON_ACCENT: "#dcdcdc",
 };

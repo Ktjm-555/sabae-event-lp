@@ -174,7 +174,6 @@ const DL_ContactContainer = styled.dl`
 
 const DIV_HeaderWrapper = styled.div`
 	position: fixed;
-	color: ${COLORS.TEXT};
 	width: 100%;
 	z-index: 1000;
 `;
@@ -206,7 +205,7 @@ const NAV_HeaderNavContainer = styled.nav`
 	@media (max-width: 1030px) {
 		width: 220px;
 		position: fixed;
-		background-color: #fff;
+		background-color: ${COLORS.CARD_BG};
 		top: 0;
 		right: -300px;
 		bottom: 0;
@@ -246,19 +245,18 @@ const LI_HeaderNavItem = styled.li`
 `;
 
 const A_HeaderNavLink = styled.a`
-	color: ${COLORS.TEXT};
 	font-weight: 500;
 
 	&:hover,
 	&:active,
 	&:focus {
-		color: #e60012;
+		color: ${COLORS.PRIMARY};
 	}
 
 	@media (max-width: 1030px) {
 		position: relative;
 		display: block;
-		border-bottom: 2px solid #e6e6e6;
+		border-bottom: 2px solid ${COLORS.BORDER_ON_ACCENT};
 		padding: 20px;
 		/* 下記、表示ナビ幅 - 文字要素のpaddingを引く */
 		width: calc(220px - 40px);
@@ -271,7 +269,7 @@ const A_HeaderNavLink = styled.a`
 			height: 2px;
 			display: block;
 			content: "";
-			background: #e60012;
+			background: ${COLORS.PRIMARY};
 		}
 	}
 `;
@@ -324,7 +322,7 @@ const DIV_HeaderToggleBtn = styled.div`
 			left: 0;
 			width: 30px;
 			height: 2px;
-			background-color: #4b5563;
+			background-color: ${COLORS.TEXT};
 			transition: all 0.5s;
 			border-radius: 4px;
 		}
