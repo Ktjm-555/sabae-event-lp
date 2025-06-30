@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import type { MouseEventHandler, ReactNode } from "react";
+import { COLORS } from "../consts/color";
 
 type Props = {
 	children: ReactNode;
@@ -38,7 +39,7 @@ const BUTTON_Button = styled.button`
 	padding: 10px 20px;
 	border: none;
 	border-radius: 60px;
-	background-color: #e60012;
+	background-color: ${COLORS.PRIMARY};
 	color: white;
 	font-size: 16px;
 	cursor: pointer;
