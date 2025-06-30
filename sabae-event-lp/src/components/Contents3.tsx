@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { DIV_CardContainer } from "../Style";
+import { S_DIV_CardContainer } from "../Style";
 import { Button } from "./Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
+import { COLORS } from "../consts/color";
 
 type Props = {
 	title: string;
@@ -165,7 +166,6 @@ const DIV_Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: #4b5563;
 
 	@media (max-width: 900px) {
 		margin-bottom: 25px;
@@ -180,7 +180,7 @@ const DIV_SwiperContainer = styled.div`
 	.swiper-button-prev,
 	.swiper-button-next {
 		background-color: rgba(230, 0, 18, 0.8);
-		color: #fff;
+		color: ${COLORS.TEXT_ON_ACCENT};
 		border-radius: 50%;
 		width: 40px;
 		height: 40px;
@@ -193,7 +193,7 @@ const DIV_SwiperContainer = styled.div`
 	}
 `;
 
-const DIV_SwiperCardContainer = styled(DIV_CardContainer)`
+const DIV_SwiperCardContainer = styled(S_DIV_CardContainer)`
 	padding: 15px;
 	/* スワイパーの枠に重なるため */
 	margin-top: 10px;
@@ -216,7 +216,6 @@ const DIV_SwipeImage = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: #4b5563;
 
 	p {
 		font-family: "M PLUS 1", sans-serif;

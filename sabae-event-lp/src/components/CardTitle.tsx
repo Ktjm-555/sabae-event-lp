@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { COLORS } from "../consts/color";
 
 type Props = {
 	title: string;
@@ -40,16 +41,7 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 	${({ label }) => `margin-bottom: ${label ? "20px" : "10px"};`}
 	line-height: 1;
 
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 900px) and (min-width: 801px) {
-		display: block;
-		height: auto;
-		margin-bottom: 10px;
-	}
-
-	/* ここだけレスポンシブ例外対応 */
-	/*TODO:上と統合する */
-	@media (max-width: 410px) {
+	@media (max-width: 900px) and (min-width: 801px), (max-width: 410px) {
 		display: block;
 		height: auto;
 		margin-bottom: 10px;
@@ -57,9 +49,8 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 `;
 
 const P_TitleLabel = styled.p`
-	/* TODO：赤色定義する */
-	background-color: #e60012;
-	color: #fff;
+	background-color: ${COLORS.PRIMARY};
+	color: ${COLORS.TEXT_ON_ACCENT};
 	padding: 6px;
 	font-size: 15px;
 	font-weight: bold;
@@ -83,7 +74,7 @@ const H2_Title = styled.h2`
 	font-size: 22px;
 	font-weight: bold;
 
-	/* ここ修正時：P_SubTitleがある場合はそれも直す必要あり！ */
+	/* ここ修正時：S_P_Subtitleがある場合はそれも直す必要あり！ */
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 1160px) {
 		font-size: 18px;

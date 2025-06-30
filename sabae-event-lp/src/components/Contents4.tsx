@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "./CardTitle";
-import { DIV_CardContainer, P_Subtitle } from "../Style";
+import { S_DIV_CardContainer, S_P_Description, S_P_Subtitle } from "../Style";
 import { Button } from "./Button";
 
 type Props = {
@@ -18,7 +18,7 @@ const goToSabaeEightPage = () => {
 export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 	return (
 		<div>
-			<P_Subtitle id="4">同時開催</P_Subtitle>
+			<S_P_Subtitle id="4">同時開催</S_P_Subtitle>
 			<ContentsTitle
 				title={title}
 				balloonList={balloonList}
@@ -87,7 +87,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					</DIV_CardFooter>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
-					<P_SubTitle>さばえ3大フェス 市制70周年記念イベント</P_SubTitle>
+					<P_Subtitle>さばえ3大フェス 市制70周年記念イベント</P_Subtitle>
 					<CardTitle
 						title={`コロコロコミック コラボ\nなぞときスタンプラリー`}
 					/>
@@ -105,7 +105,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 };
 
 const SECTION_CardContainer = styled(
-	DIV_CardContainer.withComponent("section")
+	S_DIV_CardContainer.withComponent("section")
 )`
 	position: relative;
 `;
@@ -152,7 +152,7 @@ const DIV_IconContainer_underButton = styled.div`
 	}
 `;
 
-const P_SubTitle = styled.div`
+const P_Subtitle = styled.div`
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 5px;
@@ -184,15 +184,11 @@ const A_Icon = styled.a`
 	margin-left: 8px;
 `;
 
-const P_Description = styled.p`
+const P_Description = styled(S_P_Description)`
 	margin-bottom: 20px;
-
-	@media (max-width: 500px) {
-		font-size: 14px;
-	}
 `;
 
-const P_Description_gapNone = styled(P_Description)`
+const P_Description_gapNone = styled(S_P_Description)`
 	margin-bottom: 0px;
 
 	@media (max-width: 500px) {

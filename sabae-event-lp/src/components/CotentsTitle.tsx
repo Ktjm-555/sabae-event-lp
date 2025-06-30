@@ -36,7 +36,7 @@ const DIV_TitleContainer = styled.div`
 	display: flex;
 	align-items: center;
 	position: relative;
-	border-bottom: 3px solid #e6e6e6;
+	border-bottom: 3px solid ${COLORS.BORDER_ON_ACCENT};
 	padding-bottom: 0.4em;
 	margin-bottom: 14px;
 `;
@@ -51,7 +51,7 @@ const H1_Title = styled.h1`
 		height: 3px;
 		display: block;
 		content: "";
-		background: #e60012;
+		background: ${COLORS.PRIMARY};
 	}
 
 	/* spanタグでルビ振っている */
@@ -125,7 +125,6 @@ const SPAN_Annotation = styled.span`
 `;
 
 const P_Caption = styled.p`
-	color: ${COLORS.TEXT};
 	min-height: 70px;
 	margin-bottom: 20px;
 `;
