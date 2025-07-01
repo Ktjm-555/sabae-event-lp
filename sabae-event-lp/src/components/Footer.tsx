@@ -30,7 +30,7 @@ export const Footer = () => {
 						<P_Event>過去のフェス</P_Event>
 						<DIV_LinkList>
 							<A_EventUrl
-								href="https://fes.sabae-sdgs.jp/"
+								href="https://fes.sabae-sdgs.jp/2024/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
