@@ -36,14 +36,20 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IMG_Icon src="icon/instagram.svg" alt="instagramのアイコン" />
+							<IMG_Icon
+								src="icon/instagram.svg"
+								alt="さばえ門前まつりのinstagramのアイコン"
+							/>
 						</A_Icon>
 						<A_Icon
 							href="https://www.facebook.com/profile.php?id=61560310619817"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<IMG_Icon src="icon/facebook.svg" alt="facebookのアイコン" />
+							<IMG_Icon
+								src="icon/facebook.svg"
+								alt="さばえ門前まつりのfacebookのアイコン"
+							/>
 						</A_Icon>
 					</DIV_IconContainer>
 				</SECTION_CardContainer>
@@ -60,28 +66,40 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icon/twitter-x.svg" alt="twitter-xのアイコン" />
+								<IMG_Icon
+									src="icon/twitter-x.svg"
+									alt="めがねフェスのtwitter-xのアイコン"
+								/>
 							</A_Icon>
 							<A_Icon
 								href="https://www.instagram.com/meganefes/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icon/instagram.svg" alt="instagramのアイコン" />
+								<IMG_Icon
+									src="icon/instagram.svg"
+									alt="めがねフェスのinstagramのアイコン"
+								/>
 							</A_Icon>
 							<A_Icon
 								href="https://www.facebook.com/meganefes"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icon/facebook.svg" alt="facebookのアイコン" />
+								<IMG_Icon
+									src="icon/facebook.svg"
+									alt="めがねフェスのfacebookのアイコン"
+								/>
 							</A_Icon>
 							<A_Icon
 								href="https://m.youtube.com/channel/UCDwHawMHi7yeLzSSof8bvDQ"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<IMG_Icon src="icon/youtube.svg" />
+								<IMG_Icon
+									src="icon/youtube.svg"
+									alt="めがねフェスのYoutubeのアイコン"
+								/>
 							</A_Icon>
 						</DIV_IconContainer_underButton>
 					</DIV_CardFooter>
@@ -184,7 +202,7 @@ const A_Icon = styled.a`
 	margin-left: 8px;
 
 	&:hover {
-		opacity: 0.8;
+		opacity: 0.6;
 	}
 `;
 

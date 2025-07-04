@@ -113,7 +113,7 @@ export const Header = () => {
 						>
 							<IMG_Icon
 								src="icon/instagram_gray.svg"
-								alt="instagramのアイコン"
+								alt="鯖江市のinstagramのアイコン"
 							/>
 							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>
 						</a>
