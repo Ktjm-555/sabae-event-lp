@@ -182,6 +182,10 @@ const IMG_Icon = styled.img`
 const A_Icon = styled.a`
 	display: inline-block;
 	margin-left: 8px;
+
+	&:hover {
+		opacity: 0.8;
+	}
 `;
 
 const P_Description = styled(S_P_Description)`
