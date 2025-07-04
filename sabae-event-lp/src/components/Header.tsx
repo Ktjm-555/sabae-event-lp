@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { COLORS } from "../consts/color.ts";
 import { Logo } from "./logo.tsx";
 import { useState } from "react";
-import { Button } from "./Button.tsx";
 
 export const Header = () => {
 	const [isShowMask, setIsShowMask] = useState(false);
@@ -14,17 +13,13 @@ export const Header = () => {
 		}
 	};
 
-	const goToSabaeInstaPage = () => {
-		window.open("https://www.instagram.com/sabae_sdgsfes/", "_blank");
-	};
-
 	return (
 		<DIV_HeaderWrapper>
 			<DIV_HeaderContainer>
 				{/* ロゴエリア */}
 				<Logo />
-				<NAV_HeaderNavContainer className={isShowMask ? "open" : ""}>
-					<DIV_AAA>
+				<NAV_Container className={isShowMask ? "open" : ""}>
+					<DIV_HeaderNavAndIconContainer>
 						{/* ナビゲーション */}
 						<UL_HeaderNavList>
 							<LI_HeaderNavItem>
@@ -49,16 +44,43 @@ export const Header = () => {
 							</LI_HeaderNavItem>
 						</UL_HeaderNavList>
 						<div>
-							<Button
-								onClick={goToSabaeInstaPage}
-								isShort={true}
-								isArrow={false}
-								icon="icon/instagram_white.svg"
-							>
+							<P_SnsLabel className={isShowMask ? "open" : ""}>
 								公式SNS
-							</Button>
+							</P_SnsLabel>
+							<DIV_IconContainer>
+								<A_Icon
+									href="https://x.com/sabaekoho"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src="icon/twitter-x_red.svg"
+										alt="鯖江市のtwitter-xのアイコン"
+									/>
+								</A_Icon>
+								<A_Icon
+									href="https://www.instagram.com/sabae.city"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src="icon/instagram_red.svg"
+										alt="鯖江市のinstagramのアイコン"
+									/>
+								</A_Icon>
+								<A_Icon
+									href="https://www.facebook.com/sabaecity"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src="icon/facebook_red.svg"
+										alt="鯖江市役所facebookのアイコン"
+									/>
+								</A_Icon>
+							</DIV_IconContainer>
 						</div>
-					</DIV_AAA>
+					</DIV_HeaderNavAndIconContainer>
 
 					{/* 主催情報 */}
 					<DIV_OrganizedInfo className={isShowMask ? "open" : ""}>
@@ -79,7 +101,7 @@ export const Header = () => {
 							</div>
 						</DL_ContactContainer>
 					</DIV_OrganizedInfo>
-				</NAV_HeaderNavContainer>
+				</NAV_Container>
 
 				{/* ハンバーガーアイコン */}
 				<DIV_HeaderToggleArea>
@@ -91,7 +113,7 @@ export const Header = () => {
 						>
 							<IMG_Icon
 								src="icon/instagram_gray.svg"
-								alt="instagramのアイコン"
+								alt="鯖江市のinstagramのアイコン"
 							/>
 							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>
 						</a>
@@ -114,12 +136,28 @@ export const Header = () => {
 	);
 };
 
-const DIV_AAA = styled.div`
+const A_Icon = styled.a`
+	display: inline-block;
+	margin-left: 12px;
+
+	&:nth-child(1) {
+		margin-left: 0px;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+`;
+
+const DIV_IconContainer = styled.div`
+	display: flex;
+`;
+
+const DIV_HeaderNavAndIconContainer = styled.div`
 	display: flex;
 
 	@media (max-width: 1030px) {
 		flex-direction: column;
-		align-items: center;
 		gap: 30px;
 	}
 `;
@@ -128,6 +166,14 @@ const DIV_OrganizedInfo = styled.div`
 	display: none;
 	&.open {
 		display: block;
+	}
+`;
+
+const P_SnsLabel = styled.p`
+	display: none;
+	&.open {
+		display: block;
+		margin-bottom: 14px;
 	}
 `;
 
@@ -196,7 +242,7 @@ const DIV_HeaderContainer = styled.div`
 	}
 `;
 
-const NAV_HeaderNavContainer = styled.nav`
+const NAV_Container = styled.nav`
 	margin-left: auto;
 	display: flex;
 	flex-direction: column;
@@ -236,8 +282,6 @@ const LI_HeaderNavItem = styled.li`
 	margin-left: 15px;
 
 	@media (max-width: 1030px) {
-		margin-left: 0;
-
 		&:nth-child(1) {
 			margin-top: 40px;
 		}
@@ -245,7 +289,7 @@ const LI_HeaderNavItem = styled.li`
 `;
 
 const A_HeaderNavLink = styled.a`
-	font-weight: 500;
+	font-weight: bold;
 
 	&:hover,
 	&:active,
