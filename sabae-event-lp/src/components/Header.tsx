@@ -43,38 +43,43 @@ export const Header = () => {
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 						</UL_HeaderNavList>
-						<DIV_IcoContainer>
-							<A_Icon
-								href="https://x.com/sabaekoho"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									src="icon/twitter-x_red.svg"
-									alt="鯖江市のtwitter-xのアイコン"
-								/>
-							</A_Icon>
-							<A_Icon
-								href="https://www.instagram.com/sabae.city"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									src="icon/instagram_red.svg"
-									alt="鯖江市のinstagramのアイコン"
-								/>
-							</A_Icon>
-							<A_Icon
-								href="https://www.facebook.com/sabaecity"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									src="icon/facebook_red.svg"
-									alt="鯖江市役所facebookのアイコン"
-								/>
-							</A_Icon>
-						</DIV_IcoContainer>
+						<div>
+							<P_SnsLabel className={isShowMask ? "open" : ""}>
+								公式SNS
+							</P_SnsLabel>
+							<DIV_IconContainer>
+								<A_Icon
+									href="https://x.com/sabaekoho"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src="icon/twitter-x_red.svg"
+										alt="鯖江市のtwitter-xのアイコン"
+									/>
+								</A_Icon>
+								<A_Icon
+									href="https://www.instagram.com/sabae.city"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src="icon/instagram_red.svg"
+										alt="鯖江市のinstagramのアイコン"
+									/>
+								</A_Icon>
+								<A_Icon
+									href="https://www.facebook.com/sabaecity"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src="icon/facebook_red.svg"
+										alt="鯖江市役所facebookのアイコン"
+									/>
+								</A_Icon>
+							</DIV_IconContainer>
+						</div>
 					</DIV_HeaderNavAndIconContainer>
 
 					{/* 主催情報 */}
@@ -144,7 +149,7 @@ const A_Icon = styled.a`
 	}
 `;
 
-const DIV_IcoContainer = styled.div`
+const DIV_IconContainer = styled.div`
 	display: flex;
 `;
 
@@ -161,6 +166,14 @@ const DIV_OrganizedInfo = styled.div`
 	display: none;
 	&.open {
 		display: block;
+	}
+`;
+
+const P_SnsLabel = styled.p`
+	display: none;
+	&.open {
+		display: block;
+		margin-bottom: 14px;
 	}
 `;
 
