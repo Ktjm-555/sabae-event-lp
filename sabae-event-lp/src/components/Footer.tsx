@@ -75,6 +75,8 @@ const DIV_DetailContainer = styled.div`
 
 const P_Organized = styled.p`
 	${TEXT_L};
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
 	margin-bottom: 20px;
 
 	@media (max-width: 500px) {
