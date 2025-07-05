@@ -49,7 +49,7 @@ export const Header = () => {
 							</P_SnsLabel>
 							<DIV_IconContainer>
 								<A_Icon
-									href="https://x.com/sabaekoho"
+									href="https://x.com/SabaeSDGsCenter"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
@@ -59,7 +59,7 @@ export const Header = () => {
 									/>
 								</A_Icon>
 								<A_Icon
-									href="https://www.instagram.com/sabae.city"
+									href="https://www.instagram.com/sabae_sdgsfes/"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
@@ -69,7 +69,7 @@ export const Header = () => {
 									/>
 								</A_Icon>
 								<A_Icon
-									href="https://www.facebook.com/sabaecity"
+									href="https://www.facebook.com/profile.php?id=61564680812799"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
