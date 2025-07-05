@@ -486,6 +486,8 @@ Error generating stack: `+n.message+`
 	}
 `,J0=J.p`
 	${Co};
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
 	margin-bottom: 20px;
 
 	@media (max-width: 500px) {
