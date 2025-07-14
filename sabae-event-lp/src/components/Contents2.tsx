@@ -24,7 +24,7 @@ export const Contents2 = ({
 
 	const guests1 = [
 		{
-			name: "くれいじーまぐねっと[メインMC]",
+			name: `くれいじーまぐねっと<br class="sp-only">[メインMC]`,
 			imgSrc: "images/photo_spstage_guest_01.png",
 			alt: "くれいじーまぐねっとの画像",
 		},
@@ -67,7 +67,7 @@ export const Contents2 = ({
 			alt: "EXILE TETSUYAの画像",
 		},
 		{
-			name: "岩谷翔吾（THE RAMPAGE）",
+			name: `岩谷翔吾<br class="sp-only">（THE RAMPAGE）`,
 			imgSrc: "images/photo_spstage_guest_03.png",
 			alt: "岩谷翔吾（THE RAMPAGE）の画像",
 		},
@@ -99,7 +99,7 @@ export const Contents2 = ({
 							<DIV_Image>
 								<IMG_Image src={guest.imgSrc} alt={guest.alt} />
 							</DIV_Image>
-							<p>{guest.name}</p>
+							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
 				</DIV_GuestContainer>
@@ -116,7 +116,7 @@ export const Contents2 = ({
 							<DIV_Image>
 								<IMG_Image src={guest.imgSrc} alt={guest.alt} />
 							</DIV_Image>
-							<p>{guest.name}</p>
+							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
 				</DIV_GuestContainer>
@@ -191,18 +191,17 @@ const DIV_GuestContainer = styled.div`
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
 
-	@media (max-width: 500px) {
-		display: block;
+	.sp-only {
+		display: none;
+	}
 
-		/* 子要素の下に余白をつける（最後の要素は除く） */
-		> div {
-			margin-bottom: 20px;
+	@media (max-width: 1225px) {
+		.sp-only {
+			display: block;
 		}
-
-		/* 最後の要素は余白なしにする */
-		> div:last-of-type {
-			margin-bottom: 0;
-		}
+	}
+	@media (max-width: 800px) {
+		grid-template-columns: repeat(2, 1fr);
 	}
 `;
 
