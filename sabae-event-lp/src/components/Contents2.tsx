@@ -22,6 +22,62 @@ export const Contents2 = ({
 		window.open("https://www.sabae-sdgs.jp/news/2120/", "_blank");
 	};
 
+	const guests1 = [
+		{
+			name: "くれいじーまぐねっと[メインMC]",
+			imgSrc: "images/photo_spstage_guest_01.png",
+			alt: "くれいじーまぐねっとの画像",
+		},
+		{
+			name: "梶原叶渚",
+			imgSrc: "images/photo_spstage_guest_04.png",
+			alt: "梶原叶渚の画像",
+		},
+		{
+			name: "MINAMI",
+			imgSrc: "images/photo_spstage_guest_05.png",
+			alt: "MINAMIの画像",
+		},
+		{
+			name: "村谷はるな",
+			imgSrc: "images/photo_spstage_guest_06.png",
+			alt: "村谷はるなの画像",
+		},
+		{
+			name: "りんか",
+			imgSrc: "images/photo_spstage_guest_07.png",
+			alt: "りんかの画像",
+		},
+		{
+			name: "",
+			imgSrc: "images/photo_spstage_guest_ComingSoon.png",
+			alt: "COMING SOONの画像",
+		},
+		{
+			name: "",
+			imgSrc: "images/photo_spstage_guest_ComingSoon.png",
+			alt: "COMING SOONの画像",
+		},
+	];
+
+	const guests2 = [
+		{
+			name: "EXILE TETSUYA",
+			imgSrc: "images/photo_spstage_guest_02.png",
+			alt: "EXILE TETSUYAの画像",
+		},
+		{
+			name: "岩谷翔吾（THE RAMPAGE）",
+			imgSrc: "images/photo_spstage_guest_03.png",
+			alt: "岩谷翔吾（THE RAMPAGE）の画像",
+		},
+		{
+			name: "",
+			imgSrc: "images/photo_spstage_guest_ComingSoon.png",
+			alt: "COMING SOONの画像",
+		},
+	];
+
 	return (
 		<div>
 			<S_P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
@@ -31,52 +87,41 @@ export const Contents2 = ({
 				balloonList={balloonList}
 				annotation={annotation}
 			/>
+			<SECTION_CardContainer>
+				<CardTitle
+					title={`“さばえアクション∞（エイト）”\nコレクション produced by TGC`}
+					label="出演ゲスト"
+					labelNum={1}
+				/>
+				<DIV_GuestContainer>
+					{guests1.map((guest, index) => (
+						<div key={index}>
+							<DIV_Image>
+								<IMG_Image src={guest.imgSrc} alt={guest.alt} />
+							</DIV_Image>
+							<p>{guest.name}</p>
+						</div>
+					))}
+				</DIV_GuestContainer>
+			</SECTION_CardContainer>
+			<SECTION_CardContainer>
+				<CardTitle
+					title="LDH ダンスワークショップショー"
+					label="出演ゲスト"
+					labelNum={2}
+				/>
+				<DIV_GuestContainer>
+					{guests2.map((guest, index) => (
+						<div key={index}>
+							<DIV_Image>
+								<IMG_Image src={guest.imgSrc} alt={guest.alt} />
+							</DIV_Image>
+							<p>{guest.name}</p>
+						</div>
+					))}
+				</DIV_GuestContainer>
+			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
-				<SECTION_CardContainer>
-					<CardTitle
-						title={`“さばえアクション∞（エイト）”\nコレクション produced by TGC`}
-						label="出演ゲスト"
-						labelNum={1}
-					/>
-					<DIV_Guest>
-						<div>
-							<DIV_Image>
-								<IMG_Image
-									src="images/photo_spstage_guest_01.png"
-									alt="くれいじーまぐねっとの画像"
-								/>
-							</DIV_Image>
-							<p>くれいじーまぐねっと[メインMC]</p>
-						</div>
-					</DIV_Guest>
-				</SECTION_CardContainer>
-				<SECTION_CardContainer>
-					<CardTitle
-						title="LDH ダンスワークショップショー"
-						label="出演ゲスト"
-						labelNum={2}
-					/>
-					<DIV_GuestContainer>
-						<div>
-							<DIV_Image>
-								<IMG_Image
-									src="images/photo_spstage_guest_02.png"
-									alt="EXILE TETSUYAの画像"
-								/>
-							</DIV_Image>
-							<p>EXILE TETSUYA</p>
-						</div>
-						<div>
-							<DIV_Image>
-								<IMG_Image
-									src="images/photo_spstage_guest_03.png"
-									alt="岩谷翔吾（THE RAMPAGE）の画像"
-								/>
-							</DIV_Image>
-							<p>岩谷翔吾（THE RAMPAGE）</p>
-						</div>
-					</DIV_GuestContainer>
-				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle
 						title="繊維産業×福井文化服装学院コラボ"
@@ -124,7 +169,9 @@ export const Contents2 = ({
 
 const SECTION_CardContainer = styled(
 	S_DIV_CardContainer.withComponent("section")
-)``;
+)`
+	margin-bottom: 30px;
+`;
 
 const DIV_CardsWrapper = styled.div`
 	display: grid;
@@ -140,8 +187,8 @@ const DIV_CardsWrapper = styled.div`
 `;
 
 const DIV_GuestContainer = styled.div`
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
 
 	@media (max-width: 500px) {
@@ -170,17 +217,18 @@ const IMG_Image = styled.img`
 	object-fit: cover;
 `;
 
-const DIV_Guest = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+// TODO: 削除する
+// const DIV_Guest = styled.div`
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
 
-	@media (max-width: 500px) {
-		div {
-			width: 100%;
-		}
-	}
-`;
+// 	@media (max-width: 500px) {
+// 		div {
+// 			width: 100%;
+// 		}
+// 	}
+// `;
 
 const DIV_NoticeSection = styled.div`
 	background-color: ${COLORS.NOTICE_BG};

@@ -46,7 +46,7 @@ export const EventContents = () => {
 const DIV_EventWrapper = styled(S_DIV_SectionWrapper)`
 	padding-top: 150px;
 	margin-top: -100px;
-
+	padding-bottom: 30px;
 	@media (max-width: 900px) {
 		margin-top: -130px;
 	}
