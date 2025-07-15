@@ -3,44 +3,50 @@ import { ContentsTitle } from "./CotentsTitle";
 import { S_DIV_CardContainer } from "../Style";
 import { TEXT_M, TEXT_S } from "../consts/typography";
 import { COLORS } from "../consts/color";
-
-const newsList = [
-	{
-		date: "2025/07/25",
-		title: "スペシャルステージの出演ゲスト第2弾が公開されました",
-		link: true,
-	},
-];
+import { newsList } from "../consts/news";
+import { Button } from "./Button";
 
 export const NewsContents = () => {
+	const goToNewsDetailPage = () => {
+		window.open("https://www.sabae-sdgs.jp/news/2080/");
+	};
+
 	return (
-		<div>
+		<DIV_SectionContainer>
 			<ContentsTitle title="お知らせ" balloonList={[]} />
 			<div>
 				<UL_CardWrapper>
-					<LI_CardContainer>
-						<A_CardLink>
-							<DIV_Date className="date">2025/07/25</DIV_Date>
-							<P_Title className="title">
-								スペシャルステージの出演ゲスト第2弾が公開されました
-							</P_Title>
-						</A_CardLink>
-					</LI_CardContainer>
+					{newsList.slice(0, 3).map((news, index) => {
+						const isLink = news.url;
+						const LinkWrapper = isLink ? A_CardLink : DIV_CardLink;
+
+						return (
+							<LI_CardContainer key={index}>
+								<LinkWrapper {...(isLink ? { href: news.url } : {})}>
+									<DIV_Date>{news.date}</DIV_Date>
+									<P_Title>{news.title}</P_Title>
+								</LinkWrapper>
+							</LI_CardContainer>
+						);
+					})}
 				</UL_CardWrapper>
-				<button></button>
+
+				<Button onClick={goToNewsDetailPage}>お知らせ一覧</Button>
 			</div>
-		</div>
+		</DIV_SectionContainer>
 	);
 };
 
 const LI_CardContainer = styled(S_DIV_CardContainer.withComponent("li"))`
 	padding: 0px;
+	margin-bottom: 25px;
 `;
 
 const UL_CardWrapper = styled.ul`
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
+	margin-top: 20px;
 `;
 
 const DIV_Date = styled.div`
@@ -49,19 +55,27 @@ const DIV_Date = styled.div`
 	color: ${COLORS.PRIMARY};
 `;
 
-// TODO: こことaタグはlinkがtrueの時だけ条件分岐する ここはclassname使う
 const P_Title = styled.p`
 	${TEXT_M}
-	text-decoration:underline 1px;
-	text-underline-offset: 3px;
 `;
 
-// TODO: 命名が微妙なので、この前後のタグ見直したい
-const A_CardLink = styled.a`
+const DIV_CardLink = styled.div`
 	display: block;
 	padding: 20px;
+`;
 
+// NOTE: withComponent('a') を使えば、タグを div → a に変えられる。
+const A_CardLink = styled(DIV_CardLink.withComponent("a"))`
 	&:hover ${DIV_Date}, &:hover ${P_Title} {
 		opacity: 0.5;
 	}
+
+	${P_Title} {
+		text-decoration: underline 1px;
+		text-underline-offset: 3px;
+	}
+`;
+
+const DIV_SectionContainer = styled.div`
+	margin-bottom: 70px;
 `;
