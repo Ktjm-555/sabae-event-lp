@@ -14,7 +14,7 @@ export const NewsContents = () => {
 	return (
 		<DIV_SectionContainer>
 			<ContentsTitle title="お知らせ" balloonList={[]} />
-			<div>
+			<DIV_CardContainer>
 				<UL_CardWrapper>
 					{newsList.slice(0, 3).map((news, index) => {
 						const isLink = news.url;
@@ -31,8 +31,10 @@ export const NewsContents = () => {
 					})}
 				</UL_CardWrapper>
 
-				<Button onClick={goToNewsDetailPage}>お知らせ一覧</Button>
-			</div>
+				<DIV_ButtonContainer>
+					<Button onClick={goToNewsDetailPage}>お知らせ一覧</Button>
+				</DIV_ButtonContainer>
+			</DIV_CardContainer>
 		</DIV_SectionContainer>
 	);
 };
@@ -40,6 +42,14 @@ export const NewsContents = () => {
 const LI_CardContainer = styled(S_DIV_CardContainer.withComponent("li"))`
 	padding: 0px;
 	margin-bottom: 25px;
+
+	@media (max-width: 800px) {
+		all: unset;
+		display: block;
+		list-style: none;
+		border-bottom: 1px solid ${COLORS.BORDER};
+		padding-bottom: 15px;
+	}
 `;
 
 const UL_CardWrapper = styled.ul`
@@ -47,6 +57,12 @@ const UL_CardWrapper = styled.ul`
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 	margin-top: 20px;
+
+	@media (max-width: 800px) {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 14px;
+	}
 `;
 
 const DIV_Date = styled.div`
@@ -62,6 +78,11 @@ const P_Title = styled.p`
 const DIV_CardLink = styled.div`
 	display: block;
 	padding: 20px;
+
+	@media (max-width: 800px) {
+		padding: 0;
+		padding-top: 10px;
+	}
 `;
 
 // NOTE: withComponent('a') を使えば、タグを div → a に変えられる。
@@ -78,4 +99,22 @@ const A_CardLink = styled(DIV_CardLink.withComponent("a"))`
 
 const DIV_SectionContainer = styled.div`
 	margin-bottom: 70px;
+`;
+
+const DIV_CardContainer = styled.div`
+	@media (max-width: 800px) {
+		// リストの上部パッディングを考慮
+		padding: 6px 16px 16px 16px;
+		background-color: ${COLORS.CARD_BG};
+		box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+		color: ${COLORS.TEXT};
+	}
+`;
+
+const DIV_ButtonContainer = styled.div`
+	@media (max-width: 800px) {
+		display: flex;
+		justify-content: center;
+	}
 `;
