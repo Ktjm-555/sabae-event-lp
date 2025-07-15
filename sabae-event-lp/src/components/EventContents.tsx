@@ -7,6 +7,7 @@ import {
 } from "../Style.ts";
 import { Contents } from "./Contents.tsx";
 import { Contents2 } from "./Contents2.tsx";
+import { NewsContents } from "./NewsContents.tsx";
 
 export const EventContents = () => {
 	return (
@@ -17,6 +18,7 @@ export const EventContents = () => {
 					<br />
 					今回は、若者視点で考案した行動目標「さばえアクション∞(エイト)」をとおし、知って、遊んで、楽しめるフェスを目指します。
 				</S_P_LargeDesc>
+				<NewsContents />
 				<S_P_Subtitle>体験&販売</S_P_Subtitle>
 				<DIV_ContentsContainer>
 					<Contents
