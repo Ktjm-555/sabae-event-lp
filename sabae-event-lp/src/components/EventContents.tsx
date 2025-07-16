@@ -7,7 +7,7 @@ import {
 } from "../Style.ts";
 import { Contents } from "./contents/Contents.tsx";
 import { Contents2 } from "./contents/Contents2.tsx";
-import { NewsContents } from "./NewsContents.tsx";
+import { NewsContents } from "./contents/NewsContents.tsx";
 
 export const EventContents = () => {
 	return (
