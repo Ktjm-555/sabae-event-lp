@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Contents4 } from "./Contents4.tsx";
+import { Contents4 } from "./contents/Contents4.tsx";
 import { S_DIV_SectionWrapper, S_SECTION_container } from "../Style.ts";
 import { COLORS } from "../consts/color.ts";
 

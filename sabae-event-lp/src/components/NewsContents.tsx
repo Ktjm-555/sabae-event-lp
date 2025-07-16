@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import { ContentsTitle } from "./CotentsTitle";
+import { ContentsTitle } from "./contents/CotentsTitle";
 import { S_DIV_CardContainer } from "../Style";
 import { TEXT_M, TEXT_S } from "../consts/typography";
 import { COLORS } from "../consts/color";
 import { newsList } from "../consts/news";
-import { Button } from "./Button";
+import { Button } from "./ui/Button";
 
 export const NewsContents = () => {
 	const goToNewsDetailPage = () => {

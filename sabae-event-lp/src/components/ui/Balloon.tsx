@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS } from "../consts/color";
+import { COLORS } from "../../consts/color";
 type Props = {
 	balloonList: Array<string>;
 };

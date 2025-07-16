@@ -1,9 +1,13 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { CardTitle } from "./CardTitle";
-import { S_P_Description, S_DIV_CardContainer, S_P_Subtitle } from "../Style";
-import { Button } from "./Button";
-import { COLORS } from "../consts/color";
+import { CardTitle } from "../ui/CardTitle";
+import {
+	S_P_Description,
+	S_DIV_CardContainer,
+	S_P_Subtitle,
+} from "../../Style";
+import { Button } from "../ui/Button";
+import { COLORS } from "../../consts/color";
 
 type Props = {
 	title: string;

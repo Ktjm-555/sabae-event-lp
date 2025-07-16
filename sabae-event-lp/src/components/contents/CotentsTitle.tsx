@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Balloon } from "./Balloon";
-import { COLORS } from "../consts/color";
+import { Balloon } from "../ui/Balloon";
+import { COLORS } from "../../consts/color";
 
 type Props = {
 	title: string;

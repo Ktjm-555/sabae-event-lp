@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { COLORS } from "../consts/color";
+import { COLORS } from "../../consts/color";
 
 type Props = {
 	title: string;

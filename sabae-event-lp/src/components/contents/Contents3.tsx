@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { S_DIV_CardContainer } from "../Style";
-import { Button } from "./Button";
+import { S_DIV_CardContainer } from "../../Style";
+import { Button } from "../ui/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
-import { COLORS } from "../consts/color";
+import { COLORS } from "../../consts/color";
 
 type Props = {
 	title: string;

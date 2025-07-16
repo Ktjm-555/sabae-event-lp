@@ -5,8 +5,8 @@ import {
 	S_P_Subtitle,
 	S_P_LargeDesc,
 } from "../Style.ts";
-import { Contents } from "./Contents.tsx";
-import { Contents2 } from "./Contents2.tsx";
+import { Contents } from "./contents/Contents.tsx";
+import { Contents2 } from "./contents/Contents2.tsx";
 import { NewsContents } from "./NewsContents.tsx";
 
 export const EventContents = () => {

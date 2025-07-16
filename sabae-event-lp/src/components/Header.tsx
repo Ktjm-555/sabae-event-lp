@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import { COLORS } from "../consts/color.ts";
-import { Logo } from "./logo.tsx";
+import { Logo } from "./ui/logo.tsx";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
 	const [isShowMask, setIsShowMask] = useState(false);
@@ -23,22 +24,22 @@ export const Header = () => {
 						{/* ナビゲーション */}
 						<UL_HeaderNavList>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#1" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#1" onClick={toggleShowMask}>
 									トップ
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#2" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#2" onClick={toggleShowMask}>
 									スペシャルステージ
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#3" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#3" onClick={toggleShowMask}>
 									さばえアクション∞とは
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#4" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#4" onClick={toggleShowMask}>
 									さばえ３大フェス
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
@@ -288,7 +289,7 @@ const LI_HeaderNavItem = styled.li`
 	}
 `;
 
-const A_HeaderNavLink = styled.a`
+const A_HeaderNavLink = styled(Link)`
 	font-weight: bold;
 
 	&:hover,
