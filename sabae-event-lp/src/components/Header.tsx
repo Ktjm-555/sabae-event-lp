@@ -29,6 +29,11 @@ export const Header = () => {
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
+								<A_HeaderNavLink to="/news" onClick={toggleShowMask}>
+									お知らせ
+								</A_HeaderNavLink>
+							</LI_HeaderNavItem>
+							<LI_HeaderNavItem>
 								<A_HeaderNavLink to="/#2" onClick={toggleShowMask}>
 									スペシャルステージ
 								</A_HeaderNavLink>
