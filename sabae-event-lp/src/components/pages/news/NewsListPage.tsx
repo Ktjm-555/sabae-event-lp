@@ -7,11 +7,12 @@ import {
 } from "../../../Style";
 import { ContentsTitle } from "../../contents/CotentsTitle";
 import { COLORS } from "../../../consts/color";
-import { TEXT_M, TEXT_S } from "../../../consts/typography";
+import { RoundButton } from "../../ui/RoundButton";
+import { Link } from "react-router-dom";
 
 export const NewsListPage = () => {
 	return (
-		<S_DIV_SectionWrapper>
+		<DIV_SectionWrapper>
 			<S_SECTION_container>
 				<ContentsTitle title="お知らせ" balloonList={[]} />
 				<DIV_CardContainer>
@@ -22,9 +23,12 @@ export const NewsListPage = () => {
 
 							return (
 								<LI_CardContainer key={index}>
-									<LinkWrapper {...(isLink ? { href: news.url } : {})}>
+									<LinkWrapper to={news.url}>
 										<DIV_Date>{news.date}</DIV_Date>
 										<P_Title>{news.title}</P_Title>
+										{isLink && (
+											<RoundButton className="round-button"></RoundButton>
+										)}
 									</LinkWrapper>
 								</LI_CardContainer>
 							);
@@ -32,9 +36,13 @@ export const NewsListPage = () => {
 					</UL_CardWrapper>
 				</DIV_CardContainer>
 			</S_SECTION_container>
-		</S_DIV_SectionWrapper>
+		</DIV_SectionWrapper>
 	);
 };
+
+const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
+	padding-top: 140px;
+`;
 
 const LI_CardContainer = styled.li`
 	padding: 0px;
@@ -50,24 +58,65 @@ const UL_CardWrapper = styled.ul`
 `;
 
 const DIV_Date = styled.div`
-	${TEXT_S}
+	font-size: 18px;
 	font-weight: bold;
 	color: ${COLORS.PRIMARY};
+
+	@media (max-width: 1000px) {
+		font-size: 18px;
+	}
+
+	@media (max-width: 500px) {
+		font-size: 14px;
+	}
 `;
 
 const P_Title = styled.p`
-	${TEXT_M}
+	font-size: 20px;
+	flex: 1;
+
+	@media (max-width: 1000px) {
+		font-size: 18px;
+	}
+
+	@media (max-width: 500px) {
+		font-size: 16px;
+	}
+`;
+
+const cardLinkBaseStyle = `
+	display: grid;
+	grid-template-columns: 130px 1fr 32px;
+	align-items: center;
+	gap: 30px;
+	padding: 30px 0 30px;
+
+	@media (max-width: 900px) {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		padding: 15px 0 15px;
+		gap: 4px;
+
+    .round-button {
+      display: none;
+    }
+	}
 `;
 
 const DIV_CardLink = styled.div`
-	display: block;
-	padding: 30px;
+	${cardLinkBaseStyle}
 `;
 
-// NOTE: withComponent('a') を使えば、タグを div → a に変えられる。
-const A_CardLink = styled(DIV_CardLink.withComponent("a"))`
+const A_CardLink = styled(Link)`
+	${cardLinkBaseStyle}
+
 	&:hover ${DIV_Date}, &:hover ${P_Title} {
 		opacity: 0.5;
+	}
+
+	&:hover .round-button {
+		opacity: 0.8;
 	}
 
 	${P_Title} {
@@ -76,8 +125,23 @@ const A_CardLink = styled(DIV_CardLink.withComponent("a"))`
 	}
 `;
 
+// const DIV_titleIconContainer = styled.div`
+// 	display: flex;
+// 	align-items: center;
+// 	width: 100%;
+
+// 	@media (max-width: 900px) {
+// 		width: 100%;
+// 	}
+// `;
+
 const DIV_CardContainer = styled(S_DIV_CardContainer)`
 	// リストの上部パッディングを考慮
 	padding: 0px 30px 30px 30px;
 	min-height: 675px;
+
+	@media (max-width: 900px) {
+		padding: 6px 16px 16px 16px;
+		min-height: 500px;
+	}
 `;

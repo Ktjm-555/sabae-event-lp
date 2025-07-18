@@ -22,7 +22,7 @@ export const NewsContents = () => {
 
 						return (
 							<LI_CardContainer key={index}>
-								<LinkWrapper {...(isLink ? { href: news.url } : {})}>
+								<LinkWrapper to={news.url}>
 									<DIV_Date>{news.date}</DIV_Date>
 									<P_Title>{news.title}</P_Title>
 								</LinkWrapper>
