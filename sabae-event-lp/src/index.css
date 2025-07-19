@@ -11,6 +11,10 @@ body {
 	color: #4b5563;
 }
 
+main {
+	background-color: #fffde2;
+}
+
 img {
 	vertical-align: bottom;
 }
