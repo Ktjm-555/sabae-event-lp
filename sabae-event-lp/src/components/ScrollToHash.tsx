@@ -15,6 +15,9 @@ export const ScrollToHash = () => {
 					target.scrollIntoView({ behavior: "smooth" });
 				}
 			}, 100);
+		} else {
+			// ハッシュが無いならスクロールトップに戻す
+			window.scrollTo({ top: 0, left: 0, behavior: "auto" });
 		}
 	}, [location]);
 

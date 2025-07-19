@@ -16,7 +16,7 @@ if (import.meta.env.MODE === "production") {
 function App() {
 	return (
 		<>
-			<BrowserRouter basename="/sabae-event-lp/">
+			<BrowserRouter basename={import.meta.env.BASE_URL}>
 				<ScrollToHash />
 				<Routes>
 					<Route path="/" element={<Layout />}>

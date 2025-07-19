@@ -5,6 +5,7 @@ import { Button } from "../ui/Button";
 import { S_DIV_CardContainer } from "../../Style";
 import { COLORS } from "../../consts/color";
 import { TEXT_M, TEXT_S } from "../../consts/typography";
+import { Link, useNavigate } from "react-router-dom";
 
 export const NewsContents = () => {
 	const navigate = useNavigate();
@@ -88,8 +89,14 @@ const DIV_CardLink = styled.div`
 	}
 `;
 
-// NOTE: withComponent('a') を使えば、タグを div → a に変えられる。
-const A_CardLink = styled(DIV_CardLink.withComponent("a"))`
+const A_CardLink = styled(Link)`
+	display: block;
+	padding: 20px;
+
+	@media (max-width: 800px) {
+		padding: 0;
+		padding-top: 10px;
+	}
 	&:hover ${DIV_Date}, &:hover ${P_Title} {
 		opacity: 0.5;
 	}
