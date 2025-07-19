@@ -33,13 +33,6 @@ export const guests1 = [
 		}images/photo_spstage_guest_ComingSoon.png`,
 		alt: "COMING SOONの画像",
 	},
-	{
-		name: "",
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/photo_spstage_guest_ComingSoon.png`,
-		alt: "COMING SOONの画像",
-	},
 ];
 
 export const secondGuestsImage = guests1.slice(1, 5);
