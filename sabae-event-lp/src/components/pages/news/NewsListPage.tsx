@@ -121,7 +121,8 @@ const A_CardLink = styled(Link)`
 	}
 
 	${P_Title} {
-		text-decoration: underline 1px;
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
 		text-underline-offset: 3px;
 	}
 `;
