@@ -29,7 +29,7 @@ export const Header = () => {
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink to="/news" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#5" onClick={toggleShowMask}>
 									お知らせ
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>

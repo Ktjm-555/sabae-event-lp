@@ -4,8 +4,8 @@ import ReactGA from "react-ga4";
 import { Layout } from "./components/pages/Layout";
 import TopPage from "./components/pages/TopPage";
 import { NewsListPage } from "./components/pages/news/NewsListPage";
-import NewsDetailPage from "./components/pages/news/NewsDetailPage";
 import { ScrollToHash } from "./components/ScrollToHash";
+import { NewsDetailPage } from "./components/pages/news/NewsDetailPage";
 
 // NOTE：initializeは初期化+sendしている。
 // ルーティングを設定するときは二重送信に要注意！

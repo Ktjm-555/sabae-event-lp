@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { newsList } from "../../../consts/news";
+import { newsList } from "../../../items/news";
 import {
 	S_DIV_CardContainer,
 	S_DIV_SectionWrapper,
@@ -124,16 +124,6 @@ const A_CardLink = styled(Link)`
 		text-underline-offset: 3px;
 	}
 `;
-
-// const DIV_titleIconContainer = styled.div`
-// 	display: flex;
-// 	align-items: center;
-// 	width: 100%;
-
-// 	@media (max-width: 900px) {
-// 		width: 100%;
-// 	}
-// `;
 
 const DIV_CardContainer = styled(S_DIV_CardContainer)`
 	// リストの上部パッディングを考慮

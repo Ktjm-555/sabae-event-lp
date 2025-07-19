@@ -172,19 +172,6 @@ const IMG_Image = styled.img`
 	object-fit: cover;
 `;
 
-// TODO: 削除する
-// const DIV_Guest = styled.div`
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-
-// 	@media (max-width: 500px) {
-// 		div {
-// 			width: 100%;
-// 		}
-// 	}
-// `;
-
 const DIV_NoticeSection = styled.div`
 	background-color: ${COLORS.NOTICE_BG};
 	padding: 15px;

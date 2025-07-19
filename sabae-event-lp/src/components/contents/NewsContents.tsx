@@ -1,18 +1,21 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { newsList } from "../../consts/news";
+import { newsList } from "../../items/news";
 import { Button } from "../ui/Button";
 import { S_DIV_CardContainer } from "../../Style";
 import { COLORS } from "../../consts/color";
 import { TEXT_M, TEXT_S } from "../../consts/typography";
 
 export const NewsContents = () => {
+	const navigate = useNavigate();
+
 	const goToNewsDetailPage = () => {
-		window.open("https://www.sabae-sdgs.jp/news/2080/");
+		navigate("/news");
 	};
 
 	return (
 		<DIV_SectionContainer>
+			<span id="5"></span>
 			<ContentsTitle title="お知らせ" balloonList={[]} />
 			<DIV_CardContainer>
 				<UL_CardWrapper>
