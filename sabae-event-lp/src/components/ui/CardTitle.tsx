@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import React from "react";
-import { COLORS } from "../consts/color";
+import { COLORS } from "../../consts/color";
+import { S_H2_Title } from "../../Style";
 
 type Props = {
 	title: string;
@@ -20,14 +20,7 @@ export const CardTitle = ({ title, label, labelNum, annotation }: Props) => {
 			)}
 
 			<div>
-				<H2_Title>
-					{title.split("\n").map((line, i) => (
-						<React.Fragment key={i}>
-							{line}
-							<br />
-						</React.Fragment>
-					))}
-				</H2_Title>
+				<H2_Title dangerouslySetInnerHTML={{ __html: title }}></H2_Title>
 				{annotation && <SPAN_Annotation>{annotation}</SPAN_Annotation>}
 			</div>
 		</DIV_CardTitleContainer>
@@ -46,6 +39,10 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 		height: auto;
 		margin-bottom: 10px;
 	}
+`;
+
+const H2_Title = styled(S_H2_Title)`
+	font-size: 22px;
 `;
 
 const P_TitleLabel = styled.p`
@@ -67,34 +64,6 @@ const P_TitleLabel = styled.p`
 
 	@media (max-width: 500px) {
 		font-size: 12px;
-	}
-`;
-
-const H2_Title = styled.h2`
-	font-size: 22px;
-	font-weight: bold;
-
-	/* ここ修正時：S_P_Subtitleがある場合はそれも直す必要あり！ */
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 1160px) {
-		font-size: 18px;
-	}
-
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 1040px) {
-		font-size: 16px;
-	}
-
-	@media (max-width: 900px) {
-		margin-top: 10px;
-	}
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 800px) {
-		margin-top: 0;
-	}
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 410px) {
-		margin-top: 10px;
 	}
 `;
 

@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import { COLORS } from "../consts/color.ts";
-import { Logo } from "./logo.tsx";
+import { Logo } from "./ui/logo.tsx";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
 	const [isShowMask, setIsShowMask] = useState(false);
@@ -23,22 +24,27 @@ export const Header = () => {
 						{/* ナビゲーション */}
 						<UL_HeaderNavList>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#1" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#1" onClick={toggleShowMask}>
 									トップ
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#2" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#5" onClick={toggleShowMask}>
+									お知らせ
+								</A_HeaderNavLink>
+							</LI_HeaderNavItem>
+							<LI_HeaderNavItem>
+								<A_HeaderNavLink to="/#2" onClick={toggleShowMask}>
 									スペシャルステージ
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#3" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#3" onClick={toggleShowMask}>
 									さばえアクション∞とは
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink href="#4" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#4" onClick={toggleShowMask}>
 									さばえ３大フェス
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
@@ -54,7 +60,7 @@ export const Header = () => {
 									rel="noopener noreferrer"
 								>
 									<img
-										src="icon/twitter-x_red.svg"
+										src={`${import.meta.env.BASE_URL}icon/twitter-x_red.svg`}
 										alt="鯖江市のtwitter-xのアイコン"
 									/>
 								</A_Icon>
@@ -64,7 +70,7 @@ export const Header = () => {
 									rel="noopener noreferrer"
 								>
 									<img
-										src="icon/instagram_red.svg"
+										src={`${import.meta.env.BASE_URL}icon/instagram_red.svg`}
 										alt="鯖江市のinstagramのアイコン"
 									/>
 								</A_Icon>
@@ -74,7 +80,7 @@ export const Header = () => {
 									rel="noopener noreferrer"
 								>
 									<img
-										src="icon/facebook_red.svg"
+										src={`${import.meta.env.BASE_URL}icon/facebook_red.svg`}
 										alt="鯖江市役所facebookのアイコン"
 									/>
 								</A_Icon>
@@ -112,7 +118,7 @@ export const Header = () => {
 							rel="noopener noreferrer"
 						>
 							<IMG_Icon
-								src="icon/instagram_gray.svg"
+								src={`${import.meta.env.BASE_URL}icon/instagram_gray.svg`}
 								alt="鯖江市のinstagramのアイコン"
 							/>
 							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>
@@ -156,7 +162,7 @@ const DIV_IconContainer = styled.div`
 const DIV_HeaderNavAndIconContainer = styled.div`
 	display: flex;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		flex-direction: column;
 		gap: 30px;
 	}
@@ -233,7 +239,7 @@ const DIV_HeaderContainer = styled.div`
 	border-radius: 4px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		position: relative;
 	}
 
@@ -248,7 +254,7 @@ const NAV_Container = styled.nav`
 	flex-direction: column;
 	justify-content: space-between;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		width: 220px;
 		position: fixed;
 		background-color: ${COLORS.CARD_BG};
@@ -273,7 +279,7 @@ const UL_HeaderNavList = styled.ul`
 	align-items: center;
 	margin-right: 20px;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		flex-direction: column;
 	}
 `;
@@ -281,14 +287,14 @@ const UL_HeaderNavList = styled.ul`
 const LI_HeaderNavItem = styled.li`
 	margin-left: 15px;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		&:nth-child(1) {
 			margin-top: 40px;
 		}
 	}
 `;
 
-const A_HeaderNavLink = styled.a`
+const A_HeaderNavLink = styled(Link)`
 	font-weight: bold;
 
 	&:hover,
@@ -297,7 +303,7 @@ const A_HeaderNavLink = styled.a`
 		color: ${COLORS.PRIMARY};
 	}
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		position: relative;
 		display: block;
 		border-bottom: 2px solid ${COLORS.BORDER_ON_ACCENT};
@@ -315,6 +321,10 @@ const A_HeaderNavLink = styled.a`
 			content: "";
 			background: ${COLORS.PRIMARY};
 		}
+	}
+
+	@media (max-width: 1100px) {
+		font-size: 14px;
 	}
 `;
 
@@ -340,7 +350,7 @@ const DIV_HeaderToggleArea = styled.div`
 
 const DIV_HeaderSns = styled.div`
 	display: none;
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		display: block;
 	}
 	&.open {
@@ -351,7 +361,7 @@ const DIV_HeaderSns = styled.div`
 const DIV_HeaderToggleBtn = styled.div`
 	display: none;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		display: block;
 		width: 30px;
 		height: 30px;

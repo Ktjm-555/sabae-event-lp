@@ -5,8 +5,9 @@ import {
 	S_P_Subtitle,
 	S_P_LargeDesc,
 } from "../Style.ts";
-import { Contents } from "./Contents.tsx";
-import { Contents2 } from "./Contents2.tsx";
+import { Contents } from "./contents/Contents.tsx";
+import { Contents2 } from "./contents/Contents2.tsx";
+import { NewsContents } from "./contents/NewsContents.tsx";
 
 export const EventContents = () => {
 	return (
@@ -17,18 +18,19 @@ export const EventContents = () => {
 					<br />
 					今回は、若者視点で考案した行動目標「さばえアクション∞(エイト)」をとおし、知って、遊んで、楽しめるフェスを目指します。
 				</S_P_LargeDesc>
+				<NewsContents />
 				<S_P_Subtitle>体験&販売</S_P_Subtitle>
 				<DIV_ContentsContainer>
 					<Contents
 						title="わくわくサステナブース"
 						caption="SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい！！"
-						imgSrc="images/photo_try&buy_01.png"
+						imgSrc={`${import.meta.env.BASE_URL}images/photo_try&buy_01.png`}
 						balloonList={["9/20", "土", "9/21", "日"]}
 					/>
 					<Contents
 						title="パーク探検！クイズラリー"
 						caption="ブースを巡ってクイズにチャレンジ！スタンプを集めて豪華賞品をゲットしよう！"
-						imgSrc="images/photo_try&buy_02.png"
+						imgSrc={`${import.meta.env.BASE_URL}images/photo_try&buy_02.png`}
 						balloonList={[]}
 					/>
 				</DIV_ContentsContainer>
@@ -46,7 +48,7 @@ export const EventContents = () => {
 const DIV_EventWrapper = styled(S_DIV_SectionWrapper)`
 	padding-top: 150px;
 	margin-top: -100px;
-
+	padding-bottom: 30px;
 	@media (max-width: 900px) {
 		margin-top: -130px;
 	}

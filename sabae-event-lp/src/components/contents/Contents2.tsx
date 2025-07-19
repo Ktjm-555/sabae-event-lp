@@ -1,9 +1,15 @@
 import styled from "@emotion/styled";
 import { ContentsTitle } from "./CotentsTitle";
-import { CardTitle } from "./CardTitle";
-import { S_P_Description, S_DIV_CardContainer, S_P_Subtitle } from "../Style";
-import { Button } from "./Button";
-import { COLORS } from "../consts/color";
+import { CardTitle } from "../ui/CardTitle";
+import {
+	S_P_Description,
+	S_DIV_CardContainer,
+	S_P_Subtitle,
+	S_H2_Title,
+} from "../../Style";
+import { Button } from "../ui/Button";
+import { COLORS } from "../../consts/color";
+import { guests1, guests2 } from "../../items/guests";
 
 type Props = {
 	title: string;
@@ -31,52 +37,40 @@ export const Contents2 = ({
 				balloonList={balloonList}
 				annotation={annotation}
 			/>
+			<SECTION_CardContainer>
+				<DIV_CardHeaderContainer>
+					<S_H2_Title>
+						“さばえアクション∞（エイト）”コレクション <br className="sp-only" />
+						<span className="english">produced by TGC</span>
+					</S_H2_Title>
+				</DIV_CardHeaderContainer>
+				<DIV_GuestContainer>
+					{guests1.map((guest, index) => (
+						<div key={index}>
+							<DIV_Image>
+								<IMG_Image src={guest.imgSrc} alt={guest.alt} />
+							</DIV_Image>
+							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
+						</div>
+					))}
+				</DIV_GuestContainer>
+			</SECTION_CardContainer>
+			<SECTION_CardContainer>
+				<DIV_CardHeaderContainer>
+					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
+				</DIV_CardHeaderContainer>
+				<DIV_GuestContainer>
+					{guests2.map((guest, index) => (
+						<div key={index}>
+							<DIV_Image>
+								<IMG_Image src={guest.imgSrc} alt={guest.alt} />
+							</DIV_Image>
+							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
+						</div>
+					))}
+				</DIV_GuestContainer>
+			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
-				<SECTION_CardContainer>
-					<CardTitle
-						title={`“さばえアクション∞（エイト）”\nコレクション produced by TGC`}
-						label="出演ゲスト"
-						labelNum={1}
-					/>
-					<DIV_Guest>
-						<div>
-							<DIV_Image>
-								<IMG_Image
-									src="images/photo_spstage_guest_01.png"
-									alt="くれいじーまぐねっとの画像"
-								/>
-							</DIV_Image>
-							<p>くれいじーまぐねっと[メインMC]</p>
-						</div>
-					</DIV_Guest>
-				</SECTION_CardContainer>
-				<SECTION_CardContainer>
-					<CardTitle
-						title="LDH ダンスワークショップショー"
-						label="出演ゲスト"
-						labelNum={2}
-					/>
-					<DIV_GuestContainer>
-						<div>
-							<DIV_Image>
-								<IMG_Image
-									src="images/photo_spstage_guest_02.png"
-									alt="EXILE TETSUYAの画像"
-								/>
-							</DIV_Image>
-							<p>EXILE TETSUYA</p>
-						</div>
-						<div>
-							<DIV_Image>
-								<IMG_Image
-									src="images/photo_spstage_guest_03.png"
-									alt="岩谷翔吾（THE RAMPAGE）の画像"
-								/>
-							</DIV_Image>
-							<p>岩谷翔吾（THE RAMPAGE）</p>
-						</div>
-					</DIV_GuestContainer>
-				</SECTION_CardContainer>
 				<SECTION_CardContainer>
 					<CardTitle
 						title="繊維産業×福井文化服装学院コラボ"
@@ -89,10 +83,17 @@ export const Contents2 = ({
 					</S_P_Description>
 					<DIV_ImageContainer>
 						<img
-							src="images/photo_spstage_collab_01.png"
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_01.png`}
 							alt="福井文化服装学院の画像"
 						/>
-						<img src="images/photo_spstage_collab_02.png" alt="学生の画像" />
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_02.png`}
+							alt="学生の画像"
+						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
@@ -124,7 +125,9 @@ export const Contents2 = ({
 
 const SECTION_CardContainer = styled(
 	S_DIV_CardContainer.withComponent("section")
-)``;
+)`
+	margin-bottom: 30px;
+`;
 
 const DIV_CardsWrapper = styled.div`
 	display: grid;
@@ -139,23 +142,34 @@ const DIV_CardsWrapper = styled.div`
 	}
 `;
 
+const DIV_CardHeaderContainer = styled.div`
+	padding-bottom: 20px;
+	display: block;
+	list-style: none;
+	border-bottom: 1px solid ${COLORS.BORDER};
+	margin-bottom: 14px;
+
+	@media (max-width: 900px) {
+		padding-bottom: 15px;
+	}
+`;
+
 const DIV_GuestContainer = styled.div`
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
 
-	@media (max-width: 500px) {
-		display: block;
+	.sp-only {
+		display: none;
+	}
 
-		/* 子要素の下に余白をつける（最後の要素は除く） */
-		> div {
-			margin-bottom: 20px;
+	@media (max-width: 1225px) {
+		.sp-only {
+			display: block;
 		}
-
-		/* 最後の要素は余白なしにする */
-		> div:last-of-type {
-			margin-bottom: 0;
-		}
+	}
+	@media (max-width: 800px) {
+		grid-template-columns: repeat(2, 1fr);
 	}
 `;
 
@@ -168,18 +182,6 @@ const IMG_Image = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-`;
-
-const DIV_Guest = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	@media (max-width: 500px) {
-		div {
-			width: 100%;
-		}
-	}
 `;
 
 const DIV_NoticeSection = styled.div`

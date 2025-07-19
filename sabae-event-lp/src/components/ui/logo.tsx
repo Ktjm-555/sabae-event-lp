@@ -1,16 +1,20 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 export const Logo = () => {
 	return (
 		<>
-			<A_Logo href="#1">
-				<img src="logo/sabae_logo.svg" alt="logo" />
+			<A_Logo to="/#1">
+				<img
+					src={`${import.meta.env.BASE_URL}logo/sabae_logo.svg`}
+					alt="logo"
+				/>
 			</A_Logo>
 		</>
 	);
 };
 
-const A_Logo = styled.a`
+const A_Logo = styled(Link)`
 	display: block;
 	@media (max-width: 410px) {
 		img {

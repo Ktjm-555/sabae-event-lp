@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { S_SECTION_container, S_DIV_SectionWrapper } from "../Style.ts";
-import { Contents3 } from "./Contents3.tsx";
+import { Contents3 } from "./contents/Contents3.tsx";
 import { COLORS } from "../consts/color.ts";
 
 export const IntroduceContents = () => {

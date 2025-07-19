@@ -16,3 +16,25 @@ export const TEXT_L = () => `
 		font-size: 16px;
 	}
 `;
+
+export const TEXT_M = () => `
+	font-size: 20px;
+
+	@media (max-width: 1000px) {
+		font-size: 16px;
+	}
+
+	@media (max-width: 500px) {
+	}
+`;
+
+export const TEXT_S = () => `
+	font-size: 18px;
+
+	@media (max-width: 1000px) {
+		font-size: 14px;
+	}
+
+	@media (max-width: 500px) {
+	}
+`;

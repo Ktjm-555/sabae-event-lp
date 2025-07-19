@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import type { MouseEventHandler, ReactNode } from "react";
-import { COLORS } from "../consts/color";
+import { COLORS } from "../../consts/color";
 
 type Props = {
 	children: ReactNode;
