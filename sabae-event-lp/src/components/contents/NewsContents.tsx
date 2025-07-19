@@ -26,7 +26,8 @@ export const NewsContents = () => {
 
 						return (
 							<LI_CardContainer key={index}>
-								<LinkWrapper to={news.url}>
+								{/* 本当はdivの場合は、toは不要だが、エラーが出るため */}
+								<LinkWrapper to={news.url ?? "/"}>
 									<DIV_Date>{news.date}</DIV_Date>
 									<P_Title>{news.title}</P_Title>
 								</LinkWrapper>
@@ -92,6 +93,8 @@ const DIV_CardLink = styled.div`
 const A_CardLink = styled(Link)`
 	display: block;
 	padding: 20px;
+	// リンク範囲をカードに。上下のパディング分をひく
+	height: calc(100% - 40px);
 
 	@media (max-width: 800px) {
 		padding: 0;

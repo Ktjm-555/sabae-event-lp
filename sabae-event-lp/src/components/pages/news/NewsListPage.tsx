@@ -23,7 +23,8 @@ export const NewsListPage = () => {
 
 							return (
 								<LI_CardContainer key={index}>
-									<LinkWrapper to={news.url}>
+									{/* 本当はdivの場合は、toは不要だが、エラーが出るため */}
+									<LinkWrapper to={news.url ?? "/"}>
 										<DIV_Date>{news.date}</DIV_Date>
 										<P_Title>{news.title}</P_Title>
 										{isLink && (

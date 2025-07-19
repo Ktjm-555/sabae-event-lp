@@ -8,7 +8,6 @@ import { ScrollToHash } from "./components/ScrollToHash";
 import { NewsDetailPage } from "./components/pages/news/NewsDetailPage";
 import { useEffect } from "react";
 
-// NOTE：initializeは初期化+sendしている。
 // ルーティングを設定するときは二重送信に要注意！
 if (import.meta.env.MODE === "production") {
 	ReactGA.initialize("G-1P3N11YF8M", {
