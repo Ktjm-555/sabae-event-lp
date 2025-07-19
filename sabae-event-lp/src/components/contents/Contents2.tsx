@@ -5,6 +5,7 @@ import {
 	S_P_Description,
 	S_DIV_CardContainer,
 	S_P_Subtitle,
+	S_H2_Title,
 } from "../../Style";
 import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
@@ -37,11 +38,12 @@ export const Contents2 = ({
 				annotation={annotation}
 			/>
 			<SECTION_CardContainer>
-				<CardTitle
-					title={`“さばえアクション∞（エイト）”\nコレクション produced by TGC`}
-					label="出演ゲスト"
-					labelNum={1}
-				/>
+				<DIV_CardHeaderContainer>
+					<S_H2_Title>
+						“さばえアクション∞（エイト）”コレクション <br className="sp-only" />
+						<span className="english">produced by TGC</span>
+					</S_H2_Title>
+				</DIV_CardHeaderContainer>
 				<DIV_GuestContainer>
 					{guests1.map((guest, index) => (
 						<div key={index}>
@@ -54,11 +56,9 @@ export const Contents2 = ({
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<SECTION_CardContainer>
-				<CardTitle
-					title="LDH ダンスワークショップショー"
-					label="出演ゲスト"
-					labelNum={2}
-				/>
+				<DIV_CardHeaderContainer>
+					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
+				</DIV_CardHeaderContainer>
 				<DIV_GuestContainer>
 					{guests2.map((guest, index) => (
 						<div key={index}>
@@ -139,6 +139,18 @@ const DIV_CardsWrapper = styled.div`
 	@media (max-width: 800px) {
 		grid-template-columns: none;
 		grid-auto-rows: auto;
+	}
+`;
+
+const DIV_CardHeaderContainer = styled.div`
+	padding-bottom: 20px;
+	display: block;
+	list-style: none;
+	border-bottom: 1px solid ${COLORS.BORDER};
+	margin-bottom: 14px;
+
+	@media (max-width: 900px) {
+		padding-bottom: 15px;
 	}
 `;
 

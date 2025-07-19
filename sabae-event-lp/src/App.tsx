@@ -42,8 +42,6 @@ function App() {
 }
 
 function InnerApp() {
-	console.log("InnerApp コンポーネント レンダリング");
-
 	usePageTracking();
 
 	return (

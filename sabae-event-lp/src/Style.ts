@@ -62,3 +62,53 @@ export const S_P_Description = styled.p`
 		margin-bottom: 20px;
 	}
 `;
+
+export const S_H2_Title = styled.h2`
+	font-size: 24px;
+	font-weight: bold;
+	.sp-only {
+		display: none;
+	}
+
+	.english {
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	/* ここ修正時：S_P_Subtitleがある場合はそれも直す必要あり！ */
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 1160px) {
+		font-size: 18px;
+
+		.english {
+			font-size: 16px;
+		}
+	}
+
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 1040px) {
+		font-size: 16px;
+
+		.english {
+			font-size: 14px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		margin-top: 10px;
+	}
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 800px) {
+		margin-top: 0;
+	}
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 540px) {
+		.sp-only {
+			display: block;
+		}
+	}
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 410px) {
+		margin-top: 10px;
+	}
+`;
