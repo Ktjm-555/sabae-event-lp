@@ -162,7 +162,7 @@ const DIV_IconContainer = styled.div`
 const DIV_HeaderNavAndIconContainer = styled.div`
 	display: flex;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		flex-direction: column;
 		gap: 30px;
 	}
@@ -239,7 +239,7 @@ const DIV_HeaderContainer = styled.div`
 	border-radius: 4px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		position: relative;
 	}
 
@@ -254,7 +254,7 @@ const NAV_Container = styled.nav`
 	flex-direction: column;
 	justify-content: space-between;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		width: 220px;
 		position: fixed;
 		background-color: ${COLORS.CARD_BG};
@@ -279,7 +279,7 @@ const UL_HeaderNavList = styled.ul`
 	align-items: center;
 	margin-right: 20px;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		flex-direction: column;
 	}
 `;
@@ -287,7 +287,7 @@ const UL_HeaderNavList = styled.ul`
 const LI_HeaderNavItem = styled.li`
 	margin-left: 15px;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		&:nth-child(1) {
 			margin-top: 40px;
 		}
@@ -303,7 +303,7 @@ const A_HeaderNavLink = styled(Link)`
 		color: ${COLORS.PRIMARY};
 	}
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		position: relative;
 		display: block;
 		border-bottom: 2px solid ${COLORS.BORDER_ON_ACCENT};
@@ -321,6 +321,10 @@ const A_HeaderNavLink = styled(Link)`
 			content: "";
 			background: ${COLORS.PRIMARY};
 		}
+	}
+
+	@media (max-width: 1100px) {
+		font-size: 14px;
 	}
 `;
 
@@ -346,7 +350,7 @@ const DIV_HeaderToggleArea = styled.div`
 
 const DIV_HeaderSns = styled.div`
 	display: none;
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		display: block;
 	}
 	&.open {
@@ -357,7 +361,7 @@ const DIV_HeaderSns = styled.div`
 const DIV_HeaderToggleBtn = styled.div`
 	display: none;
 
-	@media (max-width: 1030px) {
+	@media (max-width: 1040px) {
 		display: block;
 		width: 30px;
 		height: 30px;
