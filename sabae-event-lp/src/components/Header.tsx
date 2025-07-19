@@ -60,7 +60,7 @@ export const Header = () => {
 									rel="noopener noreferrer"
 								>
 									<img
-										src="icon/twitter-x_red.svg"
+										src={`${import.meta.env.BASE_URL}icon/twitter-x_red.svg`}
 										alt="鯖江市のtwitter-xのアイコン"
 									/>
 								</A_Icon>
@@ -70,7 +70,7 @@ export const Header = () => {
 									rel="noopener noreferrer"
 								>
 									<img
-										src="icon/instagram_red.svg"
+										src={`${import.meta.env.BASE_URL}icon/instagram_red.svg`}
 										alt="鯖江市のinstagramのアイコン"
 									/>
 								</A_Icon>
@@ -80,7 +80,7 @@ export const Header = () => {
 									rel="noopener noreferrer"
 								>
 									<img
-										src="icon/facebook_red.svg"
+										src={`${import.meta.env.BASE_URL}icon/facebook_red.svg`}
 										alt="鯖江市役所facebookのアイコン"
 									/>
 								</A_Icon>
@@ -118,7 +118,7 @@ export const Header = () => {
 							rel="noopener noreferrer"
 						>
 							<IMG_Icon
-								src="icon/instagram_gray.svg"
+								src={`${import.meta.env.BASE_URL}icon/instagram_gray.svg`}
 								alt="鯖江市のinstagramのアイコン"
 							/>
 							<SPAN_UnderIcon>公式SNS</SPAN_UnderIcon>

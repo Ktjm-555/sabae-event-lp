@@ -8,6 +8,7 @@ import {
 } from "../../Style";
 import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
+import { guests1, guests2 } from "../../items/guests";
 
 type Props = {
 	title: string;
@@ -25,62 +26,6 @@ export const Contents2 = ({
 	const goToSabaeModelPage = () => {
 		window.open("https://www.sabae-sdgs.jp/news/2120/", "_blank");
 	};
-
-	const guests1 = [
-		{
-			name: `くれいじーまぐねっと<br class="sp-only">[メインMC]`,
-			imgSrc: "images/photo_spstage_guest_01.png",
-			alt: "くれいじーまぐねっとの画像",
-		},
-		{
-			name: "梶原叶渚",
-			imgSrc: "images/photo_spstage_guest_04.png",
-			alt: "梶原叶渚の画像",
-		},
-		{
-			name: "MINAMI",
-			imgSrc: "images/photo_spstage_guest_05.png",
-			alt: "MINAMIの画像",
-		},
-		{
-			name: "村谷はるな",
-			imgSrc: "images/photo_spstage_guest_06.png",
-			alt: "村谷はるなの画像",
-		},
-		{
-			name: "りんか",
-			imgSrc: "images/photo_spstage_guest_07.png",
-			alt: "りんかの画像",
-		},
-		{
-			name: "",
-			imgSrc: "images/photo_spstage_guest_ComingSoon.png",
-			alt: "COMING SOONの画像",
-		},
-		{
-			name: "",
-			imgSrc: "images/photo_spstage_guest_ComingSoon.png",
-			alt: "COMING SOONの画像",
-		},
-	];
-
-	const guests2 = [
-		{
-			name: "EXILE TETSUYA",
-			imgSrc: "images/photo_spstage_guest_02.png",
-			alt: "EXILE TETSUYAの画像",
-		},
-		{
-			name: `岩谷翔吾<br class="sp-only">（THE RAMPAGE）`,
-			imgSrc: "images/photo_spstage_guest_03.png",
-			alt: "岩谷翔吾（THE RAMPAGE）の画像",
-		},
-		{
-			name: "",
-			imgSrc: "images/photo_spstage_guest_ComingSoon.png",
-			alt: "COMING SOONの画像",
-		},
-	];
 
 	return (
 		<div>
@@ -138,10 +83,17 @@ export const Contents2 = ({
 					</S_P_Description>
 					<DIV_ImageContainer>
 						<img
-							src="images/photo_spstage_collab_01.png"
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_01.png`}
 							alt="福井文化服装学院の画像"
 						/>
-						<img src="images/photo_spstage_collab_02.png" alt="学生の画像" />
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_02.png`}
+							alt="学生の画像"
+						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>

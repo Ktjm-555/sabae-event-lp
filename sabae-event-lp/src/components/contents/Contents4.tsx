@@ -41,7 +41,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 							rel="noopener noreferrer"
 						>
 							<IMG_Icon
-								src="icon/instagram.svg"
+								src={`${import.meta.env.BASE_URL}icon/instagram.svg`}
 								alt="さばえ門前まつりのinstagramのアイコン"
 							/>
 						</A_Icon>
@@ -51,7 +51,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 							rel="noopener noreferrer"
 						>
 							<IMG_Icon
-								src="icon/facebook.svg"
+								src={`${import.meta.env.BASE_URL}icon/facebook.svg`}
 								alt="さばえ門前まつりのfacebookのアイコン"
 							/>
 						</A_Icon>
@@ -71,7 +71,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 								rel="noopener noreferrer"
 							>
 								<IMG_Icon
-									src="icon/twitter-x.svg"
+									src={`${import.meta.env.BASE_URL}icon/twitter-x.svg`}
 									alt="めがねフェスのtwitter-xのアイコン"
 								/>
 							</A_Icon>
@@ -81,7 +81,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 								rel="noopener noreferrer"
 							>
 								<IMG_Icon
-									src="icon/instagram.svg"
+									src={`${import.meta.env.BASE_URL}icon/instagram.svg`}
 									alt="めがねフェスのinstagramのアイコン"
 								/>
 							</A_Icon>
@@ -91,7 +91,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 								rel="noopener noreferrer"
 							>
 								<IMG_Icon
-									src="icon/facebook.svg"
+									src={`${import.meta.env.BASE_URL}icon/facebook.svg`}
 									alt="めがねフェスのfacebookのアイコン"
 								/>
 							</A_Icon>
@@ -101,7 +101,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 								rel="noopener noreferrer"
 							>
 								<IMG_Icon
-									src="icon/youtube.svg"
+									src={`${import.meta.env.BASE_URL}icon/youtube.svg`}
 									alt="めがねフェスのYoutubeのアイコン"
 								/>
 							</A_Icon>
@@ -118,7 +118,10 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 						スタンプを集めると、豪華景品が当たるカプセルマシンを回せるチャンス！
 					</P_Description_gapNone>
 					<DIV_Image>
-						<img src="logo/comic_logo.svg" alt="コロコロコミックのロゴ" />
+						<img
+							src={`${import.meta.env.BASE_URL}logo/comic_logo.svg`}
+							alt="コロコロコミックのロゴ"
+						/>
 					</DIV_Image>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>

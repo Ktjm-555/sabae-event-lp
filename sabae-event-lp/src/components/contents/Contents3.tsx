@@ -18,42 +18,42 @@ type Props = {
 const swiperItems = [
 	{
 		num: "01",
-		src: "images/figure_sabae_action_01.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_01.png`,
 		text: "いいと思ったらほめよう",
 	},
 	{
 		num: "02",
-		src: "images/figure_sabae_action_02.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_02.png`,
 		text: "自分を大切にしよう",
 	},
 	{
 		num: "03",
-		src: "images/figure_sabae_action_03.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_03.png`,
 		text: "視野を広げよう",
 	},
 	{
 		num: "04",
-		src: "images/figure_sabae_action_04.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_04.png`,
 		text: "フードロスを減らそう",
 	},
 	{
 		num: "05",
-		src: "images/figure_sabae_action_05.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_05.png`,
 		text: "地産地消しよう",
 	},
 	{
 		num: "06",
-		src: "images/figure_sabae_action_06.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_06.png`,
 		text: "イベントに参加しよう",
 	},
 	{
 		num: "07",
-		src: "images/figure_sabae_action_07.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_07.png`,
 		text: "リサイクルしよう",
 	},
 	{
 		num: "08",
-		src: "images/figure_sabae_action_08.png",
+		src: `${import.meta.env.BASE_URL}images/figure_sabae_action_08.png`,
 		text: "さばえらしさを伝えよう",
 	},
 ];
@@ -82,7 +82,7 @@ export const Contents3 = ({
 				</div>
 				<DIV_Content>
 					<img
-						src="logo/sabae_eight.svg"
+						src={`${import.meta.env.BASE_URL}logo/sabae_eight.svg`}
 						alt="さばえアクション∞(エイト)_ロゴ"
 					/>
 					<p>「笑顔があふれるまち」を目指す8つのアクション</p>
@@ -97,7 +97,7 @@ export const Contents3 = ({
 				/>
 				<DIV_Content>
 					<IMG_Logo
-						src="logo/sabae_eight.svg"
+						src={`${import.meta.env.BASE_URL}logo/sabae_eight.svg`}
 						alt="さばえアクション∞(エイト)_ロゴ"
 					/>
 					<P_LogoSup>「笑顔があふれるまち」を目指す8つのアクション</P_LogoSup>

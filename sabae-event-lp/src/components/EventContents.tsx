@@ -24,13 +24,13 @@ export const EventContents = () => {
 					<Contents
 						title="わくわくサステナブース"
 						caption="SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい！！"
-						imgSrc="images/photo_try&buy_01.png"
+						imgSrc={`${import.meta.env.BASE_URL}images/photo_try&buy_01.png`}
 						balloonList={["9/20", "土", "9/21", "日"]}
 					/>
 					<Contents
 						title="パーク探検！クイズラリー"
 						caption="ブースを巡ってクイズにチャレンジ！スタンプを集めて豪華賞品をゲットしよう！"
-						imgSrc="images/photo_try&buy_02.png"
+						imgSrc={`${import.meta.env.BASE_URL}images/photo_try&buy_02.png`}
 						balloonList={[]}
 					/>
 				</DIV_ContentsContainer>

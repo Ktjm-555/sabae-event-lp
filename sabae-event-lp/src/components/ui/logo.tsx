@@ -5,7 +5,10 @@ export const Logo = () => {
 	return (
 		<>
 			<A_Logo to="/#1">
-				<img src="logo/sabae_logo.svg" alt="logo" />
+				<img
+					src={`${import.meta.env.BASE_URL}logo/sabae_logo.svg`}
+					alt="logo"
+				/>
 			</A_Logo>
 		</>
 	);
