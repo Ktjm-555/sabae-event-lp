@@ -26,13 +26,6 @@ export const guests1 = [
 		imgSrc: `${import.meta.env.BASE_URL}images/photo_spstage_guest_07.png`,
 		alt: "りんかの画像",
 	},
-	{
-		name: "",
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/photo_spstage_guest_ComingSoon.png`,
-		alt: "COMING SOONの画像",
-	},
 ];
 
 export const secondGuestsImage = guests1.slice(1, 5);
@@ -47,12 +40,5 @@ export const guests2 = [
 		name: `岩谷翔吾<br class="sp-only">（THE RAMPAGE）`,
 		imgSrc: `${import.meta.env.BASE_URL}images/photo_spstage_guest_03.png`,
 		alt: "岩谷翔吾（THE RAMPAGE）の画像",
-	},
-	{
-		name: "",
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/photo_spstage_guest_ComingSoon.png`,
-		alt: "COMING SOONの画像",
 	},
 ];

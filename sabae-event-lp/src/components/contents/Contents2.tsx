@@ -44,6 +44,9 @@ export const Contents2 = ({
 						<span className="english">produced by TGC</span>
 					</S_H2_Title>
 				</DIV_CardHeaderContainer>
+				<DIV_Container>
+					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
+				</DIV_Container>
 				<DIV_GuestContainer>
 					{guests1.map((guest, index) => (
 						<div key={index}>
@@ -53,12 +56,25 @@ export const Contents2 = ({
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
+					<DIV_PcOnlyContainer>
+						<DIV_Image>
+							<IMG_Image
+								src={`${
+									import.meta.env.BASE_URL
+								}images/photo_spstage_guest_ComingSoon.png`}
+								alt="COMING SOONの画像"
+							/>
+						</DIV_Image>
+					</DIV_PcOnlyContainer>
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<SECTION_CardContainer>
 				<DIV_CardHeaderContainer>
 					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
 				</DIV_CardHeaderContainer>
+				<DIV_Container>
+					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
+				</DIV_Container>
 				<DIV_GuestContainer>
 					{guests2.map((guest, index) => (
 						<div key={index}>
@@ -68,6 +84,16 @@ export const Contents2 = ({
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
+					<DIV_PcOnlyContainer>
+						<DIV_Image>
+							<IMG_Image
+								src={`${
+									import.meta.env.BASE_URL
+								}images/photo_spstage_guest_ComingSoon.png`}
+								alt="COMING SOONの画像"
+							/>
+						</DIV_Image>
+					</DIV_PcOnlyContainer>
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
@@ -151,6 +177,22 @@ const DIV_CardHeaderContainer = styled.div`
 
 	@media (max-width: 900px) {
 		padding-bottom: 15px;
+	}
+`;
+
+const DIV_Container = styled.div`
+	display: none;
+	@media (max-width: 800px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+`;
+
+const DIV_PcOnlyContainer = styled.div`
+	@media (max-width: 800px) {
+		display: none;
 	}
 `;
 
