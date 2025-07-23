@@ -113,6 +113,13 @@ const A_CardLink = styled(Link)`
 
 const DIV_SectionContainer = styled.div`
 	margin-bottom: 70px;
+	@media (max-width: 900px) {
+		margin-bottom: 40px;
+	}
+
+	@media (max-width: 500px) {
+		margin-bottom: 30px;
+	}
 `;
 
 const DIV_CardContainer = styled.div`

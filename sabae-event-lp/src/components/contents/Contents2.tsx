@@ -154,6 +154,10 @@ const DIV_CardsWrapper = styled.div`
 		grid-template-columns: none;
 		grid-auto-rows: auto;
 	}
+
+	@media (max-width: 500px) {
+		gap: 0;
+	}
 `;
 
 const DIV_CardHeaderContainer = styled.div`

@@ -22,10 +22,19 @@ export const S_SECTION_container = styled.section`
 `;
 
 export const S_DIV_SectionWrapper = styled.div`
-	background-color: ${COLORS.SEC_YELLOW_BG};
+	background-color: ${COLORS.SEC_GRAY_BG};
 	width: 100%;
-	padding-top: 35px;
+	padding-top: 50px;
 	padding-bottom: 60px;
+
+	@media (max-width: 900px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@media (max-width: 500px) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 `;
 
 export const S_DIV_CardContainer = styled.div`

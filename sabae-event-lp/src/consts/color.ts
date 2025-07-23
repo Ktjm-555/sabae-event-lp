@@ -7,7 +7,7 @@ export const COLORS = {
 	NOTICE_BG: "#fdede2",
 	SEC_NORMAL_BG: "#fff",
 	SEC_YELLOW_BG: "#fffde2",
-	SEC_BLUE_BG: "#F4FBFF",
+	SEC_BLUE_BG: "#f4fBff",
 	SEC_GRAY_BG: "#f4f4f4",
 	CARD_BG: "#fff",
 	MASK: "#000",

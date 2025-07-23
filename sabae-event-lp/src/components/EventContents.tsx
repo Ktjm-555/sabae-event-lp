@@ -7,6 +7,7 @@ import {
 } from "../Style.ts";
 import { Contents } from "./contents/Contents.tsx";
 import { NewsContents } from "./contents/NewsContents.tsx";
+import { COLORS } from "../consts/color.ts";
 
 export const EventContents = () => {
 	return (
@@ -38,9 +39,11 @@ export const EventContents = () => {
 	);
 };
 
-const DIV_EventWrapper = styled(S_DIV_SectionWrapper)`
+const DIV_EventWrapper = styled.div`
+	background-color: ${COLORS.SEC_YELLOW_BG};
 	padding-top: 150px;
 	margin-top: -100px;
+	width: 100%;
 	padding-bottom: 0px;
 	@media (max-width: 900px) {
 		margin-top: -130px;
@@ -65,6 +68,6 @@ const DIV_ContentsContainer = styled.div`
 	}
 
 	@media (max-width: 500px) {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 `;

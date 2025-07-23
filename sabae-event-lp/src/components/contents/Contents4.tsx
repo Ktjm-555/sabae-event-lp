@@ -3,6 +3,7 @@ import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "../ui/CardTitle";
 import {
 	S_DIV_CardContainer,
+	S_DIV_SectionWrapper,
 	S_P_Description,
 	S_P_Subtitle,
 } from "../../Style";
@@ -21,7 +22,7 @@ const goToSabaeEightPage = () => {
 
 export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 	return (
-		<div>
+		<DIV_SectionWrapper>
 			<S_P_Subtitle id="4">同時開催</S_P_Subtitle>
 			<ContentsTitle
 				title={title}
@@ -125,7 +126,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					</DIV_Image>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
-		</div>
+		</DIV_SectionWrapper>
 	);
 };
 
@@ -223,5 +224,12 @@ const P_Description_gapNone = styled(S_P_Description)`
 	@media (max-width: 500px) {
 		font-size: 14px;
 		margin-bottom: 0px;
+	}
+`;
+
+const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
+	padding-bottom: 0px;
+	@media (max-width: 900px) {
+		padding-bottom: 0px;
 	}
 `;

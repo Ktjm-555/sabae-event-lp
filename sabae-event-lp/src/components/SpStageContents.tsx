@@ -18,6 +18,11 @@ const DIV_EventWrapper = styled(S_DIV_SectionWrapper)`
 	padding-top: 50px;
 	padding-bottom: 30px;
 	@media (max-width: 900px) {
-		margin-top: -130px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+	@media (max-width: 500px) {
+		padding-top: 30px;
+		padding-bottom: 10px;
 	}
 `;
