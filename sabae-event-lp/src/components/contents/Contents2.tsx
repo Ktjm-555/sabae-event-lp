@@ -11,19 +11,7 @@ import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
 import { guests1, guests2 } from "../../items/guests";
 
-type Props = {
-	title: string;
-	caption?: string;
-	balloonList: Array<string>;
-	annotation?: string;
-};
-
-export const Contents2 = ({
-	title,
-	caption,
-	balloonList,
-	annotation,
-}: Props) => {
+export const Contents2 = () => {
 	const goToSabaeModelPage = () => {
 		window.open("https://www.sabae-sdgs.jp/news/2120/", "_blank");
 	};
@@ -32,10 +20,10 @@ export const Contents2 = ({
 		<div>
 			<S_P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
 			<ContentsTitle
-				title={title}
-				caption={caption}
-				balloonList={balloonList}
-				annotation={annotation}
+				title="スペシャルステージ"
+				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
+				balloonList={["9/20", "土"]}
+				annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
 			/>
 			<SECTION_CardContainer>
 				<DIV_CardHeaderContainer>

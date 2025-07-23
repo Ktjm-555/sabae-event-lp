@@ -6,7 +6,6 @@ import {
 	S_P_LargeDesc,
 } from "../Style.ts";
 import { Contents } from "./contents/Contents.tsx";
-import { Contents2 } from "./contents/Contents2.tsx";
 import { NewsContents } from "./contents/NewsContents.tsx";
 
 export const EventContents = () => {
@@ -34,12 +33,6 @@ export const EventContents = () => {
 						balloonList={[]}
 					/>
 				</DIV_ContentsContainer>
-				<Contents2
-					title="スペシャルステージ"
-					caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
-					annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
-					balloonList={["9/20", "土"]}
-				/>
 			</S_SECTION_container>
 		</DIV_EventWrapper>
 	);
@@ -48,7 +41,7 @@ export const EventContents = () => {
 const DIV_EventWrapper = styled(S_DIV_SectionWrapper)`
 	padding-top: 150px;
 	margin-top: -100px;
-	padding-bottom: 30px;
+	padding-bottom: 0px;
 	@media (max-width: 900px) {
 		margin-top: -130px;
 	}
@@ -59,7 +52,7 @@ const DIV_ContentsContainer = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 	gap: 50px;
 	grid-auto-rows: 1fr;
-	margin-bottom: 70px;
+	margin-bottom: 60px;
 
 	@media (max-width: 900px) {
 		margin-bottom: 40px;
