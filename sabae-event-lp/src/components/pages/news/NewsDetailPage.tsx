@@ -52,6 +52,10 @@ export const NewsDetailPage = () => {
 const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
 	background-color: ${COLORS.SEC_YELLOW_BG};
 	padding-top: 140px;
+
+	@media (max-width: 900px) {
+		padding-top: 120px;
+	}
 `;
 
 const DIV_CardHeaderContainer = styled.div`
