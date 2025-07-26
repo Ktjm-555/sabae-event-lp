@@ -42,6 +42,7 @@ export const NewsListPage = () => {
 };
 
 const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
+	background-color: ${COLORS.SEC_YELLOW_BG};
 	padding-top: 140px;
 `;
 
