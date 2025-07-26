@@ -22,5 +22,3 @@ export const IntroduceContents = () => {
 const DIV_IntroduceWrapper = styled(S_DIV_SectionWrapper)`
 	background-color: ${COLORS.SEC_GRAY_BG};
 `;
-
-const SECTION_container = styled(S_SECTION_container)``;

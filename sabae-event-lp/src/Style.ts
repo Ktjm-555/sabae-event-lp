@@ -73,6 +73,7 @@ export const S_P_Description = styled.p`
 `;
 
 export const S_H2_Title = styled.h2`
+	font-family: "Noto Sans", sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	.sp-only {
@@ -120,4 +121,9 @@ export const S_H2_Title = styled.h2`
 	@media (max-width: 410px) {
 		margin-top: 10px;
 	}
+`;
+
+export const S_DIV_DisplayContainer = styled.div`
+	display: flex;
+	gap: 20px;
 `;
