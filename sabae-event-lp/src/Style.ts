@@ -104,22 +104,11 @@ export const S_H2_Title = styled.h2`
 		}
 	}
 
-	@media (max-width: 900px) {
-		margin-top: 10px;
-	}
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 800px) {
-		margin-top: 0;
-	}
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 540px) {
 		.sp-only {
 			display: block;
 		}
-	}
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 410px) {
-		margin-top: 10px;
 	}
 `;
 

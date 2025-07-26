@@ -60,10 +60,21 @@ const P_TitleLabel = styled.p`
 	@media (max-width: 900px) {
 		padding: 3px 6px;
 		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 800px) {
+		margin-bottom: 0;
 	}
 
 	@media (max-width: 500px) {
 		font-size: 12px;
+	}
+
+	/* ここだけレスポンシブ例外対応 */
+	@media (max-width: 410px) {
+		margin-bottom: 10px;
 	}
 `;
 
