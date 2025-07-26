@@ -33,15 +33,41 @@ export const AccessContents = () => {
 						<DIV_CardContainer>
 							<DIV_DisplayContainer>
 								<S_H2_Title>臨時駐車場</S_H2_Title>
-								<p>
-									●鯖江市スポーツ交流館（ ）<br />
-									※シャトルバスが運行します。
-									<br />
-									●鯖江市役所（ ）<br />
-									<SPAN_Notice>
-										※駐車台数に限りがございます。公共交通機関をご利用いただくか、なるべく乗り合わせの上ご来場ください。
-									</SPAN_Notice>
-								</p>
+								<ul>
+									<li>
+										●鯖江市スポーツ交流館（
+										<A_URL
+											href="https://maps.app.goo.gl/gP73PMZjJxFR5Qxp7"
+											target="_blank"
+										>
+											<IMG_icon
+												src={`${import.meta.env.BASE_URL}icon/map.svg`}
+												alt="鯖江市スポーツ交流館のmapのアイコン"
+											/>
+											鯖江市宮前2丁目9-1
+										</A_URL>
+										）
+										<br />
+										※シャトルバスが運行します。
+									</li>
+									<li>
+										●鯖江市役所（
+										<A_URL
+											href="https://maps.app.goo.gl/StivTBgmU626TxG76"
+											target="_blank"
+										>
+											<IMG_icon
+												src={`${import.meta.env.BASE_URL}icon/map.svg`}
+												alt="鯖江市役所のmapのアイコン"
+											/>
+											鯖江市西山町13-1
+										</A_URL>
+										）<br />
+										<SPAN_Notice>
+											※駐車台数に限りがございます。公共交通機関をご利用いただくか、なるべく乗り合わせの上ご来場ください。
+										</SPAN_Notice>
+									</li>
+								</ul>
 							</DIV_DisplayContainer>
 						</DIV_CardContainer>
 					</div>
@@ -113,5 +139,20 @@ const SPAN_Notice = styled.span`
 
 	@media (max-width: 500px) {
 		font-size: 10px;
+	}
+`;
+
+const IMG_icon = styled.img`
+	vertical-align: middle;
+`;
+
+const A_URL = styled.a`
+	text-decoration: underline;
+	text-underline-offset: 3px;
+
+	&:hover {
+		// TODO：なぜかhoverするとラインが消えるので。
+		text-decoration: underline;
+		opacity: 0.5;
 	}
 `;
