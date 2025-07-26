@@ -16,7 +16,7 @@ export const EventContents = () => {
 
 	const goToWakuwakuPage = () => {
 		// TODO: わくわくサステナブースページへ
-		navigate("/news");
+		navigate("/booth");
 	};
 
 	return (

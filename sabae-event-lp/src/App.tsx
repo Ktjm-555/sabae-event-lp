@@ -7,6 +7,7 @@ import { NewsListPage } from "./components/pages/news/NewsListPage";
 import { ScrollToHash } from "./components/ScrollToHash";
 import { NewsDetailPage } from "./components/pages/news/NewsDetailPage";
 import { useEffect } from "react";
+import { BoothPage } from "./components/pages/booth/BoothPage";
 
 // ルーティングを設定するときは二重送信に要注意！
 if (import.meta.env.MODE === "production") {
@@ -49,6 +50,7 @@ function InnerApp() {
 				<Route index element={<TopPage />} />
 				<Route path="news" element={<NewsListPage />} />
 				<Route path="news/:newsId" element={<NewsDetailPage />} />
+				<Route path="booth" element={<BoothPage />} />
 			</Route>
 		</Routes>
 	);
