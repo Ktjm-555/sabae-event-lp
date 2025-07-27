@@ -14,9 +14,8 @@ import { useNavigate } from "react-router-dom";
 export const EventContents = () => {
 	const navigate = useNavigate();
 
-	const goToWakuwakuPage = () => {
-		// TODO: わくわくサステナブースページへ
-		navigate("/booth");
+	const goToBoothPage = (id: number) => {
+		navigate(`/booth/#${id}`);
 	};
 
 	return (
@@ -45,7 +44,7 @@ export const EventContents = () => {
 								<p className="mg-bt">
 									SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい‼
 								</p>
-								<Button onClick={goToWakuwakuPage}>詳しくはこちら</Button>
+								<Button onClick={() => goToBoothPage(1)}>詳しくはこちら</Button>
 							</DIV_Caption1>
 						</DIV_Contents1>
 					</div>
@@ -90,7 +89,7 @@ export const EventContents = () => {
 							<DIV_Caption2>
 								<H2_Title>はたらくくるま乗車体験</H2_Title>
 								<p className="mg-bt">ミニショベルでボールすくい！</p>
-								<Button onClick={goToWakuwakuPage}>詳しくはこちら</Button>
+								<Button onClick={() => goToBoothPage(2)}>詳しくはこちら</Button>
 							</DIV_Caption2>
 							<img
 								src={`${import.meta.env.BASE_URL}images/photo_try&buy_04.png`}
@@ -120,7 +119,7 @@ export const EventContents = () => {
 								{/* H2のタイトルの高さ分を開けるため */}
 								<DIV_Hidden2></DIV_Hidden2>
 								<p className="mg-bt">美味しいスイーツもたくさん</p>
-								<Button onClick={goToWakuwakuPage}>詳しくはこちら</Button>
+								<Button onClick={() => goToBoothPage(3)}>詳しくはこちら</Button>
 							</DIV_Caption2>
 							<img
 								src={`${import.meta.env.BASE_URL}images/photo_try&buy_06.png`}

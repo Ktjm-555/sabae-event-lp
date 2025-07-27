@@ -10,7 +10,7 @@ export const BoothPage = () => {
 	return (
 		<>
 			{/* わくわくサステナブース */}
-			<DIV_SectionWrapper className="top-section">
+			<DIV_SectionWrapper id="1" className="top-section">
 				<S_SECTION_container>
 					<DIV_TitleWrapper>
 						<ContentsTitleOnly
@@ -39,7 +39,7 @@ export const BoothPage = () => {
 			</DIV_SectionWrapper>
 
 			{/* こどもの遊び場 */}
-			<DIV_SectionWrapper>
+			<DIV_SectionWrapper id="2">
 				<S_SECTION_container>
 					<DIV_TitleWrapper>
 						<ContentsTitleOnly
@@ -53,7 +53,7 @@ export const BoothPage = () => {
 			</DIV_SectionWrapper>
 
 			{/* フードエリア */}
-			<DIV_SectionWrapper>
+			<DIV_SectionWrapper id="3">
 				<S_SECTION_container>
 					<DIV_TitleWrapper>
 						<ContentsTitleOnly
@@ -82,7 +82,7 @@ const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
 	}
 `;
 
-// 大元タイトルの下のタイトルにつける
+// 大元タイトルの下のマージンをつける
 const DIV_TitleWrapper = styled.div`
 	margin-bottom: 30px;
 `;
