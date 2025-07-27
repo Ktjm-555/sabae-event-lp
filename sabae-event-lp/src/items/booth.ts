@@ -174,6 +174,8 @@ export const partners = [
 		name: "明治安田生命 福井支社 武生営業所･武生南営業所",
 		isNameLong: true,
 		numbers: [3, 8],
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 	},
 	{
 		id: 11,
@@ -186,6 +188,8 @@ export const partners = [
 		name: "株式会社横山商会",
 		isNameLong: false,
 		numbers: [12, 13],
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 	},
 	{
 		id: 12,
@@ -247,7 +251,7 @@ export const partners = [
 		id: 17,
 		imgSrc: `${
 			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image17.png`,
+		}images/partners/photo_partner_image29.png`,
 		title: "確認中",
 		isLong: false,
 		name: "認定NPO法人さばえNPOサポート",
@@ -275,6 +279,8 @@ export const partners = [
 		name: "株式会社アモーレながすぎ",
 		isNameLong: false,
 		numbers: [4, 12],
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 	},
 	{
 		id: 20,

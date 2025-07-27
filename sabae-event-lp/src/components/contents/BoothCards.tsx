@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { S_DIV_CardContainer } from "../../Style";
 import { COLORS } from "../../consts/color";
 
-type item = {
+type Item = {
 	id: number;
 	imgSrc: string;
 	title: string;
@@ -11,38 +11,52 @@ type item = {
 	isNameLong: boolean;
 	numbers: number[];
 	notice?: string;
+	noticeBlue?: boolean;
 };
 
 type Props = {
-	items: item[];
+	items: Item[];
 };
 
 export const BoothCards = ({ items }: Props) => {
 	return (
-		<>
-			<DIV_CardsContainer>
-				{items.map((item, index) => (
-					<DIV_CardContainer key={index}>
-						<IMG_Card src={item.imgSrc} />
+		<DIV_CardsContainer>
+			{items.map((item) => {
+				const {
+					id,
+					imgSrc,
+					title,
+					isLong = false,
+					name,
+					isNameLong = false,
+					numbers,
+					notice = "",
+					noticeBlue = false,
+				} = item;
 
-						<H3_Title className={item.isLong ? "long-title" : ""}>
-							{item.title}
-						</H3_Title>
+				return (
+					<DIV_CardContainer key={id}>
+						<IMG_Card src={imgSrc} />
 
-						{/* カードの高さを合わせる */}
+						<H3_Title className={isLong ? "long-title" : ""}>{title}</H3_Title>
+
 						<DIV_Spacer />
 
 						<DIV_CardFooter>
-							<p className={item.isNameLong ? "long-title" : ""}>{item.name}</p>
+							<p className={isNameLong ? "long-name" : ""}>{name}</p>
 
-							<DIV_NoticeNumber className={item.notice ? "" : "flex-controle"}>
-								{item.notice && <SPAN_Notice>{item.notice}</SPAN_Notice>}
+							<DIV_NoticeNumber className={notice ? "" : "flex-controle"}>
+								{notice && (
+									<SPAN_Notice className={noticeBlue ? "blue" : ""}>
+										{notice}
+									</SPAN_Notice>
+								)}
 
 								<p>
 									SDGs目標：
 									<span>
-										{item.numbers.length
-											? item.numbers.map((num) => (
+										{numbers.length
+											? numbers.map((num) => (
 													<IMG_SdgsNumber
 														key={num}
 														src={`${
@@ -57,9 +71,9 @@ export const BoothCards = ({ items }: Props) => {
 							</DIV_NoticeNumber>
 						</DIV_CardFooter>
 					</DIV_CardContainer>
-				))}
-			</DIV_CardsContainer>
-		</>
+				);
+			})}
+		</DIV_CardsContainer>
 	);
 };
 
@@ -115,7 +129,7 @@ const DIV_CardFooter = styled.div`
 	flex-direction: column;
 	align-items: flex-end;
 
-	p.long-title {
+	p.long-name {
 		font-size: 13px;
 	}
 `;
@@ -136,4 +150,8 @@ const SPAN_Notice = styled.span`
 	font-size: 15px;
 	font-weight: bold;
 	color: ${COLORS.PRIMARY};
+
+	&.blue {
+		color: ${COLORS.TEXT_SUB_COLOR};
+	}
 `;

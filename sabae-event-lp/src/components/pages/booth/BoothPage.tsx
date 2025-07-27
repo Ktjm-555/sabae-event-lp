@@ -2,12 +2,7 @@ import styled from "@emotion/styled";
 import { S_DIV_SectionWrapper, S_SECTION_container } from "../../../Style";
 import { COLORS } from "../../../consts/color";
 import { ContentsTitleOnly } from "../../contents/CotentsTitleOnly";
-import {
-	childrenSpace,
-	foodArea,
-	partners,
-	sabaeStudents,
-} from "../../../items/booth";
+import { childrenSpace, foodArea, partners } from "../../../items/booth";
 import { BoothCards } from "../../contents/BoothCards";
 import { BoothCardsMini } from "../../contents/BoothCardsMini";
 
@@ -24,16 +19,22 @@ export const BoothPage = () => {
 						/>
 					</DIV_TitleWrapper>
 
-					{/* 鯖江高校生ブース */}
+					{/* 企業･団体パートナーズブース */}
 					{/* セクションまたぎではないがボトムが必要なので囲む */}
 					<DIV_Contents>
-						<H2_Title>鯖江高校生ブース</H2_Title>
-						<BoothCards items={sabaeStudents} />
+						<H2_Title>企業･団体パートナーズブース</H2_Title>
+						<BoothCards items={partners} />
 					</DIV_Contents>
 
-					{/* 企業･団体パートナーズブース */}
-					<H2_Title>企業･団体パートナーズブース</H2_Title>
-					<BoothCards items={partners} />
+					{/* 鯖江高校生ブース */}
+					<H2_Title>鯖江高校生ブース</H2_Title>
+					{/* <BoothCards items={sabaeStudents} /> */}
+					<DIV_ImgContainer>
+						<img
+							src={`${import.meta.env.BASE_URL}logo/booth_comingSoon.svg`}
+							alt="ブースの画像"
+						/>
+					</DIV_ImgContainer>
 				</S_SECTION_container>
 			</DIV_SectionWrapper>
 
@@ -110,4 +111,10 @@ const H2_Title = styled.h2`
 
 const DIV_Contents = styled.div`
 	margin-bottom: 35px;
+`;
+
+const DIV_ImgContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
