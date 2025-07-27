@@ -435,7 +435,7 @@ export const childrenSpace = [
 		numbers: [11],
 	},
 	{
-		id: 4,
+		id: 5,
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/children_space/photo_children_space_image5.png`,
