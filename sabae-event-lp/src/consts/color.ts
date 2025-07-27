@@ -3,6 +3,7 @@ export const COLORS = {
 	TITLE: "#000000",
 	TEXT: "#4B5563",
 	TEXT_ON_ACCENT: "#fff",
+	TEXT_SUB_COLOR: "#00508e",
 	PRIMARY: "#e60012",
 	NOTICE_BG: "#fdede2",
 	SEC_NORMAL_BG: "#fff",

@@ -2,38 +2,79 @@ import styled from "@emotion/styled";
 import { S_DIV_SectionWrapper, S_SECTION_container } from "../../../Style";
 import { COLORS } from "../../../consts/color";
 import { ContentsTitleOnly } from "../../contents/CotentsTitleOnly";
-import { partners, sabaeStudents } from "../../../items/booth";
+import {
+	childrenSpace,
+	foodArea,
+	partners,
+	sabaeStudents,
+} from "../../../items/booth";
 import { BoothCards } from "../../contents/BoothCards";
+import { BoothCardsMini } from "../../contents/BoothCardsMini";
 
 export const BoothPage = () => {
 	return (
-		<DIV_SectionWrapper>
+		<>
 			{/* わくわくサステナブース */}
-			<S_SECTION_container>
-				<DIV_TitleWrapper>
-					<ContentsTitleOnly
-						title={"わくわくサステナブース"}
-						balloonList={["9/20", "土", "9/21", "日"]}
-					/>
-				</DIV_TitleWrapper>
+			<DIV_SectionWrapper className="top-section">
+				<S_SECTION_container>
+					<DIV_TitleWrapper>
+						<ContentsTitleOnly
+							title={"わくわくサステナブース"}
+							balloonList={["9/20", "土", "9/21", "日"]}
+						/>
+					</DIV_TitleWrapper>
 
-				{/* 鯖江高校生ブース */}
-				<DIV_Contents>
-					<H2_Title>鯖江高校生ブース</H2_Title>
-					<BoothCards items={sabaeStudents} />
-				</DIV_Contents>
+					{/* 鯖江高校生ブース */}
+					{/* セクションまたぎではないがボトムが必要なので囲む */}
+					<DIV_Contents>
+						<H2_Title>鯖江高校生ブース</H2_Title>
+						<BoothCards items={sabaeStudents} />
+					</DIV_Contents>
 
-				{/* 企業･団体パートナーズブース */}
-				<H2_Title>企業･団体パートナーズブース</H2_Title>
-				<BoothCards items={partners} />
-			</S_SECTION_container>
-		</DIV_SectionWrapper>
+					{/* 企業･団体パートナーズブース */}
+					<H2_Title>企業･団体パートナーズブース</H2_Title>
+					<BoothCards items={partners} />
+				</S_SECTION_container>
+			</DIV_SectionWrapper>
+
+			{/* こどもの遊び場 */}
+			<DIV_SectionWrapper>
+				<S_SECTION_container>
+					<DIV_TitleWrapper>
+						<ContentsTitleOnly
+							title={"こどもの遊び場"}
+							balloonList={["9/20", "土", "9/21", "日"]}
+						/>
+					</DIV_TitleWrapper>
+
+					<BoothCards items={childrenSpace} />
+				</S_SECTION_container>
+			</DIV_SectionWrapper>
+
+			{/* フードエリア */}
+			<DIV_SectionWrapper>
+				<S_SECTION_container>
+					<DIV_TitleWrapper>
+						<ContentsTitleOnly
+							title={"フードエリア"}
+							balloonList={["9/20", "土", "9/21", "日"]}
+						/>
+					</DIV_TitleWrapper>
+
+					<BoothCardsMini items={foodArea} />
+				</S_SECTION_container>
+			</DIV_SectionWrapper>
+		</>
 	);
 };
 
 const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
 	background-color: ${COLORS.SEC_YELLOW_BG};
-	padding-top: 140px;
+	padding-top: 0px;
+
+	&.top-section {
+		padding-top: 140px;
+	}
 
 	@media (max-width: 900px) {
 		padding-top: 120px;
