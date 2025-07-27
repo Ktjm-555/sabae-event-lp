@@ -87,9 +87,15 @@ export const AccessContents = () => {
 					</div>
 				</DIV_ContentsContainer>
 			</S_SECTION_container>
-			<Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-				<h2>モーダルの中身</h2>
-				<p>ここに説明文などが入るよ。</p>
+			<Modal
+				title="会場マップ"
+				isOpen={isModalOpen}
+				onClose={() => setModalOpen(false)}
+			>
+				<IMG_ModalImage
+					src={`${import.meta.env.BASE_URL}images/figure_map.png`}
+					className="map"
+				/>
 			</Modal>
 		</DIV_EventWrapper>
 	);
@@ -230,4 +236,8 @@ const A_URL = styled.a`
 		text-decoration: underline;
 		opacity: 0.5;
 	}
+`;
+
+const IMG_ModalImage = styled.img`
+	width: 100%;
 `;
