@@ -3,14 +3,18 @@ import {
 	S_SECTION_container,
 	S_DIV_SectionWrapper,
 	S_DIV_CardContainer,
-	S_DIV_DisplayContainer,
 	S_H2_Title,
 } from "../Style.ts";
 
 import { ContentsTitle } from "./contents/CotentsTitle.tsx";
 import { COLORS } from "../consts/color.ts";
+import { ZoomIcon } from "./ui/ZoomIcon.tsx";
+import { Modal } from "./ui/modal.tsx";
+import { useState } from "react";
 
 export const AccessContents = () => {
+	const [isModalOpen, setModalOpen] = useState(false);
+
 	return (
 		<DIV_EventWrapper>
 			<S_SECTION_container>
@@ -22,16 +26,26 @@ export const AccessContents = () => {
 								<p>
 									ステージエリアをはじめ、こどもの遊び場やフードエリア、ブースエリアなど、会場内を周遊するための情報を掲載した会場マップです。
 								</p>
-								<IMG_image
-									src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`}
-								/>
+								<DIV_ImgContainerWrapper>
+									<DIV_ImgContainer>
+										<img
+											src={`${
+												import.meta.env.BASE_URL
+											}images/figure_map_mini.png`}
+											className="map"
+										/>
+										<Span_IconPosition onClick={() => setModalOpen(true)}>
+											<ZoomIcon />
+										</Span_IconPosition>
+									</DIV_ImgContainer>
+								</DIV_ImgContainerWrapper>
 							</DIV_DisplayContainer>
 						</DIV_CardContainer>
 					</div>
 					<div>
 						<ContentsTitle title="アクセス" caption="" balloonList={[]} />
 						<DIV_CardContainer>
-							<DIV_DisplayContainer>
+							<DIV_DisplayContainer className="tate">
 								<S_H2_Title>臨時駐車場</S_H2_Title>
 								<ul>
 									<li>
@@ -73,6 +87,10 @@ export const AccessContents = () => {
 					</div>
 				</DIV_ContentsContainer>
 			</S_SECTION_container>
+			<Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+				<h2>モーダルの中身</h2>
+				<p>ここに説明文などが入るよ。</p>
+			</Modal>
 		</DIV_EventWrapper>
 	);
 };
@@ -83,7 +101,7 @@ const DIV_EventWrapper = styled(S_DIV_SectionWrapper)`
 		padding-bottom: 40px;
 	}
 	@media (max-width: 500px) {
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 	}
 `;
 
@@ -92,20 +110,11 @@ const DIV_ContentsContainer = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 	gap: 50px;
 	grid-auto-rows: 1fr;
-	margin-bottom: 60px;
-
-	@media (max-width: 900px) {
-		margin-bottom: 40px;
-	}
 
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 800px) {
 		grid-template-columns: none;
 		grid-auto-rows: auto;
-	}
-
-	@media (max-width: 500px) {
-		margin-bottom: 20px;
 	}
 `;
 
@@ -114,19 +123,85 @@ const DIV_CardContainer = styled(S_DIV_CardContainer)`
 	/* 100% - タイトル高さ - タイトル下margin - カードpadding上下 */
 	height: calc(100% - 86px - 14px - 40px);
 
+	@media (max-width: 900px) {
+		/* 100% - タイトル高さ - タイトル下margin - カードpadding上下 + マップ画像が超える分？*/
+		height: calc(100% - 86px - 14px - 40px + 25px);
+	}
+
 	@media (max-width: 800px) {
 		height: auto;
 	}
 `;
 
-const IMG_image = styled.img`
-	width: 252px;
-	height: 252px;
+const DIV_ImgContainerWrapper = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+`;
+const DIV_ImgContainer = styled.div`
+	position: relative;
+
+	@media (max-width: 1200px) {
+		width: 323px;
+	}
+
+	@media (max-width: 400px) {
+		width: 250px;
+	}
 `;
 
-const DIV_DisplayContainer = styled(S_DIV_DisplayContainer)`
-	flex-direction: column;
+const Span_IconPosition = styled.span`
+	position: absolute;
+	bottom: 0px;
+	right: 8px;
+	width: 40px;
+
+	@media (max-width: 1200px) {
+		right: 15px;
+	}
+
+	@media (max-width: 800px) {
+		right: 8px;
+	}
+
+	@media (max-width: 600px) {
+		right: 15px;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		fill: #ff9999;
+	}
+`;
+
+// IMG_ZoomIconと連動してる。レスポンシブ
+// マップのアイコンの位置のせいで。
+const DIV_DisplayContainer = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 15px;
+
+	.map {
+		width: 100%;
+	}
+
+	@media (max-width: 1200px) {
+		grid-template-columns: 1fr;
+	}
+
+	@media (max-width: 800px) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
+	}
+
+	&.tate {
+		display: flex;
+		flex-direction: column;
+	}
 
 	img {
 		margin: 0 auto;
