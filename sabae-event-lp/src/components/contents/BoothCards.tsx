@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 import { S_DIV_CardContainer } from "../../Style";
 import { COLORS } from "../../consts/color";
+import { Modal } from "../ui/modal";
+import { useState } from "react";
+import { sdgsList } from "../../items/sdgs";
+import { SdgsModalContents } from "./sdgsModalContents";
 
 type Item = {
 	id: number;
@@ -19,64 +23,88 @@ type Props = {
 };
 
 export const BoothCards = ({ items }: Props) => {
+	const [isModalOpen, setModalOpen] = useState(false);
+	const [selectedNum, setSelectedNum] = useState<number | null>(null);
+
+	const sdgsItem = sdgsList.find((item) => item.id === selectedNum);
+
 	return (
-		<DIV_CardsContainer>
-			{items.map((item) => {
-				const {
-					id,
-					imgSrc,
-					title,
-					isLong = false,
-					name,
-					isNameLong = false,
-					numbers,
-					notice = "",
-					noticeBlue = false,
-				} = item;
+		<>
+			<DIV_CardsContainer>
+				{items.map((item) => {
+					const {
+						id,
+						imgSrc,
+						title,
+						isLong = false,
+						name,
+						isNameLong = false,
+						numbers,
+						notice = "",
+						noticeBlue = false,
+					} = item;
 
-				return (
-					<DIV_CardContainer key={id}>
-						<IMG_Card src={imgSrc} />
+					return (
+						<DIV_CardContainer key={id}>
+							<IMG_Card src={imgSrc} />
 
-						<H3_Title
-							className={isLong ? "long-title" : ""}
-							dangerouslySetInnerHTML={{ __html: title }}
-						></H3_Title>
+							<H3_Title
+								className={isLong ? "long-title" : ""}
+								dangerouslySetInnerHTML={{ __html: title }}
+							></H3_Title>
 
-						<DIV_Spacer />
+							<DIV_Spacer />
 
-						<DIV_CardFooter>
-							<p className={isNameLong ? "long-name" : ""}>{name}</p>
+							<DIV_CardFooter>
+								<p className={isNameLong ? "long-name" : ""}>{name}</p>
 
-							<DIV_NoticeNumber className={notice ? "" : "flex-controle"}>
-								{notice && (
-									<SPAN_Notice className={noticeBlue ? "blue" : ""}>
-										{notice}
-									</SPAN_Notice>
-								)}
+								<DIV_NoticeNumber className={notice ? "" : "flex-controle"}>
+									{notice && (
+										<SPAN_Notice className={noticeBlue ? "blue" : ""}>
+											{notice}
+										</SPAN_Notice>
+									)}
 
-								<p>
-									SDGs目標：
-									<span>
-										{numbers.length
-											? numbers.map((num) => (
-													<IMG_SdgsNumber
-														key={num}
-														src={`${
-															import.meta.env.BASE_URL
-														}images/sdgs_number/figure_number_${num}.svg`}
-														alt={`SDGs目標 ${num}`}
-													/>
-											  ))
-											: "未定"}
-									</span>
-								</p>
-							</DIV_NoticeNumber>
-						</DIV_CardFooter>
-					</DIV_CardContainer>
-				);
-			})}
-		</DIV_CardsContainer>
+									<p>
+										SDGs目標：
+										<span>
+											{numbers.length
+												? numbers.map((num) => (
+														<IMG_SdgsNumber
+															key={num}
+															src={`${
+																import.meta.env.BASE_URL
+															}images/sdgs_number/figure_number_${num}.svg`}
+															alt={`SDGs目標 ${num}`}
+															onClick={() => {
+																setModalOpen(true);
+																setSelectedNum(num);
+															}}
+														/>
+												  ))
+												: "未定"}
+										</span>
+									</p>
+								</DIV_NoticeNumber>
+							</DIV_CardFooter>
+						</DIV_CardContainer>
+					);
+				})}
+			</DIV_CardsContainer>
+			<Modal
+				title="SDGs17の目標について"
+				isOpen={isModalOpen}
+				onClose={() => {
+					setModalOpen(false);
+					setSelectedNum(null);
+				}}
+				mini
+			>
+				{sdgsItem && selectedNum && (
+					<SdgsModalContents number={selectedNum} item={sdgsItem} />
+				)}
+			</Modal>
+		</>
 	);
 };
 
@@ -125,6 +153,11 @@ const IMG_SdgsNumber = styled.img`
 	margin-left: 5px;
 	margin-bottom: 3px;
 	vertical-align: middle;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.8;
+	}
 `;
 
 const DIV_CardFooter = styled.div`

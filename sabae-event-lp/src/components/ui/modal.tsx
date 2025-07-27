@@ -7,14 +7,25 @@ type Props = {
 	isOpen: boolean;
 	onClose: () => void;
 	children: React.ReactNode;
+	mini?: boolean;
 };
 
-export const Modal = ({ title, isOpen, onClose, children }: Props) => {
+export const Modal = ({
+	title,
+	isOpen,
+	onClose,
+	children,
+	// NOTE: 他のサイズ作る時は変数名変える
+	mini = false,
+}: Props) => {
 	if (!isOpen) return null;
 
 	return (
 		<DIV_Overlay onClick={onClose}>
-			<DIV_Content onClick={(e) => e.stopPropagation()}>
+			<DIV_Content
+				onClick={(e) => e.stopPropagation()}
+				className={mini ? "mini " : ""}
+			>
 				<DIV_TitleContainer>
 					<h2>{title}</h2>
 					<IMG_CloseButton
@@ -34,6 +45,16 @@ const DIV_Content = styled.div`
 	position: relative;
 	width: 80%;
 	max-width: 1000px;
+
+	&.mini {
+		width: 50%;
+		max-width: 700px;
+		min-width: 300px;
+
+		@media (max-width: 1200px) {
+			width: 70%;
+		}
+	}
 `;
 
 const DIV_Overlay = styled.div`
