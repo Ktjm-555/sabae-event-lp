@@ -4,6 +4,7 @@ import {
 	S_DIV_SectionWrapper,
 	S_DIV_CardContainer,
 	S_H2_Title,
+	S_SPAN_Notice,
 } from "../Style.ts";
 
 import { ContentsTitle } from "./contents/CotentsTitle.tsx";
@@ -77,9 +78,9 @@ export const AccessContents = () => {
 											鯖江市西山町13-1
 										</A_URL>
 										）<br />
-										<SPAN_Notice>
+										<S_SPAN_Notice>
 											※駐車台数に限りがございます。公共交通機関をご利用いただくか、なるべく乗り合わせの上ご来場ください。
-										</SPAN_Notice>
+										</S_SPAN_Notice>
 									</li>
 								</ul>
 							</DIV_DisplayContainer>
@@ -211,15 +212,6 @@ const DIV_DisplayContainer = styled.div`
 
 	img {
 		margin: 0 auto;
-	}
-`;
-
-const SPAN_Notice = styled.span`
-	display: block;
-	font-size: 12px;
-
-	@media (max-width: 500px) {
-		font-size: 10px;
 	}
 `;
 

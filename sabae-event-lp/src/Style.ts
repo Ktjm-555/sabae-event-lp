@@ -45,6 +45,15 @@ export const S_DIV_CardContainer = styled.div`
 	color: ${COLORS.TEXT};
 `;
 
+export const S_SPAN_Notice = styled.span`
+	display: block;
+	font-size: 12px;
+
+	@media (max-width: 500px) {
+		font-size: 10px;
+	}
+`;
+
 export const S_P_Subtitle = styled.p`
 	${TEXT_L}
 	color: ${COLORS.TITLE};
