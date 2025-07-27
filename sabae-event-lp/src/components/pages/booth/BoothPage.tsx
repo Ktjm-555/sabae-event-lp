@@ -78,7 +78,9 @@ const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
 	}
 
 	@media (max-width: 900px) {
-		padding-top: 120px;
+		&.top-section {
+			padding-top: 120px;
+		}
 	}
 `;
 

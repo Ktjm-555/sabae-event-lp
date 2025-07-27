@@ -196,7 +196,7 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image12.png`,
-		title: "コイヤーグラウンド",
+		title: "みんなに優しい！ココヤシマットとは？",
 		isLong: false,
 		name: "コイヤーグラウンド･ジャパン",
 		isNameLong: false,
@@ -218,8 +218,9 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image14.png`,
-		title: "アクセサリーや廃材を使用したハンドメイド商品＆古着0円ショップ",
-		isLong: false,
+		title:
+			"アクセサリー･廃材を使用したハンドメイド商品＆古着0円ショップ（ドリカムベース）",
+		isLong: true,
 		name: "株式会社クラッチ",
 		isNameLong: false,
 		numbers: [3],
@@ -252,7 +253,7 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image29.png`,
-		title: "確認中",
+		title: "未定",
 		isLong: false,
 		name: "認定NPO法人さばえNPOサポート",
 		isNameLong: false,
@@ -422,7 +423,7 @@ export const childrenSpace = [
 		isLong: false,
 		name: "自衛隊福井地方協力本部",
 		isNameLong: false,
-		numbers: [],
+		numbers: [17],
 	},
 	{
 		id: 4,
