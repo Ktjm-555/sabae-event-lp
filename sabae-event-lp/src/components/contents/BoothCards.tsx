@@ -38,7 +38,10 @@ export const BoothCards = ({ items }: Props) => {
 					<DIV_CardContainer key={id}>
 						<IMG_Card src={imgSrc} />
 
-						<H3_Title className={isLong ? "long-title" : ""}>{title}</H3_Title>
+						<H3_Title
+							className={isLong ? "long-title" : ""}
+							dangerouslySetInnerHTML={{ __html: title }}
+						></H3_Title>
 
 						<DIV_Spacer />
 

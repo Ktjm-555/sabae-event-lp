@@ -433,6 +433,17 @@ export const childrenSpace = [
 		isNameLong: false,
 		numbers: [11],
 	},
+	{
+		id: 4,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/children_space/photo_children_space_image5.png`,
+		title: "探検！地面300メートルの世界<br>ジオ･ラボ号で地層処分を学ぼう",
+		isLong: false,
+		name: "鯖江･丹生消防組合",
+		isNameLong: false,
+		numbers: [12],
+	},
 ];
 
 export const foodArea = [
