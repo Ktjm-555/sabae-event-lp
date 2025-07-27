@@ -23,7 +23,7 @@ const goToSabaeEightPage = () => {
 export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 	return (
 		<DIV_SectionWrapper>
-			<S_P_Subtitle id="4">同時開催</S_P_Subtitle>
+			<S_P_Subtitle>同時開催</S_P_Subtitle>
 			<ContentsTitle
 				title={title}
 				balloonList={balloonList}

@@ -58,7 +58,8 @@ export const Contents3 = () => {
 
 	return (
 		<div>
-			<span id="3"></span>
+			{/* 画面スクロールのためのspan */}
+			{/* <span></span> */}
 			<DIV_OverviewContainer>
 				<div>
 					<ContentsTitle

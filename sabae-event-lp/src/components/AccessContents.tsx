@@ -18,8 +18,8 @@ export const AccessContents = () => {
 	return (
 		<DIV_EventWrapper>
 			<S_SECTION_container>
-				<DIV_ContentsContainer>
-					<div>
+				<DIV_ContentsContainer id="4">
+					<div id="4">
 						<ContentsTitle title="会場マップ" caption="" balloonList={[]} />
 						<DIV_CardContainer>
 							<DIV_DisplayContainer>
@@ -42,7 +42,7 @@ export const AccessContents = () => {
 							</DIV_DisplayContainer>
 						</DIV_CardContainer>
 					</div>
-					<div>
+					<div id="5">
 						<ContentsTitle title="アクセス" caption="" balloonList={[]} />
 						<DIV_CardContainer>
 							<DIV_DisplayContainer className="tate">

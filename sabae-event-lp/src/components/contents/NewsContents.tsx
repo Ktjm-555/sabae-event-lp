@@ -16,7 +16,7 @@ export const NewsContents = () => {
 
 	return (
 		<DIV_SectionContainer>
-			<span id="5"></span>
+			<span id="2"></span>
 			<ContentsTitle title="お知らせ" balloonList={[]} />
 			<DIV_CardContainer>
 				<UL_CardWrapper>

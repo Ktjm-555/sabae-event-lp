@@ -18,7 +18,7 @@ export const Contents2 = () => {
 
 	return (
 		<div>
-			<S_P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
+			<S_P_Subtitle id="3">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
 			<ContentsTitle
 				title="スペシャルステージ"
 				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"

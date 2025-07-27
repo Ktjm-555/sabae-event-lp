@@ -29,23 +29,28 @@ export const Header = () => {
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink to="/#5" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#2" onClick={toggleShowMask}>
 									お知らせ
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink to="/#2" onClick={toggleShowMask}>
+								<A_HeaderNavLink to="/#3" onClick={toggleShowMask}>
 									スペシャルステージ
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
-								<A_HeaderNavLink to="/#3" onClick={toggleShowMask}>
-									さばえアクション∞とは
+								<A_HeaderNavLink to="/booth" onClick={toggleShowMask}>
+									ブース一覧
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 							<LI_HeaderNavItem>
 								<A_HeaderNavLink to="/#4" onClick={toggleShowMask}>
-									さばえ３大フェス
+									会場マップ
+								</A_HeaderNavLink>
+							</LI_HeaderNavItem>
+							<LI_HeaderNavItem>
+								<A_HeaderNavLink to="/#5" onClick={toggleShowMask}>
+									アクセス
 								</A_HeaderNavLink>
 							</LI_HeaderNavItem>
 						</UL_HeaderNavList>
