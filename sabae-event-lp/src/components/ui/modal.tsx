@@ -27,7 +27,7 @@ export const Modal = ({
 				className={mini ? "mini " : ""}
 			>
 				<DIV_TitleContainer>
-					<h2>{title}</h2>
+					<h2 className={mini ? "mini " : ""}>{title}</h2>
 					<IMG_CloseButton
 						onClick={onClose}
 						src={`${import.meta.env.BASE_URL}icon/close.svg`}
@@ -77,6 +77,12 @@ const DIV_TitleContainer = styled.div`
 		font-size: 28px;
 	}
 
+	@media (max-width: 550px) {
+		h2.mini {
+			font-size: 18px;
+		}
+	}
+
 	@media (max-width: 500px) {
 		h2 {
 			font-size: 20px;
@@ -98,4 +104,8 @@ const IMG_CloseButton = styled.img`
 	border: none;
 	background: none;
 	cursor: pointer;
+
+	@media (max-width: 550px) {
+		top: 14px;
+	}
 `;
