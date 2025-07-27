@@ -1,68 +1,213 @@
 import styled from "@emotion/styled";
-import { S_DIV_SectionWrapper, S_SECTION_container } from "../../../Style";
+import {
+	S_DIV_CardContainer,
+	S_DIV_SectionWrapper,
+	S_P_Subtitle,
+	S_SECTION_container,
+	S_SPAN_Notice,
+} from "../../../Style";
 import { COLORS } from "../../../consts/color";
 import { ContentsTitleOnly } from "../../contents/CotentsTitleOnly";
-import { childrenSpace, foodArea, partners } from "../../../items/booth";
-import { BoothCards } from "../../contents/BoothCards";
-import { BoothCardsMini } from "../../contents/BoothCardsMini";
+import { TableRow } from "../../ui/TableRow";
+import { Button } from "../../ui/Button";
+import { useNavigate } from "react-router-dom";
 
 export const TicketPage = () => {
+	const navigate = useNavigate();
+
+	const goToTicketFormPage = (type: string) => {
+		if (type === "enji") {
+			window.open("https://form.run/@RyXin2yw4Q3Sg2BxU4MD", "_blank");
+		} else if (type === "oyako") {
+			window.open("https://form.run/@RIvzh2KbWZ4WGmBBWfX5", "_blank");
+		} else {
+			window.open("https://form.run/@VPW1CE1vwQG7HTK94ZNR", "_blank");
+		}
+	};
+
+	const goToTop = () => {
+		navigate("/");
+	};
 	return (
 		<>
-			{/* わくわくサステナブース */}
-			<DIV_SectionWrapper id="1" className="top-section">
+			<DIV_SectionWrapper className="top-section">
 				<S_SECTION_container>
-					<DIV_TitleWrapper>
-						<ContentsTitleOnly
-							title={"わくわくサステナブース"}
-							balloonList={["9/20", "土", "9/21", "日"]}
-						/>
-					</DIV_TitleWrapper>
+					<S_P_Subtitle id="3">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
+					<ContentsTitleOnly
+						title={"スペシャルステージ入場券申込概要"}
+						balloonList={["9/20", "土"]}
+					/>
 
-					{/* 企業･団体パートナーズブース */}
-					{/* セクションまたぎではないがボトムが必要なので囲む */}
-					<DIV_Contents>
-						<H2_Title>企業･団体パートナーズブース</H2_Title>
-						<BoothCards items={partners} />
-					</DIV_Contents>
+					<S_DIV_CardContainer>
+						<dl>
+							<TableRow title="開催日" top>
+								令和７年９月２０日（土）
+							</TableRow>
 
-					{/* 鯖江高校生ブース */}
-					<H2_Title>鯖江高校生ブース</H2_Title>
-					{/* <BoothCards items={sabaeStudents} /> */}
-					<DIV_ImgContainer>
-						<img
-							src={`${import.meta.env.BASE_URL}logo/booth_comingSoon.svg`}
-							alt="ブースの画像"
-						/>
-					</DIV_ImgContainer>
-				</S_SECTION_container>
-			</DIV_SectionWrapper>
+							<TableRow title="開場時間">１２時００分</TableRow>
 
-			{/* こどもの遊び場 */}
-			<DIV_SectionWrapper id="2">
-				<S_SECTION_container>
-					<DIV_TitleWrapper>
-						<ContentsTitleOnly
-							title={"こどもの遊び場"}
-							balloonList={["9/20", "土", "9/21", "日"]}
-						/>
-					</DIV_TitleWrapper>
+							<TableRow title="開始時間">
+								１３時３０分（１３時００分 オープニングアクト）
+							</TableRow>
 
-					<BoothCards items={childrenSpace} />
-				</S_SECTION_container>
-			</DIV_SectionWrapper>
+							<TableRow title="会場">
+								西山公園 円形芝生広場（鯖江市桜町3丁目）
+							</TableRow>
 
-			{/* フードエリア */}
-			<DIV_SectionWrapper id="3">
-				<S_SECTION_container>
-					<DIV_TitleWrapper>
-						<ContentsTitleOnly
-							title={"フードエリア"}
-							balloonList={["9/20", "土", "9/21", "日"]}
-						/>
-					</DIV_TitleWrapper>
+							<TableRow title="雨天時の対応">
+								<UL_TableList>
+									<li>
+										①雨天時、鯖江市総合体育館に会場が変更となります。また、会場変更の判断は、９月１８日（木）１７時００分までに、特設サイトなどでご案内いたしますので、必ずご確認ください。
+									</li>
+									<li>
+										②鯖江市総合体育館周辺には駐車場のご用意はありません。お車でお越しの方は、鯖江市役所など一般開放されている公共駐車場をご利用の上、シャトルバスでのご来場にご協力ください。
+										<S_SPAN_Notice>
+											※近隣店舗などへの無断駐車はお控えください。
+										</S_SPAN_Notice>
+									</li>
+								</UL_TableList>
+							</TableRow>
 
-					<BoothCardsMini items={foodArea} />
+							<TableRow title="エリア区分">
+								<div>
+									<p>
+										会場内では、ステージ前方が「鯖江市内園児エリア」・「親子エリア」、後方が「一般エリア」となります。
+									</p>
+									{/* spaced-topはリストの上に文章がある時にマージンをつけるため */}
+									<UL_TableList className="spaced-top bold">
+										<li>
+											①鯖江市内園児エリア（EXILE TETSUYAさんたちとMORNING
+											SUNを一緒に踊ろう！）
+											<S_SPAN_Notice>
+												※保護者2名までと5歳児以下の園児3名まで（なお0～1歳児は安全を確保するため、抱っこ紐またはベビーカーをご利用の上、ご入場ください。）
+											</S_SPAN_Notice>
+										</li>
+										<li>
+											②親子エリア
+											<S_SPAN_Notice>
+												※保護者2名までと小学6年生以下のお子さま3名まで
+											</S_SPAN_Notice>
+										</li>
+										<li>
+											③一般エリア
+											<S_SPAN_Notice>
+												※代表者1名に対して同伴者3名まで
+											</S_SPAN_Notice>
+										</li>
+									</UL_TableList>
+								</div>
+							</TableRow>
+
+							<TableRow title="入場券申込期間">
+								令和７年８月５日（火）～ 令和７年９月５日（金）
+							</TableRow>
+
+							<TableRow title="入場券入手方法">
+								<div>
+									<p>
+										希望エリアのフォームURLを選択し、関係情報の入力をお願いします。
+										<br />
+										申込期間終了後の９月１２日（金）、申込者すべてに対しメールで入場券と入場口マップを送信いたします。{" "}
+									</p>
+									{/* spaced-topはリストの上に文章がある時にマージンをつけるため */}
+									<UL_TableList className="spaced-top bold">
+										<li>
+											①鯖江市内園児エリアお申込み【400名】
+											<DIV_ButtonWrapper>
+												<Button onClick={() => goToTicketFormPage("enji")}>
+													お申込みはこちら
+												</Button>
+											</DIV_ButtonWrapper>
+										</li>
+										<li>
+											②親子エリアお申込み【400名】
+											<DIV_ButtonWrapper>
+												<Button onClick={() => goToTicketFormPage("oyako")}>
+													お申込みはこちら
+												</Button>
+											</DIV_ButtonWrapper>
+										</li>
+										<li>
+											③一般エリアお申込み【400名】
+											<DIV_ButtonWrapper>
+												<Button onClick={() => goToTicketFormPage("ippan")}>
+													お申込みはこちら
+												</Button>
+											</DIV_ButtonWrapper>
+										</li>
+									</UL_TableList>
+								</div>
+							</TableRow>
+
+							<TableRow title="入場券（例）">
+								<DIV_TableTicket>
+									<div>めがねのまちさばえSDGsフェス2025</div>
+									<div>スペシャルステージ入場券</div>
+									<DIV_TicketType>
+										<span className="label">【エリア区分】</span>
+										<span className="type">鯖江市内園児エリア</span>
+									</DIV_TicketType>
+								</DIV_TableTicket>
+							</TableRow>
+
+							<TableRow title="エリア入場前の整列<br />（待機）について">
+								<UL_TableList>
+									<li>
+										①エリア入場前の整列（待機）開始時間はフリーとします。到着順でお並びください。
+									</li>
+									<li>
+										②エリア区分に応じて整列（待機）場所が異なります。該当の場所に整列（待機）ください。
+									</li>
+									<li>
+										③エリア入場時（１２時００分）には、お申込者全員お揃いの上でのご入場にご協力ください。
+									</li>
+									<li>
+										④エリア入場前に係員が入場券の確認を行いますので、入場券をご提示ください。
+									</li>
+									<li>
+										⑤入場券の提示ができない方やお申込みをされていない方は、恐れ入りますが、すべてのエリア区分の方が入場後、フリーでのご入場となります。
+									</li>
+									<li>
+										⑥整列（待機）場所以外に整列されたり係員の指示に従っていただけなかったりする場合は、入場をお断りさせていただきます。
+									</li>
+								</UL_TableList>
+							</TableRow>
+
+							<TableRow title="エリア入場方法">
+								<UL_TableList>
+									{/* indent改行後インデントつけたい時につける */}
+									<li className="indent">
+										①開場時間（１２時００分）となりましたら、以下の順でエリア内にご入場いただきます。
+										<br />
+										鯖江市内園児エリア、親子エリア、一般エリア
+									</li>
+									<li>
+										②エリアに到着までは、慌てず、決して走らないでください。
+									</li>
+								</UL_TableList>
+							</TableRow>
+
+							<TableRow title="その他">
+								<div>
+									<p>最新情報は特設サイトなどで随時公開していきます。</p>
+									<DIV_ButtonWrapper>
+										<Button onClick={goToTop}>最新情報はこちら</Button>
+									</DIV_ButtonWrapper>
+								</div>
+							</TableRow>
+
+							<TableRow title="個人情報保護方針">
+								<UL_TableList>
+									<li>
+										当サイトを通じて提供いただく個人情報は、「鯖江市個人情報保護条例」に基づき、お問い合わせや各種申込への返信や確認などのための利用など、取扱目的の範囲内での利用を行います。
+									</li>
+									<li>
+										収集した個人情報は、「鯖江市情報セキュリティポリシー」に基づき、所管の部署が厳重に管理し、漏えい、滅失、改ざんなどの防止措置を講じるとともに、保有する必要がなくなった個人情報は、確実かつ速やかに廃棄または消去します。
+									</li>
+								</UL_TableList>
+							</TableRow>
+						</dl>
+					</S_DIV_CardContainer>
 				</S_SECTION_container>
 			</DIV_SectionWrapper>
 		</>
@@ -84,39 +229,71 @@ const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
 	}
 `;
 
-// 大元タイトルの下のマージンをつける
-const DIV_TitleWrapper = styled.div`
-	margin-bottom: 30px;
-`;
-
-// S_H2_Titleは継承しない
-const H2_Title = styled.h2`
-	font-family: "Noto Sans", sans-serif;
-	font-size: 26px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid ${COLORS.BORDER};
-	margin-bottom: 20px;
-
-	@media (max-width: 1160px) {
-		font-size: 26px;
+const UL_TableList = styled.ul`
+	&.spaced-top {
+		/* リストの間隔と揃える */
+		margin-top: 20px;
 	}
 
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 1040px) {
-		font-size: 26px;
+	&.bold {
+		/* 正しくはliを太字にしたい */
+		font-weight: bold;
+
+		/* span_noticeは太字にしない */
+		span {
+			font-weight: normal;
+		}
 	}
 
-	@media (max-width: 500px) {
-		font-size: 20px;
+	/* リスト間の間隔 margin-bottom変えたら、spaced-topも変える */
+	li {
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+
+		&.indent {
+			margin-left: 1em;
+			text-indent: -1em;
+		}
+	}
+
+	/* 最後のリストには不要 */
+	li:last-of-type {
+		margin-bottom: 0px;
 	}
 `;
 
-const DIV_Contents = styled.div`
-	margin-bottom: 35px;
-`;
-
-const DIV_ImgContainer = styled.div`
+const DIV_TableTicket = styled.div`
+	border: 1px solid ${COLORS.BORDER};
+	padding: 10px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-size: 10px;
+	font-weight: bold;
+`;
+
+const DIV_TicketType = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px;
+	span {
+		display: block;
+
+		&.label {
+			font-size: 12px;
+		}
+
+		&.type {
+			font-size: 18px;
+			color: #ed6a02;
+		}
+	}
+`;
+
+const DIV_ButtonWrapper = styled.div`
+	margin-top: 5px;
 `;
