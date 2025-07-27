@@ -8,6 +8,7 @@ import { ScrollToHash } from "./components/ScrollToHash";
 import { NewsDetailPage } from "./components/pages/news/NewsDetailPage";
 import { useEffect } from "react";
 import { BoothPage } from "./components/pages/booth/BoothPage";
+import { TicketPage } from "./components/pages/ticket/TicketPage";
 
 // ルーティングを設定するときは二重送信に要注意！
 if (import.meta.env.MODE === "production") {
@@ -33,6 +34,7 @@ const usePageTracking = () => {
 function App() {
 	return (
 		<>
+			{/* Github Actionはstgビルドして、/ではなく/sabae-event-lp/からURLが始まる */}
 			<BrowserRouter basename={import.meta.env.BASE_URL}>
 				<ScrollToHash />
 				<InnerApp />
@@ -51,6 +53,7 @@ function InnerApp() {
 				<Route path="news" element={<NewsListPage />} />
 				<Route path="news/:newsId" element={<NewsDetailPage />} />
 				<Route path="booth" element={<BoothPage />} />
+				<Route path="ticket" element={<TicketPage />} />
 			</Route>
 		</Routes>
 	);

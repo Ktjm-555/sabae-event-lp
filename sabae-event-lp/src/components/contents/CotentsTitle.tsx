@@ -126,7 +126,6 @@ const SPAN_Annotation = styled.span`
 `;
 
 const P_Caption = styled.p`
-	min-height: 70px;
 	margin-bottom: 20px;
 
 	@media (max-width: 800px) {

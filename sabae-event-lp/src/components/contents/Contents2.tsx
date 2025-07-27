@@ -10,10 +10,17 @@ import {
 import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
 import { guests1, guests2 } from "../../items/guests";
+import { useNavigate } from "react-router-dom";
 
 export const Contents2 = () => {
+	const navigate = useNavigate();
+
 	const goToSabaeModelPage = () => {
 		window.open("https://www.sabae-sdgs.jp/news/2120/", "_blank");
+	};
+
+	const goToTicketPage = () => {
+		navigate("/ticket");
 	};
 
 	return (
@@ -25,6 +32,11 @@ export const Contents2 = () => {
 				balloonList={["9/20", "土"]}
 				annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
 			/>
+			<DIV_ButtonContainer>
+				<Button onClick={() => goToTicketPage()}>
+					入場券のお申込みはこちら
+				</Button>
+			</DIV_ButtonContainer>
 			<SECTION_CardContainer>
 				<DIV_CardHeaderContainer>
 					<S_H2_Title>
@@ -141,6 +153,10 @@ const SECTION_CardContainer = styled(
 	S_DIV_CardContainer.withComponent("section")
 )`
 	margin-bottom: 30px;
+`;
+
+const DIV_ButtonContainer = styled.div`
+	margin-bottom: 20px;
 `;
 
 const DIV_CardsWrapper = styled.div`
