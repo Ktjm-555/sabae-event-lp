@@ -20,11 +20,17 @@ export const TableRow = ({ children, title, top = false }: Props) => {
 const DIV_Info = styled.dl`
 	display: flex;
 	gap: 20px;
-	padding: 10px;
+	padding: 10px 0;
 	border-bottom: 1px solid ${COLORS.BORDER};
 
 	&.info-top {
 		border-top: 1px solid ${COLORS.BORDER};
+	}
+
+	@media (max-width: 650px) {
+		flex-direction: column;
+		gap: 0;
+		padding: 8px 0;
 	}
 `;
 
@@ -38,6 +44,17 @@ const DT_InfoTitle = styled.dt`
 	min-height: 58px;
 	background-color: #efefef;
 	font-weight: bold;
+
+	@media (max-width: 650px) {
+		width: auto;
+		min-height: auto;
+		padding: 8px 15px;
+		justify-content: flex-start;
+
+		br {
+			display: none;
+		}
+	}
 `;
 
 const DD_InfoDetail = styled.dd`
@@ -45,4 +62,12 @@ const DD_InfoDetail = styled.dd`
 	align-items: center;
 	/* DD_InfoDetailはtitleほど広がっていない */
 	padding: 10px;
+
+	@media (max-width: 650px) {
+		font-size: 14px;
+		padding: 8px;
+		// DIV_Infoのpaddingで20でかかってしまい、
+		// 文字が上に浮くため、0にする。
+		padding-bottom: 0px;
+	}
 `;

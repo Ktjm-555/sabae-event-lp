@@ -34,11 +34,11 @@ export const TicketPage = () => {
 				<S_SECTION_container>
 					<S_P_Subtitle id="3">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
 					<ContentsTitleOnly
-						title={"スペシャルステージ入場券申込概要"}
+						title={"スペシャルステージ入場券<wbr>申込概要"}
 						balloonList={["9/20", "土"]}
 					/>
 
-					<S_DIV_CardContainer>
+					<DIV_CardContainer>
 						<dl>
 							<TableRow title="開催日" top>
 								令和７年９月２０日（土）
@@ -140,14 +140,16 @@ export const TicketPage = () => {
 							</TableRow>
 
 							<TableRow title="入場券（例）">
-								<DIV_TableTicket>
-									<div>めがねのまちさばえSDGsフェス2025</div>
-									<div>スペシャルステージ入場券</div>
-									<DIV_TicketType>
-										<span className="label">【エリア区分】</span>
-										<span className="type">鯖江市内園児エリア</span>
-									</DIV_TicketType>
-								</DIV_TableTicket>
+								<DIV_TableTicketContainer>
+									<DIV_TableTicket>
+										<div>めがねのまちさばえSDGsフェス2025</div>
+										<div>スペシャルステージ入場券</div>
+										<DIV_TicketType>
+											<span className="label">【エリア区分】</span>
+											<span className="type">鯖江市内園児エリア</span>
+										</DIV_TicketType>
+									</DIV_TableTicket>
+								</DIV_TableTicketContainer>
 							</TableRow>
 
 							<TableRow title="エリア入場前の整列<br />（待機）について">
@@ -207,7 +209,7 @@ export const TicketPage = () => {
 								</UL_TableList>
 							</TableRow>
 						</dl>
-					</S_DIV_CardContainer>
+					</DIV_CardContainer>
 				</S_SECTION_container>
 			</DIV_SectionWrapper>
 		</>
@@ -226,6 +228,15 @@ const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
 		&.top-section {
 			padding-top: 120px;
 		}
+	}
+`;
+
+const DIV_CardContainer = styled(S_DIV_CardContainer)`
+	padding: 25px;
+
+	// max-widthは、TableRowのレスポンシブと合わせる
+	@media (max-width: 650px) {
+		padding: 15px;
 	}
 `;
 
@@ -260,6 +271,16 @@ const UL_TableList = styled.ul`
 	/* 最後のリストには不要 */
 	li:last-of-type {
 		margin-bottom: 0px;
+	}
+`;
+
+const DIV_TableTicketContainer = styled.div`
+	@media (max-width: 650px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 3px;
 	}
 `;
 
