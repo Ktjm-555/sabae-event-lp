@@ -65,7 +65,7 @@ export const BoothCards = ({ items }: Props) => {
 										</SPAN_Notice>
 									)}
 
-									<p>
+									<P_FooterP>
 										SDGs目標：
 										<span>
 											{numbers.length
@@ -84,7 +84,7 @@ export const BoothCards = ({ items }: Props) => {
 												  ))
 												: "未定"}
 										</span>
-									</p>
+									</P_FooterP>
 								</DIV_NoticeNumber>
 							</DIV_CardFooter>
 						</DIV_CardContainer>
@@ -129,6 +129,17 @@ const DIV_CardContainer = styled(S_DIV_CardContainer)`
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
+
+	// max-width 他のと連動している
+	@media (max-width: 600px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"title image"
+			"item image";
+		column-gap: 10px;
+		align-items: start;
+	}
 `;
 
 const H3_Title = styled.h3`
@@ -137,6 +148,16 @@ const H3_Title = styled.h3`
 
 	&.long-title {
 		font-size: 14px;
+	}
+
+	@media (max-width: 600px) {
+		font-size: 15px;
+		grid-area: title;
+		order: 1;
+
+		&.long-title {
+			font-size: 13px;
+		}
 	}
 `;
 
@@ -147,6 +168,11 @@ const DIV_Spacer = styled.div`
 const IMG_Card = styled.img`
 	width: 100%;
 	margin-bottom: 10px;
+
+	@media (max-width: 600px) {
+		grid-area: image;
+		margin-bottom: 0;
+	}
 `;
 
 const IMG_SdgsNumber = styled.img`
@@ -168,6 +194,11 @@ const DIV_CardFooter = styled.div`
 	p.long-name {
 		font-size: 13px;
 	}
+
+	@media (max-width: 600px) {
+		grid-area: item;
+		align-self: end;
+	}
 `;
 
 const DIV_NoticeNumber = styled.div`
@@ -180,6 +211,11 @@ const DIV_NoticeNumber = styled.div`
 	&.flex-controle {
 		justify-content: flex-end;
 	}
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+		align-items: end;
+	}
 `;
 
 const SPAN_Notice = styled.span`
@@ -189,5 +225,16 @@ const SPAN_Notice = styled.span`
 
 	&.blue {
 		color: ${COLORS.TEXT_SUB_COLOR};
+	}
+	@media (max-width: 600px) {
+		order: 2;
+		font-size: 12px;
+	}
+`;
+
+const P_FooterP = styled.p`
+	@media (max-width: 600px) {
+		font-size: 14px;
+		order: 1;
 	}
 `;
