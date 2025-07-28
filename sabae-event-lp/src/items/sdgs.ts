@@ -1,7 +1,7 @@
 export const sdgsList = [
 	{
 		id: 1,
-		message: "“地球上のあらゆる形の貧困をなくそう1”",
+		message: "“地球上のあらゆる形の貧困をなくそう”",
 		url: "https://www.unicef.or.jp/kodomo/sdgs/17goals/1-poverty/",
 	},
 	{
