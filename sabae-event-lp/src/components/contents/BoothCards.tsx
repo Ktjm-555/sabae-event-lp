@@ -46,7 +46,9 @@ export const BoothCards = ({ items }: Props) => {
 
 					return (
 						<DIV_CardContainer key={id}>
-							<IMG_Card src={imgSrc} />
+							<DIV_IMGContainer>
+								<IMG_Card src={imgSrc} />
+							</DIV_IMGContainer>
 
 							<H3_Title
 								className={isLong ? "long-title" : ""}
@@ -171,8 +173,17 @@ const IMG_Card = styled.img`
 	margin-bottom: 10px;
 
 	@media (max-width: 600px) {
-		grid-area: image;
 		margin-bottom: 0;
+	}
+`;
+
+const DIV_IMGContainer = styled.div`
+	@media (max-width: 600px) {
+		grid-area: image;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		background-color: #efefef;
 	}
 `;
 
