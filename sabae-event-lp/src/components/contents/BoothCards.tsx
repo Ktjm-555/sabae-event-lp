@@ -154,6 +154,7 @@ const H3_Title = styled.h3`
 		font-size: 15px;
 		grid-area: title;
 		order: 1;
+		margin-bottom: 16px;
 
 		&.long-title {
 			font-size: 13px;
@@ -198,6 +199,7 @@ const DIV_CardFooter = styled.div`
 	@media (max-width: 600px) {
 		grid-area: item;
 		align-self: end;
+		font-size: 11px;
 	}
 `;
 
@@ -227,14 +229,13 @@ const SPAN_Notice = styled.span`
 		color: ${COLORS.TEXT_SUB_COLOR};
 	}
 	@media (max-width: 600px) {
+		font-size: 11px;
 		order: 2;
-		font-size: 12px;
 	}
 `;
 
 const P_FooterP = styled.p`
 	@media (max-width: 600px) {
-		font-size: 14px;
 		order: 1;
 	}
 `;
