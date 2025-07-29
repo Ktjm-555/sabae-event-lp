@@ -4,6 +4,10 @@ import { COLORS } from "../consts/color.ts";
 import { TEXT_L } from "../consts/typography.ts";
 
 export const Footer = () => {
+	const goToZooPage = () => {
+		window.open("https://www.city.sabae.fukui.jp/nishiyama_zoo/", "_blank");
+	};
+
 	return (
 		<SECTION_FooterContainer>
 			<S_SECTION_container>
@@ -29,7 +33,10 @@ export const Footer = () => {
 					</div>
 					<DIV_Contents>
 						<div>
-							<img src={`${import.meta.env.BASE_URL}banners/kaigyo40.svg`} />
+							<IMG_ZooLogo
+								src={`${import.meta.env.BASE_URL}banners/kaigyo40.svg`}
+								onClick={goToZooPage}
+							/>
 						</div>
 						<P_Event>過去のフェス</P_Event>
 						<DIV_LinkList>
@@ -165,4 +172,8 @@ const DIV_Copyright = styled.div`
 	@media (max-width: 500px) {
 		font-size: 11px;
 	}
+`;
+
+const IMG_ZooLogo = styled.img`
+	cursor: pointer;
 `;
