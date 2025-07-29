@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 
+// TODO: newsの型定義を外出して、Propsで呼び出したい
 type Props = {
 	news: {
 		id: number;
