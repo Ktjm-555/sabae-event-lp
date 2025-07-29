@@ -18,16 +18,26 @@ export const Footer = () => {
 						<DL_ContactContainer>
 							<dt>鯖江市総合政策課</dt>
 							<dd>
-								<img src={`${import.meta.env.BASE_URL}icon/tel-phone.svg`} />
-								0778-53-2263
+								<a href="tel:0778-53-2263">
+									<img src={`${import.meta.env.BASE_URL}icon/tel-phone.svg`} />
+									0778-53-2263
+								</a>
 							</dd>
 						</DL_ContactContainer>
 						<P_ContactTitle>ブースエリア事務局</P_ContactTitle>
 						<DL_ContactContainer>
 							<dt>さばえSDGs推進センター（指定管理者 (株)メディアビジョン）</dt>
 							<dd>
-								<img src={`${import.meta.env.BASE_URL}icon/tel-phone.svg`} />
-								0778-42-8938　contact@sabae-sdgs.jp
+								<a href="tel:0778-42-8938">
+									<img src={`${import.meta.env.BASE_URL}icon/tel-phone.svg`} />
+									0778-42-8938
+								</a>
+								<a
+									href="mailto:contact@sabae-sdgs.jp?subject=お問い合わせ"
+									className="left-space"
+								>
+									contact@sabae-sdgs.jp
+								</a>
 							</dd>
 						</DL_ContactContainer>
 					</div>
@@ -114,6 +124,10 @@ const DL_ContactContainer = styled.dl`
 		img {
 			margin-right: 5px;
 			vertical-align: text-top;
+		}
+
+		.left-space {
+			margin-left: 20px;
 		}
 	}
 
