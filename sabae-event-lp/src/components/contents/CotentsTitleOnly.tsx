@@ -28,6 +28,18 @@ const DIV_TitleContainer = styled.div`
 	border-bottom: 3px solid ${COLORS.BORDER_ON_ACCENT};
 	padding-bottom: 0.4em;
 	margin-bottom: 30px;
+
+	@media (max-width: 1100px) {
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: 800px) {
+		margin-bottom: 15px;
+	}
+
+	@media (max-width: 500px) {
+		margin-bottom: 10px;
+	}
 `;
 
 const H1_Title = styled.h1`

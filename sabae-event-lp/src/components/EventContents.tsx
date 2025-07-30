@@ -79,12 +79,13 @@ export const EventContents = () => {
 							balloonList={["9/20", "土", "9/21", "日"]}
 						/>
 						<DIV_Contents2 className="first-item">
+							<H2_Title className="sp-only">インクルーシブ遊具</H2_Title>
 							<img
 								src={`${import.meta.env.BASE_URL}images/photo_try&buy_03.png`}
 								alt="ブースの画像"
 							/>
 							<DIV_Caption2>
-								<H2_Title>インクルーシブ遊具</H2_Title>
+								<H2_Title className="pc-only">インクルーシブ遊具</H2_Title>
 								<p>障がいの有無に関わらずみんなで楽しめる遊具で遊ぼう！</p>
 							</DIV_Caption2>
 						</DIV_Contents2>
@@ -92,13 +93,25 @@ export const EventContents = () => {
 						<DIV_Contents2 className="no-reverse">
 							<DIV_Caption2>
 								<H2_Title>はたらくくるま乗車体験</H2_Title>
-								<p className="mg-bt">ミニショベルでボールすくい！</p>
-								<Button onClick={() => goToBoothPage(2)}>詳しくはこちら</Button>
+								<DIV_ContainerDisplay className="pc-only">
+									<p className="mg-bt">ミニショベルでボールすくい！</p>
+									<Button onClick={() => goToBoothPage(2)}>
+										詳しくはこちら
+									</Button>
+								</DIV_ContainerDisplay>
 							</DIV_Caption2>
 							<img
 								src={`${import.meta.env.BASE_URL}images/photo_try&buy_04.png`}
 								alt="ブースの画像"
 							/>
+							<DIV_ContainerDisplay className="sp-only">
+								<p className="mg-bt">ミニショベルでボールすくい！</p>
+								<DIV_ButtonContainer>
+									<Button onClick={() => goToBoothPage(2)}>
+										詳しくはこちら
+									</Button>
+								</DIV_ButtonContainer>
+							</DIV_ContainerDisplay>
 						</DIV_Contents2>
 					</div>
 					<div>
@@ -106,30 +119,71 @@ export const EventContents = () => {
 							title={"フードエリア"}
 							balloonList={["9/20", "土", "9/21", "日"]}
 						/>
-						<DIV_Contents2 className="first-item">
-							<img
-								src={`${import.meta.env.BASE_URL}images/photo_try&buy_05.png`}
-								alt="ブースの画像"
-							/>
-							<DIV_Caption2>
-								{/* H2のタイトルの高さ分を開けるため */}
+						{/* TODO: この辺の二重表現またチャレンジする一旦このまま行く */}
+						<DIV_ContainerDisplay2 className="pc-only">
+							<DIV_Contents2 className="first-item">
 								<DIV_Hidden2></DIV_Hidden2>
-								<p>ここでしか食べられない地産地消グルメを味わおう！</p>
-							</DIV_Caption2>
-						</DIV_Contents2>
-						{/* 画像が後の場合SPの際上下ひっくり返さなくても良い no-reverse*/}
-						<DIV_Contents2 className="no-reverse">
-							<DIV_Caption2>
-								{/* H2のタイトルの高さ分を開けるため */}
-								<DIV_Hidden2></DIV_Hidden2>
-								<p className="mg-bt">美味しいスイーツもたくさん</p>
+								<img
+									src={`${import.meta.env.BASE_URL}images/photo_try&buy_05.png`}
+									alt="ブースの画像"
+								/>
+								<DIV_Caption2>
+									{/* H2のタイトルの高さ分を開けるため */}
+									<p>ここでしか食べられない地産地消グルメを味わおう！</p>
+								</DIV_Caption2>
+							</DIV_Contents2>
+
+							{/* 画像が後の場合SPの際上下ひっくり返さなくても良い no-reverse*/}
+							<DIV_Contents2 className="no-reverse">
+								<DIV_Caption2>
+									{/* H2のタイトルの高さ分を開けるため */}
+									<DIV_Hidden2></DIV_Hidden2>
+									<DIV_ContainerDisplay className="pc-only">
+										<p className="mg-bt">美味しいスイーツもたくさん</p>
+										<DIV_ButtonContainer>
+											<Button onClick={() => goToBoothPage(3)}>
+												詳しくはこちら
+											</Button>
+										</DIV_ButtonContainer>
+									</DIV_ContainerDisplay>
+								</DIV_Caption2>
+								<img
+									src={`${import.meta.env.BASE_URL}images/photo_try&buy_06.png`}
+									alt="ブースの画像"
+								/>
+								<DIV_ContainerDisplay className="sp-only">
+									<p className="mg-bt">美味しいスイーツもたくさん</p>
+									<DIV_ButtonContainer>
+										<Button onClick={() => goToBoothPage(3)}>
+											詳しくはこちら
+										</Button>
+									</DIV_ButtonContainer>
+								</DIV_ContainerDisplay>
+							</DIV_Contents2>
+						</DIV_ContainerDisplay2>
+						{/* ここもかえる名前といか、このスタイルの当て方 */}
+						<DIV_ContainerDisplay2 className="sp-only">
+							<DIV_ImgContainerOverlay>
+								<IMG_MainImage
+									src={`${import.meta.env.BASE_URL}images/photo_try&buy_05.png`}
+									alt="ブースの画像"
+								/>
+								<IMG_Overlay
+									src={`${import.meta.env.BASE_URL}images/photo_try&buy_06.png`}
+									alt="ブースの画像"
+								/>
+								{/* ポジションで浮いてしまった分の高さを確保する */}
+								<DummySpacer />
+							</DIV_ImgContainerOverlay>
+							<p className="mg-bt">
+								ここでしか食べられない地産地消グルメを味わおう！
+								<br />
+								美味しいスイーツもたくさん！
+							</p>
+							<DIV_ButtonContainer>
 								<Button onClick={() => goToBoothPage(3)}>詳しくはこちら</Button>
-							</DIV_Caption2>
-							<img
-								src={`${import.meta.env.BASE_URL}images/photo_try&buy_06.png`}
-								alt="ブースの画像"
-							/>
-						</DIV_Contents2>
+							</DIV_ButtonContainer>
+						</DIV_ContainerDisplay2>
 					</div>
 				</DIV_ContentsContainer>
 			</S_SECTION_container>
@@ -156,7 +210,7 @@ const DIV_ContentsContainer = styled.div`
 	margin-bottom: 60px;
 
 	@media (max-width: 900px) {
-		gap: 30px;
+		/* gap: 30px; */
 		margin-bottom: 40px;
 	}
 
@@ -168,11 +222,12 @@ const DIV_ContentsContainer = styled.div`
 	}
 
 	@media (max-width: 500px) {
-		gap: 20px;
+		gap: 30px;
 		margin-bottom: 30px;
 	}
 `;
 
+// TODO: displayするだけのコンテナなんか定義したい
 const DIV_ButtonContainer = styled.div`
 	@media (max-width: 1100px) {
 		display: flex;
@@ -197,7 +252,7 @@ const DIV_Contents1 = styled.div`
 	@media (max-width: 1100px) {
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
+		gap: 10px;
 	}
 
 	&.first-item {
@@ -211,12 +266,7 @@ const DIV_Contents2 = styled(DIV_Contents1)`
 `;
 
 // キャプションのトップが画像と同じバージョン
-const DIV_Caption1 = styled.div`
-	// ボタンありの場合
-	p.mg-bt {
-		margin-bottom: 10px;
-	}
-`;
+const DIV_Caption1 = styled.div``;
 
 // キャプションが画像の高さの上下真ん中にあるバージョン
 const DIV_Caption2 = styled(DIV_Caption1)`
@@ -252,6 +302,9 @@ const DIV_Hidden2 = styled.div`
 `;
 
 const H2_Title = styled(S_H2_Title)`
+	&.sp-only {
+		display: none;
+	}
 	@media (max-width: 1280px) {
 		font-size: 20px;
 	}
@@ -264,4 +317,74 @@ const H2_Title = styled(S_H2_Title)`
 	@media (max-width: 500px) {
 		font-size: 18px;
 	}
+
+	@media (max-width: 1100px) {
+		&.sp-only {
+			display: block;
+		}
+
+		&.pc-only {
+			display: none;
+		}
+	}
+`;
+
+// TODO: 名前変えたい
+// sp-onlyのこの辺を定義するだけでいいのか？
+const DIV_ContainerDisplay = styled.div`
+	&.sp-only {
+		display: none;
+	}
+
+	@media (max-width: 1100px) {
+		&.sp-only {
+			display: block;
+		}
+		&.pc-only {
+			display: none;
+		}
+	}
+`;
+
+const DIV_ContainerDisplay2 = styled.div`
+	&.sp-only {
+		display: none;
+	}
+
+	@media (max-width: 700px) {
+		&.sp-only {
+			display: block;
+		}
+		&.pc-only {
+			display: none;
+		}
+	}
+`;
+
+// 画像の重なり表現
+const DIV_ImgContainerOverlay = styled.div`
+	position: relative;
+	width: 100%;
+	margin-bottom: 10px;
+`;
+
+const IMG_MainImage = styled.img`
+	display: block;
+	width: 70%;
+	border-radius: 20px;
+`;
+
+const IMG_Overlay = styled.img`
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+`;
+
+const DummySpacer = styled.div`
+	/* これを入れる前にIMG_Overlayを下げたかった分のbottomサイズを設定 */
+	/* bottomを0にすると重なる */
+	height: 90px;
 `;

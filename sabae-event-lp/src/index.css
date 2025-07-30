@@ -84,3 +84,8 @@ h1 {
 		font-size: 14px;
 	}
 }
+
+/* ボタンありの場合 */
+.mg-bt {
+	margin-bottom: 10px;
+}

@@ -87,6 +87,18 @@ const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
 // 大元タイトルの下のマージンをつける
 const DIV_TitleWrapper = styled.div`
 	margin-bottom: 30px;
+
+	@media (max-width: 1100px) {
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: 800px) {
+		margin-bottom: 15px;
+	}
+
+	@media (max-width: 500px) {
+		margin-bottom: 10px;
+	}
 `;
 
 // S_H2_Titleは継承しない
