@@ -44,7 +44,11 @@ export const EventContents = () => {
 								<p className="mg-bt">
 									SDGsに取り組むさまざまな企業・団体などが大集合！家族で楽しめるブースがいっぱい‼
 								</p>
-								<Button onClick={() => goToBoothPage(1)}>詳しくはこちら</Button>
+								<DIV_ButtonContainer>
+									<Button onClick={() => goToBoothPage(1)}>
+										詳しくはこちら
+									</Button>
+								</DIV_ButtonContainer>
 							</DIV_Caption1>
 						</DIV_Contents1>
 					</div>
@@ -169,6 +173,13 @@ const DIV_ContentsContainer = styled.div`
 	}
 `;
 
+const DIV_ButtonContainer = styled.div`
+	@media (max-width: 1100px) {
+		display: flex;
+		justify-content: center;
+	}
+`;
+
 // 画像大きめ、キャプション少し小さめバージョン
 const DIV_Contents1 = styled.div`
 	display: grid;
@@ -185,14 +196,8 @@ const DIV_Contents1 = styled.div`
 	// ここmax-width変える場合は、DIV_Hidden2の1110も変える
 	@media (max-width: 1100px) {
 		display: flex;
-		// 縦表示の時画像の上にキャプションを持ってくる
-		flex-direction: column-reverse;
+		flex-direction: column;
 		gap: 15px;
-
-		// 元々画像の上に書いている場合はno-reverse！
-		&.no-reverse {
-			flex-direction: column;
-		}
 	}
 
 	&.first-item {
