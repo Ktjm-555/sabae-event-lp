@@ -378,7 +378,7 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image28.png`,
-		title: "甲府市",
+		title: "宝石のまち甲府 甲府の良きモノ発信中！",
 		isLong: false,
 		name: "甲府市役所",
 		isNameLong: false,
