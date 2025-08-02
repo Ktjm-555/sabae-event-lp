@@ -409,7 +409,9 @@ export const childrenSpace = [
 	},
 	{
 		id: 2,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/children_space/photo_children_space_image2.png`,
 		title: "地域の安全安心をまもる ～警察のおしごと～",
 		isLong: false,
 		name: "鯖江警察署",
@@ -418,7 +420,9 @@ export const childrenSpace = [
 	},
 	{
 		id: 3,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/children_space/photo_children_space_image3.png`,
 		title: "なりきり！ちびっこ自衛隊",
 		isLong: false,
 		name: "自衛隊福井地方協力本部",
@@ -427,7 +431,9 @@ export const childrenSpace = [
 	},
 	{
 		id: 4,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/children_space/photo_children_space_image4.png`,
 		title: "安全安心な街づくりを！",
 		isLong: false,
 		name: "鯖江･丹生消防組合",
