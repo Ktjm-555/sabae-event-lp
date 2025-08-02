@@ -4,7 +4,7 @@ import { COLORS } from "../../../consts/color";
 import { ContentsTitleOnly } from "../../contents/CotentsTitleOnly";
 import { childrenSpace, foodArea, partners } from "../../../items/booth";
 import { BoothCards } from "../../contents/BoothCards";
-import { BoothCardsMini } from "../../contents/BoothCardsMini";
+import { BoothCardsMini2 } from "../../contents/BoothCardsMini2";
 
 export const BoothPage = () => {
 	return (
@@ -62,7 +62,7 @@ export const BoothPage = () => {
 						/>
 					</DIV_TitleWrapper>
 
-					<BoothCardsMini items={foodArea} />
+					<BoothCardsMini2 items={foodArea} />
 				</S_SECTION_container>
 			</DIV_SectionWrapper>
 		</>

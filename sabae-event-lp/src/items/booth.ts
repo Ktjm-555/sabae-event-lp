@@ -459,48 +459,66 @@ export const foodArea = [
 		id: 1,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
 		title: "ボーノ夢果房",
+		numbers: [],
 	},
 	{
 		id: 2,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image2.png`,
 		title: "Mr.コシヒカリ",
+		numbers: [3, 15],
 	},
 	{
 		id: 3,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image3.png`,
 		title: "K&K FOOD’S",
+		numbers: [7, 8],
 	},
 	{
 		id: 4,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "GOONIES",
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image4.png`,
+		title: "FOOD TRUCK GOONIES",
+		numbers: [12],
 	},
 	{
 		id: 5,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "火の鳥",
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image5.png`,
+		title: "キッチンカーさくら",
+		numbers: [],
 	},
 	{
 		id: 6,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "SAKURA",
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image6.png`,
+		title: "コッペ亭",
+		numbers: [2, 12],
 	},
 	{
 		id: 7,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "コッペ亭",
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image7.png`,
+		title: "火の鳥",
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
+		numbers: [3, 12],
 	},
 	{
 		id: 8,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image8.png`,
 		title: "ビストロ NOAH",
 		notice: "※9/20(土)のみ",
 		noticeBlue: true,
-	},
-	{
-		id: 9,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "Cafe Amelia",
-		notice: "※9/21(日)のみ",
+		numbers: [2, 12],
 	},
 ];
