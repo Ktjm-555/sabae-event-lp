@@ -129,7 +129,7 @@ export const EventContents = () => {
 								/>
 								<DIV_Caption2>
 									{/* H2のタイトルの高さ分を開けるため */}
-									<p>ここでしか食べられない地産地消グルメを味わおう！</p>
+									<p>SDGsに取り組むキッチンカーなどがいっぱい！</p>
 								</DIV_Caption2>
 							</DIV_Contents2>
 
@@ -176,7 +176,7 @@ export const EventContents = () => {
 								<DummySpacer />
 							</DIV_ImgContainerOverlay>
 							<p className="mg-bt">
-								ここでしか食べられない地産地消グルメを味わおう！
+								SDGsに取り組むキッチンカーなどがいっぱい！
 								<br />
 								美味しいスイーツもたくさん！
 							</p>
