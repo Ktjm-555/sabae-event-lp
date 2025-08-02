@@ -445,9 +445,10 @@ export const childrenSpace = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/children_space/photo_children_space_image5.png`,
-		title: "探検！地面300メートルの世界<br>ジオ･ラボ号で地層処分を学ぼう",
-		isLong: false,
-		name: "鯖江･丹生消防組合",
+		title:
+			"体験しよう！地層処分「ジオ・ラボ号に乗ってミライの処分場を見に行こう！」",
+		isLong: true,
+		name: "原子力発電環境整備機構（NUMO）",
 		isNameLong: false,
 		numbers: [12],
 	},
