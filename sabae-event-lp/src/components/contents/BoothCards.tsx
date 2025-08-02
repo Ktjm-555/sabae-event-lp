@@ -4,7 +4,7 @@ import { COLORS } from "../../consts/color";
 import { Modal } from "../ui/modal";
 import { useState } from "react";
 import { sdgsList } from "../../items/sdgs";
-import { SdgsModalContents } from "./sdgsModalContents";
+import { SdgsModalContents } from "./SdgsModalContents";
 
 type Item = {
 	id: number;

@@ -4,7 +4,7 @@ import { COLORS } from "../../consts/color";
 import { Modal } from "../ui/modal";
 import { useState } from "react";
 import { sdgsList } from "../../items/sdgs";
-import { SdgsModalContents } from "./sdgsModalContents";
+import { SdgsModalContents } from "./SdgsModalContents";
 
 type Item = {
 	id: number;
@@ -62,7 +62,7 @@ export const BoothCardsMini2 = ({ items }: Props) => {
 									)}
 
 									<P_FooterP>
-										SDGs目標：
+										{numbers.length ? <span>SDGs目標：</span> : ""}
 										<span>
 											{numbers.length
 												? numbers.map((num) => (
@@ -78,7 +78,7 @@ export const BoothCardsMini2 = ({ items }: Props) => {
 															}}
 														/>
 												  ))
-												: "未定"}
+												: ""}
 										</span>
 									</P_FooterP>
 								</DIV_NoticeNumber>
