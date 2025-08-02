@@ -49,7 +49,7 @@ export const AccessContents = () => {
 							<DIV_DisplayContainer className="tate">
 								<S_H2_Title>臨時駐車場</S_H2_Title>
 								<ul>
-									<li>
+									{/* <li>
 										●鯖江市スポーツ交流館（
 										<A_URL
 											href="https://maps.app.goo.gl/gP73PMZjJxFR5Qxp7"
@@ -64,7 +64,7 @@ export const AccessContents = () => {
 										）
 										<br />
 										※シャトルバスが運行します。
-									</li>
+									</li> */}
 									<li>
 										●鯖江市役所（
 										<A_URL
@@ -78,6 +78,7 @@ export const AccessContents = () => {
 											鯖江市西山町13-1
 										</A_URL>
 										）<br />
+										<S_SPAN_Notice>※シャトルバスが運行します。</S_SPAN_Notice>
 										<S_SPAN_Notice>
 											※駐車台数に限りがございます。公共交通機関をご利用いただくか、なるべく乗り合わせの上ご来場ください。
 										</S_SPAN_Notice>
