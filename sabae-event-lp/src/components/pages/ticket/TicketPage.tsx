@@ -62,7 +62,7 @@ export const TicketPage = () => {
 									<li>
 										②鯖江市総合体育館周辺には駐車場のご用意はありません。お車でお越しの方は、鯖江市役所など一般開放されている公共駐車場をご利用の上、シャトルバスでのご来場にご協力ください。
 										<S_SPAN_Notice>
-											※近隣店舗などへの無断駐車はお控えください。
+											※近隣店舗などへの無断駐車はおやめください。
 										</S_SPAN_Notice>
 									</li>
 								</UL_TableList>
@@ -71,28 +71,56 @@ export const TicketPage = () => {
 							<TableRow title="エリア区分">
 								<div>
 									<p>
-										会場内では、ステージ前方が「鯖江市内園児エリア」・「親子エリア」、後方が「一般エリア」となります。
+										会場内は、ステージ前方から①鯖江市内園児エリア、②親子エリア、③一般エリアに分かれます。
 									</p>
 									{/* spaced-topはリストの上に文章がある時にマージンをつけるため */}
 									<UL_TableList className="spaced-top bold">
 										<li>
-											①鯖江市内園児エリア（EXILE TETSUYAさんたちとMORNING
-											SUNを一緒に踊ろう！）
-											<S_SPAN_Notice>
-												※保護者2名までと5歳児以下の園児3名まで（なお0～1歳児は安全を確保するため、抱っこ紐またはベビーカーをご利用の上、ご入場ください。）
-											</S_SPAN_Notice>
+											①鯖江市内園児エリア（EXILE
+											TETSUYAさんたちと一緒に「MORNING SUN」を踊ろう！）
+											<P_Target>
+												対象：鯖江市内の保育園･こども園に通う0～5歳児とそのご家族
+											</P_Target>
+											<UL_Notice>
+												<li>※対象園児1人と保護者1人でお申込みください。</li>
+												<li>
+													※同行者として、同一世帯のご家族が入場できます。
+													<br />
+													<span className="indent">
+														例）対象のお子様1人＋保護者(父)1人＋同行者(中学生と高校生の姉妹)2人
+													</span>
+												</li>
+												<li>
+													※0～1歳児は、安全確保のため抱っこひも、またはベビーカーでの入場をお願いします。
+												</li>
+											</UL_Notice>
 										</li>
 										<li>
 											②親子エリア
-											<S_SPAN_Notice>
-												※保護者2名までと小学6年生以下のお子さま3名まで
-											</S_SPAN_Notice>
+											<P_Target>
+												対象：鯖江市内外を問わず小学6年生以下のお子さまとそのご家族
+											</P_Target>
+											<UL_Notice>
+												<li>
+													※同行者として、同一世帯のご家族が入場できます。
+													<br />
+													<span className="indent">
+														例）対象のお子様1人＋保護者(父)1人＋同行者(中学生と高校生の姉妹)2人{" "}
+													</span>
+												</li>
+											</UL_Notice>
 										</li>
 										<li>
 											③一般エリア
-											<S_SPAN_Notice>
-												※代表者1名に対して同伴者3名まで
-											</S_SPAN_Notice>
+											<P_Target>
+												対象：① ②
+												の対象外の方や、同一世帯のご家族以外の同行者を含む方{" "}
+											</P_Target>
+											<UL_Notice>
+												<li>
+													※代表者1人に対して同行者3人まで入場できます。 <br />
+												</li>
+											</UL_Notice>
 										</li>
 									</UL_TableList>
 								</div>
@@ -148,6 +176,11 @@ export const TicketPage = () => {
 											<span className="label">【エリア区分】</span>
 											<span className="type">鯖江市内園児エリア</span>
 										</DIV_TicketType>
+										<p>
+											9/20㊏ 12:00開場 13:00開演
+											<br />
+											鯖江市西山公園 円形芝生広場
+										</p>
 									</DIV_TableTicket>
 								</DIV_TableTicketContainer>
 							</TableRow>
@@ -186,16 +219,33 @@ export const TicketPage = () => {
 									<li>
 										②エリアに到着までは、慌てず、決して走らないでください。
 									</li>
+									<li>
+										③再入場は可能ですが、その際は最後列に並び直しとなります。
+									</li>
 								</UL_TableList>
 							</TableRow>
 
 							<TableRow title="その他">
-								<div>
+								{/* <div>
 									<p>最新情報は特設サイトなどで随時公開していきます。</p>
 									<DIV_ButtonWrapper>
 										<Button onClick={goToTop}>最新情報はこちら</Button>
 									</DIV_ButtonWrapper>
-								</div>
+								</div> */}
+								<UL_TableList>
+									<li>
+										①最新情報は特設サイトなどで随時公開していきます。{" "}
+										<DIV_ButtonWrapper>
+											<Button onClick={goToTop}>最新情報はこちら</Button>
+										</DIV_ButtonWrapper>
+									</li>
+									<li>
+										②会場内でのスマートフォンなどでのビデオ撮影、録音は一切禁止いたします。
+									</li>
+									<li>
+										③熱中症対策のため、こまめな水分補給、帽子着用などをお願いいたします。
+									</li>
+								</UL_TableList>
 							</TableRow>
 
 							<TableRow title="個人情報保護方針">
@@ -257,7 +307,7 @@ const UL_TableList = styled.ul`
 	}
 
 	/* リスト間の間隔 margin-bottom変えたら、spaced-topも変える */
-	li {
+	> li {
 		margin-bottom: 20px;
 		display: flex;
 		flex-direction: column;
@@ -269,8 +319,31 @@ const UL_TableList = styled.ul`
 	}
 
 	/* 最後のリストには不要 */
-	li:last-of-type {
+	> li:last-of-type {
 		margin-bottom: 0px;
+	}
+`;
+
+const P_Target = styled.p`
+	font-size: 14px;
+
+	@media (max-width: 650px) {
+		font-size: 12px;
+	}
+`;
+
+const UL_Notice = styled.ul`
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+
+	@media (max-width: 500px) {
+		font-size: 10px;
+	}
+
+	.indent {
+		display: inline-block;
+		padding-left: 1em; /* 必要なだけ字下げ */
 	}
 `;
 
@@ -293,6 +366,11 @@ const DIV_TableTicket = styled.div`
 	align-items: center;
 	font-size: 10px;
 	font-weight: bold;
+
+	p {
+		font-size: 12px;
+		font-weight: normal;
+	}
 `;
 
 const DIV_TicketType = styled.div`
@@ -300,7 +378,7 @@ const DIV_TicketType = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 5px;
+	margin: 5px 0;
 	span {
 		display: block;
 
