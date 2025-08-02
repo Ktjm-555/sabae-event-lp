@@ -26,6 +26,11 @@ export const guests1 = [
 		imgSrc: `${import.meta.env.BASE_URL}images/photo_spstage_guest_07.png`,
 		alt: "りんかの画像",
 	},
+	{
+		name: "米澤りあ",
+		imgSrc: `${import.meta.env.BASE_URL}images/photo_spstage_guest_08.png`,
+		alt: "米澤りあの画像",
+	},
 ];
 
 export const secondGuestsImage = guests1.slice(1, 5);
