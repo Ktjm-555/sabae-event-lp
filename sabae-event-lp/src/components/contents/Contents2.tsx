@@ -72,9 +72,9 @@ export const Contents2 = () => {
 				<DIV_CardHeaderContainer>
 					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
 				</DIV_CardHeaderContainer>
-				<DIV_Container>
+				{/* <DIV_Container>
 					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
-				</DIV_Container>
+				</DIV_Container> */}
 				<DIV_GuestContainer>
 					{guests2.map((guest, index) => (
 						<div key={index}>
@@ -84,7 +84,7 @@ export const Contents2 = () => {
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
-					<DIV_PcOnlyContainer>
+					{/* <DIV_PcOnlyContainer>
 						<DIV_Image>
 							<IMG_Image
 								src={`${
@@ -93,7 +93,7 @@ export const Contents2 = () => {
 								alt="COMING SOONの画像"
 							/>
 						</DIV_Image>
-					</DIV_PcOnlyContainer>
+					</DIV_PcOnlyContainer> */}
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
