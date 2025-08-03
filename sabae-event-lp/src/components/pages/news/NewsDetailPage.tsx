@@ -8,7 +8,10 @@ import {
 } from "../../../Style";
 import { ContentsTitle } from "../../contents/CotentsTitle";
 import { COLORS } from "../../../consts/color";
-import { NewsDetailTypeA } from "../../contents/NewsDetailBodies";
+import {
+	NewsDetailTypeA,
+	NewsDetailTypeB,
+} from "../../contents/NewsDetailBodies";
 
 export const NewsDetailPage = () => {
 	const { newsId } = useParams();
@@ -21,7 +24,7 @@ export const NewsDetailPage = () => {
 				case "A":
 					return <NewsDetailTypeA news={news} />;
 				case "B":
-					return <p>タイプ未対応</p>;
+					return <NewsDetailTypeB news={news} />;
 				case "C":
 					return <p>タイプ未対応</p>;
 				default:

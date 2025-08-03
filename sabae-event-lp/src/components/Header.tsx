@@ -337,7 +337,7 @@ const A_HeaderNavLink = styled(Link)`
 const DIV_HeaderToggleArea = styled.div`
 	display: none;
 
-	@media (max-width: 1031px) {
+	@media (max-width: 1040px) {
 		display: flex;
 		justify-content: center;
 		align-items: center;

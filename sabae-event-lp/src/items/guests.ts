@@ -33,7 +33,14 @@ export const guests1 = [
 	},
 ];
 
-export const secondGuestsImage = guests1.slice(1, 5);
+export const secondGuestsImage = [
+	guests1[1],
+	guests1[2],
+	guests1[3],
+	guests1[5],
+];
+
+export const thirdGuestsImage = [guests1[4]];
 
 export const guests2 = [
 	{

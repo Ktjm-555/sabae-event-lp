@@ -1,8 +1,21 @@
-import { secondGuestsImage } from "./guests";
+import { secondGuestsImage, thirdGuestsImage } from "./guests";
 
 // NOTE: 上から新しいの
 // 詳細ページがないものはtype Xとしておく
 export const newsList = [
+	{
+		id: 5,
+		date: "2025/08/05",
+		title: "スペシャルステージの出演ゲスト第3弾が公開されました",
+		type: "B",
+		url: "/news/5",
+		detail: `
+			<span class="text1">“さばえアクション∞(エイト)”コレクション</span>
+			<span class="pc_only"> produced by TGC</span><br />
+			<span class="sp_only">produced by TGC </span>出演ゲスト第３弾
+		`,
+		images: thirdGuestsImage,
+	},
 	{
 		id: 4,
 		date: "2025/08/05",
