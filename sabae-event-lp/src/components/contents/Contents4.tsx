@@ -112,11 +112,10 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 				<SECTION_CardContainer>
 					<P_Subtitle>さばえ3大フェス 市制70周年記念イベント</P_Subtitle>
 					<CardTitle
-						title={`コロコロコミック コラボ\nなぞときスタンプラリー`}
+						title={`コロコロコミック コラボ<br />クイズスタンプラリー`}
 					/>
 					<P_Description_gapNone>
-						さばえ3大フェス会場などに「なぞときスポット」を設置します。各スポットで出題されるクイズに回答し、スタンプを集めましょう。
-						スタンプを集めると、豪華景品が当たるカプセルマシンを回せるチャンス！
+						「めがねのまちさばえSDGsフェス」「めがねフェス」「さばえ門前まつり」などでなぞを解いてスタンプを集め、豪華景品が当たるカプセルマシンを回そう！{" "}
 					</P_Description_gapNone>
 					<DIV_Image>
 						<img
@@ -158,6 +157,7 @@ const DIV_CardFooter = styled.div`
 
 	/* ここだけレスポンシブ例外対応(A)() */
 	@media (max-width: 1210px) and (min-width: 901px) {
+		position: static;
 		flex-direction: column;
 		align-items: flex-end;
 		justify-content: flex-end;
@@ -219,11 +219,11 @@ const P_Description = styled(S_P_Description)`
 `;
 
 const P_Description_gapNone = styled(S_P_Description)`
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 
 	@media (max-width: 500px) {
 		font-size: 14px;
-		margin-bottom: 0px;
+		/* margin-bottom: 0px; */
 	}
 `;
 

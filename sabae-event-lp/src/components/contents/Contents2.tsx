@@ -44,11 +44,11 @@ export const Contents2 = () => {
 						<span className="english">produced by TGC</span>
 					</S_H2_Title>
 				</DIV_CardHeaderContainer>
-				<DIV_Container>
+				{/* <DIV_Container>
 					<img
 						src={`${import.meta.env.BASE_URL}images/commingSoon_yoko2.png`}
 					/>
-				</DIV_Container>
+				</DIV_Container> */}
 				<DIV_GuestContainer>
 					{guests1.map((guest, index) => (
 						<div key={index}>
@@ -58,7 +58,7 @@ export const Contents2 = () => {
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
-					<DIV_PcOnlyContainer>
+					{/* <DIV_PcOnlyContainer>
 						<DIV_Image>
 							<IMG_Image
 								src={`${
@@ -67,7 +67,7 @@ export const Contents2 = () => {
 								alt="COMING SOONの画像"
 							/>
 						</DIV_Image>
-					</DIV_PcOnlyContainer>
+					</DIV_PcOnlyContainer> */}
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<SECTION_CardContainer>

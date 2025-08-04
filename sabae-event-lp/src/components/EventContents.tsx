@@ -55,7 +55,7 @@ export const EventContents = () => {
 
 					<div>
 						<ContentsTitleOnly
-							title={"パーク探検！クイズラリー"}
+							title={"SDGsパーク探検！"}
 							balloonList={["9/20", "土", "9/21", "日"]}
 						/>
 						<DIV_Contents1>
