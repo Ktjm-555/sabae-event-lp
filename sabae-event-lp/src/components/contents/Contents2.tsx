@@ -190,21 +190,21 @@ const DIV_CardHeaderContainer = styled.div`
 	}
 `;
 
-const DIV_Container = styled.div`
-	display: none;
-	@media (max-width: 800px) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 20px;
-	}
-`;
+// const DIV_Container = styled.div`
+// 	display: none;
+// 	@media (max-width: 800px) {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		margin-bottom: 20px;
+// 	}
+// `;
 
-const DIV_PcOnlyContainer = styled.div`
-	@media (max-width: 800px) {
-		display: none;
-	}
-`;
+// const DIV_PcOnlyContainer = styled.div`
+// 	@media (max-width: 800px) {
+// 		display: none;
+// 	}
+// `;
 
 const DIV_GuestContainer = styled.div`
 	display: grid;

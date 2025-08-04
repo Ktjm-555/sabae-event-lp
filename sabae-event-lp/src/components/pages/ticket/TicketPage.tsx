@@ -79,7 +79,7 @@ export const TicketPage = () => {
 											①鯖江市内園児エリア（EXILE
 											TETSUYAさんたちと一緒に「MORNING SUN」を踊ろう！）
 											<P_Target>
-												対象：鯖江市内の保育園･こども園に通う0～5歳児とそのご家族
+												対象：鯖江市内の保育園・こども園・幼稚園に通う0～5歳児とそのご家族
 											</P_Target>
 											<UL_Notice>
 												<li>※対象園児1人と保護者1人でお申込みください。</li>
