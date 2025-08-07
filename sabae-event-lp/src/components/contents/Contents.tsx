@@ -8,6 +8,7 @@ type Props = {
 	imgSrc: string;
 };
 
+// TODO: 使用していない・整理するか、削除する
 export const Contents = ({ title, caption, imgSrc, balloonList }: Props) => {
 	return (
 		<div>

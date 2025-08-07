@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 
+// TODO: newsの型定義を外出して、Propsで呼び出したい
 type Props = {
 	news: {
 		id: number;
@@ -31,6 +32,29 @@ export const NewsDetailTypeA = ({ news }: Props) => {
 						</div>
 					))}
 			</DIV_GuestContainer>
+		</div>
+	);
+};
+
+export const NewsDetailTypeB = ({ news }: Props) => {
+	return (
+		<div>
+			<P_Detail
+				dangerouslySetInnerHTML={{ __html: news.detail ? news.detail : "" }}
+			></P_Detail>
+			<DIV_GuestContainerB>
+				{news.images &&
+					news.images.map((guest, index) => (
+						<div key={index}>
+							<DIV_Image>
+								<IMG_Image src={guest.imgSrc} alt={guest.alt} />
+							</DIV_Image>
+							<P_ImageName
+								dangerouslySetInnerHTML={{ __html: guest.name }}
+							></P_ImageName>
+						</div>
+					))}
+			</DIV_GuestContainerB>
 		</div>
 	);
 };
@@ -84,13 +108,40 @@ const P_Detail = styled.p`
 	}
 `;
 
+const DIV_GuestContainerB = styled.div`
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+
+	@media (max-width: 800px) {
+		gap: 15px;
+		align-items: center;
+	}
+
+	img {
+		width: 320px;
+
+		@media (max-width: 600px) {
+			max-width: 262px;
+		}
+
+		@media (max-width: 500px) {
+			max-width: 206px;
+		}
+	}
+`;
+
 const DIV_GuestContainer = styled.div`
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
 
-	@media (max-width: 800px) {
+	@media (max-width: 1000px) {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 800px) {
 		gap: 15px;
 	}
 `;

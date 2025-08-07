@@ -6,6 +6,9 @@ export const ScrollToHash = () => {
 
 	useEffect(() => {
 		if (location.hash && location.hash.length > 1) {
+			// まずいったんトップに戻す
+			window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
 			const id = location.hash.replace("#", "");
 
 			// 0.1秒だけ待ってからDOMにアクセス（マウント直後対応）する

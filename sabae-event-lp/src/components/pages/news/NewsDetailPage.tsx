@@ -8,7 +8,10 @@ import {
 } from "../../../Style";
 import { ContentsTitle } from "../../contents/CotentsTitle";
 import { COLORS } from "../../../consts/color";
-import { NewsDetailTypeA } from "../../contents/NewsDetailBodies";
+import {
+	NewsDetailTypeA,
+	NewsDetailTypeB,
+} from "../../contents/NewsDetailBodies";
 
 export const NewsDetailPage = () => {
 	const { newsId } = useParams();
@@ -21,7 +24,7 @@ export const NewsDetailPage = () => {
 				case "A":
 					return <NewsDetailTypeA news={news} />;
 				case "B":
-					return <p>タイプ未対応</p>;
+					return <NewsDetailTypeB news={news} />;
 				case "C":
 					return <p>タイプ未対応</p>;
 				default:
@@ -50,7 +53,12 @@ export const NewsDetailPage = () => {
 };
 
 const DIV_SectionWrapper = styled(S_DIV_SectionWrapper)`
+	background-color: ${COLORS.SEC_YELLOW_BG};
 	padding-top: 140px;
+
+	@media (max-width: 900px) {
+		padding-top: 120px;
+	}
 `;
 
 const DIV_CardHeaderContainer = styled.div`

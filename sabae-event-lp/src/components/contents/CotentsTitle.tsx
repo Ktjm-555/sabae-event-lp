@@ -25,7 +25,8 @@ export const ContentsTitle = ({
 			</DIV_TitleContainer>
 			{caption && (
 				<P_Caption>
-					{caption} <SPAN_Annotation>{annotation}</SPAN_Annotation>
+					{caption}{" "}
+					{annotation && <SPAN_Annotation>{annotation}</SPAN_Annotation>}
 				</P_Caption>
 			)}
 		</div>
@@ -125,6 +126,13 @@ const SPAN_Annotation = styled.span`
 `;
 
 const P_Caption = styled.p`
-	min-height: 70px;
 	margin-bottom: 20px;
+
+	@media (max-width: 800px) {
+		min-height: auto;
+	}
+
+	@media (max-width: 500px) {
+		margin-bottom: 10px;
+	}
 `;

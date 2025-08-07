@@ -22,13 +22,25 @@ export const guests1 = [
 		alt: "村谷はるなの画像",
 	},
 	{
+		name: "米澤りあ",
+		imgSrc: `${import.meta.env.BASE_URL}images/photo_spstage_guest_08.png`,
+		alt: "米澤りあの画像",
+	},
+	{
 		name: "りんか",
 		imgSrc: `${import.meta.env.BASE_URL}images/photo_spstage_guest_07.png`,
 		alt: "りんかの画像",
 	},
 ];
 
-export const secondGuestsImage = guests1.slice(1, 5);
+export const secondGuestsImage = [
+	guests1[1],
+	guests1[2],
+	guests1[3],
+	guests1[5],
+];
+
+export const thirdGuestsImage = [guests1[4]];
 
 export const guests2 = [
 	{

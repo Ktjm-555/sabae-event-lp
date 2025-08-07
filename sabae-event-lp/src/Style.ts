@@ -22,10 +22,19 @@ export const S_SECTION_container = styled.section`
 `;
 
 export const S_DIV_SectionWrapper = styled.div`
-	background-color: ${COLORS.SEC_YELLOW_BG};
+	background-color: ${COLORS.SEC_GRAY_BG};
 	width: 100%;
-	padding-top: 35px;
+	padding-top: 50px;
 	padding-bottom: 60px;
+
+	@media (max-width: 900px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@media (max-width: 500px) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 `;
 
 export const S_DIV_CardContainer = styled.div`
@@ -34,6 +43,15 @@ export const S_DIV_CardContainer = styled.div`
 	border-radius: 4px;
 	padding: 20px;
 	color: ${COLORS.TEXT};
+`;
+
+export const S_SPAN_Notice = styled.span`
+	display: block;
+	font-size: 12px;
+
+	@media (max-width: 500px) {
+		font-size: 10px;
+	}
 `;
 
 export const S_P_Subtitle = styled.p`
@@ -64,6 +82,7 @@ export const S_P_Description = styled.p`
 `;
 
 export const S_H2_Title = styled.h2`
+	font-family: "Noto Sans", sans-serif;
 	font-size: 24px;
 	font-weight: bold;
 	.sp-only {
@@ -94,21 +113,15 @@ export const S_H2_Title = styled.h2`
 		}
 	}
 
-	@media (max-width: 900px) {
-		margin-top: 10px;
-	}
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 800px) {
-		margin-top: 0;
-	}
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 540px) {
 		.sp-only {
 			display: block;
 		}
 	}
-	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 410px) {
-		margin-top: 10px;
-	}
+`;
+
+export const S_DIV_DisplayContainer = styled.div`
+	display: flex;
+	gap: 20px;
 `;

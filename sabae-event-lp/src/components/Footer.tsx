@@ -4,29 +4,50 @@ import { COLORS } from "../consts/color.ts";
 import { TEXT_L } from "../consts/typography.ts";
 
 export const Footer = () => {
+	const goToZooPage = () => {
+		window.open("https://www.city.sabae.fukui.jp/nishiyama_zoo/", "_blank");
+	};
+
 	return (
 		<SECTION_FooterContainer>
 			<S_SECTION_container>
 				<DIV_DetailContainer>
 					<div>
 						<P_Organized>主催：鯖江市</P_Organized>
-						<P_ContactTitle>ブースエリア事務局／お問合せ</P_ContactTitle>
+						<P_ContactTitle>お問合せ</P_ContactTitle>
 						<DL_ContactContainer>
-							<div>
-								<dt>さばえSDGs推進センター</dt>
-								<dd>（指定管理者：㈱メディアビジョン）</dd>
-							</div>
-							<div>
-								<dt>電話：</dt>
-								<dd>0778-42-8938</dd>
-							</div>
-							<div>
-								<dt>メール：</dt>
-								<dd>contact@sabae-sdgs.jp</dd>
-							</div>
+							<dt>鯖江市総合政策課</dt>
+							<dd>
+								<a href="tel:0778-53-2263">
+									<img src={`${import.meta.env.BASE_URL}icon/tel-phone.svg`} />
+									0778-53-2263
+								</a>
+							</dd>
+						</DL_ContactContainer>
+						<P_ContactTitle>ブースエリア事務局</P_ContactTitle>
+						<DL_ContactContainer>
+							<dt>さばえSDGs推進センター（指定管理者 (株)メディアビジョン）</dt>
+							<dd>
+								<a href="tel:0778-42-8938">
+									<img src={`${import.meta.env.BASE_URL}icon/tel-phone.svg`} />
+									0778-42-8938
+								</a>
+								<a
+									href="mailto:contact@sabae-sdgs.jp?subject=お問い合わせ"
+									className="left-space"
+								>
+									contact@sabae-sdgs.jp
+								</a>
+							</dd>
 						</DL_ContactContainer>
 					</div>
-					<DIV_Contens>
+					<DIV_Contents>
+						<div>
+							<IMG_ZooLogo
+								src={`${import.meta.env.BASE_URL}banners/kaigyo40.svg`}
+								onClick={goToZooPage}
+							/>
+						</div>
 						<P_Event>過去のフェス</P_Event>
 						<DIV_LinkList>
 							<A_EventUrl
@@ -44,7 +65,7 @@ export const Footer = () => {
 								2023年
 							</A_EventUrl>
 						</DIV_LinkList>
-					</DIV_Contens>
+					</DIV_Contents>
 				</DIV_DetailContainer>
 				<DIV_Copyright>
 					© 2025 Resources Center for Implementation of the SDGs in SABAE
@@ -94,12 +115,20 @@ const P_ContactTitle = styled.p`
 `;
 
 const DL_ContactContainer = styled.dl`
-	font-size: 14px;
+	font-size: 16px;
 	margin: 0;
 	padding: 0;
+	line-height: 32px;
 
-	div {
-		display: flex;
+	dd {
+		img {
+			margin-right: 5px;
+			vertical-align: text-top;
+		}
+
+		.left-space {
+			margin-left: 20px;
+		}
 	}
 
 	/* 450px以下のとき、最初のdivだけ縦並び */
@@ -112,17 +141,18 @@ const DL_ContactContainer = styled.dl`
 	}
 `;
 
-const DIV_Contens = styled.div`
+const DIV_Contents = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	@media (max-width: 900px) {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
 		margin-top: 10px;
 	}
 `;
 
 const P_Event = styled.p`
 	font-weight: bold;
+	margin-top: 15px;
 `;
 
 const DIV_LinkList = styled.div`
@@ -150,10 +180,14 @@ const DIV_Copyright = styled.div`
 	padding-top: 10px;
 
 	@media (max-width: 900px) {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	@media (max-width: 500px) {
 		font-size: 11px;
 	}
+`;
+
+const IMG_ZooLogo = styled.img`
+	cursor: pointer;
 `;

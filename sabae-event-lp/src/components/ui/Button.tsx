@@ -74,7 +74,9 @@ const SPAN_Arrow = styled.span`
 `;
 
 const IMG_Icon = styled.img`
-	margin-left: 6px;
-	width: 25px;
-	height: 25px;
+	margin-left: 3px;
+	/* 	vertical-alignが効かないため、margin-bottomで調整 */
+	margin-bottom: 4px;
+	width: 18px;
+	height: 18px;
 `;

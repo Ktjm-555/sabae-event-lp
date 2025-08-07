@@ -10,33 +10,33 @@ import {
 import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
 import { guests1, guests2 } from "../../items/guests";
+import { useNavigate } from "react-router-dom";
 
-type Props = {
-	title: string;
-	caption?: string;
-	balloonList: Array<string>;
-	annotation?: string;
-};
+export const Contents2 = () => {
+	const navigate = useNavigate();
 
-export const Contents2 = ({
-	title,
-	caption,
-	balloonList,
-	annotation,
-}: Props) => {
 	const goToSabaeModelPage = () => {
 		window.open("https://www.sabae-sdgs.jp/news/2120/", "_blank");
 	};
 
+	const goToTicketPage = () => {
+		navigate("/ticket");
+	};
+
 	return (
 		<div>
-			<S_P_Subtitle id="2">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
+			<S_P_Subtitle id="3">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
 			<ContentsTitle
-				title={title}
-				caption={caption}
-				balloonList={balloonList}
-				annotation={annotation}
+				title="スペシャルステージ"
+				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
+				balloonList={["9/20", "土"]}
+				annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
 			/>
+			<DIV_ButtonContainer>
+				<Button onClick={() => goToTicketPage()}>
+					入場券のお申込みはこちら
+				</Button>
+			</DIV_ButtonContainer>
 			<SECTION_CardContainer>
 				<DIV_CardHeaderContainer>
 					<S_H2_Title>
@@ -44,9 +44,11 @@ export const Contents2 = ({
 						<span className="english">produced by TGC</span>
 					</S_H2_Title>
 				</DIV_CardHeaderContainer>
-				<DIV_Container>
-					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
-				</DIV_Container>
+				{/* <DIV_Container>
+					<img
+						src={`${import.meta.env.BASE_URL}images/commingSoon_yoko2.png`}
+					/>
+				</DIV_Container> */}
 				<DIV_GuestContainer>
 					{guests1.map((guest, index) => (
 						<div key={index}>
@@ -56,25 +58,25 @@ export const Contents2 = ({
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
-					<DIV_PcOnlyContainer>
+					{/* <DIV_PcOnlyContainer>
 						<DIV_Image>
 							<IMG_Image
 								src={`${
 									import.meta.env.BASE_URL
-								}images/photo_spstage_guest_ComingSoon.png`}
+								}images/photo_spstage_guest_ComingSoon4.png`}
 								alt="COMING SOONの画像"
 							/>
 						</DIV_Image>
-					</DIV_PcOnlyContainer>
+					</DIV_PcOnlyContainer> */}
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<SECTION_CardContainer>
 				<DIV_CardHeaderContainer>
 					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
 				</DIV_CardHeaderContainer>
-				<DIV_Container>
+				{/* <DIV_Container>
 					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
-				</DIV_Container>
+				</DIV_Container> */}
 				<DIV_GuestContainer>
 					{guests2.map((guest, index) => (
 						<div key={index}>
@@ -84,7 +86,7 @@ export const Contents2 = ({
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
-					<DIV_PcOnlyContainer>
+					{/* <DIV_PcOnlyContainer>
 						<DIV_Image>
 							<IMG_Image
 								src={`${
@@ -93,7 +95,7 @@ export const Contents2 = ({
 								alt="COMING SOONの画像"
 							/>
 						</DIV_Image>
-					</DIV_PcOnlyContainer>
+					</DIV_PcOnlyContainer> */}
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
@@ -155,6 +157,10 @@ const SECTION_CardContainer = styled(
 	margin-bottom: 30px;
 `;
 
+const DIV_ButtonContainer = styled.div`
+	margin-bottom: 20px;
+`;
+
 const DIV_CardsWrapper = styled.div`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -165,6 +171,10 @@ const DIV_CardsWrapper = styled.div`
 	@media (max-width: 800px) {
 		grid-template-columns: none;
 		grid-auto-rows: auto;
+	}
+
+	@media (max-width: 500px) {
+		gap: 0;
 	}
 `;
 
@@ -180,21 +190,21 @@ const DIV_CardHeaderContainer = styled.div`
 	}
 `;
 
-const DIV_Container = styled.div`
-	display: none;
-	@media (max-width: 800px) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 20px;
-	}
-`;
+// const DIV_Container = styled.div`
+// 	display: none;
+// 	@media (max-width: 800px) {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		margin-bottom: 20px;
+// 	}
+// `;
 
-const DIV_PcOnlyContainer = styled.div`
-	@media (max-width: 800px) {
-		display: none;
-	}
-`;
+// const DIV_PcOnlyContainer = styled.div`
+// 	@media (max-width: 800px) {
+// 		display: none;
+// 	}
+// `;
 
 const DIV_GuestContainer = styled.div`
 	display: grid;

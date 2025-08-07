@@ -8,13 +8,6 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { COLORS } from "../../consts/color";
 
-type Props = {
-	title: string;
-	caption?: string;
-	balloonList: Array<string>;
-	annotation?: string;
-};
-
 const swiperItems = [
 	{
 		num: "01",
@@ -58,25 +51,22 @@ const swiperItems = [
 	},
 ];
 
-export const Contents3 = ({
-	title,
-	caption,
-	balloonList,
-	annotation,
-}: Props) => {
+export const Contents3 = () => {
 	const goToSabaeEightPage = () => {
 		window.open("https://www.sabae-sdgs.jp/news/2080/", "_blank");
 	};
 
 	return (
 		<div>
+			{/* 画面スクロールのためのspan */}
+			{/* <span></span> */}
 			<DIV_OverviewContainer>
 				<div>
 					<ContentsTitle
-						title={title}
-						caption={caption}
-						balloonList={balloonList}
-						annotation={annotation}
+						title="「笑顔があふれるまち」を目指して行動しよう！"
+						caption="SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
+一人一人の小さな行動で広がり、つながり、まちの未来を大きく変えていく。そんな”∞(無限)”の願いを込めた未来へのアクションです。"
+						balloonList={[]}
 					/>
 					<Button onClick={goToSabaeEightPage}>詳しくはこちら</Button>
 				</div>
@@ -85,22 +75,20 @@ export const Contents3 = ({
 						src={`${import.meta.env.BASE_URL}logo/sabae_eight.svg`}
 						alt="さばえアクション∞(エイト)_ロゴ"
 					/>
-					<p>「笑顔があふれるまち」を目指す8つのアクション</p>
 				</DIV_Content>
 			</DIV_OverviewContainer>
 			<DIV_OverviewContainer_SP>
 				<ContentsTitle
-					title={title}
-					caption={caption}
-					balloonList={balloonList}
-					annotation={annotation}
+					title="「笑顔があふれるまち」を目指して行動しよう！"
+					caption="SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
+一人一人の小さな行動で広がり、つながり、まちの未来を大きく変えていく。そんな”∞(無限)”の願いを込めた未来へのアクションです。"
+					balloonList={[]}
 				/>
 				<DIV_Content>
 					<IMG_Logo
 						src={`${import.meta.env.BASE_URL}logo/sabae_eight.svg`}
 						alt="さばえアクション∞(エイト)_ロゴ"
 					/>
-					<P_LogoSup>「笑顔があふれるまち」を目指す8つのアクション</P_LogoSup>
 					<Button onClick={goToSabaeEightPage}>詳しくはこちら</Button>
 				</DIV_Content>
 			</DIV_OverviewContainer_SP>
@@ -166,14 +154,11 @@ const DIV_Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 
 	@media (max-width: 900px) {
 		margin-bottom: 25px;
 	}
-`;
-
-const P_LogoSup = styled.p`
-	margin-bottom: 25px;
 `;
 
 const DIV_SwiperContainer = styled.div`
@@ -222,7 +207,10 @@ const DIV_SwipeImage = styled.div`
 	}
 `;
 
+// ロゴ下にボタンあり
 const IMG_Logo = styled.img`
+	margin-bottom: 25px;
+
 	@media (max-width: 900px) {
 		width: 360px;
 	}
