@@ -5,15 +5,17 @@ export const Hero = () => {
 		<>
 			<SECTION_HeroContainer id="1">
 				<IMG_Image
-					src="images/image_mainvisual_01.png"
+					src={`${import.meta.env.BASE_URL}images/image_mainvisual_01.png`}
 					alt="フェスのメイン画像"
 				/>
 				<IMG_Image_SP
-					src="images/image_mainvisual_01_tablet.png"
+					src={`${
+						import.meta.env.BASE_URL
+					}images/image_mainvisual_01_tablet.png`}
 					alt="フェスのメイン画像"
 				/>
 				<IMG_Image_SP2
-					src="images/image_mainvisual_01_sp.png"
+					src={`${import.meta.env.BASE_URL}images/image_mainvisual_01_sp.png`}
 					alt="フェスのメイン画像"
 				/>
 			</SECTION_HeroContainer>

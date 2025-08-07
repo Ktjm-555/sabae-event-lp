@@ -3,11 +3,16 @@ html {
 	/* ページ内遷移のスクロール位置調整 */
 	scroll-padding-top: 130px;
 }
+
 body {
 	margin: 0;
 	padding: 0;
 	/* emotion ${$COLORS.TEXT}  */
 	color: #4b5563;
+}
+
+main {
+	background-color: #fffde2;
 }
 
 img {
@@ -78,4 +83,9 @@ h1 {
 	p {
 		font-size: 14px;
 	}
+}
+
+/* ボタンありの場合 */
+.mg-bt {
+	margin-bottom: 10px;
 }
