@@ -16,11 +16,17 @@ type Props = {
 	annotation?: string;
 };
 
-const goToSabaeEightPage = () => {
-	window.open("https://meganefes.com/", "_blank");
-};
-
 export const Contents4 = ({ title, balloonList, annotation }: Props) => {
+	const goToSabaeEightPage = () => {
+		window.open("https://meganefes.com/", "_blank");
+	};
+
+	const goToKoroKoroPage = () => {
+		window.open(
+			"https://www.city.sabae.fukui.jp/event/koza/korokoro.html",
+			"_blank"
+		);
+	};
 	return (
 		<DIV_SectionWrapper>
 			<S_P_Subtitle>同時開催</S_P_Subtitle>
@@ -63,9 +69,10 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					<P_Description>
 						「めがねよ、ありがとう」を合言葉に、全国からめがね好きが集まるめがねの感謝祭。めがね供養をはじめ、めがねの製造工程をユニークに展示・体験する「メガ展」、産地の最新めがねなどの販売、ステージ、グルメまで、めがねづくしのイベントです。
 					</P_Description>
+					<DIV_Spacer />
 					<DIV_CardFooter>
 						<Button onClick={goToSabaeEightPage}>公式サイト</Button>
-						<DIV_IconContainer_underButton>
+						<div>
 							<A_Icon
 								href="https://x.com/meganefes"
 								target="_blank"
@@ -106,7 +113,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 									alt="めがねフェスのYoutubeのアイコン"
 								/>
 							</A_Icon>
-						</DIV_IconContainer_underButton>
+						</div>
 					</DIV_CardFooter>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
@@ -114,24 +121,37 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					<CardTitle
 						title={`コロコロコミック コラボ<br />クイズスタンプラリー`}
 					/>
-					<P_Description_gapNone>
-						「めがねのまちさばえSDGsフェス」「めがねフェス」「さばえ門前まつり」などでなぞを解いてスタンプを集め、豪華景品が当たるカプセルマシンを回そう！{" "}
-					</P_Description_gapNone>
-					<DIV_Image>
+					<DIV_Container>
+						<P_Description_gapNone>
+							「めがねのまちさばえSDGsフェス」「めがねフェス」「さばえ門前まつり」などでなぞを解いてスタンプを集め、豪華景品が当たるカプセルマシンを回そう！
+						</P_Description_gapNone>
+						<img
+							src={`${import.meta.env.BASE_URL}images/image_korokoro.png`}
+							alt="コロコロコミックの表紙"
+						/>
+					</DIV_Container>
+
+					<DIV_CardFooter>
+						<Button onClick={goToKoroKoroPage}>公式サイト</Button>
 						<img
 							src={`${import.meta.env.BASE_URL}logo/comic_logo.svg`}
 							alt="コロコロコミックのロゴ"
 						/>
-					</DIV_Image>
+					</DIV_CardFooter>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
 		</DIV_SectionWrapper>
 	);
 };
+const DIV_Spacer = styled.div`
+	flex-grow: 1;
+`;
 
 const SECTION_CardContainer = styled(
 	S_DIV_CardContainer.withComponent("section")
 )`
+	display: flex;
+	flex-direction: column;
 	position: relative;
 `;
 
@@ -141,8 +161,9 @@ const DIV_CardsWrapper = styled.div`
 	gap: 30px;
 	grid-auto-rows: 1fr;
 
-	@media (max-width: 900px) {
+	@media (max-width: 1200px) {
 		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
 	}
 `;
 
@@ -150,17 +171,18 @@ const DIV_CardFooter = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: absolute;
-	bottom: 20px;
+	/* position: absolute;
+	bottom: 10px;
 	left: 20px;
-	right: 20px;
+	right: 20px; */
 
 	/* ここだけレスポンシブ例外対応(A)() */
-	@media (max-width: 1210px) and (min-width: 901px) {
-		position: static;
+	@media (max-width: 1210px) and (min-width: 1201px) {
 		flex-direction: column;
 		align-items: flex-end;
 		justify-content: flex-end;
+		gap: 20px;
+		margin-top: 20px;
 	}
 `;
 
@@ -172,11 +194,11 @@ const DIV_IconContainer = styled.div`
 
 /* ここだけレスポンシブ例外対応(A) */
 /* TODO：継承していない。変数名おかしい */
-const DIV_IconContainer_underButton = styled.div`
-	@media (max-width: 1210px) and (min-width: 901px) {
-		margin-top: 15px;
-	}
-`;
+// const DIV_IconContainer_underButton = styled.div`
+// 	@media (max-width: 1210px) and (min-width: 901px) {
+// 		margin-top: 15px;
+// 	}
+// `;
 
 const P_Subtitle = styled.div`
 	font-size: 18px;
@@ -195,9 +217,19 @@ const P_Subtitle = styled.div`
 	}
 `;
 
-const DIV_Image = styled.div`
+const DIV_Container = styled.div`
 	display: flex;
-	justify-content: flex-end;
+	gap: 10px;
+	margin-bottom: 10px;
+	@media (max-width: 1200px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		img {
+			width: 200px;
+		}
+	}
 `;
 
 const IMG_Icon = styled.img`
@@ -219,11 +251,11 @@ const P_Description = styled(S_P_Description)`
 `;
 
 const P_Description_gapNone = styled(S_P_Description)`
-	/* margin-bottom: 0px; */
+	margin-bottom: 0px;
 
 	@media (max-width: 500px) {
 		font-size: 14px;
-		/* margin-bottom: 0px; */
+		margin-bottom: 0px;
 	}
 `;
 
