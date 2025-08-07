@@ -41,6 +41,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					<P_Description>
 						「さばえの歴史と文化を伝えるフェス」をテーマに、江戸時代、間部家の門前町として栄えたまちなかを空間演出し、鯖江市の歴史・伝統・文化の魅力を見て、知って、体感できるまつりです。
 					</P_Description>
+					<DIV_Spacer />
 					<DIV_IconContainer>
 						<A_Icon
 							href="https://www.instagram.com/sabaemonzenmatsuri/"
@@ -127,6 +128,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 						</P_Description_gapNone>
 						<img
 							src={`${import.meta.env.BASE_URL}images/image_korokoro.png`}
+							srcSet={`${import.meta.env.BASE_URL}images/image_korokoro_2x.png`}
 							alt="コロコロコミックの表紙"
 						/>
 					</DIV_Container>
@@ -187,9 +189,7 @@ const DIV_CardFooter = styled.div`
 `;
 
 const DIV_IconContainer = styled.div`
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
+	margin-left: auto;
 `;
 
 /* ここだけレスポンシブ例外対応(A) */
