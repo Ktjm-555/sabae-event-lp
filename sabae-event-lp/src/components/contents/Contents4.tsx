@@ -129,9 +129,9 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 						<IMG_Pc
 							src={`${import.meta.env.BASE_URL}images/image_korokoro.png`}
 							srcSet={`
-    ${import.meta.env.BASE_URL}images/image_korokoro.png 1x,
-    ${import.meta.env.BASE_URL}images/image_korokoro_2x.png 2x
-  `}
+								${import.meta.env.BASE_URL}images/image_korokoro.png 1x,
+								${import.meta.env.BASE_URL}images/image_korokoro_2x.png 2x
+							`}
 							alt="コロコロコミックの表紙"
 						/>
 					</DIV_Container>
