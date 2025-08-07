@@ -126,9 +126,12 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 						<P_Description_gapNone>
 							「めがねのまちさばえSDGsフェス」「めがねフェス」「さばえ門前まつり」などでなぞを解いてスタンプを集め、豪華景品が当たるカプセルマシンを回そう！
 						</P_Description_gapNone>
-						<img
+						<IMG_Pc
 							src={`${import.meta.env.BASE_URL}images/image_korokoro.png`}
-							srcSet={`${import.meta.env.BASE_URL}images/image_korokoro_2x.png`}
+							srcSet={`
+    ${import.meta.env.BASE_URL}images/image_korokoro.png 1x,
+    ${import.meta.env.BASE_URL}images/image_korokoro_2x.png 2x
+  `}
 							alt="コロコロコミックの表紙"
 						/>
 					</DIV_Container>
@@ -199,6 +202,8 @@ const DIV_IconContainer = styled.div`
 // 		margin-top: 15px;
 // 	}
 // `;
+
+const IMG_Pc = styled.img``;
 
 const P_Subtitle = styled.div`
 	font-size: 18px;
