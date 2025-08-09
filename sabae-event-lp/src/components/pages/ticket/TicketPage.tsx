@@ -140,7 +140,7 @@ export const TicketPage = () => {
 									{/* spaced-topはリストの上に文章がある時にマージンをつけるため */}
 									<UL_TableList className="spaced-top bold">
 										<li>
-											①鯖江市内園児エリアお申込み【400名】
+											①鯖江市内園児エリアお申込み
 											<DIV_ButtonWrapper>
 												<Button onClick={() => goToTicketFormPage("enji")}>
 													お申込みはこちら
@@ -148,7 +148,7 @@ export const TicketPage = () => {
 											</DIV_ButtonWrapper>
 										</li>
 										<li>
-											②親子エリアお申込み【400名】
+											②親子エリアお申込み
 											<DIV_ButtonWrapper>
 												<Button onClick={() => goToTicketFormPage("oyako")}>
 													お申込みはこちら
@@ -156,7 +156,7 @@ export const TicketPage = () => {
 											</DIV_ButtonWrapper>
 										</li>
 										<li>
-											③一般エリアお申込み【400名】
+											③一般エリアお申込み
 											<DIV_ButtonWrapper>
 												<Button onClick={() => goToTicketFormPage("ippan")}>
 													お申込みはこちら
