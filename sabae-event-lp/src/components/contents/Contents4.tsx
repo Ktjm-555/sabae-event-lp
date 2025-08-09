@@ -137,7 +137,7 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 					</DIV_Container>
 
 					<DIV_CardFooter>
-						<Button onClick={goToKoroKoroPage}>公式サイト</Button>
+						<Button onClick={goToKoroKoroPage}>詳しくはこちら</Button>
 						<img
 							src={`${import.meta.env.BASE_URL}logo/comic_logo.svg`}
 							alt="コロコロコミックのロゴ"
@@ -224,6 +224,7 @@ const P_Subtitle = styled.div`
 
 const DIV_Container = styled.div`
 	display: flex;
+	align-items: flex-start;
 	gap: 10px;
 	margin-bottom: 10px;
 	@media (max-width: 1200px) {
