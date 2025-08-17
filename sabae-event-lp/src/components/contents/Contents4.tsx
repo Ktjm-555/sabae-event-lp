@@ -23,37 +23,6 @@ export const Contents4 = () => {
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
 					<S_DIV_CardHeaderContainer>
-						<H2_Title>さばえ門前まつり</H2_Title>
-					</S_DIV_CardHeaderContainer>
-					<P_Description>
-						「さばえの歴史と文化を伝えるフェス」をテーマに、江戸時代、間部家の門前町として栄えたまちなかを空間演出し、鯖江市の歴史・伝統・文化の魅力を見て、知って、体感できるまつりです。
-					</P_Description>
-					<DIV_Spacer />
-					<DIV_IconContainer>
-						<A_Icon
-							href="https://www.instagram.com/sabaemonzenmatsuri/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<IMG_Icon
-								src={`${import.meta.env.BASE_URL}icon/instagram.svg`}
-								alt="さばえ門前まつりのinstagramのアイコン"
-							/>
-						</A_Icon>
-						<A_Icon
-							href="https://www.facebook.com/profile.php?id=61560310619817"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<IMG_Icon
-								src={`${import.meta.env.BASE_URL}icon/facebook.svg`}
-								alt="さばえ門前まつりのfacebookのアイコン"
-							/>
-						</A_Icon>
-					</DIV_IconContainer>
-				</SECTION_CardContainer>
-				<SECTION_CardContainer>
-					<S_DIV_CardHeaderContainer>
 						<H2_Title>めがねフェス</H2_Title>
 					</S_DIV_CardHeaderContainer>
 					<P_Description>
@@ -105,6 +74,38 @@ export const Contents4 = () => {
 							</A_Icon>
 						</div>
 					</DIV_CardFooter>
+				</SECTION_CardContainer>
+
+				<SECTION_CardContainer>
+					<S_DIV_CardHeaderContainer>
+						<H2_Title>さばえ門前まつり</H2_Title>
+					</S_DIV_CardHeaderContainer>
+					<P_Description>
+						「さばえの歴史と文化を伝えるフェス」をテーマに、江戸時代、間部家の門前町として栄えたまちなかを空間演出し、鯖江市の歴史・伝統・文化の魅力を見て、知って、体感できるまつりです。
+					</P_Description>
+					<DIV_Spacer />
+					<DIV_IconContainer>
+						<A_Icon
+							href="https://www.instagram.com/sabaemonzenmatsuri/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IMG_Icon
+								src={`${import.meta.env.BASE_URL}icon/instagram.svg`}
+								alt="さばえ門前まつりのinstagramのアイコン"
+							/>
+						</A_Icon>
+						<A_Icon
+							href="https://www.facebook.com/profile.php?id=61560310619817"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<IMG_Icon
+								src={`${import.meta.env.BASE_URL}icon/facebook.svg`}
+								alt="さばえ門前まつりのfacebookのアイコン"
+							/>
+						</A_Icon>
+					</DIV_IconContainer>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
 		</DIV_SectionWrapper>
