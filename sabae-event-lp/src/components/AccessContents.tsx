@@ -139,54 +139,6 @@ const Span_IconPosition = styled.span`
 	}
 `;
 
-// IMG_ZoomIconと連動してる。レスポンシブ
-// マップのアイコンの位置のせいで。
-const DIV_DisplayContainer = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 15px;
-
-	.map {
-		width: 100%;
-	}
-
-	@media (max-width: 1200px) {
-		grid-template-columns: 1fr;
-	}
-
-	@media (max-width: 800px) {
-		grid-template-columns: 1fr 1fr;
-	}
-
-	@media (max-width: 600px) {
-		grid-template-columns: 1fr;
-	}
-
-	&.tate {
-		display: flex;
-		flex-direction: column;
-	}
-
-	img {
-		margin: 0 auto;
-	}
-`;
-
-const IMG_icon = styled.img`
-	vertical-align: middle;
-`;
-
-const A_URL = styled.a`
-	text-decoration: underline;
-	text-underline-offset: 3px;
-
-	&:hover {
-		// TODO：なぜかhoverするとラインが消えるので。
-		text-decoration: underline;
-		opacity: 0.5;
-	}
-`;
-
 const IMG_ModalImage = styled.img`
 	width: 100%;
 `;

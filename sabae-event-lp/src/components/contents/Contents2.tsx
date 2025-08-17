@@ -315,6 +315,12 @@ const DIV_ImageContainer = styled.div`
 		}
 	}
 
+	@media (max-width: 600px) {
+		&.tmp_vertical {
+			display: block;
+		}
+	}
+
 	@media (max-width: 500px) {
 		display: block;
 
@@ -326,6 +332,10 @@ const DIV_ImageContainer = styled.div`
 		/* 最後の要素は余白なしにする */
 		img:last-of-type {
 			margin-bottom: 0;
+		}
+
+		&.tmp_vertical {
+			display: block;
 		}
 	}
 `;
