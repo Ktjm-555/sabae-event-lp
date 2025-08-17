@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { ContentsTitle } from "./CotentsTitle";
 import { CardTitle } from "../ui/CardTitle";
 import {
 	S_P_Description,
@@ -11,6 +10,8 @@ import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
 import { guests1, guests2 } from "../../items/guests";
 import { useNavigate } from "react-router-dom";
+import { ContentsTitleOnly } from "./CotentsTitleOnly";
+import { TitleCaption } from "../ui/TitleCaption";
 
 export const Contents2 = () => {
 	const navigate = useNavigate();
@@ -26,10 +27,12 @@ export const Contents2 = () => {
 	return (
 		<div>
 			<S_P_Subtitle id="3">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
-			<ContentsTitle
-				title="スペシャルステージ"
-				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
+			<ContentsTitleOnly
+				title={"スペシャルステージ"}
 				balloonList={["9/20", "土"]}
+			/>
+			<TitleCaption
+				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
 				annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
 			/>
 			<DIV_ButtonContainer>

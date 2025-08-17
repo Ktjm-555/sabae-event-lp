@@ -12,6 +12,7 @@ import { COLORS } from "../consts/color.ts";
 import { ZoomIcon } from "./ui/ZoomIcon.tsx";
 import { Modal } from "./ui/modal.tsx";
 import { useState } from "react";
+import { ContentsTitleOnly } from "./contents/CotentsTitleOnly.tsx";
 
 export const AccessContents = () => {
 	const [isModalOpen, setModalOpen] = useState(false);
@@ -21,7 +22,7 @@ export const AccessContents = () => {
 			<S_SECTION_container>
 				<DIV_ContentsContainer id="4">
 					<div id="4">
-						<ContentsTitle title="会場マップ" caption="" balloonList={[]} />
+						<ContentsTitleOnly title={"会場マップ"} balloonList={[]} />
 						<DIV_CardContainer>
 							<DIV_DisplayContainer>
 								<p>
@@ -44,7 +45,7 @@ export const AccessContents = () => {
 						</DIV_CardContainer>
 					</div>
 					<div id="5">
-						<ContentsTitle title="アクセス" caption="" balloonList={[]} />
+						<ContentsTitleOnly title={"アクセス"} balloonList={[]} />
 						<DIV_CardContainer>
 							<DIV_DisplayContainer className="tate">
 								<S_H2_Title>臨時駐車場</S_H2_Title>

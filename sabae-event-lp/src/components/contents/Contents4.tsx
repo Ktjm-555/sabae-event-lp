@@ -8,6 +8,7 @@ import {
 	S_P_Subtitle,
 } from "../../Style";
 import { Button } from "../ui/Button";
+import { ContentsTitleOnly } from "./CotentsTitleOnly";
 
 type Props = {
 	title: string;
@@ -30,11 +31,8 @@ export const Contents4 = ({ title, balloonList, annotation }: Props) => {
 	return (
 		<DIV_SectionWrapper>
 			<S_P_Subtitle>同時開催</S_P_Subtitle>
-			<ContentsTitle
-				title={title}
-				balloonList={balloonList}
-				annotation={annotation}
-			/>
+			<ContentsTitleOnly title={title} balloonList={[]} />
+
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
 					<CardTitle title="さばえ門前まつり" />
