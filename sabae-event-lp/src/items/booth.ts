@@ -457,9 +457,17 @@ export const childrenSpace = [
 export const foodArea = [
 	{
 		id: 1,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image9.png`,
+		title: "「MEGANE no MACHI CAFE」<br />produced by AMAZING COFFEE",
+		numbers: [12],
+	},
+	{
+		id: 1,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
 		title: "ボーノ夢果房",
-		numbers: [],
+		numbers: [12],
 	},
 	{
 		id: 2,
@@ -491,7 +499,7 @@ export const foodArea = [
 			import.meta.env.BASE_URL
 		}images/food_area/photo_food_area_image5.png`,
 		title: "キッチンカーさくら",
-		numbers: [],
+		numbers: [2],
 	},
 	{
 		id: 6,
