@@ -12,6 +12,7 @@ import { guests1, guests2 } from "../../items/guests";
 import { useNavigate } from "react-router-dom";
 import { ContentsTitleOnly } from "./CotentsTitleOnly";
 import { TitleCaption } from "../ui/TitleCaption";
+import { Balloon2 } from "../ui/Balloon2";
 
 export const Contents2 = () => {
 	const navigate = useNavigate();
@@ -47,7 +48,9 @@ export const Contents2 = () => {
 						“さばえアクション∞（エイト）”コレクション <br className="sp-only" />
 						<span className="english">produced by TGC</span>
 					</S_H2_Title>
+					<Balloon2 balloonList={["9/20", "土", "13:30〜"]} />
 				</DIV_CardHeaderContainer>
+				{/* カミングスーン */}
 				{/* <DIV_Container>
 					<img
 						src={`${import.meta.env.BASE_URL}images/commingSoon_yoko2.png`}
@@ -62,6 +65,7 @@ export const Contents2 = () => {
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
+					{/* カミングスーン */}
 					{/* <DIV_PcOnlyContainer>
 						<DIV_Image>
 							<IMG_Image
@@ -77,6 +81,7 @@ export const Contents2 = () => {
 			<SECTION_CardContainer>
 				<DIV_CardHeaderContainer>
 					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
+					<Balloon2 balloonList={["9/20", "土", "14:10〜"]} />
 				</DIV_CardHeaderContainer>
 				{/* <DIV_Container>
 					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
@@ -104,11 +109,10 @@ export const Contents2 = () => {
 			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
-					<CardTitle
-						title="繊維産業×福井文化服装学院コラボ"
-						label="ステージ企画"
-						labelNum={1}
-					/>
+					<DIV_CardHeaderContainer>
+						<S_H2_Title>繊維産業×福井文化服装学院コラボ</S_H2_Title>
+						<Balloon2 balloonList={["9/20", "土"]} />
+					</DIV_CardHeaderContainer>
 					<S_P_Description>
 						鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
 						produced by TGC」でモデルが着用します。
@@ -129,11 +133,10 @@ export const Contents2 = () => {
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
-					<CardTitle
-						title="キッズモデルコラボ"
-						label="ステージ企画"
-						labelNum={2}
-					/>
+					<DIV_CardHeaderContainer>
+						<S_H2_Title>キッズモデルコラボ</S_H2_Title>
+						<Balloon2 balloonList={["9/20", "土"]} />
+					</DIV_CardHeaderContainer>
 					<S_P_Description>
 						子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
 					</S_P_Description>
@@ -184,13 +187,16 @@ const DIV_CardsWrapper = styled.div`
 
 const DIV_CardHeaderContainer = styled.div`
 	padding-bottom: 20px;
-	display: block;
+	display: flex;
+	align-items: center;
 	list-style: none;
 	border-bottom: 1px solid ${COLORS.BORDER};
 	margin-bottom: 14px;
+	gap: 15px;
 
 	@media (max-width: 900px) {
 		padding-bottom: 15px;
+		gap: 8px;
 	}
 `;
 

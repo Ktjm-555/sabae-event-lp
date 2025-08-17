@@ -34,6 +34,7 @@ const DIV_TitleContainer = styled.div`
 	border-bottom: 3px solid ${COLORS.BORDER_ON_ACCENT};
 	padding-bottom: 0.4em;
 	margin-bottom: 30px;
+	gap: 15px;
 
 	@media (max-width: 1100px) {
 		margin-bottom: 20px;
@@ -41,6 +42,7 @@ const DIV_TitleContainer = styled.div`
 
 	@media (max-width: 800px) {
 		margin-bottom: 15px;
+		gap: 10px;
 	}
 
 	@media (max-width: 500px) {
