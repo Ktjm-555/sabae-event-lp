@@ -54,15 +54,20 @@ const P_Date = styled.p`
 	flex-direction: column;
 	align-items: center;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 1;
+	gap: 3px;
+
+	@media (max-width: 900px) {
+		font-size: 16px;
+	}
 `;
 
 const SPAN_Blue = styled.span`
 	color: #004080;
 	display: flex;
 	align-items: center;
-	gap: 2px;
+	gap: 3px;
 `;
 
 const SPAN_Red = styled.span`
@@ -76,14 +81,19 @@ const SPAN_Red = styled.span`
 const SPAN_CircleBlue = styled.span`
 	background: #004080;
 	color: white;
-	font-size: 10px;
+	font-size: 12px;
 	border-radius: 50%;
-	width: 15px;
-	height: 15px;
+	width: 22px;
+	height: 22px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 2px;
+
+	@media (max-width: 900px) {
+		font-size: 10px;
+		width: 16px;
+		height: 16px;
+	}
 `;
 
 const SPAN_CircleRed = styled(SPAN_CircleBlue)`

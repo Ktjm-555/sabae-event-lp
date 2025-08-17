@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { CardTitle } from "../ui/CardTitle";
 import {
 	S_P_Description,
 	S_DIV_CardContainer,
@@ -113,17 +112,11 @@ export const Contents2 = () => {
 						<S_H2_Title>繊維産業×福井文化服装学院コラボ</S_H2_Title>
 						<Balloon2 balloonList={["9/20", "土"]} />
 					</DIV_CardHeaderContainer>
-					<S_P_Description>
-						鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
-						produced by TGC」でモデルが着用します。
-					</S_P_Description>
 					<DIV_ImageContainer>
-						<img
-							src={`${
-								import.meta.env.BASE_URL
-							}images/photo_spstage_collab_01.png`}
-							alt="福井文化服装学院の画像"
-						/>
+						<S_P_Description>
+							鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
+							produced by TGC」でモデルが着用します。
+						</S_P_Description>
 						<img
 							src={`${
 								import.meta.env.BASE_URL
@@ -137,21 +130,62 @@ export const Contents2 = () => {
 						<S_H2_Title>キッズモデルコラボ</S_H2_Title>
 						<Balloon2 balloonList={["9/20", "土"]} />
 					</DIV_CardHeaderContainer>
-					<S_P_Description>
-						子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
-					</S_P_Description>
-					<DIV_NoticeSection>
-						<h4>キッズモデル募集</h4>
-						<UL_Notice>
-							<li>・募集開始：2025年6月26日(木)～</li>
-							<li>・対象年齢：年長児～小学３年生</li>
-							<li>・募集要件：SDGsを表現したファッションを着用すること 他</li>
-						</UL_Notice>
-						<SPAN_Notice>
-							※詳細・ご応募は、さばえSDGs推進センターHPまで
-						</SPAN_Notice>
-						<Button onClick={goToSabaeModelPage}>ご応募はこちら</Button>
-					</DIV_NoticeSection>
+					<DIV_ImageContainer>
+						<S_P_Description>
+							子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
+						</S_P_Description>
+						<DIV_NoticeSection>
+							<h4>キッズモデル募集</h4>
+							<UL_Notice>
+								<li>・募集開始：2025年6月26日(木)～</li>
+								<li>・対象年齢：年長児～小学３年生</li>
+								<li>・募集要件：SDGsを表現したファッションを着用すること 他</li>
+							</UL_Notice>
+							<SPAN_Notice>
+								※詳細・ご応募は、さばえSDGs推進センターHPまで
+							</SPAN_Notice>
+							<Button onClick={goToSabaeModelPage}>ご応募はこちら</Button>
+						</DIV_NoticeSection>
+					</DIV_ImageContainer>
+				</SECTION_CardContainer>
+			</DIV_CardsWrapper>
+			<DIV_CardsWrapper>
+				<SECTION_CardContainer>
+					<DIV_CardHeaderContainer>
+						<S_H2_Title>スーパーキッズショー</S_H2_Title>
+						<Balloon2 balloonList={["9/21", "日", "10:00～/13:00～"]} sunday />
+					</DIV_CardHeaderContainer>
+					<DIV_ImageContainer>
+						<S_P_Description>
+							歌・武道・リズムで魅せる！子どもたちの全力パフォーマンスが輝きます。
+						</S_P_Description>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_03.png`}
+							alt="学生の画像"
+						/>
+					</DIV_ImageContainer>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer>
+					<DIV_CardHeaderContainer>
+						<S_H2_Title>キッズダンスショー</S_H2_Title>
+						<Balloon2 balloonList={["9/21", "日", "10:30～/14:00～"]} sunday />
+					</DIV_CardHeaderContainer>
+					<DIV_ImageContainer>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_04.png`}
+							alt="学生の画像"
+						/>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_05.png`}
+							alt="学生の画像"
+						/>
+					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
 		</div>
@@ -175,7 +209,7 @@ const DIV_CardsWrapper = styled.div`
 	grid-auto-rows: 1fr;
 
 	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 800px) {
+	@media (max-width: 1100px) {
 		grid-template-columns: none;
 		grid-auto-rows: auto;
 	}
@@ -248,7 +282,8 @@ const IMG_Image = styled.img`
 
 const DIV_NoticeSection = styled.div`
 	background-color: ${COLORS.NOTICE_BG};
-	padding: 15px;
+	padding: 20px;
+	border-radius: 40px;
 `;
 
 const UL_Notice = styled.ul`
@@ -268,14 +303,17 @@ const SPAN_Notice = styled.span`
 	}
 `;
 
+// TODO: 名前変えたい。画像だけじゃない
 const DIV_ImageContainer = styled.div`
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: auto;
 	gap: 20px;
 
 	img {
 		width: 100%;
 		overflow: hidden;
+		border-radius: 40px;
 	}
 
 	@media (max-width: 500px) {
