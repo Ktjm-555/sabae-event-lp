@@ -29,7 +29,8 @@ export const Contents2 = () => {
 			<S_P_Subtitle id="3">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
 			<ContentsTitleOnly
 				title={"スペシャルステージ"}
-				balloonList={["9/20", "土"]}
+				balloonList={[]}
+				balloonList2={["9/20", "土", "13:00〜", "@ステージエリア"]}
 			/>
 			<TitleCaption
 				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"

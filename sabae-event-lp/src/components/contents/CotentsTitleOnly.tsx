@@ -1,21 +1,27 @@
 import styled from "@emotion/styled";
 import { Balloon } from "../ui/Balloon";
 import { COLORS } from "../../consts/color";
+import { Balloon2 } from "../ui/Balloon2";
 
 type Props = {
 	title: string;
-	caption?: string;
+	// TODO: これも？すべきではないか？
 	balloonList: Array<string>;
-	annotation?: string;
+	balloonList2?: Array<string>;
 };
 
 // TODO: タイトルこちらに統合したい
-export const ContentsTitleOnly = ({ title, balloonList }: Props) => {
+export const ContentsTitleOnly = ({
+	title,
+	balloonList,
+	balloonList2,
+}: Props) => {
 	return (
 		<div>
 			<DIV_TitleContainer>
 				<H1_Title dangerouslySetInnerHTML={{ __html: title }} />
 				{balloonList.length > 0 && <Balloon balloonList={balloonList} />}
+				{balloonList2 && <Balloon2 balloonList={balloonList2} />}
 			</DIV_TitleContainer>
 		</div>
 	);
