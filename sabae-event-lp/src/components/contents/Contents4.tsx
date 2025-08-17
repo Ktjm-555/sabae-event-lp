@@ -5,7 +5,6 @@ import {
 	S_DIV_SectionWrapper,
 	S_H2_Title,
 	S_P_Description,
-	S_P_Subtitle,
 } from "../../Style";
 import { Button } from "../ui/Button";
 import { ContentsTitleOnly } from "./CotentsTitleOnly";
@@ -17,8 +16,7 @@ export const Contents4 = () => {
 
 	return (
 		<DIV_SectionWrapper>
-			<S_P_Subtitle>同時開催</S_P_Subtitle>
-			<ContentsTitleOnly title="さばえ３大フェス" balloonList={[]} />
+			<ContentsTitleOnly title="同時開催 さばえ３大フェス" balloonList={[]} />
 
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
