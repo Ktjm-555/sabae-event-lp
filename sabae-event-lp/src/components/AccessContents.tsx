@@ -3,8 +3,6 @@ import {
 	S_SECTION_container,
 	S_DIV_SectionWrapper,
 	S_DIV_CardContainer,
-	S_H2_Title,
-	S_SPAN_Notice,
 } from "../Style.ts";
 
 import { COLORS } from "../consts/color.ts";
@@ -12,6 +10,7 @@ import { ZoomIcon } from "./ui/ZoomIcon.tsx";
 import { Modal } from "./ui/modal.tsx";
 import { useState } from "react";
 import { ContentsTitleOnly } from "./contents/CotentsTitleOnly.tsx";
+import { AccessCardContents } from "./contents/AccessCardContents.tsx";
 
 export const AccessContents = () => {
 	const [isModalOpen, setModalOpen] = useState(false);
@@ -19,72 +18,27 @@ export const AccessContents = () => {
 	return (
 		<DIV_EventWrapper>
 			<S_SECTION_container>
-				<DIV_ContentsContainer id="4">
+				<DIV_ContentsContainer>
 					<div id="4">
 						<ContentsTitleOnly title={"会場マップ"} balloonList={[]} />
 						<DIV_CardContainer>
-							<DIV_DisplayContainer>
-								<p>
-									ステージエリアをはじめ、こどもの遊び場やフードエリア、ブースエリアなど、会場内を周遊するための情報を掲載した会場マップです。
-								</p>
-								<DIV_ImgContainerWrapper>
-									<DIV_ImgContainer>
-										<img
-											src={`${
-												import.meta.env.BASE_URL
-											}images/figure_map_mini.png`}
-											className="map"
-										/>
-										<Span_IconPosition onClick={() => setModalOpen(true)}>
-											<ZoomIcon />
-										</Span_IconPosition>
-									</DIV_ImgContainer>
-								</DIV_ImgContainerWrapper>
-							</DIV_DisplayContainer>
+							<DIV_ImgContainerWrapper>
+								<DIV_ImgContainer>
+									<img
+										src={`${import.meta.env.BASE_URL}images/figure_map.png`}
+										className="map"
+									/>
+									<Span_IconPosition onClick={() => setModalOpen(true)}>
+										<ZoomIcon />
+									</Span_IconPosition>
+								</DIV_ImgContainer>
+							</DIV_ImgContainerWrapper>
 						</DIV_CardContainer>
 					</div>
 					<div id="5">
 						<ContentsTitleOnly title={"アクセス"} balloonList={[]} />
 						<DIV_CardContainer>
-							<DIV_DisplayContainer className="tate">
-								<S_H2_Title>臨時駐車場</S_H2_Title>
-								<ul>
-									{/* <li>
-										●鯖江市スポーツ交流館（
-										<A_URL
-											href="https://maps.app.goo.gl/gP73PMZjJxFR5Qxp7"
-											target="_blank"
-										>
-											<IMG_icon
-												src={`${import.meta.env.BASE_URL}icon/map.svg`}
-												alt="鯖江市スポーツ交流館のmapのアイコン"
-											/>
-											鯖江市宮前2丁目9-1
-										</A_URL>
-										）
-										<br />
-										※シャトルバスが運行します。
-									</li> */}
-									<li>
-										●鯖江市役所（
-										<A_URL
-											href="https://maps.app.goo.gl/StivTBgmU626TxG76"
-											target="_blank"
-										>
-											<IMG_icon
-												src={`${import.meta.env.BASE_URL}icon/map.svg`}
-												alt="鯖江市役所のmapのアイコン"
-											/>
-											鯖江市西山町13-1
-										</A_URL>
-										）<br />
-										<S_SPAN_Notice>※シャトルバスが運行します。</S_SPAN_Notice>
-										<S_SPAN_Notice>
-											※駐車台数に限りがございます。公共交通機関をご利用いただくか、なるべく乗り合わせの上ご来場ください。
-										</S_SPAN_Notice>
-									</li>
-								</ul>
-							</DIV_DisplayContainer>
+							<AccessCardContents />
 						</DIV_CardContainer>
 					</div>
 				</DIV_ContentsContainer>
@@ -120,16 +74,20 @@ const DIV_ContentsContainer = styled.div`
 	grid-auto-rows: 1fr;
 
 	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 800px) {
+	@media (max-width: 1000px) {
 		grid-template-columns: none;
 		grid-auto-rows: auto;
 	}
 `;
 
+// ここ修正するか変える（タイトルからひとまとめにしてgridする？）
 /* NOTO: 上記で高さを揃えているので子要素（カードの高さをあわせる） */
 const DIV_CardContainer = styled(S_DIV_CardContainer)`
 	/* 100% - タイトル高さ - タイトル下margin - カードpadding上下 */
-	height: calc(100% - 86px - 14px - 40px);
+	height: calc(100% - 86px - 32px - 40px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	@media (max-width: 900px) {
 		/* 100% - タイトル高さ - タイトル下margin - カードpadding上下 + マップ画像が超える分？*/
@@ -146,15 +104,13 @@ const DIV_ImgContainerWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 `;
+
 const DIV_ImgContainer = styled.div`
 	position: relative;
 
-	@media (max-width: 1200px) {
-		width: 323px;
-	}
-
-	@media (max-width: 400px) {
-		width: 250px;
+	img {
+		width: 100%;
+		border: 1px solid ${COLORS.BORDER_ON_ACCENT};
 	}
 `;
 
