@@ -43,6 +43,16 @@ const DIV_CardTitleContainer = styled.div<{ label?: string }>`
 
 const H2_Title = styled(S_H2_Title)`
 	font-size: 22px;
+
+	br.display {
+		display: none;
+	}
+
+	@media (max-width: 850px) and (min-width: 801px) {
+		br.display {
+			display: block;
+		}
+	}
 `;
 
 const P_TitleLabel = styled.p`

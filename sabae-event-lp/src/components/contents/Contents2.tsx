@@ -4,6 +4,7 @@ import {
 	S_DIV_CardContainer,
 	S_P_Subtitle,
 	S_H2_Title,
+	S_DIV_CardHeaderContainer,
 } from "../../Style";
 import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
@@ -42,13 +43,13 @@ export const Contents2 = () => {
 				</Button>
 			</DIV_ButtonContainer>
 			<SECTION_CardContainer>
-				<DIV_CardHeaderContainer>
+				<S_DIV_CardHeaderContainer>
 					<S_H2_Title>
 						“さばえアクション∞（エイト）”コレクション <br className="sp-only" />
 						<span className="english">produced by TGC</span>
 					</S_H2_Title>
 					<Balloon2 balloonList={["9/20", "土", "13:30〜"]} />
-				</DIV_CardHeaderContainer>
+				</S_DIV_CardHeaderContainer>
 				{/* カミングスーン */}
 				{/* <DIV_Container>
 					<img
@@ -78,10 +79,10 @@ export const Contents2 = () => {
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<SECTION_CardContainer>
-				<DIV_CardHeaderContainer>
+				<S_DIV_CardHeaderContainer>
 					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
 					<Balloon2 balloonList={["9/20", "土", "14:10〜"]} />
-				</DIV_CardHeaderContainer>
+				</S_DIV_CardHeaderContainer>
 				{/* <DIV_Container>
 					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
 				</DIV_Container> */}
@@ -108,10 +109,10 @@ export const Contents2 = () => {
 			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
-					<DIV_CardHeaderContainer>
+					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>繊維産業×福井文化服装学院コラボ</S_H2_Title>
 						<Balloon2 balloonList={["9/20", "土"]} />
-					</DIV_CardHeaderContainer>
+					</S_DIV_CardHeaderContainer>
 					<DIV_ImageContainer>
 						<S_P_Description>
 							鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
@@ -126,11 +127,11 @@ export const Contents2 = () => {
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
-					<DIV_CardHeaderContainer>
+					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>キッズモデルコラボ</S_H2_Title>
 						<Balloon2 balloonList={["9/20", "土"]} />
-					</DIV_CardHeaderContainer>
-					<DIV_ImageContainer>
+					</S_DIV_CardHeaderContainer>
+					<DIV_ImageContainer className="tmp_vertical">
 						<S_P_Description>
 							子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
 						</S_P_Description>
@@ -151,10 +152,10 @@ export const Contents2 = () => {
 			</DIV_CardsWrapper>
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
-					<DIV_CardHeaderContainer>
+					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>スーパーキッズショー</S_H2_Title>
 						<Balloon2 balloonList={["9/21", "日", "10:00～/13:00～"]} sunday />
-					</DIV_CardHeaderContainer>
+					</S_DIV_CardHeaderContainer>
 					<DIV_ImageContainer>
 						<S_P_Description>
 							歌・武道・リズムで魅せる！子どもたちの全力パフォーマンスが輝きます。
@@ -163,27 +164,27 @@ export const Contents2 = () => {
 							src={`${
 								import.meta.env.BASE_URL
 							}images/photo_spstage_collab_03.png`}
-							alt="学生の画像"
+							alt="柔道着のキッズの画像"
 						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 				<SECTION_CardContainer>
-					<DIV_CardHeaderContainer>
+					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>キッズダンスショー</S_H2_Title>
 						<Balloon2 balloonList={["9/21", "日", "10:30～/14:00～"]} sunday />
-					</DIV_CardHeaderContainer>
+					</S_DIV_CardHeaderContainer>
 					<DIV_ImageContainer>
 						<img
 							src={`${
 								import.meta.env.BASE_URL
 							}images/photo_spstage_collab_04.png`}
-							alt="学生の画像"
+							alt="ダンスしているキッズの画像1"
 						/>
 						<img
 							src={`${
 								import.meta.env.BASE_URL
 							}images/photo_spstage_collab_05.png`}
-							alt="学生の画像"
+							alt="ダンスしているキッズの画像2"
 						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
@@ -216,21 +217,6 @@ const DIV_CardsWrapper = styled.div`
 
 	@media (max-width: 500px) {
 		gap: 0;
-	}
-`;
-
-const DIV_CardHeaderContainer = styled.div`
-	padding-bottom: 20px;
-	display: flex;
-	align-items: center;
-	list-style: none;
-	border-bottom: 1px solid ${COLORS.BORDER};
-	margin-bottom: 14px;
-	gap: 15px;
-
-	@media (max-width: 900px) {
-		padding-bottom: 15px;
-		gap: 8px;
 	}
 `;
 
@@ -314,6 +300,19 @@ const DIV_ImageContainer = styled.div`
 		width: 100%;
 		overflow: hidden;
 		border-radius: 40px;
+	}
+
+	@media (max-width: 1200px) {
+		&.tmp_vertical {
+			display: block;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		&.tmp_vertical {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	@media (max-width: 500px) {
