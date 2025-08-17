@@ -7,7 +7,6 @@ import {
 	S_SPAN_Notice,
 } from "../Style.ts";
 
-import { ContentsTitle } from "./contents/CotentsTitle.tsx";
 import { COLORS } from "../consts/color.ts";
 import { ZoomIcon } from "./ui/ZoomIcon.tsx";
 import { Modal } from "./ui/modal.tsx";
