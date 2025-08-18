@@ -16,7 +16,7 @@ export const Contents4 = () => {
 
 	return (
 		<DIV_SectionWrapper>
-			<ContentsTitleOnly title="同時開催 さばえ３大フェス" balloonList={[]} />
+			<ContentsTitleOnly title="同時開催" balloonList={[]} />
 
 			<DIV_CardsWrapper>
 				<SECTION_CardContainer>
