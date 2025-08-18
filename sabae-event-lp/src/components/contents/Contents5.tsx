@@ -78,7 +78,7 @@ export const Contents5 = () => {
 								<br />
 								人気ゲーム機や鯖江産豪華景品が多数当たる！
 								<br />
-								「さばえ３大フェスきねてキャンペーン」を、8月5日(火)から9月21日(日)まで開催します。
+								「さばえ３大フェスきてねキャンペーン」を、8月5日(火)から9月21日(日)まで開催します。{" "}
 							</P_Description>
 							<DIV_ButtonContainer_PC>
 								<Button onClick={goToSabaeruPage}>詳しくはこちら</Button>

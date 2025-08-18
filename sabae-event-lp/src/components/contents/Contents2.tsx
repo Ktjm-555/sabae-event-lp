@@ -108,7 +108,7 @@ export const Contents2 = () => {
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
-				<SECTION_CardContainer>
+				<SECTION_CardContainer className="left none-bottom">
 					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>繊維産業×福井文化服装学院コラボ</S_H2_Title>
 						<Balloon2 balloonList={["9/20", "土"]} />
@@ -126,7 +126,7 @@ export const Contents2 = () => {
 						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
-				<SECTION_CardContainer>
+				<SECTION_CardContainer className="left none-bottom">
 					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>キッズモデルコラボ</S_H2_Title>
 						<Balloon2 balloonList={["9/20", "土"]} />
@@ -149,26 +149,7 @@ export const Contents2 = () => {
 						</DIV_NoticeSection>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
-			</DIV_CardsWrapper>
-			<DIV_CardsWrapper>
-				<SECTION_CardContainer>
-					<S_DIV_CardHeaderContainer>
-						<S_H2_Title>スーパーキッズショー</S_H2_Title>
-						<Balloon2 balloonList={["9/21", "日", "10:00～/13:00～"]} sunday />
-					</S_DIV_CardHeaderContainer>
-					<DIV_ImageContainer>
-						<S_P_Description>
-							歌・武道・リズムで魅せる！子どもたちの全力パフォーマンスが輝きます。
-						</S_P_Description>
-						<img
-							src={`${
-								import.meta.env.BASE_URL
-							}images/photo_spstage_collab_03.png`}
-							alt="柔道着のキッズの画像"
-						/>
-					</DIV_ImageContainer>
-				</SECTION_CardContainer>
-				<SECTION_CardContainer>
+				<SECTION_CardContainer className="left none-bottom">
 					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>キッズダンスショー</S_H2_Title>
 						<Balloon2 balloonList={["9/21", "日", "10:30～/14:00～"]} sunday />
@@ -188,6 +169,55 @@ export const Contents2 = () => {
 						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
+				<SECTION_CardContainer className="right none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<S_H2_Title>スーパーキッズショー</S_H2_Title>
+						<Balloon2 balloonList={["9/21", "日", "10:00～/13:00～"]} sunday />
+					</S_DIV_CardHeaderContainer>
+					<DIV_ImageContainer className="bottom">
+						<S_P_Description>
+							<SPAN_Time>10:00～</SPAN_Time>
+							<H3>
+								国際空手道連盟 極真会館
+								<br />
+								坂本派 福井県本部
+							</H3>
+							迫力満点！子どもたちの日々の鍛錬の成果をステージで披露します。気合いと技にご注目ください！
+						</S_P_Description>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_03.png`}
+							alt="国際空手道連盟 極真会館 坂本派 福井県本部の画像"
+						/>
+					</DIV_ImageContainer>
+					<DIV_ImageContainer className="bottom responsive-order">
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_06.png`}
+							alt="Jammy×Jammyの画像"
+						/>
+						<S_P_Description>
+							<SPAN_Time>13:00～</SPAN_Time>
+							<H3>Jammy×Jammy</H3>
+							僕たちは、ドラムだけで構成されるチームです！今回は、選抜された小学３年生・４年生・５年生・中学１年生のメンバー８名でパフォーマンスさせていただきます。Jammy×Jammyのツインドラムで、ステージを盛り上げるぜ！
+						</S_P_Description>
+					</DIV_ImageContainer>
+					<DIV_ImageContainer>
+						<S_P_Description>
+							<SPAN_Time>13:30～</SPAN_Time>
+							<H3>富田 輝</H3>
+							私は、第48回全日本ジュニアクラッシック音楽コンクール声楽部門で第5位に入賞しました。自然豊かな西山公園での披露は初めてで緊張しますが、「日本一」を目指すため磨き上げた歌声をぜひ聞いてください。{" "}
+						</S_P_Description>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_07.png`}
+							alt="富田 輝の画像"
+						/>
+					</DIV_ImageContainer>
+				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
 		</div>
 	);
@@ -197,6 +227,10 @@ const SECTION_CardContainer = styled(
 	S_DIV_CardContainer.withComponent("section")
 )`
 	margin-bottom: 30px;
+
+	&.none-bottom {
+		margin-bottom: 0;
+	}
 `;
 
 const DIV_ButtonContainer = styled.div`
@@ -205,36 +239,32 @@ const DIV_ButtonContainer = styled.div`
 
 const DIV_CardsWrapper = styled.div`
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, auto);
+	gap: 20px;
 	grid-auto-rows: 1fr;
+
+	.left {
+		grid-column: 1;
+	}
+
+	.right {
+		grid-column: 2;
+		/* 左3行にまたがる */
+		grid-row: 1 / span 3;
+	}
 
 	/* ここだけレスポンシブ例外対応 */
 	@media (max-width: 1100px) {
-		grid-template-columns: none;
-		grid-auto-rows: auto;
-	}
+		grid-template-columns: 1fr;
+		gap: 30px;
 
-	@media (max-width: 500px) {
-		gap: 0;
+		.right {
+			grid-column: 1;
+			grid-row: auto;
+		}
 	}
 `;
-
-// const DIV_Container = styled.div`
-// 	display: none;
-// 	@media (max-width: 800px) {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 		margin-bottom: 20px;
-// 	}
-// `;
-
-// const DIV_PcOnlyContainer = styled.div`
-// 	@media (max-width: 800px) {
-// 		display: none;
-// 	}
-// `;
 
 const DIV_GuestContainer = styled.div`
 	display: grid;
@@ -302,13 +332,19 @@ const DIV_ImageContainer = styled.div`
 		border-radius: 40px;
 	}
 
+	&.bottom {
+		margin-bottom: 30px;
+	}
+
 	@media (max-width: 1200px) {
+		// 募集要項を縦に配置する
 		&.tmp_vertical {
 			display: block;
 		}
 	}
 
 	@media (max-width: 1100px) {
+		// 募集要項を横並びにする
 		&.tmp_vertical {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -316,6 +352,7 @@ const DIV_ImageContainer = styled.div`
 	}
 
 	@media (max-width: 600px) {
+		// 募集要項を縦に配置する
 		&.tmp_vertical {
 			display: block;
 		}
@@ -337,5 +374,25 @@ const DIV_ImageContainer = styled.div`
 		&.tmp_vertical {
 			display: block;
 		}
+
+		// SPの際に画像が下に来るようにする
+		&.responsive-order {
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 0;
+		}
+	}
+`;
+
+const SPAN_Time = styled.span`
+	color: ${COLORS.PRIMARY};
+	font-weight: bold;
+`;
+
+const H3 = styled.h3`
+	font-size: 20px;
+
+	@media (max-width: 500px) {
+		font-size: 16px;
 	}
 `;

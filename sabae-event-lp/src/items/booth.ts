@@ -519,8 +519,10 @@ export const foodArea = [
 		numbers: [12],
 	},
 	{
-		id: 1,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		id: 2,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image10.png`,
 		title: "ボーノ夢果房",
 		numbers: [12],
 	},
