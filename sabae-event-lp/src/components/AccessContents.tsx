@@ -6,7 +6,6 @@ import {
 } from "../Style.ts";
 
 import { COLORS } from "../consts/color.ts";
-import { ZoomIcon } from "./ui/ZoomIcon.tsx";
 import { Modal } from "./ui/modal.tsx";
 import { useState } from "react";
 import { ContentsTitleOnly } from "./contents/CotentsTitleOnly.tsx";
@@ -28,9 +27,10 @@ export const AccessContents = () => {
 										src={`${import.meta.env.BASE_URL}images/figure_map.png`}
 										className="map"
 									/>
-									<Span_IconPosition onClick={() => setModalOpen(true)}>
+									{/* Zoomアイコン不要 一旦残しておく */}
+									{/* <Span_IconPosition onClick={() => setModalOpen(true)}>
 										<ZoomIcon />
-									</Span_IconPosition>
+									</Span_IconPosition> */}
 								</DIV_ImgContainer>
 							</DIV_ImgContainerWrapper>
 						</DIV_CardContainer>
@@ -114,30 +114,31 @@ const DIV_ImgContainer = styled.div`
 	}
 `;
 
-const Span_IconPosition = styled.span`
-	position: absolute;
-	bottom: 0px;
-	right: 8px;
-	width: 40px;
+// ズームアイコン不要だが、一旦残しておく
+// const Span_IconPosition = styled.span`
+// 	position: absolute;
+// 	bottom: 0px;
+// 	right: 8px;
+// 	width: 40px;
 
-	@media (max-width: 1200px) {
-		right: 15px;
-	}
+// 	@media (max-width: 1200px) {
+// 		right: 15px;
+// 	}
 
-	@media (max-width: 800px) {
-		right: 8px;
-	}
+// 	@media (max-width: 800px) {
+// 		right: 8px;
+// 	}
 
-	@media (max-width: 600px) {
-		right: 15px;
-	}
+// 	@media (max-width: 600px) {
+// 		right: 15px;
+// 	}
 
-	&:hover,
-	&:active,
-	&:focus {
-		fill: #ff9999;
-	}
-`;
+// 	&:hover,
+// 	&:active,
+// 	&:focus {
+// 		fill: #ff9999;
+// 	}
+// `;
 
 const IMG_ModalImage = styled.img`
 	width: 100%;

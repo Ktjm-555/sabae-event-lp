@@ -390,6 +390,7 @@ const SPAN_Time = styled.span`
 `;
 
 const H3 = styled.h3`
+	font-family: "Noto Sans", sans-serif;
 	font-size: 20px;
 
 	@media (max-width: 500px) {

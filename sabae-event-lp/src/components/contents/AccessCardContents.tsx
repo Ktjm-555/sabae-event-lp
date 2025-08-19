@@ -78,7 +78,7 @@ export const AccessCardContents = () => {
 								src={`${import.meta.env.BASE_URL}icon/map.svg`}
 								alt="鯖江市役所のmapのアイコン"
 							/>
-							鯖江市西山町13-1
+							福井県鯖江市西山町13-1
 						</A_URL>
 						）
 					</li>
@@ -136,6 +136,7 @@ export const AccessCardContents = () => {
 };
 
 const H2 = styled.h2`
+	font-family: "Noto Sans", sans-serif;
 	font-size: 16px;
 	margin-bottom: 8px;
 `;
