@@ -248,17 +248,17 @@ export const partners = [
 		isNameLong: false,
 		numbers: [8, 12],
 	},
-	{
-		id: 17,
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image29.png`,
-		title: "未定",
-		isLong: false,
-		name: "認定NPO法人さばえNPOサポート",
-		isNameLong: false,
-		numbers: [4, 17],
-	},
+	// {
+	// 	id: 17,
+	// 	imgSrc: `${
+	// 		import.meta.env.BASE_URL
+	// 	}images/partners/photo_partner_image29.png`,
+	// 	title: "未定",
+	// 	isLong: false,
+	// 	name: "認定NPO法人さばえNPOサポート",
+	// 	isNameLong: false,
+	// 	numbers: [4, 17],
+	// },
 	{
 		id: 18,
 		imgSrc: `${
@@ -275,25 +275,25 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image19.png`,
-		title: "コメダ珈琲店 鯖江店",
+		title: "コーヒーのぬり絵体験",
 		isLong: false,
-		name: "株式会社アモーレながすぎ",
-		isNameLong: false,
+		name: "コメダ珈琲店 鯖江店（株式会社アモーレながすぎ）",
+		isNameLong: true,
 		numbers: [4, 12],
 		notice: "※9/20(土)のみ",
 		noticeBlue: true,
 	},
-	{
-		id: 20,
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image20.png`,
-		title: "ペットと私「共に安心・幸せ・笑顔ある街に住むのだ」",
-		isLong: false,
-		name: "福井県動物愛護センター",
-		isNameLong: false,
-		numbers: [3, 11],
-	},
+	// {
+	// 	id: 20,
+	// 	imgSrc: `${
+	// 		import.meta.env.BASE_URL
+	// 	}images/partners/photo_partner_image20.png`,
+	// 	title: "ペットと私「共に安心・幸せ・笑顔ある街に住むのだ」",
+	// 	isLong: false,
+	// 	name: "福井県動物愛護センター",
+	// 	isNameLong: false,
+	// 	numbers: [3, 11],
+	// },
 	{
 		id: 21,
 		imgSrc: `${
@@ -408,9 +408,7 @@ export const partners = [
 	},
 	{
 		id: 31,
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image29.png`,
+		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
 		title: "いざという時のためみんなで備えよう！",
 		isLong: false,
 		name: "株式会社ミドリ防災",
@@ -419,10 +417,8 @@ export const partners = [
 	},
 	{
 		id: 32,
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image29.png`,
-		title: "自然栽培",
+		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		title: "自然栽培！バナナ名刺＆シードペーパー",
 		isLong: false,
 		name: "特定非営利活動法人ハートオブマインド",
 		isNameLong: false,
@@ -450,6 +446,38 @@ export const partners = [
 		isNameLong: false,
 		numbers: [11, 12],
 	},
+	{
+		id: 35,
+		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		title: "認知症と共に生きる",
+		isLong: false,
+		name: "鯖江市長寿福祉課",
+		isNameLong: false,
+		numbers: [3],
+	},
+	{
+		id: 36,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image36.png`,
+		title:
+			"①めざせ！クレカ博士 はじめての金融クイズ 〜クレジットカード編〜<br />②ワクワク体験！はじめてのクレジットカードを作ってみよう！",
+		isLong: true,
+		name: "株式会社オリエントコーポレーション福井支店",
+		isNameLong: true,
+		numbers: [8],
+	},
+	{
+		id: 37,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image37.png`,
+		title: "西山アート探検ツアー",
+		isLong: false,
+		name: "鯖江市文化課",
+		isNameLong: false,
+		numbers: [4, 15],
+	},
 ];
 
 export const childrenSpace = [
@@ -459,6 +487,17 @@ export const childrenSpace = [
 		title: "チャレンジ！ニュースポーツ",
 		isLong: false,
 		name: "NPO法人越前市障がいスポーツクラブ",
+		isNameLong: false,
+		numbers: [3, 11],
+	},
+	{
+		id: 6,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/children_space/photo_children_space_image6.png`,
+		title: "ペットと私「共に安心・幸せ・笑顔ある街に住むのだ」",
+		isLong: false,
+		name: "福井県動物愛護センター",
 		isNameLong: false,
 		numbers: [3, 11],
 	},
@@ -507,6 +546,7 @@ export const childrenSpace = [
 		isNameLong: false,
 		numbers: [12],
 	},
+	// 7から
 ];
 
 export const foodArea = [
