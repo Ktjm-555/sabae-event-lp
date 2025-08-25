@@ -15,7 +15,7 @@ export const BoothPage = () => {
 					<DIV_TitleWrapper>
 						<ContentsTitleOnly
 							title={"わくわくサステナブース"}
-							balloonList={["9/20", "土", "9/21", "日"]}
+							balloonList={["9/20", "土", "21", "日"]}
 						/>
 					</DIV_TitleWrapper>
 
@@ -44,7 +44,7 @@ export const BoothPage = () => {
 					<DIV_TitleWrapper>
 						<ContentsTitleOnly
 							title={"こどもの遊び場"}
-							balloonList={["9/20", "土", "9/21", "日"]}
+							balloonList={["9/20", "土", "21", "日"]}
 						/>
 					</DIV_TitleWrapper>
 
@@ -58,7 +58,7 @@ export const BoothPage = () => {
 					<DIV_TitleWrapper>
 						<ContentsTitleOnly
 							title={"フードエリア"}
-							balloonList={["9/20", "土", "9/21", "日"]}
+							balloonList={["9/20", "土", "21", "日"]}
 						/>
 					</DIV_TitleWrapper>
 

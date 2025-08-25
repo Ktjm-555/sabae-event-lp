@@ -32,7 +32,7 @@ export const EventContents = () => {
 					<div>
 						<ContentsTitleOnly
 							title={"わくわくサステナブース"}
-							balloonList={["9/20", "土", "9/21", "日"]}
+							balloonList={["9/20", "土", "21", "日"]}
 						/>
 						<DIV_Contents1>
 							<img
@@ -56,7 +56,7 @@ export const EventContents = () => {
 					<div>
 						<ContentsTitleOnly
 							title={"SDGsパーク探検！"}
-							balloonList={["9/20", "土", "9/21", "日"]}
+							balloonList={["9/20", "土", "21", "日"]}
 						/>
 						<DIV_Contents1>
 							<img
@@ -76,7 +76,7 @@ export const EventContents = () => {
 					<div>
 						<ContentsTitleOnly
 							title={"こどもの遊び場"}
-							balloonList={["9/20", "土", "9/21", "日"]}
+							balloonList={["9/20", "土", "21", "日"]}
 						/>
 						<DIV_Contents2 className="first-item">
 							<H2_Title className="sp-only">インクルーシブ遊具</H2_Title>
@@ -117,7 +117,7 @@ export const EventContents = () => {
 					<div>
 						<ContentsTitleOnly
 							title={"フードエリア"}
-							balloonList={["9/20", "土", "9/21", "日"]}
+							balloonList={["9/20", "土", "21", "日"]}
 						/>
 						{/* TODO: この辺の二重表現またチャレンジする一旦このまま行く */}
 						<DIV_ContainerDisplay2 className="pc-only">

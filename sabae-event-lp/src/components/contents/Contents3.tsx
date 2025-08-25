@@ -7,6 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { COLORS } from "../../consts/color";
+import { ContentsTitleOnly } from "./CotentsTitleOnly";
+import { TitleCaption } from "../ui/TitleCaption";
 
 const swiperItems = [
 	{
@@ -62,11 +64,13 @@ export const Contents3 = () => {
 			{/* <span></span> */}
 			<DIV_OverviewContainer>
 				<div>
-					<ContentsTitle
-						title="「笑顔があふれるまち」を目指して行動しよう！"
-						caption="SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
-一人一人の小さな行動で広がり、つながり、まちの未来を大きく変えていく。そんな”∞(無限)”の願いを込めた未来へのアクションです。"
+					<ContentsTitleOnly
+						title={"「笑顔があふれるまち」を目指して行動しよう！"}
 						balloonList={[]}
+					/>
+					<TitleCaption
+						caption="SDGsに関心のある学生でつくる「さばえSDGs部」が、若者の視点から考案した行動目標。
+									一人一人の小さな行動で広がり、つながり、まちの未来を大きく変えていく。そんな”∞(無限)”の願いを込めた未来へのアクションです。"
 					/>
 					<Button onClick={goToSabaeEightPage}>詳しくはこちら</Button>
 				</div>

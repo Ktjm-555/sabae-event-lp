@@ -1,16 +1,18 @@
 import styled from "@emotion/styled";
-import { ContentsTitle } from "./CotentsTitle";
-import { CardTitle } from "../ui/CardTitle";
 import {
 	S_P_Description,
 	S_DIV_CardContainer,
 	S_P_Subtitle,
 	S_H2_Title,
+	S_DIV_CardHeaderContainer,
 } from "../../Style";
 import { Button } from "../ui/Button";
 import { COLORS } from "../../consts/color";
 import { guests1, guests2 } from "../../items/guests";
 import { useNavigate } from "react-router-dom";
+import { ContentsTitleOnly } from "./CotentsTitleOnly";
+import { TitleCaption } from "../ui/TitleCaption";
+import { Balloon2 } from "../ui/Balloon2";
 
 export const Contents2 = () => {
 	const navigate = useNavigate();
@@ -26,10 +28,13 @@ export const Contents2 = () => {
 	return (
 		<div>
 			<S_P_Subtitle id="3">めがねのまちさばえ応援プロジェクト</S_P_Subtitle>
-			<ContentsTitle
-				title="スペシャルステージ"
+			<ContentsTitleOnly
+				title={"スペシャルステージ"}
+				balloonList={[]}
+				balloonList2={["9/20", "土", "13:00〜", "@ステージエリア"]}
+			/>
+			<TitleCaption
 				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
-				balloonList={["9/20", "土"]}
 				annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
 			/>
 			<DIV_ButtonContainer>
@@ -38,12 +43,14 @@ export const Contents2 = () => {
 				</Button>
 			</DIV_ButtonContainer>
 			<SECTION_CardContainer>
-				<DIV_CardHeaderContainer>
+				<S_DIV_CardHeaderContainer>
 					<S_H2_Title>
 						“さばえアクション∞（エイト）”コレクション <br className="sp-only" />
 						<span className="english">produced by TGC</span>
 					</S_H2_Title>
-				</DIV_CardHeaderContainer>
+					<Balloon2 balloonList={["9/20", "土", "13:30〜"]} />
+				</S_DIV_CardHeaderContainer>
+				{/* カミングスーン */}
 				{/* <DIV_Container>
 					<img
 						src={`${import.meta.env.BASE_URL}images/commingSoon_yoko2.png`}
@@ -58,6 +65,7 @@ export const Contents2 = () => {
 							<p dangerouslySetInnerHTML={{ __html: guest.name }}></p>
 						</div>
 					))}
+					{/* カミングスーン */}
 					{/* <DIV_PcOnlyContainer>
 						<DIV_Image>
 							<IMG_Image
@@ -71,9 +79,10 @@ export const Contents2 = () => {
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<SECTION_CardContainer>
-				<DIV_CardHeaderContainer>
+				<S_DIV_CardHeaderContainer>
 					<S_H2_Title>LDH ダンスワークショップショー</S_H2_Title>
-				</DIV_CardHeaderContainer>
+					<Balloon2 balloonList={["9/20", "土", "14:10〜"]} />
+				</S_DIV_CardHeaderContainer>
 				{/* <DIV_Container>
 					<img src={`${import.meta.env.BASE_URL}images/commingSoon_yoko.png`} />
 				</DIV_Container> */}
@@ -99,23 +108,16 @@ export const Contents2 = () => {
 				</DIV_GuestContainer>
 			</SECTION_CardContainer>
 			<DIV_CardsWrapper>
-				<SECTION_CardContainer>
-					<CardTitle
-						title="繊維産業×福井文化服装学院コラボ"
-						label="ステージ企画"
-						labelNum={1}
-					/>
-					<S_P_Description>
-						鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
-						produced by TGC」でモデルが着用します。
-					</S_P_Description>
+				<SECTION_CardContainer className="left none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<S_H2_Title>繊維産業×福井文化服装学院コラボ</S_H2_Title>
+						<Balloon2 balloonList={["9/20", "土"]} />
+					</S_DIV_CardHeaderContainer>
 					<DIV_ImageContainer>
-						<img
-							src={`${
-								import.meta.env.BASE_URL
-							}images/photo_spstage_collab_01.png`}
-							alt="福井文化服装学院の画像"
-						/>
+						<S_P_Description>
+							鯖江市内繊維産業から排出される繊維端材を用いて、学生の自由な発想と創造性でサステナブルアクセサリーを製作！「“さばえアクション∞(エイト)”コレクション
+							produced by TGC」でモデルが着用します。
+						</S_P_Description>
 						<img
 							src={`${
 								import.meta.env.BASE_URL
@@ -124,27 +126,97 @@ export const Contents2 = () => {
 						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
-				<SECTION_CardContainer>
-					<CardTitle
-						title="キッズモデルコラボ"
-						label="ステージ企画"
-						labelNum={2}
-					/>
-					<S_P_Description>
-						子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
-					</S_P_Description>
-					<DIV_NoticeSection>
-						<h4>キッズモデル募集</h4>
-						<UL_Notice>
-							<li>・募集開始：2025年6月26日(木)～</li>
-							<li>・対象年齢：年長児～小学３年生</li>
-							<li>・募集要件：SDGsを表現したファッションを着用すること 他</li>
-						</UL_Notice>
-						<SPAN_Notice>
-							※詳細・ご応募は、さばえSDGs推進センターHPまで
-						</SPAN_Notice>
-						<Button onClick={goToSabaeModelPage}>ご応募はこちら</Button>
-					</DIV_NoticeSection>
+				<SECTION_CardContainer className="left none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<S_H2_Title>キッズモデルコラボ</S_H2_Title>
+						<Balloon2 balloonList={["9/20", "土"]} />
+					</S_DIV_CardHeaderContainer>
+					<DIV_ImageContainer className="tmp_vertical">
+						<S_P_Description>
+							子どもたちにSDGsを体感し、トップモデルとの共演による感動体験を味わってもらうことを目的に、昨年に引き続き、キッズモデルコラボステージを実施します。
+						</S_P_Description>
+						<DIV_NoticeSection>
+							<h4>キッズモデル募集</h4>
+							<UL_Notice>
+								<li>・募集開始：2025年6月26日(木)～</li>
+								<li>・対象年齢：年長児～小学３年生</li>
+								<li>・募集要件：SDGsを表現したファッションを着用すること 他</li>
+							</UL_Notice>
+							<SPAN_Notice>
+								※詳細・ご応募は、さばえSDGs推進センターHPまで
+							</SPAN_Notice>
+							<Button onClick={goToSabaeModelPage}>ご応募はこちら</Button>
+						</DIV_NoticeSection>
+					</DIV_ImageContainer>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer className="left none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<S_H2_Title>キッズダンスショー</S_H2_Title>
+						<Balloon2 balloonList={["9/21", "日", "10:30～/14:00～"]} sunday />
+					</S_DIV_CardHeaderContainer>
+					<DIV_ImageContainer>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_04.png`}
+							alt="ダンスしているキッズの画像1"
+						/>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_05.png`}
+							alt="ダンスしているキッズの画像2"
+						/>
+					</DIV_ImageContainer>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer className="right none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<S_H2_Title>スーパーキッズショー</S_H2_Title>
+						<Balloon2 balloonList={["9/21", "日", "10:00～/13:00～"]} sunday />
+					</S_DIV_CardHeaderContainer>
+					<DIV_ImageContainer className="bottom">
+						<S_P_Description>
+							<SPAN_Time>10:00～</SPAN_Time>
+							<H3>
+								国際空手道連盟 極真会館
+								<br />
+								坂本派 福井県本部
+							</H3>
+							迫力満点！子どもたちの日々の鍛錬の成果をステージで披露します。気合いと技にご注目ください！
+						</S_P_Description>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_03.png`}
+							alt="国際空手道連盟 極真会館 坂本派 福井県本部の画像"
+						/>
+					</DIV_ImageContainer>
+					<DIV_ImageContainer className="bottom responsive-order">
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_06.png`}
+							alt="Jammy×Jammyの画像"
+						/>
+						<S_P_Description>
+							<SPAN_Time>13:00～</SPAN_Time>
+							<H3>Jammy×Jammy</H3>
+							僕たちは、ドラムだけで構成されるチームです！今回は、選抜された小学３年生・４年生・５年生・中学１年生のメンバー８名でパフォーマンスさせていただきます。Jammy×Jammyのツインドラムで、ステージを盛り上げるぜ！
+						</S_P_Description>
+					</DIV_ImageContainer>
+					<DIV_ImageContainer>
+						<S_P_Description>
+							<SPAN_Time>13:30～</SPAN_Time>
+							<H3>富田 輝</H3>
+							私は、第48回全日本ジュニアクラッシック音楽コンクール声楽部門で第5位に入賞しました。自然豊かな西山公園での披露は初めてで緊張しますが、「日本一」を目指すため磨き上げた歌声をぜひ聞いてください。{" "}
+						</S_P_Description>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_07.png`}
+							alt="富田 輝の画像"
+						/>
+					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
 		</div>
@@ -155,6 +227,10 @@ const SECTION_CardContainer = styled(
 	S_DIV_CardContainer.withComponent("section")
 )`
 	margin-bottom: 30px;
+
+	&.none-bottom {
+		margin-bottom: 0;
+	}
 `;
 
 const DIV_ButtonContainer = styled.div`
@@ -163,48 +239,32 @@ const DIV_ButtonContainer = styled.div`
 
 const DIV_CardsWrapper = styled.div`
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, auto);
+	gap: 20px;
 	grid-auto-rows: 1fr;
 
+	.left {
+		grid-column: 1;
+	}
+
+	.right {
+		grid-column: 2;
+		/* 左3行にまたがる */
+		grid-row: 1 / span 3;
+	}
+
 	/* ここだけレスポンシブ例外対応 */
-	@media (max-width: 800px) {
-		grid-template-columns: none;
-		grid-auto-rows: auto;
-	}
+	@media (max-width: 1100px) {
+		grid-template-columns: 1fr;
+		gap: 30px;
 
-	@media (max-width: 500px) {
-		gap: 0;
-	}
-`;
-
-const DIV_CardHeaderContainer = styled.div`
-	padding-bottom: 20px;
-	display: block;
-	list-style: none;
-	border-bottom: 1px solid ${COLORS.BORDER};
-	margin-bottom: 14px;
-
-	@media (max-width: 900px) {
-		padding-bottom: 15px;
+		.right {
+			grid-column: 1;
+			grid-row: auto;
+		}
 	}
 `;
-
-// const DIV_Container = styled.div`
-// 	display: none;
-// 	@media (max-width: 800px) {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 		margin-bottom: 20px;
-// 	}
-// `;
-
-// const DIV_PcOnlyContainer = styled.div`
-// 	@media (max-width: 800px) {
-// 		display: none;
-// 	}
-// `;
 
 const DIV_GuestContainer = styled.div`
 	display: grid;
@@ -238,7 +298,8 @@ const IMG_Image = styled.img`
 
 const DIV_NoticeSection = styled.div`
 	background-color: ${COLORS.NOTICE_BG};
-	padding: 15px;
+	padding: 20px;
+	border-radius: 40px;
 `;
 
 const UL_Notice = styled.ul`
@@ -258,14 +319,43 @@ const SPAN_Notice = styled.span`
 	}
 `;
 
+// TODO: 名前変えたい。画像だけじゃない
 const DIV_ImageContainer = styled.div`
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: auto;
 	gap: 20px;
 
 	img {
 		width: 100%;
 		overflow: hidden;
+		border-radius: 40px;
+	}
+
+	&.bottom {
+		margin-bottom: 30px;
+	}
+
+	@media (max-width: 1200px) {
+		// 募集要項を縦に配置する
+		&.tmp_vertical {
+			display: block;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		// 募集要項を横並びにする
+		&.tmp_vertical {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 600px) {
+		// 募集要項を縦に配置する
+		&.tmp_vertical {
+			display: block;
+		}
 	}
 
 	@media (max-width: 500px) {
@@ -280,5 +370,30 @@ const DIV_ImageContainer = styled.div`
 		img:last-of-type {
 			margin-bottom: 0;
 		}
+
+		&.tmp_vertical {
+			display: block;
+		}
+
+		// SPの際に画像が下に来るようにする
+		&.responsive-order {
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 0;
+		}
+	}
+`;
+
+const SPAN_Time = styled.span`
+	color: ${COLORS.PRIMARY};
+	font-weight: bold;
+`;
+
+const H3 = styled.h3`
+	font-family: "Noto Sans", sans-serif;
+	font-size: 20px;
+
+	@media (max-width: 500px) {
+		font-size: 16px;
 	}
 `;

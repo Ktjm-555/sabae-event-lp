@@ -125,3 +125,18 @@ export const S_DIV_DisplayContainer = styled.div`
 	display: flex;
 	gap: 20px;
 `;
+
+export const S_DIV_CardHeaderContainer = styled.div`
+	padding-bottom: 20px;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	border-bottom: 1px solid ${COLORS.BORDER};
+	margin-bottom: 14px;
+	gap: 15px;
+
+	@media (max-width: 900px) {
+		padding-bottom: 15px;
+		gap: 8px;
+	}
+`;
