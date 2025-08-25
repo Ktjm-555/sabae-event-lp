@@ -395,6 +395,61 @@ export const partners = [
 		isNameLong: false,
 		numbers: [3, 4],
 	},
+	{
+		id: 30,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image30.png`,
+		title: "来春クランクイン！映画「きみの音が見えたとき」",
+		isLong: false,
+		name: "合同会社きみおと",
+		isNameLong: false,
+		numbers: [3, 10],
+	},
+	{
+		id: 31,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image29.png`,
+		title: "いざという時のためみんなで備えよう！",
+		isLong: false,
+		name: "株式会社ミドリ防災",
+		isNameLong: false,
+		numbers: [11],
+	},
+	{
+		id: 32,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image29.png`,
+		title: "自然栽培",
+		isLong: false,
+		name: "特定非営利活動法人ハートオブマインド",
+		isNameLong: false,
+		numbers: [3, 15],
+	},
+	{
+		id: 33,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image33.png`,
+		title: "Hi-Zai LABO",
+		isLong: false,
+		name: "さばえSDGs部",
+		isNameLong: false,
+		numbers: [3, 12],
+	},
+	{
+		id: 34,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image34.png`,
+		title: "EIWA WOOD SCHOOL",
+		isLong: false,
+		name: "クリ英ター永和株式会社",
+		isNameLong: false,
+		numbers: [11, 12],
+	},
 ];
 
 export const childrenSpace = [
@@ -457,9 +512,19 @@ export const childrenSpace = [
 export const foodArea = [
 	{
 		id: 1,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image9.png`,
+		title: "「MEGANE no MACHI CAFE」<br />produced by AMAZING COFFEE",
+		numbers: [12],
+	},
+	{
+		id: 2,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/food_area/photo_food_area_image10.png`,
 		title: "ボーノ夢果房",
-		numbers: [],
+		numbers: [12],
 	},
 	{
 		id: 2,
@@ -491,7 +556,7 @@ export const foodArea = [
 			import.meta.env.BASE_URL
 		}images/food_area/photo_food_area_image5.png`,
 		title: "キッチンカーさくら",
-		numbers: [],
+		numbers: [2],
 	},
 	{
 		id: 6,

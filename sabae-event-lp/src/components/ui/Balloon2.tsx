@@ -2,21 +2,21 @@ import styled from "@emotion/styled";
 import { COLORS } from "../../consts/color";
 type Props = {
 	balloonList: Array<string>;
+	sunday?: boolean;
 };
 
-export const Balloon = ({ balloonList }: Props) => (
+// 日付 + 時間 + プチ案内
+export const Balloon2 = ({ balloonList, sunday }: Props) => (
 	<DIV_Balloon>
 		<P_Date>
-			<SPAN_Blue>
+			<SPAN_Blue className={sunday ? "red" : ""}>
 				{balloonList[0]}
-				<SPAN_CircleBlue>{balloonList[1]}</SPAN_CircleBlue>
+				<SPAN_CircleBlue className={sunday ? "red" : ""}>
+					{balloonList[1]}
+				</SPAN_CircleBlue>
 			</SPAN_Blue>
-			{balloonList[2] && (
-				<SPAN_Red>
-					{balloonList[2]}
-					<SPAN_CircleRed>{balloonList[3]}</SPAN_CircleRed>
-				</SPAN_Red>
-			)}
+			{balloonList[2] && <SPAN_Time>{balloonList[2]}</SPAN_Time>}
+			{balloonList[3] && <SPAN_Annotation>{balloonList[3]}</SPAN_Annotation>}
 		</P_Date>
 	</DIV_Balloon>
 );
@@ -27,7 +27,7 @@ const DIV_Balloon = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 10px 5px;
+	padding: 15px 5px;
 	font-size: 16px;
 	background: ${COLORS.CARD_BG};
 	border: 1px solid ${COLORS.BORDER};
@@ -56,7 +56,6 @@ const P_Date = styled.p`
 	font-weight: bold;
 	font-size: 22px;
 	line-height: 1;
-	gap: 3px;
 
 	@media (max-width: 900px) {
 		font-size: 16px;
@@ -68,14 +67,32 @@ const SPAN_Blue = styled.span`
 	display: flex;
 	align-items: center;
 	gap: 3px;
+
+	&.red {
+		color: ${COLORS.PRIMARY};
+	}
 `;
 
-const SPAN_Red = styled.span`
-	color: ${COLORS.PRIMARY};
+const SPAN_Time = styled.span`
+	font-size: 12px;
 	display: flex;
 	align-items: center;
-	gap: 2px;
-	margin-left: auto;
+	margin-top: 5px;
+
+	@media (max-width: 900px) {
+		font-size: 10px;
+	}
+`;
+
+const SPAN_Annotation = styled.span`
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	margin-top: 3px;
+
+	@media (max-width: 900px) {
+		font-size: 8px;
+	}
 `;
 
 const SPAN_CircleBlue = styled.span`
@@ -94,8 +111,8 @@ const SPAN_CircleBlue = styled.span`
 		width: 16px;
 		height: 16px;
 	}
-`;
 
-const SPAN_CircleRed = styled(SPAN_CircleBlue)`
-	background: ${COLORS.PRIMARY};
+	&.red {
+		background: ${COLORS.PRIMARY};
+	}
 `;

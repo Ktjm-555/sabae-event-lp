@@ -14,15 +14,16 @@ export const SpStageContents = () => {
 };
 
 const DIV_EventWrapper = styled(S_DIV_SectionWrapper)`
+	// TODO: ここパッディングの設定いらないかもしれない
 	background-color: ${COLORS.SEC_BLUE_BG};
 	padding-top: 50px;
-	padding-bottom: 30px;
+	padding-bottom: 60px;
 	@media (max-width: 900px) {
 		padding-top: 40px;
-		padding-bottom: 20px;
+		padding-bottom: 40px;
 	}
 	@media (max-width: 500px) {
 		padding-top: 30px;
-		padding-bottom: 10px;
+		padding-bottom: 30px;
 	}
 `;

@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
-import { Contents4 } from "./contents/Contents4.tsx";
 import { S_DIV_SectionWrapper, S_SECTION_container } from "../Style.ts";
 import { COLORS } from "../consts/color.ts";
 
+// TODO：使用していない
 export const IntroduceContentsWide = () => {
 	return (
 		<DIV_Wrapper>
 			<S_SECTION_container>
-				<Contents4 title="さばえ３大フェス" balloonList={[]} />
+				{/* <Contents4 title="さばえ３大フェス" balloonList={[]} /> */}
 			</S_SECTION_container>
 		</DIV_Wrapper>
 	);
