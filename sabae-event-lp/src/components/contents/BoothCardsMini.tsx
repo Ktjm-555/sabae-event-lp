@@ -36,9 +36,10 @@ export const BoothCardsMini = ({ items }: Props) => {
 
 							{/* 日付付きのものは横並びに title-notice*/}
 							<DIV_TitleContainer className={notice ? "title-notice" : ""}>
-								<H3_Title className={isLong ? "long-title" : ""}>
-									{title}
-								</H3_Title>
+								<H3_Title
+									className={isLong ? "long-title" : ""}
+									dangerouslySetInnerHTML={{ __html: title }}
+								></H3_Title>
 								{notice && (
 									<SPAN_Notice className={noticeBlue ? "blue" : ""}>
 										{notice}
