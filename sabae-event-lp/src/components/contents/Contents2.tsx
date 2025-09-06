@@ -33,10 +33,7 @@ export const Contents2 = () => {
 				balloonList={[]}
 				balloonList2={["9/20", "土", "13:00〜", "@ステージエリア"]}
 			/>
-			<TitleCaption
-				caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！"
-				annotation="※タイムスケジュールは、すべての出演ゲストが出揃い次第発表させていただきます。"
-			/>
+			<TitleCaption caption="トーク×ファッション×ダンス！ここでしか味わえないパフォーマンスで盛り上がろう！" />
 			<DIV_ButtonContainer>
 				<Button onClick={() => goToTicketPage()}>
 					入場券のお申込みはこちら
