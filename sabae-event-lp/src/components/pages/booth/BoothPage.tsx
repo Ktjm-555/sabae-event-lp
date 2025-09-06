@@ -125,9 +125,3 @@ const H2_Title = styled.h2`
 const DIV_Contents = styled.div`
 	margin-bottom: 35px;
 `;
-
-const DIV_ImgContainer = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-`;
