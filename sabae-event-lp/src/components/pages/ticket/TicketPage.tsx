@@ -127,7 +127,8 @@ export const TicketPage = () => {
 							</TableRow>
 
 							<TableRow title="入場券申込期間">
-								令和７年８月５日（火）～ 令和７年９月５日（金）
+								【※期間を延長します】令和７年８月５日（火）～
+								令和７年９月５日（金）
 							</TableRow>
 
 							<TableRow title="入場券入手方法">

@@ -297,17 +297,17 @@ export const partners = [
 	// 	isNameLong: false,
 	// 	numbers: [3, 11],
 	// },
-	{
-		id: 21,
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image21.png`,
-		title: "廃棄野菜がかわいい雑貨に大変身?! 野菜ねんどにお絵描き体験！",
-		isLong: false,
-		name: "スールラテール",
-		isNameLong: false,
-		numbers: [12, 15],
-	},
+	// {
+	// 	id: 21,
+	// 	imgSrc: `${
+	// 		import.meta.env.BASE_URL
+	// 	}images/partners/photo_partner_image21.png`,
+	// 	title: "廃棄野菜がかわいい雑貨に大変身?! 野菜ねんどにお絵描き体験！",
+	// 	isLong: false,
+	// 	name: "スールラテール",
+	// 	isNameLong: false,
+	// 	numbers: [12, 15],
+	// },
 	{
 		id: 22,
 		imgSrc: `${
@@ -411,7 +411,9 @@ export const partners = [
 	},
 	{
 		id: 31,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image31.png`,
 		title: "いざという時のためみんなで備えよう！",
 		isLong: false,
 		name: "株式会社ミドリ防災",
