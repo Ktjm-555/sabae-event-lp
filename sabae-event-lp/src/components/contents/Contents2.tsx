@@ -228,22 +228,25 @@ export const Contents2 = () => {
 					<p>めがねのまちさばえ応援プロジェクトスペシャルステージ</p>
 					<ul>
 						<li>
-							12:00<span>開場</span>
+							12:00<span className="show">開場</span>
 						</li>
 						<li>
-							13:00<span>[オープニングアクト] 鯖江高校吹奏楽部</span>
+							13:00
+							<span className="show">
+								[オープニングアクト] 鯖江高校吹奏楽部
+							</span>
 						</li>
 						<li>
 							13:30
-							<span>
+							<span className="show">
 								“さばえアクション∞（エイト）”コレクション produced by TGC
 							</span>
 						</li>
 						<li>
-							14:05<span>LDH ダンスワークショップショー</span>
+							14:05<span className="show">LDH ダンスワークショップショー</span>
 						</li>
 						<li>
-							14:45<span>終了予定</span>
+							14:45<span className="show">終了予定</span>
 						</li>
 					</ul>
 				</SECTION_CardContainer>
@@ -265,16 +268,17 @@ export const Contents2 = () => {
 							</span>
 						</li>
 						<li>
-							10:30<span>キッズダンスショー 午前の部</span>
+							10:30<span className="show">キッズダンスショー 午前の部</span>
 						</li>
 						<li>
-							13:00<span>スーパーキッズショー「Jammy×Jammy」</span>
+							13:00
+							<span className="show">スーパーキッズショー「Jammy×Jammy」</span>
 						</li>
 						<li>
-							13:30<span>スーパーキッズショー「富田 輝」</span>
+							13:30<span className="show">スーパーキッズショー「富田 輝」</span>
 						</li>
 						<li>
-							14:00<span>キッズダンスショー 午後の部</span>
+							14:00<span className="show">キッズダンスショー 午後の部</span>
 						</li>
 					</ul>
 				</SECTION_CardContainer>
