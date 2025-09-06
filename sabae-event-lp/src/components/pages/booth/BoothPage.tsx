@@ -2,7 +2,12 @@ import styled from "@emotion/styled";
 import { S_DIV_SectionWrapper, S_SECTION_container } from "../../../Style";
 import { COLORS } from "../../../consts/color";
 import { ContentsTitleOnly } from "../../contents/CotentsTitleOnly";
-import { childrenSpace, foodArea, partners } from "../../../items/booth";
+import {
+	childrenSpace,
+	foodArea,
+	partners,
+	sabaeStudents,
+} from "../../../items/booth";
 import { BoothCards } from "../../contents/BoothCards";
 import { BoothCardsMini2 } from "../../contents/BoothCardsMini2";
 
@@ -28,13 +33,7 @@ export const BoothPage = () => {
 
 					{/* 鯖江高校生ブース */}
 					<H2_Title>鯖江高校生ブース</H2_Title>
-					{/* <BoothCards items={sabaeStudents} /> */}
-					<DIV_ImgContainer>
-						<img
-							src={`${import.meta.env.BASE_URL}logo/booth_comingSoon.svg`}
-							alt="ブースの画像"
-						/>
-					</DIV_ImgContainer>
+					<BoothCards items={sabaeStudents} />
 				</S_SECTION_container>
 			</DIV_SectionWrapper>
 
