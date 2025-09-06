@@ -388,7 +388,7 @@ export const partners = [
 		id: 29,
 		imgSrc: `${
 			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image29.png`,
+		}images/partners/photo_partner_image29_2.png`,
 		title: "さばえカードゲーム＆おこさま応援ねこピンチプロジェクト",
 		isLong: false,
 		name: "新潟医療福祉大学",
@@ -478,6 +478,17 @@ export const partners = [
 		isNameLong: false,
 		numbers: [4, 15],
 	},
+	{
+		id: 38,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image38.png`,
+		title: "コレどこのお野菜？さばえ野菜の産地マップ輪投げにチャレンジ",
+		isLong: false,
+		name: "さばえおいしい応援団",
+		isNameLong: false,
+		numbers: [3, 11],
+	},
 ];
 
 export const childrenSpace = [
@@ -563,7 +574,7 @@ export const foodArea = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/food_area/photo_food_area_image10.png`,
-		title: "ボーノ夢果房",
+		title: "ボーノ夢菓房",
 		numbers: [12],
 	},
 	{
