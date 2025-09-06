@@ -216,6 +216,69 @@ export const Contents2 = () => {
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
+			<S_P_Subtitle>ステージエリア</S_P_Subtitle>
+			<ContentsTitleOnly title={"タイムスケジュール"} balloonList={[]} />
+			<DIV_CardsWrapper_2>
+				<SECTION_CardContainer className="none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<H2_Title className="blue">
+							9/20<Span_Circle>土</Span_Circle>
+						</H2_Title>
+					</S_DIV_CardHeaderContainer>
+					<p>めがねのまちさばえ応援プロジェクトスペシャルステージ</p>
+					<ul>
+						<li>
+							12:00<span>開場</span>
+						</li>
+						<li>
+							13:00<span>[オープニングアクト] 鯖江高校吹奏楽部</span>
+						</li>
+						<li>
+							13:30
+							<span>
+								“さばえアクション∞（エイト）”コレクション produced by TGC
+							</span>
+						</li>
+						<li>
+							14:05<span>LDH ダンスワークショップショー</span>
+						</li>
+						<li>
+							14:45<span>終了予定</span>
+						</li>
+					</ul>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer className="none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<H2_Title>
+							9/21<Span_Circle className="red">日</Span_Circle>
+						</H2_Title>
+					</S_DIV_CardHeaderContainer>
+					<ul>
+						<li>
+							10:00
+							<span className="show">
+								スーパーキッズショー
+								<br />
+								<span className="ml-none">
+									「国際空手道連盟 極真会館 坂本派 福井県本部」
+								</span>
+							</span>
+						</li>
+						<li>
+							10:30<span>キッズダンスショー 午前の部</span>
+						</li>
+						<li>
+							13:00<span>スーパーキッズショー「Jammy×Jammy」</span>
+						</li>
+						<li>
+							13:30<span>スーパーキッズショー「富田 輝」</span>
+						</li>
+						<li>
+							14:00<span>キッズダンスショー 午後の部</span>
+						</li>
+					</ul>
+				</SECTION_CardContainer>
+			</DIV_CardsWrapper_2>
 		</div>
 	);
 };
@@ -240,6 +303,7 @@ const DIV_CardsWrapper = styled.div`
 	grid-template-rows: repeat(3, auto);
 	gap: 20px;
 	grid-auto-rows: 1fr;
+	margin-bottom: 30px;
 
 	.left {
 		grid-column: 1;
@@ -392,5 +456,67 @@ const H3 = styled.h3`
 
 	@media (max-width: 500px) {
 		font-size: 16px;
+	}
+`;
+
+const DIV_CardsWrapper_2 = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* 2列を等幅に */
+	gap: 20px;
+
+	span,
+	p {
+		font-weight: bold;
+	}
+
+	li {
+		padding-left: 3.5em;
+		text-indent: -3.5em;
+	}
+
+	.show {
+		margin-left: 12px;
+
+		.ml-none {
+			margin-left: 0;
+		}
+	}
+
+	@media (max-width: 750px) {
+		grid-template-columns: 1fr;
+		gap: 30px;
+
+		.right {
+			grid-column: 1;
+			grid-row: auto;
+		}
+	}
+`;
+
+const H2_Title = styled(S_H2_Title)`
+	&.blue {
+		color: #004080;
+	}
+	color: #e60012;
+`;
+
+const Span_Circle = styled.span`
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #004080;
+	color: #fff;
+	border-radius: 50%;
+
+	font-size: 0.7em;
+	width: 1.6em;
+	height: 1.6em;
+	margin-left: 0.3em;
+	vertical-align: middle;
+
+	transform: translateY(-0.1em);
+	&.red {
+		background-color: #e60012;
 	}
 `;
