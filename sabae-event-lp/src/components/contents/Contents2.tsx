@@ -216,7 +216,7 @@ export const Contents2 = () => {
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
 			</DIV_CardsWrapper>
-			<S_P_Subtitle>ステージエリア</S_P_Subtitle>
+			<S_P_Subtitle id="6">ステージエリア</S_P_Subtitle>
 			<ContentsTitleOnly title={"タイムスケジュール"} balloonList={[]} />
 			<DIV_CardsWrapper_2>
 				<SECTION_CardContainer className="none-bottom">
