@@ -25,7 +25,7 @@ export const sabaeStudents = [
 	{
 		id: 3,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "未定",
+		title: "繊維端材で「つつじの花」を咲かせよう！",
 		isLong: false,
 		name: "風林ボルケーノ",
 		isNameLong: false,
@@ -36,7 +36,7 @@ export const sabaeStudents = [
 	{
 		id: 4,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "未定",
+		title: "ペットボトルで作る空気砲",
 		isLong: false,
 		name: "シャイニングスター",
 		isNameLong: false,
