@@ -197,7 +197,7 @@ export const Contents2 = () => {
 				</SECTION_CardContainer>
 				<SECTION_CardContainer className="left none-bottom">
 					<S_DIV_CardHeaderContainer>
-						<S_H2_Title>キッズダンスショー</S_H2_Title>
+						<S_H2_Title id="7">キッズダンスショー</S_H2_Title>
 						<Balloon2 balloonList={["9/21", "日", "10:30～/14:30～"]} sunday />
 					</S_DIV_CardHeaderContainer>
 
