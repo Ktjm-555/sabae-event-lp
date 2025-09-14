@@ -4,6 +4,13 @@ import { secondGuestsImage, thirdGuestsImage } from "./guests";
 // 詳細ページがないものはtype Xとしておく
 export const newsList = [
 	{
+		id: 6,
+		date: "2025/09/07",
+		title: "ステージエリアのタイムスケジュールが公開されました",
+		type: "X",
+		url: "/#6",
+	},
+	{
 		id: 5,
 		date: "2025/08/05",
 		title: "スペシャルステージの出演ゲスト第3弾が公開されました",

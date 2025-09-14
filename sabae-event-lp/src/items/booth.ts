@@ -2,65 +2,68 @@ export const sabaeStudents = [
 	{
 		id: 1,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "文具を集めて寄付しよう！",
+		title: "ぐるぐる文具屋",
 		isLong: false,
 		name: "からアゲ",
 		isNameLong: false,
-		numbers: [],
+		numbers: [1, 4],
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 	},
 	{
 		id: 2,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "廃棄物削減のために私たちにできることは",
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/students/photo_student_image2.png`,
+		title: "ガチャピンのフリーマーケット！",
 		isLong: false,
 		name: "ガチャピン",
 		isNameLong: false,
-		numbers: [],
+		numbers: [12],
+		notice: "※9/21(日)のみ",
 	},
 	{
 		id: 3,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "若者を集めて経済を発展させるには",
+		title: "未定",
 		isLong: false,
 		name: "風林ボルケーノ",
 		isNameLong: false,
 		numbers: [],
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 	},
 	{
 		id: 4,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "リサイクルの意識を持ってもらう",
+		title: "未定",
 		isLong: false,
 		name: "シャイニングスター",
 		isNameLong: false,
 		numbers: [],
+		notice: "※9/21(日)のみ",
 	},
 	{
 		id: 5,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "海のゴミで音を奏でよう",
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/students/photo_student_image5.png`,
+		title: "サバコーカフェ",
 		isLong: false,
-		name: "エココア",
+		name: "",
 		isNameLong: false,
-		numbers: [],
+		numbers: [8, 9],
 	},
 	{
 		id: 6,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "確認中",
-		isLong: false,
-		name: "サバコーカフェ",
-		isNameLong: false,
-		numbers: [],
-	},
-	{
-		id: 7,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "確認中",
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/students/photo_student_image6.png`,
+		title: "ゲームでリフレーミングを体験しよう！",
 		isLong: false,
 		name: "りふれっち",
 		isNameLong: false,
-		numbers: [],
+		numbers: [4, 10],
 	},
 ];
 
@@ -294,17 +297,17 @@ export const partners = [
 	// 	isNameLong: false,
 	// 	numbers: [3, 11],
 	// },
-	{
-		id: 21,
-		imgSrc: `${
-			import.meta.env.BASE_URL
-		}images/partners/photo_partner_image21.png`,
-		title: "廃棄野菜がかわいい雑貨に大変身?! 野菜ねんどにお絵描き体験！",
-		isLong: false,
-		name: "スールラテール",
-		isNameLong: false,
-		numbers: [12, 15],
-	},
+	// {
+	// 	id: 21,
+	// 	imgSrc: `${
+	// 		import.meta.env.BASE_URL
+	// 	}images/partners/photo_partner_image21.png`,
+	// 	title: "廃棄野菜がかわいい雑貨に大変身?! 野菜ねんどにお絵描き体験！",
+	// 	isLong: false,
+	// 	name: "スールラテール",
+	// 	isNameLong: false,
+	// 	numbers: [12, 15],
+	// },
 	{
 		id: 22,
 		imgSrc: `${
@@ -408,7 +411,9 @@ export const partners = [
 	},
 	{
 		id: 31,
-		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
+		imgSrc: `${
+			import.meta.env.BASE_URL
+		}images/partners/photo_partner_image31.png`,
 		title: "いざという時のためみんなで備えよう！",
 		isLong: false,
 		name: "株式会社ミドリ防災",
