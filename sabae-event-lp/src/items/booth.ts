@@ -335,7 +335,7 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image24.png`,
-		title: "血管･肌年齢チェック／「新しい認知症感」の理解につながるVR体験",
+		title: "血管･肌年齢チェック／「新しい認知症観」の理解につながるVR体験",
 		isLong: false,
 		name: "明祥株式会社",
 		isNameLong: false,
