@@ -221,10 +221,9 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image14.png`,
-		title:
-			"アクセサリー･廃材を使用したハンドメイド商品＆古着0円ショップ（ドリカムベース）",
+		title: "アクセサリー･廃材を使用したハンドメイド商品＆古着0円ショップ",
 		isLong: true,
-		name: "株式会社クラッチ",
+		name: "ドリカムベース",
 		isNameLong: false,
 		numbers: [3],
 	},
