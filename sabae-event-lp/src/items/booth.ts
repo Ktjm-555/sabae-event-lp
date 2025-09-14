@@ -128,7 +128,7 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image6.png`,
-		title: "体験しよう！地層処分「かんたん！ベントナイト入りバスボムづくり",
+		title: "体験しよう！地層処分「かんたん！ベントナイト入りバスボムづくり」",
 		isLong: false,
 		name: "原子力発電環境整備機構（NUMO）",
 		isNameLong: false,
