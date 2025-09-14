@@ -287,8 +287,8 @@ export const Contents2 = () => {
 						</H2_Title>
 					</S_DIV_CardHeaderContainer>
 					<ul>
-						<li>
-							10:00
+						<li className="long">
+							10:00〜10:30
 							<span className="show">
 								スーパーキッズショー
 								<br />
@@ -297,18 +297,21 @@ export const Contents2 = () => {
 								</span>
 							</span>
 						</li>
-						<li>
-							10:30<span className="show">キッズダンスショー 午前の部</span>
+						<li className="long">
+							10:30～12:45
+							<span className="show">キッズダンスショー 午前の部</span>
 						</li>
-						<li>
-							13:00
+						<li className="long">
+							13:00〜13:30
 							<span className="show">スーパーキッズショー「Jammy×Jammy」</span>
 						</li>
-						<li>
-							13:30<span className="show">スーパーキッズショー「富田 輝」</span>
+						<li className="long">
+							13:30〜14:00
+							<span className="show">スーパーキッズショー「富田 輝」</span>
 						</li>
-						<li>
-							14:00<span className="show">キッズダンスショー 午後の部</span>
+						<li className="long">
+							14:30～16:00
+							<span className="show">キッズダンスショー 午後の部</span>
 						</li>
 					</ul>
 				</SECTION_CardContainer>
@@ -512,6 +515,11 @@ const DIV_CardsWrapper_2 = styled.div`
 	li {
 		padding-left: 3.5em;
 		text-indent: -3.5em;
+
+		&.long {
+			padding-left: 6em;
+			text-indent: -6em;
+		}
 	}
 
 	.show {
