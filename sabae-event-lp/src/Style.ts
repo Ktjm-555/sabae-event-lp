@@ -79,6 +79,10 @@ export const S_P_Description = styled.p`
 		font-size: 14px;
 		margin-bottom: 20px;
 	}
+
+	&.none-bottom {
+		margin-bottom: 25px;
+	}
 `;
 
 export const S_H2_Title = styled.h2`

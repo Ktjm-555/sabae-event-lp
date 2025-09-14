@@ -146,26 +146,6 @@ export const Contents2 = () => {
 						</DIV_NoticeSection>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
-				<SECTION_CardContainer className="left none-bottom">
-					<S_DIV_CardHeaderContainer>
-						<S_H2_Title>キッズダンスショー</S_H2_Title>
-						<Balloon2 balloonList={["9/21", "日", "10:30～/14:00～"]} sunday />
-					</S_DIV_CardHeaderContainer>
-					<DIV_ImageContainer>
-						<img
-							src={`${
-								import.meta.env.BASE_URL
-							}images/photo_spstage_collab_04.png`}
-							alt="ダンスしているキッズの画像1"
-						/>
-						<img
-							src={`${
-								import.meta.env.BASE_URL
-							}images/photo_spstage_collab_05.png`}
-							alt="ダンスしているキッズの画像2"
-						/>
-					</DIV_ImageContainer>
-				</SECTION_CardContainer>
 				<SECTION_CardContainer className="right none-bottom">
 					<S_DIV_CardHeaderContainer>
 						<S_H2_Title>スーパーキッズショー</S_H2_Title>
@@ -212,6 +192,56 @@ export const Contents2 = () => {
 								import.meta.env.BASE_URL
 							}images/photo_spstage_collab_07.png`}
 							alt="富田 輝の画像"
+						/>
+					</DIV_ImageContainer>
+				</SECTION_CardContainer>
+				<SECTION_CardContainer className="left none-bottom">
+					<S_DIV_CardHeaderContainer>
+						<S_H2_Title>キッズダンスショー</S_H2_Title>
+						<Balloon2 balloonList={["9/21", "日", "10:30～/14:30～"]} sunday />
+					</S_DIV_CardHeaderContainer>
+
+					<SPAN_Time>10:30～12:45</SPAN_Time>
+					<P_SmallTitle>午前の部</P_SmallTitle>
+					<H3 className="top-bottom">SDGsダンスショーケース</H3>
+					<S_P_Description className="none-bottom">
+						鯖江のダンススタジオSHAKE、ROSEA、LEGEnD OF
+						YOUによるダンスショーケースです。子どもから大人まで、25チームがダンスでSDGsフェスを盛り上げます！
+					</S_P_Description>
+					<DIV_ImageContainer className="bottom">
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_08.png`}
+							alt="ダンスしているキッズの画像1"
+						/>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_09.png`}
+							alt="ダンスしているキッズの画像2"
+						/>
+					</DIV_ImageContainer>
+
+					<SPAN_Time>14:30～16:00</SPAN_Time>
+					<P_SmallTitle>午後の部</P_SmallTitle>
+					<H3 className="top-bottom">まなびサイト&ダンススタジオBRUSH</H3>
+					<S_P_Description className="none-bottom">
+						チア、HIP
+						HOP、K-POPなど、いろんなダンスで会場に熱い演技をお届けします！
+					</S_P_Description>
+					<DIV_ImageContainer>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_10.png`}
+							alt="ダンスしているキッズの画像1"
+						/>
+						<img
+							src={`${
+								import.meta.env.BASE_URL
+							}images/photo_spstage_collab_11.png`}
+							alt="ダンスしているキッズの画像2"
 						/>
 					</DIV_ImageContainer>
 				</SECTION_CardContainer>
@@ -310,13 +340,9 @@ const DIV_CardsWrapper = styled.div`
 	margin-bottom: 30px;
 
 	.left {
-		grid-column: 1;
 	}
 
 	.right {
-		grid-column: 2;
-		/* 左3行にまたがる */
-		grid-row: 1 / span 3;
 	}
 
 	/* ここだけレスポンシブ例外対応 */
@@ -454,12 +480,22 @@ const SPAN_Time = styled.span`
 	font-weight: bold;
 `;
 
+const P_SmallTitle = styled.p`
+	font-size: 18px;
+	font-weight: bold;
+	display: inline;
+	margin-left: 15px;
+`;
+
 const H3 = styled.h3`
 	font-family: "Noto Sans", sans-serif;
 	font-size: 20px;
 
 	@media (max-width: 500px) {
 		font-size: 16px;
+	}
+	&.top-bottom {
+		margin: 15px 0;
 	}
 `;
 
