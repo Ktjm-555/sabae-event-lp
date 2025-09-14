@@ -29,7 +29,7 @@ export const sabaeStudents = [
 		isLong: false,
 		name: "風林ボルケーノ",
 		isNameLong: false,
-		numbers: [],
+		numbers: [9, 12],
 		notice: "※9/20(土)のみ",
 		noticeBlue: true,
 	},
@@ -40,7 +40,7 @@ export const sabaeStudents = [
 		isLong: false,
 		name: "シャイニングスター",
 		isNameLong: false,
-		numbers: [],
+		numbers: [12],
 		notice: "※9/21(日)のみ",
 	},
 	{
@@ -370,6 +370,8 @@ export const partners = [
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image27.png`,
 		title: "RENEWを知ろう！",
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 		isLong: false,
 		name: "一般社団法人SOE",
 		isNameLong: false,
@@ -381,6 +383,8 @@ export const partners = [
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image28.png`,
 		title: "宝石のまち甲府 甲府の良きモノ発信中！",
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 		isLong: false,
 		name: "甲府市役所",
 		isNameLong: false,
@@ -433,7 +437,7 @@ export const partners = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image33.png`,
-		title: "Hi-Zai LABO",
+		title: "Hi-Zai LABO ／ 推しるーむ",
 		isLong: false,
 		name: "さばえSDGs部",
 		isNameLong: false,
@@ -488,6 +492,8 @@ export const partners = [
 			import.meta.env.BASE_URL
 		}images/partners/photo_partner_image38.png`,
 		title: "コレどこのお野菜？さばえ野菜の産地マップ輪投げにチャレンジ",
+		notice: "※9/20(土)のみ",
+		noticeBlue: true,
 		isLong: false,
 		name: "さばえおいしい応援団",
 		isNameLong: false,
@@ -499,7 +505,7 @@ export const childrenSpace = [
 	{
 		id: 1,
 		imgSrc: `${import.meta.env.BASE_URL}images/no_image.png`,
-		title: "チャレンジ！ニュースポーツ",
+		title: "ニュースポーツをやってみよう！",
 		isLong: false,
 		name: "NPO法人越前市障がいスポーツクラブ",
 		isNameLong: false,
@@ -610,7 +616,7 @@ export const foodArea = [
 		imgSrc: `${
 			import.meta.env.BASE_URL
 		}images/food_area/photo_food_area_image5.png`,
-		title: "キッチンカーさくら",
+		title: "キッチンさくら",
 		numbers: [2],
 	},
 	{
